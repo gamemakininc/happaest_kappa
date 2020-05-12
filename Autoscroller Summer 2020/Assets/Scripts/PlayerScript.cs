@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class PlayerScript : MonoBehaviour
 {
     //idk
@@ -18,6 +20,12 @@ public class PlayerScript : MonoBehaviour
     //set player model
     public Rigidbody2D rb;
     public Animator animator;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
 
     //Update called once per frame
     private void Update()
