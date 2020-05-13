@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject BulletPrefab;
     //set speed
     public float MoveSpeed = 9f;
+    public float forwardSpeed = 0.7f;
     //set player model
     public Rigidbody2D rb;
     public Animator animator;
@@ -46,7 +47,15 @@ public class PlayerScript : MonoBehaviour
     //delta time based  
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * MoveSpeed * Time.fixedDeltaTime);
+        if(movement.y > 0)
+        {
+            rb.MovePosition(rb.position + movement * MoveSpeed  * forwardSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + movement * MoveSpeed * Time.fixedDeltaTime);
+        }
+        
     }
 
     void shoot()
