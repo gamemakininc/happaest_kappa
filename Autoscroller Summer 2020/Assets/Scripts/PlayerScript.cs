@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     //build bullet 
     public Transform mgport;
     public GameObject[] BulletPrefabs;
-    public int bulletSelector;
+    public static int bulletSelector;
     //set speed
     public float MoveSpeed = 9f;
     public float forwardSpeed = 0.7f;
@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Fire1"))
         {
-            shoot();
+            Shoot();
         }
         //animator variables
         animator.SetFloat("Vertical", movement.y);
@@ -58,7 +58,7 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    void shoot()
+    public void Shoot()
     {
         //spawn bullet
         Instantiate(BulletPrefabs[bulletSelector], mgport.position, mgport.rotation);
