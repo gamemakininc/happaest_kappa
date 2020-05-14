@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -14,7 +12,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject deathEffect;
     //build bullet 
     public Transform mgport;
-    public GameObject BulletPrefab;
+    public GameObject[] BulletPrefabs;
+    public int bulletSelector;
     //set speed
     public float MoveSpeed = 9f;
     public float forwardSpeed = 0.7f;
@@ -24,6 +23,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        bulletSelector = ObserverScript.Instance.bulletSelector;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
     void shoot()
     {
         //spawn bullet
-        Instantiate(BulletPrefab, mgport.position, mgport.rotation);
+        Instantiate(BulletPrefabs[bulletSelector], mgport.position, mgport.rotation);
     }
     public void TakeDamage(int damage)
     {
