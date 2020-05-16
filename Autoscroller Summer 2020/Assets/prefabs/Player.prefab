@@ -35,12 +35,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4388124397020246}
   - component: {fileID: 212640099686394964}
-  - component: {fileID: 114281401225816396}
   - component: {fileID: 50662472852933602}
   - component: {fileID: 60461503416886586}
+  - component: {fileID: 95763696456690150}
+  - component: {fileID: 114747760686312880}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +179,24 @@ PolygonCollider2D:
       - {x: -0.11312426, y: -0.069598325}
       - {x: -0.009236219, y: -0.2008755}
       - {x: 0.11107765, y: -0.0712088}
---- !u!114 &114281401225816396
+--- !u!95 &95763696456690150
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246358362003326}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80de68b27315a3b46979287a0a6dd0a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114747760686312880
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -186,17 +204,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1246358362003326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645255afb4cb27944adcbacca6ce5395, type: 3}
+  m_Script: {fileID: 11500000, guid: 6385b549e5679b84b90176da8bba250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bHealth: 100
   health: 100
   deathEffect: {fileID: 0}
+  payload0Selector: 0
+  payload1Selector: 0
+  wPorts:
+  - {fileID: 4957156825432886}
+  - {fileID: 4267765368324324}
   mgport: {fileID: 4208706793169000}
-  BulletPrefab: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
-    type: 2}
-  MoveSpeed: 9
+  BulletPrefabs:
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 2}
+  - {fileID: 1746794936843668, guid: b607ecbd9fbbbec4ca67d786dc8591d5, type: 2}
+  - {fileID: 1066663896368714, guid: de5342e76313b5341983a5faa95fa45e, type: 2}
+  bulletSelector: 0
+  MoveSpeed: 8.5
+  forwardSpeed: 0.7
   rb: {fileID: 50662472852933602}
   animator: {fileID: 0}
+  fitsetup: 
 --- !u!212 &212640099686394964
 SpriteRenderer:
   m_ObjectHideFlags: 1

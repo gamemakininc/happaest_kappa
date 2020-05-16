@@ -258,6 +258,7 @@ MonoBehaviour:
   speed: 16
   rb: {fileID: 50956710713533992}
   timer: 0
+  Damage: 10
 --- !u!114 &114985020365483146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,6 +273,7 @@ MonoBehaviour:
   speed: 16
   rb: {fileID: 50456163548200034}
   timer: 0
+  Damage: 10
 --- !u!114 &114990185566400842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,6 +288,7 @@ MonoBehaviour:
   speed: 16
   rb: {fileID: 50341856658616668}
   timer: 0
+  Damage: 10
 --- !u!212 &212004629015393000
 SpriteRenderer:
   m_ObjectHideFlags: 1

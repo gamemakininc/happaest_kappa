@@ -180,6 +180,7 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 50101466255682862}
   timer: 0
+  Damage: 10
 --- !u!114 &114965591482177330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,6 +195,7 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 50826348141233638}
   timer: 0
+  Damage: 10
 --- !u!212 &212197882959510120
 SpriteRenderer:
   m_ObjectHideFlags: 1
