@@ -3,7 +3,14 @@
 public class ObserverScript : MonoBehaviour
 {
     public static ObserverScript Instance { get; private set; }
-    public int bulletSelector;
+    //player output from fitting system
+    public int pBulletSelector;
+    public float pSpeed;
+    public int phealth;
+    public int[] fitSetup;
+    //save for player payload slot0-1
+    public int pP0;
+    public int pP1;
 
     private void Awake()
     {

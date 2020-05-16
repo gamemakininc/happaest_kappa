@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class pbulletscript : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
     public float timer;
+    public int Damage;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,7 @@ public class pbulletscript : MonoBehaviour
         if (enemy != null)
         {
             //damage enemy
-            enemy.TakeDamage(15);
+            enemy.TakeDamage(Damage);
             //remove bullet
             Destroy(gameObject);
         }

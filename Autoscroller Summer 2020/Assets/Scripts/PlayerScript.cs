@@ -6,16 +6,20 @@ public class PlayerScript : MonoBehaviour
 {
     //idk
     Vector2 movement;
-    //set health
-    public int health = 100;
+    //set health (for gameplay)
+    public int health;
     //set death sprite
     public GameObject deathEffect;
     //build bullet 
+    public int payload0Selector;
+    public int payload1Selector;
+    public Transform[] wPorts;
     public Transform mgport;
     public GameObject[] BulletPrefabs;
-    public static int bulletSelector;
+    public GameObject[] MissilePrefabs;
+    public int bulletSelector;
     //set speed
-    public float MoveSpeed = 9f;
+    public float MoveSpeed;
     public float forwardSpeed = 0.7f;
     //set player model
     public Rigidbody2D rb;
@@ -23,9 +27,21 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        bulletSelector = ObserverScript.Instance.bulletSelector;
+        //set variables from observer
+        health = ObserverScript.Instance.phealth;
+        bulletSelector = ObserverScript.Instance.pBulletSelector;
+        //??
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        if (health == 0)
+        {
+            health = 100;
+        }
+        if (MoveSpeed == 0f) 
+        {
+            MoveSpeed = 9f;
+        }
+        //set launcher ammo baced on selectors
     }
 
     //Update called once per frame
@@ -47,6 +63,7 @@ public class PlayerScript : MonoBehaviour
     //delta time based  
     private void FixedUpdate()
     {
+        //if statement limmits speed in forward direction
         if(movement.y > 0)
         {
             rb.MovePosition(rb.position + movement * MoveSpeed  * forwardSpeed * Time.fixedDeltaTime);
@@ -57,7 +74,16 @@ public class PlayerScript : MonoBehaviour
         }
         
     }
-
+    void p0shoot() 
+    {
+        //spawn item saved in payload0 (remove 1 ammo later problem) 
+        //slot 0 skip or set to spawn unlimited dummys
+    }
+    void p1shoot()
+    {
+        //spawn item saved in payload1 (remove 1 ammo later problem)
+        //slot 0 skip or set to spawn unlimited dummys
+    }
     public void Shoot()
     {
         //spawn bullet
@@ -65,6 +91,7 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        //take damage
         health -= damage;
         //check health
         if (health <= 0)
@@ -74,7 +101,7 @@ public class PlayerScript : MonoBehaviour
     }
     void Die()
     {
-        //spawn death sprite
+        //spawn death sprite (wip)
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         //remove self
         Destroy(gameObject);
