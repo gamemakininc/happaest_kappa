@@ -2,7 +2,7 @@
 
 public class pbulletscript : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed;
     public Rigidbody2D rb;
     public float timer;
     public int Damage;

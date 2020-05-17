@@ -7,7 +7,13 @@ public class PlayerScript : MonoBehaviour
     //idk
     Vector2 movement;
     //set health (for gameplay)
-    public int health;
+    public int maxHealth;
+    public float health;
+    public float repair;
+    //shield and regen
+    public int maxShield;
+    public float shield;
+    public float sRegen = .5f;
     //set death sprite
     public GameObject deathEffect;
     //build bullet 
@@ -28,7 +34,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         //set variables from observer
-        health = ObserverScript.Instance.phealth;
+        health = ObserverScript.Instance.pHealth;
         bulletSelector = ObserverScript.Instance.pBulletSelector;
         //??
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +64,15 @@ public class PlayerScript : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        if (health < maxHealth)
+        { 
+            health += repair * Time.deltaTime;
+        }
+        if (shield < maxShield)
+        {
+            shield += sRegen * Time.deltaTime;
+        }
 
     }
     //delta time based  

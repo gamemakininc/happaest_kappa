@@ -1,18 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemDragHandler : MonoBehaviour, IDragHandler 
+public class ItemDragHandler : MonoBehaviour, IDragHandler
 {
+    public enum Slot { HIGH, LOW, PAYLOAD, GUN };
+    public Slot typeOfItem = Slot.HIGH;
+
+    Vector3 startPosition;
+    public int itemID;
+    private CanvasGroup canvasGroup;
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = Vector3.zero;
+        transform.position = startPosition;
+        canvasGroup.blocksRaycasts = true;
 
         /*
          for (int i = 0; i < eventData.hovered.Count; i++)
@@ -37,11 +44,20 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
         transform.position = startPosition;
          */
     }
-
+    
+    private void OnMouseDown() 
+    {
+        startPosition = transform.position;
+    }
+    private void OnMouseUp()
+    {
+        transform.position = startPosition;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
