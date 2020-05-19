@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEditor;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class enemyscript : MonoBehaviour
 {
+    /// If you're adding any variables that you want to see in the inspector, go to Assets/Editor/enemyscriptEditor.cs
     //set health
     public int health = 100;
     //set death sprite
@@ -12,6 +14,8 @@ public class enemyscript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        currentState = (states)currentTab;
     }
 
     //movement pattern
@@ -24,6 +28,9 @@ public class enemyscript : MonoBehaviour
 
     public states currentState;
     public float speed = 1;
+
+    [HideInInspector]
+    public int currentTab;
 
     [Header("Wavy Attributes")]
     public float amplitude = 1;
@@ -103,3 +110,5 @@ public class enemyscript : MonoBehaviour
         #endregion
     }
 }
+
+
