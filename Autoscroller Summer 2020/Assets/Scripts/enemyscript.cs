@@ -31,6 +31,7 @@ public class enemyscript : MonoBehaviour
 
     [HideInInspector]
     public int currentTab;
+    public string currentField;
 
     [Header("Wavy Attributes")]
     public float amplitude = 1;

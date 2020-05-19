@@ -44,7 +44,11 @@ public class enemyScriptEditor : Editor
     {
         //Uncomment this to restore default editor
         //base.OnInspectorGUI();
-        
+
+        soTarget.Update();
+        EditorGUI.BeginChangeCheck();
+
+        #region Render Properties
         EditorGUILayout.PropertyField(health);
         EditorGUILayout.PropertyField(deathEffect);
         EditorGUILayout.PropertyField(speed);
@@ -53,53 +57,43 @@ public class enemyScriptEditor : Editor
         switch (myTarget.currentTab)
         {
             case 0:
+                myTarget.currentField = "Straight";
                 break;
             case 1:
+                myTarget.currentField = "Wavy";
+                break;
+            case 2:
+                myTarget.currentField = "Slide";
+                break;
+        }
+
+        if (EditorGUI.EndChangeCheck()) {
+            soTarget.ApplyModifiedProperties();
+            GUI.FocusControl(null);
+        }
+        EditorGUI.BeginChangeCheck();
+
+        switch (myTarget.currentField)
+        {
+            case "Straight":
+                break;
+            case "Wavy":
                 EditorGUILayout.PropertyField(amplitude);
                 EditorGUILayout.PropertyField(period);
                 EditorGUILayout.PropertyField(shift);
                 EditorGUILayout.PropertyField(yChange);
                 break;
-            case 2:
+            case "Slide":
                 EditorGUILayout.PropertyField(waitTime);
                 EditorGUILayout.PropertyField(slideTime);
                 EditorGUILayout.PropertyField(moveRight);
                 break;
         }
 
-    }
-
-    /*SerializedProperty enemyScript;
-    SerializedProperty amplitude;
-
-    private void OnEnable()
-    {
-        enemyScript = serializedObject.FindProperty("enemyScript");
-        amplitude = serializedObject.FindProperty("amplitude");
-    }
-
-    public void OnInSpectorGUI()
-    {
-        enemyscript enemyscript = target as enemyscript;
-
-
-        switch (enemyscript.currentState)
+        if (EditorGUI.EndChangeCheck())
         {
-            case enemyscript.states.wavy:
-                enemyscript.amplitude = EditorGUILayout.FloatField("Amplitude:", enemyscript.amplitude);
-                enemyscript.shift = EditorGUILayout.FloatField("Shift:", enemyscript.shift);
-                enemyscript.yChange = EditorGUILayout.FloatField("y Change:", enemyscript.yChange);
-                break;
-            case enemyscript.states.slide:
-                enemyscript.waitTime = EditorGUILayout.FloatField("Wait Time:", enemyscript.waitTime);
-                enemyscript.slideTime = EditorGUILayout.FloatField("Slide Time:", enemyscript.slideTime);
-                enemyscript.moveRight = EditorGUILayout.Toggle("Move Right:", enemyscript.moveRight);
-                break;
+            soTarget.ApplyModifiedProperties();
         }
-
-        serializedObject.Update();
-        EditorGUILayout.PropertyField(enemyScript);
-        EditorGUILayout.PropertyField(amplitude);
-        serializedObject.ApplyModifiedProperties();
-    }*/
+    }
+    #endregion
 }
