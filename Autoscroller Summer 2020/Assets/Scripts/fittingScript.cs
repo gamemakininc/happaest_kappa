@@ -5,7 +5,7 @@ public class fittingScript : MonoBehaviour
 	//set bace values
 	public float baceMoveSpeed = 9f;
 	public float baceHealth = 100f;
-	public float baceSRegen =0.5f;
+	public float baceSRegen = 0.5f;
 	public float baceRepair;
 	public float baceShield;
 	//swap files
@@ -24,6 +24,7 @@ public class fittingScript : MonoBehaviour
 	public int power;
 	public int slotsHigh;
 	public int slotsLow;
+	public GameObject[] slotsLoc;
 
 	//the secret sauce
 	//0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun
@@ -32,16 +33,18 @@ public class fittingScript : MonoBehaviour
 	//a counter
 	private int counter = 0;
 	
-	public void Awake() 
+	public void Start() 
 	{
 		//set local array to observer array
 		fitSetup = ObserverScript.Instance.fitSetup;
 		//update values in drop handelers scripts
-		while (counter <= 12)
+		/*while (counter <= 12)
 		{
 			this.gameObject.transform.GetChild(counter).GetComponentInChildren<itemDropHandeler>().itemId = fitSetup[counter];
-			counter++;
+			counter += 1;
 		}
+		*/
+			slotsLoc[0].GetComponent<itemDropHandeler>().itemId = fitSetup[0];
 	}
 	public void SetOutputs()
 	{
