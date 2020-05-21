@@ -38,6 +38,18 @@ TextureImporter:
   - first:
       213: 21300022
     second: icons_sr2
+  - first:
+      213: -2978653956524333172
+    second: icons_hr2
+  - first:
+      213: -299690340437171572
+    second: icons_hr1
+  - first:
+      213: -1290855366162983238
+    second: icons_hr0
+  - first:
+      213: -7043791851686128366
+    second: icons_hr0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -434,10 +446,73 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: icons_hr2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c872e841202b9a6d0800000000000000
+      internalID: -2978653956524333172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_hr1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8260a3293947dbf0800000000000000
+      internalID: -299690340437171572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_hr0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215157861ac6f3e90800000000000000
+      internalID: -7043791851686128366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2fe9063086b63f649bbe2bb508249037
     internalID: 0
     vertices: []
     indices: 
