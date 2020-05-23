@@ -6,11 +6,20 @@ public class pbulletscript : MonoBehaviour
     public Rigidbody2D rb;
     public float timer;
     public int Damage;
+    public bool trackingMouse;
+    public bool trackingEnemy;
+    public Transform enemy;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * speed;
+        if (trackingMouse == false)
+        {
+            if (trackingEnemy == false)
+            {
+            rb.velocity = transform.up * speed;
+            }
+        }
     }
     private void Update() 
     {
@@ -21,6 +30,31 @@ public class pbulletscript : MonoBehaviour
         {
             //destroy game object
             GameObject.Destroy(gameObject);
+        }
+        if (trackingEnemy==true) 
+        {
+            //get object with tag
+            enemy = GameObject.FindGameObjectWithTag("enemy").GetComponent<Transform>();
+            //move??
+            Vector3 direction = enemy.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg-90f;
+            rb.rotation = angle;
+            rb.velocity = transform.up * speed;
+
+        }
+        if (trackingMouse==true) 
+        {
+            //get mouse location
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            //set angle twards mouse
+            Vector2 direction = new Vector2 (
+                mousePosition.x - transform.position.x,
+                mousePosition.y - transform.position.y
+                );
+            //go forward
+            transform.up = direction;
+            rb.velocity = transform.up * speed;
         }
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)

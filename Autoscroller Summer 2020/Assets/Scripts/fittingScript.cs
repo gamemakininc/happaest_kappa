@@ -38,22 +38,29 @@ public class fittingScript : MonoBehaviour
 		//set local array to observer array
 		fitSetup = ObserverScript.Instance.fitSetup;
 		//update values in drop handelers scripts
-		/*while (counter <= 12)
+		/*
+		while (counter <= 12)
 		{
-			this.gameObject.transform.GetChild(counter).GetComponentInChildren<itemDropHandeler>().itemId = fitSetup[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().itemId = fitSetup[counter];
 			counter += 1;
 		}
 		*/
-			slotsLoc[0].GetComponent<itemDropHandeler>().itemId = fitSetup[0];
 	}
 	public void SetOutputs()
 	{
 		//reset counter
 		counter = 0;
+		//reset variables to bace
+		health=baceHealth;
+		repair=baceRepair;
+		shield=baceShield;
+		sRegen=baceSRegen;
+		MoveSpeed=baceMoveSpeed;
+
 		//update values in drop handelers scripts
 		while (counter <= 12)
 		{
-			fitSetup[counter] = this.gameObject.transform.GetChild(counter).GetComponentInChildren<itemDropHandeler>().itemId;
+			fitSetup[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().itemId;
 			counter++;
 		}
 		//reset counter
@@ -133,15 +140,15 @@ public class fittingScript : MonoBehaviour
 		counter++;
 		//check payload
 		if (fitSetup[counter] == 1) { payload0Selector = 1; }
-		else if (fitSetup[counter] == 2) { }
-		else if (fitSetup[counter] == 3) { }
+		else if (fitSetup[counter] == 2) { payload0Selector = 2; }
+		else if (fitSetup[counter] == 3) { payload0Selector = 3; }
 		else if (fitSetup[counter] == 4) { }
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
 		counter++;
 		if (fitSetup[counter] == 1) { payload1Selector = 1; }
-		else if (fitSetup[counter] == 2) { }
-		else if (fitSetup[counter] == 3) { }
+		else if (fitSetup[counter] == 2) { payload1Selector = 2; }
+		else if (fitSetup[counter] == 3) { payload1Selector = 3; }
 		else if (fitSetup[counter] == 4) { }
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
@@ -151,10 +158,20 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 1) { bulletSelector = 1; }
 		else if (fitSetup[counter] == 2) { bulletSelector = 2; }
 		else if (fitSetup[counter] == 3) { bulletSelector = 3; }
-		else if (fitSetup[counter] == 4) { }
-		else if (fitSetup[counter] == 5) { }
-		else if (fitSetup[counter] == 6) { }
+		else if (fitSetup[counter] == 4) { bulletSelector = 4; }
+		else if (fitSetup[counter] == 5) { bulletSelector = 5; }
+		else if (fitSetup[counter] == 6) { bulletSelector = 6; }
 
+		//output to observer
+		ObserverScript.Instance.fitSetup = fitSetup;
+		ObserverScript.Instance.pSpeed = MoveSpeed;
+		ObserverScript.Instance.pRepair = repair;
+		ObserverScript.Instance.pHealth = health;
+		ObserverScript.Instance.pSRegen = sRegen;
+		ObserverScript.Instance.pShield = shield;
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.pP0 = payload0Selector;
+		ObserverScript.Instance.pP1 = payload1Selector;
 	}
 	void shildBoost() 
 	{
@@ -170,9 +187,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void healthBoost()
 	{
-		if (fitSetup[counter] == 1) { health += 20; }
-		else if (fitSetup[counter] == 2) { health += 30; }
-		else if (fitSetup[counter] == 3) { health += 50; }
+		if (fitSetup[counter] == 1) { health +=20; }
+		else if (fitSetup[counter] == 2) { health +=25; }
+		else if (fitSetup[counter] == 3) { health +=50; }
 	}
 	void healthRegen()
 	{

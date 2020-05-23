@@ -65,4 +65,8 @@ public class sceneManager : MonoBehaviour
 		//set new scene
 		SceneManager.LoadScene("SampleScene");
 	}
+	public void testMenu() 
+	{
+		SceneManager.LoadScene("test menu");
+	}
 }
