@@ -25,6 +25,10 @@ public class enemyscript : MonoBehaviour
     public states currentState;
     public float speed = 1;
 
+    [HideInInspector]
+    public int currentTab;
+    public string currentField;
+
     [Header("Wavy Attributes")]
     public float amplitude = 1;
     public float period = 0.3f;
