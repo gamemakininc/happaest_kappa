@@ -19,14 +19,17 @@ public class enemyscript : MonoBehaviour
     {
         straight, 
         wavy, 
-        slide
+        slide,
+        kamikaze
     }
 
     public states currentState;
     public float speed = 1;
+    public float waitTime = 3.0f; //Delay for behaviours triggering
 
     [HideInInspector]
     public int currentTab;
+    [HideInInspector]
     public string currentField;
 
     [Header("Wavy Attributes")]
@@ -38,10 +41,8 @@ public class enemyscript : MonoBehaviour
     private float newY;
 
     [Header("Slide Attributes")]
-    public float waitTime = 3.0f;
     public float slideTime = 2.0f;
     public bool moveRight;
-
 
     //handel for bullet script
     public void TakeDamage(int damage) 
@@ -73,11 +74,19 @@ public class enemyscript : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, -speed);
                 break;
             case states.wavy:
-                newY = transform.position.y - yChange;
-                newX = amplitude * Mathf.Sin(period * newY) + shift;
-                Vector2 tempPosition = new Vector2(newX, transform.position.y);
-                transform.position = tempPosition;
-                rb.velocity = new Vector2(rb.velocity.x, -speed);
+                if (waitTime > 0)
+                {
+                    waitTime -= Time.deltaTime;
+                    rb.velocity = new Vector2(0, -speed);
+                }
+                else
+                {
+                    newY = transform.position.y - yChange;
+                    newX = amplitude * Mathf.Sin(period * newY) + shift;
+                    Vector2 tempPosition = new Vector2(newX, transform.position.y);
+                    transform.position = tempPosition;
+                    rb.velocity = new Vector2(rb.velocity.x, -speed);
+                }
                 break;
             case states.slide:
                 if(waitTime > 0)
@@ -101,6 +110,8 @@ public class enemyscript : MonoBehaviour
                     }
                 }
                 break;
+            case states.kamikaze:
+
             default:
                 break;
         }
