@@ -1,59 +1,56 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler
 {
-    public enum Slot { HIGH, LOW, PAYLOAD, GUN };
+    //resource check
+    public float pgCost;
+    public float wgCost;
+    //disc variables
+    public GameObject nameBox;
+    public GameObject descbox;
+    public string itemName;
+    public string itemDescription;
+    //slot type variables
+    public enum Slot { HIGH, LOW, PAYLOAD, GUN, SHIP };
     public Slot typeOfItem = Slot.HIGH;
-
+    //needed for reset
     Vector3 startPosition;
+    //used to determine item
     public int itemID;
+    //??
     private CanvasGroup canvasGroup;
+
     public void OnDrag(PointerEventData eventData)
     {
+        //pickup script
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         canvasGroup.blocksRaycasts = false;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        //return on drop
         transform.position = startPosition;
         canvasGroup.blocksRaycasts = true;
-
-        /*
-         for (int i = 0; i < eventData.hovered.Count; i++)
-        {
-            if ((eventData.hovered[i].gameObject.tag == "InventorySlots" || eventData.hovered[i].gameObject.tag == "AttackSlots") && eventData.hovered[i].gameObject.transform.childCount == 0)
-            {
-                transform.SetParent(eventData.hovered[i].gameObject.transform);
-                transform.position = eventData.hovered[i].gameObject.transform.position;
-                GetComponent<CanvasGroup>().blocksRaycasts = true;
-                if (eventData.hovered[i].gameObject.name == "ElementSlot")
-                {
-                    transform.localScale = eventData.hovered[i].gameObject.transform.localScale * 4.5f;
-                } 
-                else
-                {
-                    transform.localScale = eventData.hovered[i].gameObject.transform.localScale * 1.3f;
-                }
-                return;
-            }
-        }
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
-        transform.position = startPosition;
-         */
     }
     
     private void OnMouseDown() 
     {
+        //set tooltip text boxes to current item info
+        nameBox.GetComponent<Text>().text = itemName;
+        descbox.GetComponent<Text>().text = itemDescription;
+        //set reset point
         startPosition = transform.position;
     }
     private void OnMouseUp()
     {
+        //return to reset point
         transform.position = startPosition;
     }
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +60,5 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

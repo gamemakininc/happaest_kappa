@@ -62,7 +62,18 @@ public class enemyscript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        //check if player/get player script
+        PlayerScript player = hitInfo.GetComponent<PlayerScript>();
+        if (player != null)
+        {
+            //damage player
+            player.TakeDamage(health);
+            //remove enemy
+            Destroy(gameObject);
+        }
+    }
 
     void FixedUpdate()
     {

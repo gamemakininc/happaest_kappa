@@ -11,7 +11,7 @@ public class ObserverScript : MonoBehaviour
     public float pShield;
     public float pSRegen;
     public float pRepair;
-
+    public int mslBonus;
     //save for player payload slot0-1
     public int pP0;
     public int pP1;

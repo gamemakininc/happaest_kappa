@@ -4,7 +4,7 @@
 [RequireComponent(typeof(Animator))]
 public class PlayerScript : MonoBehaviour
 {
-    //idk
+    //idK
     Vector2 movement;
     //set health (for gameplay)
     public int maxHealth;
@@ -25,8 +25,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject[] BulletPrefabs;
     public GameObject[] MissilePrefabs;
     public int bulletSelector;
+    public int mslBonus;
     //set speed
-    public float MoveSpeed;
+    public float MoveSpeed = 6;
     public float forwardSpeed = 0.7f;
     //set player model
     public Rigidbody2D rb;
@@ -51,6 +52,7 @@ public class PlayerScript : MonoBehaviour
         bulletSelector = ObserverScript.Instance.pBulletSelector -1;
         payload0Selector = ObserverScript.Instance.pP0-1;
         payload1Selector = ObserverScript.Instance.pP1-1;
+        mslBonus = ObserverScript.Instance.mslBonus;
         //??
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -63,15 +65,18 @@ public class PlayerScript : MonoBehaviour
             MoveSpeed = 9f;
         }
         //set launcher ammo baced on selectors
-        if (payload0Selector == 0){ payload0Ammo = 20; }
-        else if (payload0Selector == 1) { payload0Ammo = 15; }
-        else if (payload0Selector == 2) { payload0Ammo = 10; }
-        if (payload1Selector == 0) { payload0Ammo = 20;}
-        else if (payload1Selector == 1) { payload1Ammo = 15; }
-        else if (payload1Selector == 2) { payload1Ammo = 10; }
+        if (payload0Selector == 0){ payload0Ammo = 20 + mslBonus; }
+        else if (payload0Selector == 1) { payload0Ammo = 15 + mslBonus; }
+        else if (payload0Selector == 2) { payload0Ammo = 10 + mslBonus; }
+        if (payload1Selector == 0) { payload0Ammo = 20 + mslBonus; }
+        else if (payload1Selector == 1) { payload1Ammo = 15 + mslBonus; }
+        else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
         //fire rate augments
         if (bulletSelector == 2) { nextFire += 0.25f; }
         else if (bulletSelector == 0) { nextFire -= 0.15f; }
+        //check for payloadexpanders
+
+
         //load audio
         audioSource = GetComponent<AudioSource>();
     }
