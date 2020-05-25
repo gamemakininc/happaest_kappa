@@ -17,7 +17,7 @@ public class mainMenu : MonoBehaviour
     public GameObject[] menuParents;
     //0main 1load 2settings 3info one
     private bool[] menucurrent = new bool [] { false, false, false, false };
-    public float menuSpeed = 9f;
+    private float menuSpeed = 9f;
     private Rigidbody2D rbswap;
     private Rigidbody2D rbswap2;
     public bool inpoint = false;
@@ -43,8 +43,12 @@ public class mainMenu : MonoBehaviour
             //move menu into frame
             rbswap.velocity = new Vector2(rbswap.velocity.x, -menuSpeed);
             //when in point stop
-            if (Vector2.Distance(rbswap.transform.position, menuPoints[swapint1].position) < 0.5f)
-            { inpoint = false; menucurrent[swapint1] = true; }
+            if (Vector2.Distance(rbswap.transform.position, menuPoints[2].position) < 1)
+            { 
+                inpoint = false; 
+                menucurrent[swapint1] = true;
+                rbswap.velocity = new Vector2(rbswap.velocity.x, 0);
+            }
         }
 
         if (outpoint == true)
@@ -52,8 +56,12 @@ public class mainMenu : MonoBehaviour
             //move menu out of frame
             rbswap2.velocity = new Vector2(rbswap2.velocity.x, -menuSpeed);
             //when out of frame stop
-            if (Vector2.Distance(rbswap2.transform.position, menuPoints[swapint2].position) < 0.5f)
-            { outpoint = false; menucurrent[swapint2] = false; }
+            if (Vector2.Distance(rbswap2.transform.position, menuPoints[0].position) < 1f)
+            { 
+                outpoint = false;
+                menucurrent[swapint2] = false;
+                rbswap2.velocity = new Vector2(rbswap2.velocity.x, 0);
+            }
         }
     }
     public void mainmenu()

@@ -25,10 +25,6 @@ public class enemyscript : MonoBehaviour
     public states currentState;
     public float speed = 1;
 
-    [HideInInspector]
-    public int currentTab;
-    public string currentField;
-
     [Header("Wavy Attributes")]
     public float amplitude = 1;
     public float period = 0.3f;
@@ -61,8 +57,19 @@ public class enemyscript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
 
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        //check if player/get player script
+        PlayerScript player = hitInfo.GetComponent<PlayerScript>();
+        if (player != null)
+        {
+            //damage player
+            player.TakeDamage(health);
+            //remove enemy
+            Destroy(gameObject);
+        }
+    }
     void FixedUpdate()
     {
         //Check method of movement
