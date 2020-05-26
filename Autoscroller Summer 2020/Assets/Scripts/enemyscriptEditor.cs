@@ -23,6 +23,8 @@ public class enemyScriptEditor : Editor
     private SerializedProperty slideTime;
     private SerializedProperty moveRight;
 
+    private SerializedProperty maxRadians;
+
     private void OnEnable()
     {
         myTarget = (enemyscript)target;
@@ -38,6 +40,7 @@ public class enemyScriptEditor : Editor
         waitTime = soTarget.FindProperty("waitTime");
         slideTime = soTarget.FindProperty("slideTime");
         moveRight = soTarget.FindProperty("moveRight");
+        maxRadians = soTarget.FindProperty("maxRadians");
     }
 
     public override void OnInspectorGUI()
@@ -52,18 +55,28 @@ public class enemyScriptEditor : Editor
         EditorGUILayout.PropertyField(health);
         EditorGUILayout.PropertyField(deathEffect);
         EditorGUILayout.PropertyField(speed);
+        EditorGUILayout.PropertyField(waitTime);
 
-        myTarget.currentTab = GUILayout.Toolbar(myTarget.currentTab, new string[] { "Straight", "Wavy", "Slide" });
+        myTarget.currentTab = GUILayout.Toolbar(myTarget.currentTab, new string[] { "Straight", "Wavy", "Slide", "Kamikaze" });
         switch (myTarget.currentTab)
         {
             case 0:
                 myTarget.currentField = "Straight";
+                myTarget.currentState = enemyscript.states.straight;
                 break;
             case 1:
                 myTarget.currentField = "Wavy";
+                myTarget.currentState = enemyscript.states.wavy;
                 break;
             case 2:
                 myTarget.currentField = "Slide";
+                myTarget.currentState = enemyscript.states.slide;
+                break;
+            case 3:
+                myTarget.currentField = "Kamikaze";
+                myTarget.currentState = enemyscript.states.kamikaze;
+                break;
+            default:
                 break;
         }
 
@@ -84,9 +97,13 @@ public class enemyScriptEditor : Editor
                 EditorGUILayout.PropertyField(yChange);
                 break;
             case "Slide":
-                EditorGUILayout.PropertyField(waitTime);
                 EditorGUILayout.PropertyField(slideTime);
                 EditorGUILayout.PropertyField(moveRight);
+                break;
+            case "Kamikaze":
+                EditorGUILayout.PropertyField(maxRadians);
+                break;
+            default:
                 break;
         }
 
