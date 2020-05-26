@@ -4,69 +4,60 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    //require wave count, wave name, wave time, spawned enemy & location, delay for each enemy, level clear func
-
-    [System.Serializable]
-    public class Enemy
-    {
-        public GameObject enemy;
-        public Vector3 spawnLocation;
-        public float enemyDelay; //Use this to delay entrance per enemy
-    }
     [System.Serializable]
     public class Wave
     {
         public string name;
         public float waveDelay; //Use this to set when wave spawns
-        public Enemy[] enemies;
+        public int count = 3;
+        public float enemyDelay = 1.0f; //Delay between enemies spawning
+        public GameObject enemy;
+        public Transform spawnTransform;
+        [Tooltip("For when Spawn Transform is empty")]
+        public Vector3 spawnLocation;
     }
 
-    public GameObject parent;
     public Wave[] waves;
     private float waveCountdown;
-    private int currentWave;
+    //private int currentWave;
 
     private void Start()
     {
-        Debug.Log(waves.Length);
+        Debug.Log("There are " + waves.Length + " waves");
         foreach (Wave wave in waves)
         {
             wave.name = "Wave " + System.Array.IndexOf(waves, wave);
         }
 
-        waveCountdown = waves[0].waveDelay;
-        Invoke("SpawnWave", waveCountdown);
+        foreach(Wave wave in waves)
+        {
+            StartCoroutine(SpawnWave(wave));
+        }
     }
 
-    private void SpawnWave()
+    IEnumerator SpawnWave(Wave _wave)
     {
-        Debug.Log("Spawning wave " + currentWave);
-        Enemy[] _enemies = waves[currentWave].enemies;
+        float _enemyDelay = _wave.enemyDelay;
+        Vector3 _spawnLocation = _wave.spawnTransform != null ? _wave.spawnTransform.position : _wave.spawnLocation;
 
-        for(int i = 0; i < _enemies.Length; i++)
+        yield return new WaitForSeconds(_wave.waveDelay);
+        Debug.Log("Spawning Wave: " + _wave.name);
+        for(int i = 0; i < _wave.count; i++)
         {
-            while (_enemies[i].enemyDelay > 0)
-            {
-                _enemies[i].enemyDelay -= Time.deltaTime;
-            }
-            //Debug.Log("Spawning Enemy");
-            Instantiate(_enemies[i].enemy, _enemies[i].spawnLocation, parent.transform.rotation, parent.transform);
+            Instantiate(_wave.enemy, _spawnLocation, Quaternion.Euler(0, 0, 90));
+            yield return new WaitForSeconds(_wave.enemyDelay);
         }
-
-        currentWave++;
-        //Debug.Log(currentWave);
-        if (currentWave > waves.Length - 1)
-        {
-
-        }
-        else
-        {
-            Invoke("SpawnWave", waves[currentWave].waveDelay);
-        }
+        
+        yield return null;
     }
 
     private void OnLevelClear()
     {
 
+    }
+
+    private void OnGUI()
+    {
+        
     }
 }
