@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class itemDropHandeler : MonoBehaviour, IDropHandler
 {
+    public bool isGun;
     public GameObject player;
     private float pgAvalible;
     private float wgAvalible;
@@ -30,7 +31,7 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
         {
             if (typeOfItem == d.typeOfItem)
             {
-                if (pgAvalible >= pgCost && wgAvalible >= wgCost)
+                if (pgCost <= pgAvalible && wgCost <= wgAvalible)
                 {
                     itemId = eventData.pointerDrag.GetComponent<ItemDragHandler>().itemID;
                     otherSprite = eventData.pointerDrag.GetComponent<SpriteRenderer>().sprite;
@@ -46,8 +47,13 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
     }
     public void reset()
     {
-        itemId = 0;
-        spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
+        if (isGun == false)
+        {
+            itemId = 0;
+            wgCost = 0;
+            pgCost = 0;
+        }
+            spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
         if (slotNull == true)
         {
             //dissable sprite renderers
@@ -81,5 +87,9 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
         {
             reset();
         }
+    }
+    public void updateSprite()
+    {
+        spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
     }
 }

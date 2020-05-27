@@ -8,6 +8,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
     public float pgCost;
     public float wgCost;
     //disc variables
+    public GameObject costBox;
     public GameObject nameBox;
     public GameObject descbox;
     public string itemName;
@@ -40,11 +41,14 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
     
     private void OnMouseDown() 
     {
+        //set reset point
+        startPosition = transform.position;
         //set tooltip text boxes to current item info
         nameBox.GetComponent<Text>().text = itemName;
         descbox.GetComponent<Text>().text = itemDescription;
+        costBox.GetComponent<Text>().text = ("power drain:" + pgCost + "    weaght:" + wgCost);
         //set reset point
-        startPosition = transform.position;
+        startPosition = this.gameObject.transform.position;
     }
     private void OnMouseUp()
     {

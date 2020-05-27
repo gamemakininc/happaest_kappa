@@ -40,8 +40,10 @@ public class sceneManager : MonoBehaviour
 		//set new scene
 		SceneManager.LoadScene("Combat");
 	}
-	public void SampleScene() 
+	public void SampleScene()
 	{
+		//set new scene
+		SceneManager.LoadScene("SampleScene");
 		//set local varibles from fitting
 		pBulletSelector = GameObject.Find("Player").GetComponent<fittingScript>().bulletSelector;
 		pSpeed = GameObject.Find("Player").GetComponent<fittingScript>().MoveSpeed;
@@ -62,11 +64,14 @@ public class sceneManager : MonoBehaviour
 		ObserverScript.Instance.fitSetup = pFitSetup;
 		ObserverScript.Instance.pP0 = pPl0;
 		ObserverScript.Instance.pP1 = pPl1;
-		//set new scene
-		SceneManager.LoadScene("SampleScene");
+		
 	}
 	public void testMenu() 
 	{
-		SceneManager.LoadScene("test menu");
+		SceneManager.LoadScene("fittingMenu");
+	}
+	public void mainMenu() 
+	{
+		SceneManager.LoadScene("mainMenu");
 	}
 }

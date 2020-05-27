@@ -19,18 +19,11 @@ public class enemyscript : MonoBehaviour
     {
         straight, 
         wavy, 
-        slide,
-        kamikaze
+        slide
     }
 
     public states currentState;
     public float speed = 1;
-    public float waitTime = 3.0f; //Delay for behaviours triggering
-
-    [HideInInspector]
-    public int currentTab;
-    [HideInInspector]
-    public string currentField;
 
     [Header("Wavy Attributes")]
     public float amplitude = 1;
@@ -41,12 +34,10 @@ public class enemyscript : MonoBehaviour
     private float newY;
 
     [Header("Slide Attributes")]
+    public float waitTime = 3.0f;
     public float slideTime = 2.0f;
     public bool moveRight;
 
-    [Header("Kamikaze Attributes")]
-    private bool isTargeting = true;
-    public float maxRadians = 1.0f;
 
     //handel for bullet script
     public void TakeDamage(int damage) 
@@ -66,6 +57,7 @@ public class enemyscript : MonoBehaviour
         Destroy(gameObject);
     }
 
+
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         //check if player/get player script
@@ -78,7 +70,6 @@ public class enemyscript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     void FixedUpdate()
     {
         //Check method of movement
@@ -86,28 +77,20 @@ public class enemyscript : MonoBehaviour
         switch (currentState)
         {
             case states.straight:
-                rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                rb.velocity = new Vector2(rb.velocity.x, -speed);
                 break;
             case states.wavy:
-                if (waitTime > Mathf.Infinity)
-                {
-                    waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
-                }
-                else
-                {
-                    newY = amplitude * Mathf.Sin(period * newY) + shift;
-                    newX = transform.position.y - yChange; 
-                    Vector2 tempPosition = new Vector2(transform.position.x, newY);
-                    transform.position = tempPosition;
-                    rb.velocity = transform.TransformDirection(new Vector2(rb.velocity.x, speed));
-                }
+                newY = transform.position.y - yChange;
+                newX = amplitude * Mathf.Sin(period * newY) + shift;
+                Vector2 tempPosition = new Vector2(newX, transform.position.y);
+                transform.position = tempPosition;
+                rb.velocity = new Vector2(rb.velocity.x, -speed);
                 break;
             case states.slide:
                 if(waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                    rb.velocity = new Vector2(0, -speed);
                 }
                 else
                 {
@@ -115,44 +98,19 @@ public class enemyscript : MonoBehaviour
                     {
                         waitTime -= Time.deltaTime;
                         if(moveRight)
-                            rb.velocity = transform.TransformDirection(new Vector2(speed * 1.5f, speed));
+                            rb.velocity = new Vector2(speed * 1.5f, -speed);
                         else
-                            rb.velocity = transform.TransformDirection(new Vector2(-speed * 1.5f, speed));
+                            rb.velocity = new Vector2(-speed * 1.5f, -speed);
                     }
                     else
                     {
-                        rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                        rb.velocity = new Vector2(0, -speed);
                     }
-                }
-                break;
-            case states.kamikaze:
-                if (waitTime > 0)
-                {
-                    waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
-                }
-                else if(isTargeting)
-                {
-                    rb.velocity = new Vector2(0, 0);
-                    Kamikaze();
-                    isTargeting = false;
                 }
                 break;
             default:
                 break;
         }
         #endregion
-    }
-
-    void Kamikaze()
-    {
-        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-        Vector3 targetDirection = (playerPos - transform.position).normalized;
-        //Vector3 newDirection = Vector3.RotateTowards(transform.up, targetDirection, maxRadians, 0.0f);
-        //float angleDif = Vector3.Angle(transform.up, newDirection);
-        Vector3 direction = playerPos - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
-        rb.velocity = targetDirection;
     }
 }

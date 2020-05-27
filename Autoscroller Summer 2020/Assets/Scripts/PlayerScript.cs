@@ -15,7 +15,11 @@ public class PlayerScript : MonoBehaviour
     public float shield;
     public float sRegen = .5f;
     //set death sprite
+    public int deathEffectSelector;
     public GameObject deathEffect;
+    //set player sprite
+    public int viewModelSelector;
+    public GameObject viewmodel;
     //build bullet 
     public int payload0Selector;
     public int payload1Selector;
@@ -24,7 +28,7 @@ public class PlayerScript : MonoBehaviour
     public Transform[] wPorts;
     public GameObject[] BulletPrefabs;
     public GameObject[] MissilePrefabs;
-    public int bulletSelector;
+    public int bulletSelector=1;
     public int mslBonus;
     //set speed
     public float MoveSpeed = 6;
@@ -42,27 +46,28 @@ public class PlayerScript : MonoBehaviour
     public AudioClip[] sounds;
     public AudioSource audioSource;
     private void Start()
-    {
+    { 
         //set variables from observer
         shield = ObserverScript.Instance.pShield;
         sRegen = ObserverScript.Instance.pSRegen;
         health = ObserverScript.Instance.pHealth;
         repair = ObserverScript.Instance.pRepair;
         MoveSpeed = ObserverScript.Instance.pSpeed;
-        bulletSelector = ObserverScript.Instance.pBulletSelector -1;
-        payload0Selector = ObserverScript.Instance.pP0-1;
-        payload1Selector = ObserverScript.Instance.pP1-1;
+        bulletSelector = ObserverScript.Instance.pBulletSelector - 1;
+        payload0Selector = ObserverScript.Instance.pP0 - 1;
+        payload1Selector = ObserverScript.Instance.pP1 - 1;
         mslBonus = ObserverScript.Instance.mslBonus;
         //??
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //if variables could not be imported set bace values
         if (health == 0)
         {
             health = 100;
         }
         if (MoveSpeed == 0f) 
         {
-            MoveSpeed = 9f;
+            MoveSpeed = 6f;
         }
         //set launcher ammo baced on selectors
         if (payload0Selector == 0){ payload0Ammo = 20 + mslBonus; }
@@ -79,6 +84,7 @@ public class PlayerScript : MonoBehaviour
 
         //load audio
         audioSource = GetComponent<AudioSource>();
+       
     }
 
     //Update called once per frame

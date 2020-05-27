@@ -30,10 +30,18 @@ public class fittingScript : MonoBehaviour
 	//misc swap files
 	public int inputLoc;
 	public GameObject[] slotsLoc;
+	//output variables
+	public GameObject healthOutput;
+	public GameObject regenOutput;
+	public GameObject p0AmmoOutput;
+	public GameObject p1AmmoOutput;
 	public Image PGbar;
 	public Image WGbar;
 	public GameObject pgText;
 	public GameObject wgText;
+	public GameObject speedInfo;
+	public float p0ammocount;
+	public float p1ammocount;
 
 	//the secret sauce
 	//0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun , 13 ship
@@ -76,6 +84,8 @@ public class fittingScript : MonoBehaviour
 		//reset counter
 		counter = 0;
 		//reset variables to bace
+		p0ammocount = 0;
+		p1ammocount = 0;
 		power = maxPG;
 		Weight = maxWG;
 		health=baceHealth;
@@ -160,9 +170,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; }
+		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
+		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
+		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
 		counter++;
 		if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
@@ -173,9 +183,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; }
+		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
+		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
+		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
 		counter++;
 		if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
@@ -186,9 +196,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; }
+		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
+		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
+		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
 		counter++;
 		if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
@@ -199,9 +209,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; }
+		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
+		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
+		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
 		counter++;
 		if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
@@ -212,21 +222,21 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; }
+		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
+		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
+		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
 		counter++;
 		//check payload
-		if (fitSetup[counter] == 1) { payload0Selector = 1; }
-		else if (fitSetup[counter] == 2) { payload0Selector = 2; }
-		else if (fitSetup[counter] == 3) { payload0Selector = 3; }
+		if (fitSetup[counter] == 1) { payload0Selector = 1; p0ammocount += 20; }
+		else if (fitSetup[counter] == 2) { payload0Selector = 2; p0ammocount += 15; }
+		else if (fitSetup[counter] == 3) { payload0Selector = 3; p0ammocount += 10; }
 		else if (fitSetup[counter] == 4) { }
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
 		counter++;
-		if (fitSetup[counter] == 1) { payload1Selector = 1; }
-		else if (fitSetup[counter] == 2) { payload1Selector = 2; }
-		else if (fitSetup[counter] == 3) { payload1Selector = 3; }
+		if (fitSetup[counter] == 1) { payload1Selector = 1; p0ammocount += 20; }
+		else if (fitSetup[counter] == 2) { payload1Selector = 2; p0ammocount += 15; }
+		else if (fitSetup[counter] == 3) { payload1Selector = 3; p0ammocount += 10; }
 		else if (fitSetup[counter] == 4) { }
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
@@ -245,8 +255,14 @@ public class fittingScript : MonoBehaviour
 		PGbar.fillAmount = pgfill;
 		float wgfill = Weight / maxWG;
 		WGbar.fillAmount = wgfill;
-		wgText.GetComponent<Text>().text =(maxWG + " / " + Weight);
-		pgText.GetComponent<Text>().text =(maxPG + " / " + power);
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		p0AmmoOutput.GetComponent<Text>().text = (p0ammocount + "/"+ p0ammocount);
+		p1AmmoOutput.GetComponent<Text>().text = (p1ammocount + "/"+ p1ammocount);
+		healthOutput.GetComponent<Text>().text = ("hull:"+health + "  rep rate:" + repair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + shield +" boost rate:"+sRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:"+MoveSpeed);
+
 
 		//output to observer
 		ObserverScript.Instance.fitSetup = fitSetup;
@@ -298,7 +314,7 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipOne() 
 	{
-		slotsfake[0] = false;
+		slotsfake[0] = true;
 		slotsfake[1] = true;
 		slotsfake[2] = true;
 		slotsfake[3] = true;
@@ -318,19 +334,74 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
 			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
 			counter++;
-			Debug.Log(counter);
 		}
 		//set bace values
 		bulletSelector = 1;
 		baceMoveSpeed = 6f;
-		baceHealth = 99f;
+		baceHealth = 100f;
 		baceSRegen = 0.4f;
-		baceRepair = 1;
-		baceShield = 1;
+		baceRepair = 0;
+		baceShield = 0;
 		maxPG = 15 ;
-		maxWG = 15 ;
+		maxWG = 13 ;
 		power = maxPG;
 		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		//push gun selection and set sprite
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
+	}
+	void shipTwo() 
+	{
+		slotsfake[0] = false;
+		slotsfake[1] = true;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
+		slotsfake[10] = false;
+		slotsfake[11] = true;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 4;
+		baceMoveSpeed = 6f;
+		baceHealth = 100f;
+		baceSRegen = 0.4f;
+		baceRepair = 0;
+		baceShield = 0;
+		maxPG = 20;
+		maxWG = 24;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		//push gun selection and set sprite
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
 		PGbar.fillAmount = pgfill;
@@ -338,26 +409,207 @@ public class fittingScript : MonoBehaviour
 		WGbar.fillAmount = wgfill;
 		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
 		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
-	}
-	void shipTwo() 
-	{
-
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 	void shipThree()
 	{
+		slotsfake[0] = false;
+		slotsfake[1] = false;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
+		slotsfake[10] = false;
+		slotsfake[11] = true;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 2;
+		baceMoveSpeed = 6f;
+		baceHealth = 99f;
+		baceSRegen = 0.4f;
+		baceRepair = 0;
+		baceShield = 0;
+		maxPG = 30;
+		maxWG = 35;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 	void shipFour()
 	{
+		slotsfake[0] = false;
+		slotsfake[1] = false;
+		slotsfake[2] = false;
+		slotsfake[3] = false;
+		slotsfake[4] = false;
+		slotsfake[5] = true;
+		slotsfake[6] = true;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
+		slotsfake[10] = false;
+		slotsfake[11] = true;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 5;
+		baceMoveSpeed = 6f;
+		baceHealth = 50f;
+		baceSRegen = 2f;
+		baceRepair = 0;
+		baceShield = 100;
+		maxPG = 40;
+		maxWG = 45;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		//push gun selection and set sprite
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 	void shipFive()
 	{
+		slotsfake[0] = false;
+		slotsfake[1] = true;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = false;
+		slotsfake[8] = false;
+		slotsfake[9] = false;
+		slotsfake[10] = false;
+		slotsfake[11] = false;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 3;
+		baceMoveSpeed = 6f;
+		baceHealth = 100f;
+		baceSRegen = 0.4f;
+		baceRepair = 0;
+		baceShield = 20;
+		maxPG = 50;
+		maxWG = 55;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		//push gun selection and set sprite
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 	void shipSix()
 	{
+		slotsfake[0] = false;
+		slotsfake[1] = false;
+		slotsfake[2] = false;
+		slotsfake[3] = false;
+		slotsfake[4] = false;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = false;
+		slotsfake[8] = false;
+		slotsfake[9] = false;
+		slotsfake[10] = false;
+		slotsfake[11] = false;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 6;
+		baceMoveSpeed = 7f;
+		baceHealth = 120f;
+		baceSRegen = 0.4f;
+		baceRepair = 0;
+		baceShield = 40;
+		maxPG = 60;
+		maxWG = 65;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		//push gun selection and set sprite
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 
 	public void Update() 
