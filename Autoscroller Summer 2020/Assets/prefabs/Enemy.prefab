@@ -48,7 +48,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -68,17 +68,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
-  currentState: 1
+  currentState: 0
   speed: 1
+  waitTime: 3
   currentTab: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
   shift: -5
   yChange: 0.0005
-  waitTime: 3
   slideTime: 2
   moveRight: 1
+  maxRadians: 1
 --- !u!212 &89656381989647452
 SpriteRenderer:
   m_ObjectHideFlags: 0
