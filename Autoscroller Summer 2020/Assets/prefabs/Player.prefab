@@ -220,6 +220,9 @@ MonoBehaviour:
   - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   - {fileID: 1746794936843668, guid: b607ecbd9fbbbec4ca67d786dc8591d5, type: 3}
   - {fileID: 1066663896368714, guid: de5342e76313b5341983a5faa95fa45e, type: 3}
+  - {fileID: 5004865427797476403, guid: 452575d293c35cb41a1065556bb7534e, type: 3}
+  - {fileID: 1413859337944824288, guid: 25c9b36fba93b644d8f61677c6a2081a, type: 3}
+  - {fileID: 4394215675179221156, guid: ba6e1b7d46e8e7c49851bdeed855406b, type: 3}
   MissilePrefabs:
   - {fileID: 1168608532995092, guid: 89ad803d146842d4e8e882ee16dbb009, type: 3}
   - {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419, type: 3}
@@ -235,6 +238,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
   - {fileID: 8300000, guid: ef6d559e2098a3f4b9fb08e36caabba3, type: 3}
   - {fileID: 8300000, guid: d321bacbd9d4a5346b500793680afc9a, type: 3}
+  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
   audioSource: {fileID: 8713131757439341107}
 --- !u!82 &8713131757439341107
 AudioSource:
