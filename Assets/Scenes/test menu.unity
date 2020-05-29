@@ -530,8 +530,8 @@ MonoBehaviour:
   costBox: {fileID: 0}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship6
-  itemDescription: ship6
+  itemName: triton
+  itemDescription: a heavy fighter with a modifyed plasma bomb launcher
   typeOfItem: 4
   itemIdentifyer: 31
   itemID: 6

@@ -54,6 +54,27 @@ public class fittingScript : MonoBehaviour
 	
 	public void Start()
 	{
+		slotsfake[0] = true;
+		slotsfake[1] = true;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
+		slotsfake[5] = true;
+		slotsfake[6] = true;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
+		slotsfake[10] = true;
+		slotsfake[11] = true;
+		slotsfake[12] = true;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
 		PGbar.fillAmount = pgfill;
@@ -410,8 +431,8 @@ public class fittingScript : MonoBehaviour
 		baceSRegen = 0.4f;
 		baceRepair = 0;
 		baceShield = 0;
-		maxPG = 20;
-		maxWG = 24;
+		maxPG = 15;
+		maxWG = 14;
 		power = maxPG;
 		Weight = maxWG;
 		fitSetup[12] = bulletSelector;
@@ -431,6 +452,54 @@ public class fittingScript : MonoBehaviour
 		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
 	void shipThree()
+	{
+		slotsfake[0] = false;
+		slotsfake[1] = true;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
+		slotsfake[10] = false;
+		slotsfake[11] = true;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 2;
+		baceMoveSpeed = 6f;
+		baceHealth = 99f;
+		baceSRegen = 0.4f;
+		baceRepair = 0;
+		baceShield = 0;
+		maxPG = 24;
+		maxWG = 20;
+		power = maxPG;
+		Weight = maxWG;
+		fitSetup[12] = bulletSelector;
+		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+
+		//update PG/WG ui elements
+		float pgfill = power / maxPG;
+		PGbar.fillAmount = pgfill;
+		float wgfill = Weight / maxWG;
+		WGbar.fillAmount = wgfill;
+		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
+		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
+		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
+	}
+	void shipFour()
 	{
 		slotsfake[0] = false;
 		slotsfake[1] = false;
@@ -454,62 +523,14 @@ public class fittingScript : MonoBehaviour
 			counter++;
 		}
 		//set bace values
-		bulletSelector = 2;
-		baceMoveSpeed = 6f;
-		baceHealth = 99f;
-		baceSRegen = 0.4f;
-		baceRepair = 0;
-		baceShield = 0;
-		maxPG = 30;
-		maxWG = 35;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-
-		//update PG/WG ui elements
-		float pgfill = power / maxPG;
-		PGbar.fillAmount = pgfill;
-		float wgfill = Weight / maxWG;
-		WGbar.fillAmount = wgfill;
-		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
-		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
-		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
-		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
-		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
-	}
-	void shipFour()
-	{
-		slotsfake[0] = false;
-		slotsfake[1] = false;
-		slotsfake[2] = false;
-		slotsfake[3] = true;
-		slotsfake[4] = true;
-		slotsfake[5] = false;
-		slotsfake[6] = false;
-		slotsfake[7] = true;
-		slotsfake[8] = true;
-		slotsfake[9] = true;
-		slotsfake[10] = false;
-		slotsfake[11] = true;
-		slotsfake[12] = false;
-		counter = 0;
-		//update slots and clear fitted items
-		while (counter <= 12)
-		{
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
-			counter++;
-		}
-		//set bace values
 		bulletSelector = 5;
 		baceMoveSpeed = 6f;
 		baceHealth = 50f;
 		baceSRegen = 2f;
 		baceRepair = 0;
 		baceShield = 100;
-		maxPG = 40;
-		maxWG = 45;
+		maxPG = 20;
+		maxWG = 24;
 		power = maxPG;
 		Weight = maxWG;
 		fitSetup[12] = bulletSelector;
@@ -558,8 +579,8 @@ public class fittingScript : MonoBehaviour
 		baceSRegen = 0.4f;
 		baceRepair = 0;
 		baceShield = 20;
-		maxPG = 50;
-		maxWG = 55;
+		maxPG = 40;
+		maxWG = 45;
 		power = maxPG;
 		Weight = maxWG;
 		fitSetup[12] = bulletSelector;
@@ -608,8 +629,8 @@ public class fittingScript : MonoBehaviour
 		baceSRegen = 0.4f;
 		baceRepair = 0;
 		baceShield = 40;
-		maxPG = 60;
-		maxWG = 65;
+		maxPG = 45;
+		maxWG = 40;
 		power = maxPG;
 		Weight = maxWG;
 		fitSetup[12] = bulletSelector;
