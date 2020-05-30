@@ -206,13 +206,16 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   currentState: 2
   speed: 1
+  waitTime: 3
+  currentTab: 0
+  currentField: 
   amplitude: 1
   period: 1.5
   shift: -5
   yChange: 0.0005
-  waitTime: 3
   slideTime: 2
   moveRight: 1
+  maxRadians: 1
 --- !u!50 &39689550
 Rigidbody2D:
   serializedVersion: 4
@@ -810,6 +813,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 60461503416886586, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60461503416886586, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95763696456690150, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5a012f544de4b8f439ca42f6ad30e537, type: 2}
     - target: {fileID: 114747760686312880, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
         type: 3}
       propertyPath: animator
@@ -1023,6 +1053,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2069556617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1246358362003326, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750483660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &2069556618
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069556617}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!95 &2137245170 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95763696456690150, guid: 639ff02e5ad1f2e47bc35b63611d38e2,

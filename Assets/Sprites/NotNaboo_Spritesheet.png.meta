@@ -13,25 +13,25 @@ TextureImporter:
     second: 02 Center Thrust
   - first:
       213: -3695245336013389561
-    second: NotNaboo_Spritesheet_3
+    second: 03 Right 1 Thrust
   - first:
       213: 7811354721201153499
-    second: NotNaboo_Spritesheet_4
+    second: 04 Right 2 Thrust
   - first:
       213: 1910754679717117286
-    second: NotNaboo_Spritesheet_5
+    second: 00 Left 2
   - first:
       213: 2879216883992666771
-    second: NotNaboo_Spritesheet_6
+    second: 01 Left 1
   - first:
       213: 7242487765654547111
-    second: NotNaboo_Spritesheet_7
+    second: 02 Center
   - first:
       213: 5037514149550165500
-    second: NotNaboo_Spritesheet_8
+    second: 03 Right 1
   - first:
       213: 8408064164080131164
-    second: NotNaboo_Spritesheet_9
+    second: 04 Right 2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,7 +150,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 7, y: 7, z: 8, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -171,7 +171,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 7, z: 5, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -192,7 +192,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 7, z: 2, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -204,7 +204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_3
+      name: 03 Right 1 Thrust
       rect:
         serializedVersion: 2
         x: 96
@@ -213,7 +213,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 5, y: 7, z: 5, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -225,7 +225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_4
+      name: 04 Right 2 Thrust
       rect:
         serializedVersion: 2
         x: 128
@@ -234,7 +234,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 8, y: 7, z: 7, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_5
+      name: 00 Left 2
       rect:
         serializedVersion: 2
         x: 0
@@ -255,7 +255,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 7, y: 7, z: 8, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_6
+      name: 01 Left 1
       rect:
         serializedVersion: 2
         x: 32
@@ -276,7 +276,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 5, y: 7, z: 5, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_7
+      name: 02 Center
       rect:
         serializedVersion: 2
         x: 64
@@ -297,7 +297,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 7, z: 2, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_8
+      name: 03 Right 1
       rect:
         serializedVersion: 2
         x: 96
@@ -318,7 +318,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 5, y: 7, z: 5, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -330,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NotNaboo_Spritesheet_9
+      name: 04 Right 2
       rect:
         serializedVersion: 2
         x: 128
@@ -339,7 +339,7 @@ TextureImporter:
         height: 32
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 8, y: 7, z: 7, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
