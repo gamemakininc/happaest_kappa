@@ -4,11 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(ObserverScript))]
 public class savescript : MonoBehaviour
 {
+    private int counter;
     private ObserverScript gameData;
     private string savePath;
     public int saveSlot;
     public int swapint;
+    public float swapfloat;
     private int[] swapIntArray;
+    public bool[] swapBArray;
 
     // Start is called before the first frame update
     void Start()
@@ -123,6 +126,8 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
 
             Debug.Log("data loaded slot1");
+            // update save info in observer
+            setPlaceMats();
         }
         else 
         {
@@ -158,6 +163,8 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
 
             Debug.Log("data loaded slot2");
+            // update save info in observer
+            setPlaceMats();
         }
         else
         {
@@ -191,6 +198,8 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
 
             Debug.Log("data loaded slot3");
+            // update save info in observer
+            setPlaceMats();
         }
         else
         {
@@ -213,6 +222,19 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s1Shipselector = swapint;
             ObserverScript.Instance.s1clears = save.levelsCleared;
             ObserverScript.Instance.s1name = save.playerName;
+            swapBArray = save.unlocks;
+            //clear counter and swapint
+            counter = 0;
+            swapint = 0;
+            //loop to collect number of true bool
+            while (counter <= 33)
+            {
+                if (swapBArray[counter] == true) { swapint++; }
+                counter++;
+            }
+            //output to observer
+            ObserverScript.Instance.s1unlocks = swapfloat;
+
         }
         savePath = Application.persistentDataPath + "savegame2.save";
         if (File.Exists(savePath))
@@ -228,6 +250,18 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s2Shipselector = swapint;
             ObserverScript.Instance.s2clears = save.levelsCleared;
             ObserverScript.Instance.s2name = save.playerName;
+            //clear counter and swapint
+            counter = 0;
+            swapint = 0;
+            //loop to collect number of true bool
+            while (counter <= 33)
+            {
+                if (swapBArray[counter]==true) { swapint++; }
+                counter++;
+            }
+            //output to observer
+            ObserverScript.Instance.s2unlocks = swapfloat;
+
         }
 
         savePath = Application.persistentDataPath + "savegame3.save";
@@ -241,9 +275,20 @@ public class savescript : MonoBehaviour
             }
             swapIntArray = save.fitSetup;
             swapint = swapIntArray[13];
-            ObserverScript.Instance.s3Shipselector=swapint;
+            ObserverScript.Instance.s3Shipselector = swapint;
             ObserverScript.Instance.s3clears = save.levelsCleared;
             ObserverScript.Instance.s3name = save.playerName;
+            //clear counter and swapint
+            counter = 0;
+            swapint = 0;
+            //loop to collect number of true bool
+            while (counter <= 33)
+            {
+                if (swapBArray[counter] == true) { swapint+=1; }
+                counter++;
+            }
+            //output to observer
+            ObserverScript.Instance.s3unlocks = swapint;
         }
     }
 }
