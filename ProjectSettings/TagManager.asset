@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - fittingSlot
+  - enemy
+  - pgbar
+  - wgbar
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 0
+    uniqueID: 2795160031
+    locked: 0
+  - name: 1
+    uniqueID: 2369644079
+    locked: 0
+  - name: 2
+    uniqueID: 4003819973
     locked: 0
