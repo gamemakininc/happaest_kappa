@@ -10534,7 +10534,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.26250935
 --- !u!212 &2071199774
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10574,7 +10574,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  m_Sprite: {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10593,7 +10594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071199771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9, y: -2.65, z: 89.44}
+  m_LocalPosition: {x: -4.88, y: -2.66, z: 89.44}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10874,6 +10875,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c3763dd5e575147a90fa73cb1aa516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pBulletSelector: 0
+  pSpeed: 0
+  phealth: 0
+  pShield: 0
+  pFitSetup: 
+  pSRegen: 0
+  pRepair: 0
+  pPl0: 0
+  pPl1: 0
 --- !u!95 &2101735546
 Animator:
   serializedVersion: 3
