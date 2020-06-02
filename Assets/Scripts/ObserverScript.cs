@@ -33,6 +33,9 @@ public class ObserverScript : MonoBehaviour
     public int levelsCleared;
     public string playerName;
     //swap vars
+    public bool bookmark0;
+    public bool bookmark1;
+    public bool bookmark2;
 
     public int s1Shipselector;
     public int s1clears=0;
