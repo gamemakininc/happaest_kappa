@@ -682,7 +682,7 @@ MonoBehaviour:
   itemName: dual plasma
   itemDescription: jaming a second in a small frame caused some inacuracy.
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 5
 --- !u!58 &176049375
 CircleCollider2D:
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   itemName: twin cannons
   itemDescription: for when one just wont do.
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 2
 --- !u!58 &256309299
 CircleCollider2D:
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   itemName: modifyed plasma bomb
   itemDescription: the midifacations cause the bomb to split after seperation
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 6
 --- !u!58 &590814565
 CircleCollider2D:
@@ -3671,7 +3671,7 @@ MonoBehaviour:
   itemName: plasma launcher
   itemDescription: a standard small frame plasma weapon
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 4
 --- !u!58 &828919202
 CircleCollider2D:
@@ -6837,7 +6837,7 @@ MonoBehaviour:
   itemName: 
   itemDescription: 
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 1
 --- !u!58 &1300237490
 CircleCollider2D:
@@ -7015,6 +7015,7 @@ GameObject:
   - component: {fileID: 1305495512}
   - component: {fileID: 1305495511}
   - component: {fileID: 1305495515}
+  - component: {fileID: 1305495516}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7111,6 +7112,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &1305495516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305495510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mstartbtn: {fileID: 0}
+  eventAllreadyTriggered: 0
+  eventTriedhangar: 0
+  eventTriedBriefing: 0
+  unlocks: 
+  hangar: 0
+  fitting: 1
+  briefing: 0
 --- !u!1 &1311139982
 GameObject:
   m_ObjectHideFlags: 0
@@ -8368,6 +8389,9 @@ MonoBehaviour:
   pP1: 0
   levelsCleared: 0
   playerName: Empty
+  bookmark0: 0
+  bookmark1: 0
+  bookmark2: 0
   s1Shipselector: 0
   s1clears: 0
   s1name: Empty
@@ -10717,7 +10741,7 @@ MonoBehaviour:
   itemName: shrapnel cannon
   itemDescription: sends hot metal everywhere
   typeOfItem: 3
-  itemIdentifyer: 0
+  itemIdentifyer: 33
   itemID: 3
 --- !u!58 &2088222027
 CircleCollider2D:

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class eventSystem : MonoBehaviour
 {
+    public GameObject mstartbtn;
     public bool eventAllreadyTriggered=false;
     public bool eventTriedhangar=false;
     public bool eventTriedBriefing=false;
@@ -10,10 +12,10 @@ public class eventSystem : MonoBehaviour
     private bool swapBool=false;
     private int counter;
     //locators to be set in unity
-    public bool hangar;
+    public bool hangar;//implemented with mission interrupt scene
     public bool fitting;
     public bool briefing;
-    public void hangarLoadEvents()
+    public void fittingLoadEvents()
         //aircraft unlocks than hp buff mods
     {
         //import variables
@@ -26,9 +28,12 @@ public class eventSystem : MonoBehaviour
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/ }
         else if (eventTriedhangar == true) {/*do nothing*/ }
+        else if (ObserverScript.Instance.levelsCleared <= 0) {/*do nothing*/}
         //poll RNG
-        else if (swapint <= 15)
+        else if (swapint <= 60)
         {
+
+            ObserverScript.Instance.bookmark0 = true;
             counter = 0;
             //should skip loop if all ships unlocked
             if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true) { swapBool = true; }
@@ -43,13 +48,17 @@ public class eventSystem : MonoBehaviour
                 if (unlocks[30] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[30] = true; }
                 if (unlocks[31] == false && swapint == 4) { swapBool = true; ObserverScript.Instance.unlocks[31] = true; }
                 counter++;
+
                 //escape clause incase number dosent come up in reasonable time.
-                if (counter >= 20) { break; }
+                if (counter >= 20) {  Debug.Log("attempted to unlock and failed"); break; }
+                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             }
             //check if all ships unlocked
             if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true) 
             {
+                counter = 0;
                 swapBool = false;
+
                 //loop till something unlocks?   
                 while (swapBool == false)
                 {
@@ -64,7 +73,8 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[6] == false && swapint == 6) { swapBool = true; ObserverScript.Instance.unlocks[6] = true; }
                     counter++;
                     //escape clause incase number dosent come up in reasonable time.
-                    if (counter >= 20) { break; }
+                    if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
+                    if (swapBool == true) { Debug.Log("unlocked" + swapint); }
                 }
             }
         }
@@ -73,7 +83,6 @@ public class eventSystem : MonoBehaviour
         eventTriedhangar = true;
         //update bookmark (reset on mission completion or fail do not reset on mission start)
         ObserverScript.Instance.bookmark1= eventTriedhangar;
-
     }
     public void briefingLoadEvents()
     //mod unlocks
@@ -85,9 +94,11 @@ public class eventSystem : MonoBehaviour
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/ }
         else if (eventTriedBriefing == true) {/*do nothing*/ }
+        else if (ObserverScript.Instance.levelsCleared <= 0) {/*do nothing*/}
         //poll RNG
-        else if (swapint <= 15) 
+        else if (swapint <= 60) 
         {
+            ObserverScript.Instance.bookmark0 = true;
             //reset swaps
             swapBool = false;
             counter = 0;
@@ -117,7 +128,8 @@ public class eventSystem : MonoBehaviour
                 if (unlocks[24] == false && swapint == 18) { swapBool = true; ObserverScript.Instance.unlocks[24] = true; }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
-                if (counter >= 20) { break; }
+                if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
+                if (swapBool == true) { Debug.Log("unlocked"+swapint); }
             }
         }
         //dissable ability to retrigger
@@ -126,7 +138,7 @@ public class eventSystem : MonoBehaviour
         ObserverScript.Instance.bookmark2 = eventTriedBriefing;
     }
     public void missionInterruptEvents()
-    //unlock secret ships later to be moved to 'questlines'
+    //unlock secret ships later to be moved to 'questlines' and replaced with missiles(with retuned drop rates)
     {
         eventAllreadyTriggered = ObserverScript.Instance.bookmark0;
         swapint = Random.Range(1, 100);
@@ -134,12 +146,14 @@ public class eventSystem : MonoBehaviour
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/}
         else if (ObserverScript.Instance.levelsCleared <= 50) {/*do nothing*/}
-        //second check not neccicary because trigger is menu change
+        //reroll check not neccicary because trigger is menu change
         //poll RNG
-        else if (swapint <= 4) 
-        {
+        else if (swapint <= 20)
+        { // i would like to make this one launch its own scene later
+            mstartbtn.GetComponent<Button>().interactable=false;
+            ObserverScript.Instance.bookmark0 = true;
             counter = 0;
-            while (swapBool==false) 
+            while (swapBool == false)
             {
 
                 //set rng
@@ -147,17 +161,22 @@ public class eventSystem : MonoBehaviour
                 //unlock something (hopefully)
                 if (unlocks[32] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[7] = true; }
                 if (unlocks[33] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[8] = true; }
-                if (unlocks[34] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
+                if (unlocks[33] == true && unlocks[32] == true)
+                {
+                if (unlocks[34] == false&& swapint==1 || swapint==3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
+                }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
-                if (counter >= 20) { break; }
+                if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
+                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             }
+            mstartbtn.GetComponent<Button>().interactable = true;
         }
         //no reset measure needed as trigger is mission start btn
     }
     private void Start()
     {
-        if (hangar == true) { hangarLoadEvents(); }
-        else if (fitting==true) { briefingLoadEvents(); }
+        if (briefing == true) { briefingLoadEvents(); }
+        else if (fitting == true) { fittingLoadEvents(); }
     }
 }

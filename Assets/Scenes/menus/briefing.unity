@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 495934562}
   - component: {fileID: 495934561}
   - component: {fileID: 495934560}
+  - component: {fileID: 495934563}
   m_Layer: 5
   m_Name: m3btn
   m_TagString: Untagged
@@ -468,6 +469,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495934558}
   m_CullTransparentMesh: 0
+--- !u!114 &495934563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495934558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 637564121}
+          m_MethodName: missionInterruptEvents
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &592301140
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +693,7 @@ GameObject:
   - component: {fileID: 637564118}
   - component: {fileID: 637564117}
   - component: {fileID: 637564120}
+  - component: {fileID: 637564121}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -748,6 +778,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c3763dd5e575147a90fa73cb1aa516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pBulletSelector: 0
+  pSpeed: 0
+  phealth: 0
+  pShield: 0
+  pFitSetup: 
+  pSRegen: 0
+  pRepair: 0
+  pPl0: 0
+  pPl1: 0
+--- !u!114 &637564121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637564116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mstartbtn: {fileID: 0}
+  eventAllreadyTriggered: 0
+  eventTriedhangar: 0
+  eventTriedBriefing: 0
+  unlocks: 
+  hangar: 0
+  fitting: 0
+  briefing: 1
 --- !u!1 &894407840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1275,7 @@ GameObject:
   - component: {fileID: 1432529611}
   - component: {fileID: 1432529610}
   - component: {fileID: 1432529609}
+  - component: {fileID: 1432529612}
   m_Layer: 5
   m_Name: m2btn
   m_TagString: Untagged
@@ -1334,6 +1394,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432529607}
   m_CullTransparentMesh: 0
+--- !u!114 &1432529612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432529607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1832861954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1514,7 @@ GameObject:
   - component: {fileID: 1895791604}
   - component: {fileID: 1895791603}
   - component: {fileID: 1895791602}
+  - component: {fileID: 1895791605}
   m_Layer: 5
   m_Name: m1btn
   m_TagString: Untagged
@@ -1544,3 +1633,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895791600}
   m_CullTransparentMesh: 0
+--- !u!114 &1895791605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895791600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 637564121}
+          m_MethodName: missionInterruptEvents
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
