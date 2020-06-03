@@ -40,11 +40,15 @@ public class PlayerScript : MonoBehaviour
     private bool portSwap;
     private bool hasFired = false;
     //timers
+    private float baceRefireRate;
     private float refireTime;
     public float nextFire;
     //audio
     public AudioClip[] sounds;
     public AudioSource audioSource;
+    //buff limmiters
+    public bool involActive;
+    public bool fireBuffActive;
     private void Start()
     { 
         //set variables from observer
@@ -208,14 +212,17 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        //take damage to shield
-        shield -= damage;
-        //fail over shield to health
-        if (shield < 0) { health += shield; shield = 0; }
-        //check health
-        if (health <= 0)
+        if (involActive == false)
         {
-            Die();
+            //take damage to shield
+            shield -= damage;
+            //fail over shield to health
+            if (shield < 0) { health += shield; shield = 0; }
+            //check health
+            if (health <= 0)
+            {
+                Die();
+            }
         }
     }
     void Die()
@@ -226,5 +233,32 @@ public class PlayerScript : MonoBehaviour
         Destroy(gameObject);
         //play sound effect
         audioSource.PlayOneShot(sounds[3]);
+    }
+    public void invincibility() 
+    {
+        involActive = true;
+        System.Threading.Thread.Sleep(5000);
+        involActive = false;
+    }
+    public void fireBuff() 
+    {
+        //dissable ability to pickup another similer buff
+        fireBuffActive = true;
+        //get bace fire rate in swapfile
+        baceRefireRate = nextFire;
+        //set fire delay to 0
+        nextFire = 0;
+        //wait (MS)
+        System.Threading.Thread.Sleep(5000);
+        //reset fire rate
+        nextFire = baceRefireRate;
+        //enable pickup of buff
+        fireBuffActive = false;
+    }
+    public void addMissiles() 
+    {
+        //add missiles to all active missile slots
+        if (payload0Selector>0) { payload0Ammo += 5; }
+        if (payload1Selector>0) { payload1Ammo += 5; }
     }
 }

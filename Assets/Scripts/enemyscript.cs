@@ -8,6 +8,8 @@ public class enemyscript : MonoBehaviour
     //set death sprite
     public GameObject deathEffect;
     private Rigidbody2D rb;
+    //loot table var
+    public powerupHandeler thisPowerup;
 
     void Start()
     {
@@ -63,8 +65,20 @@ public class enemyscript : MonoBehaviour
     {
         //spawn death sprite
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        makeLoot();
         //remove self
         Destroy(gameObject);
+    }
+    void makeLoot()
+    {
+        if (thisPowerup != null) 
+        {
+            powerUps current = thisPowerup.lootPowerups();
+            if (current != null) 
+            {
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
+        }
     }
 
 
