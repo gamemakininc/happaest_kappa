@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
   m_Name: mostlyNothing
   m_EditorClassIdentifier: 
-  loots: []
+  loots:
+  - thisLoot: {fileID: 5506538639768510570, guid: 3081bec9a329518429c232e938df0cb0,
+      type: 3}
+    lootChance: 15
+  - thisLoot: {fileID: 1210205971745251039, guid: 79d809bb8f0dce9479d2a0552bd07a13,
+      type: 3}
+    lootChance: 5
+  - thisLoot: {fileID: 7216495163256295696, guid: b9aab5c6e4538304ea812aebd033e619,
+      type: 3}
+    lootChance: 15
