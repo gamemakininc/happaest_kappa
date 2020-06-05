@@ -36,17 +36,19 @@ public class eventSystem : MonoBehaviour
             ObserverScript.Instance.bookmark0 = true;
             counter = 0;
             //should skip loop if all ships unlocked
-            if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true) { swapBool = true; }
+            if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true && unlocks[32] == true && unlocks[33] == true) { swapBool = true; }
             //loop till something unlocks?    
             while (swapBool == false)
             {
                 //set rng
-                swapint = Random.Range(1, 4);
+                swapint = Random.Range(1, 6);
                 //unlock something (hopefully)
                 if (unlocks[28] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[28] = true; }
                 if (unlocks[29] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[29] = true; }
                 if (unlocks[30] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[30] = true; }
                 if (unlocks[31] == false && swapint == 4) { swapBool = true; ObserverScript.Instance.unlocks[31] = true; }
+                if (unlocks[32] == false && swapint == 5) { swapBool = true; ObserverScript.Instance.unlocks[32] = true; }
+                if (unlocks[33] == false && swapint == 6) { swapBool = true; ObserverScript.Instance.unlocks[33] = true; }
                 counter++;
 
                 //escape clause incase number dosent come up in reasonable time.
@@ -54,7 +56,7 @@ public class eventSystem : MonoBehaviour
                 if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             }
             //check if all ships unlocked
-            if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true) 
+            if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true && unlocks[32] == true && unlocks[33] == true) 
             {
                 counter = 0;
                 swapBool = false;
@@ -159,11 +161,11 @@ public class eventSystem : MonoBehaviour
                 //set rng
                 swapint = Random.Range(1, 3);
                 //unlock something (hopefully)
-                if (unlocks[32] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[7] = true; }
-                if (unlocks[33] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[8] = true; }
-                if (unlocks[33] == true && unlocks[32] == true)
+                if (unlocks[35] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[7] = true; }
+                if (unlocks[34] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[8] = true; }
+                if (unlocks[34] == true && unlocks[35] == true)
                 {
-                if (unlocks[34] == false&& swapint==1 || swapint==3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
+                if (unlocks[36] == false&& swapint==1 || swapint==3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
                 }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.

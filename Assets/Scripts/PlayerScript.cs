@@ -6,11 +6,11 @@ public class PlayerScript : MonoBehaviour
     //idK
     Vector2 movement;
     //set health (for gameplay)
-    public int maxHealth;
+    public float maxHealth;
     public float health;
     public float repair;
     //shield and regen
-    public int maxShield;
+    public float maxShield;
     public float shield;
     public float sRegen = .5f;
     //set death sprite
@@ -33,10 +33,11 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     //swap variables
-    private float dumbdumb;
+    public float dumbdumb;
     private bool portSwap;
     private bool hasFired = false;
     //timers
+    private float hitTimer;
     private float itimer;
     private float fRtimer;
     private float baceRefireRate;
@@ -51,18 +52,21 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     { 
         //set variables from observer
-        shield = ObserverScript.Instance.pShield;
+        maxShield = ObserverScript.Instance.pShield;
+        shield = maxShield;
         sRegen = ObserverScript.Instance.pSRegen;
-        health = ObserverScript.Instance.pHealth;
+        maxHealth = ObserverScript.Instance.pHealth;
+        health = maxHealth;
         repair = ObserverScript.Instance.pRepair;
         MoveSpeed = ObserverScript.Instance.pSpeed;
         bulletSelector = ObserverScript.Instance.pBulletSelector - 1;
         payload0Selector = ObserverScript.Instance.pP0 - 1;
         payload1Selector = ObserverScript.Instance.pP1 - 1;
         mslBonus = ObserverScript.Instance.mslBonus;
-        //??
+        //save location of RB and animator
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         //if variables could not be imported set bace values
         if (health == 0)
         {
@@ -82,12 +86,6 @@ public class PlayerScript : MonoBehaviour
         //fire rate augments
         if (bulletSelector == 2) { nextFire += 0.25f; }
         else if (bulletSelector == 0) { nextFire -= 0.15f; }
-        //check for payloadexpanders
-
-
-        //load audio
-        audioSource = GetComponent<AudioSource>();
-       
     }
 
     //Update called once per frame
@@ -96,9 +94,11 @@ public class PlayerScript : MonoBehaviour
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        //fire gun
         if (Input.GetButton("Fire1") && Time.time > refireTime)
         {
             Shoot();
+            //check bullet selector for what sound to play
             if (bulletSelector == 2) { audioSource.PlayOneShot(sounds[0]); }
             else if (bulletSelector ==0 ) { audioSource.PlayOneShot(sounds[1]); }
             else if (bulletSelector == 1) { audioSource.PlayOneShot(sounds[1]); }
@@ -106,24 +106,28 @@ public class PlayerScript : MonoBehaviour
             else if (bulletSelector == 4) { audioSource.PlayOneShot(sounds[4]); }
             else if (bulletSelector == 5) { audioSource.PlayOneShot(sounds[4]); }
         }
+        //fire missile slot1
         if (Input.GetButtonDown("Fire2"))
         {
             p0shoot();
         }
+        //fire missile slot2
         if (Input.GetButtonDown("Fire3"))
         {
             p1shoot();
         }
+
         //animator variables
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
+        //hp regen
         if (health < maxHealth)
         { 
             health += repair * Time.deltaTime;
         }
-        if (shield < maxShield)
+        //shield regen
+        if (shield < maxShield&& hitTimer<=2)
         {
             shield += sRegen * Time.deltaTime;
         }
@@ -141,6 +145,8 @@ public class PlayerScript : MonoBehaviour
                 nextFire = baceRefireRate;
             }
         }
+        //incroment timer
+        hitTimer += 1.0F * Time.deltaTime;
 
     }
     //delta time based  
@@ -225,6 +231,7 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        hitTimer = 0;
         if (involActive == false)
         {
             //take damage to shield

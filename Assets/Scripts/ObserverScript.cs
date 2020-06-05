@@ -13,8 +13,8 @@ public class ObserverScript : MonoBehaviour
       13-18      speed mods
       19-24      misc mods
       25-27      missiles
-      28-33      ships (last two should have spechal unlock conditions)
-      34         guns (should be last unlock)
+      28-35      ships (last two should have spechal unlock conditions)
+      36         guns (should be last unlock)
     */
     public bool[] unlocks;
     //player output from fitting system

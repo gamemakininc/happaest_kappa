@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
     type: 3}
   thisPowerup: {fileID: 0}

@@ -204,15 +204,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
+  thisPowerup: {fileID: 0}
   currentState: 2
   speed: 1
+  waitTime: 3
+  currentTab: 0
+  currentField: 
   amplitude: 1
   period: 1.5
   shift: -5
   yChange: 0.0005
-  waitTime: 3
   slideTime: 2
   moveRight: 1
+  maxRadians: 1
 --- !u!50 &39689550
 Rigidbody2D:
   serializedVersion: 4
@@ -884,8 +888,8 @@ Canvas:
   m_GameObject: {fileID: 1902691643}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1503072450}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

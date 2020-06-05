@@ -533,7 +533,7 @@ MonoBehaviour:
   itemName: triton
   itemDescription: a heavy fighter with a modifyed plasma bomb launcher
   typeOfItem: 4
-  itemIdentifyer: 31
+  itemIdentifyer: 33
   itemID: 6
 --- !u!58 &166090664
 CircleCollider2D:
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   itemName: ship2
   itemDescription: ship2
   typeOfItem: 4
-  itemIdentifyer: 0
+  itemIdentifyer: 29
   itemID: 2
 --- !u!58 &269496940
 CircleCollider2D:
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   itemName: ship1
   itemDescription: ship1
   typeOfItem: 4
-  itemIdentifyer: 0
+  itemIdentifyer: 28
   itemID: 1
 --- !u!58 &521527521
 CircleCollider2D:
@@ -4711,7 +4711,7 @@ MonoBehaviour:
   itemName: ship6
   itemDescription: ship6
   typeOfItem: 4
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 7
 --- !u!225 &967740686
 CanvasGroup:
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   itemName: ship5
   itemDescription: ship5
   typeOfItem: 4
-  itemIdentifyer: 30
+  itemIdentifyer: 32
   itemID: 5
 --- !u!58 &1142205700
 CircleCollider2D:
@@ -7531,7 +7531,7 @@ MonoBehaviour:
   itemName: ship6
   itemDescription: ship6
   typeOfItem: 4
-  itemIdentifyer: 32
+  itemIdentifyer: 34
   itemID: 8
 --- !u!225 &1400364592
 CanvasGroup:
@@ -10541,7 +10541,7 @@ MonoBehaviour:
   itemName: ship3
   itemDescription: ship3
   typeOfItem: 4
-  itemIdentifyer: 28
+  itemIdentifyer: 30
   itemID: 3
 --- !u!58 &2071199773
 CircleCollider2D:
@@ -11112,7 +11112,7 @@ MonoBehaviour:
   itemName: ship4
   itemDescription: ship4
   typeOfItem: 4
-  itemIdentifyer: 29
+  itemIdentifyer: 31
   itemID: 4
 --- !u!58 &2122198080
 CircleCollider2D:
