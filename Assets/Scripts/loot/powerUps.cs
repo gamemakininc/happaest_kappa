@@ -10,14 +10,14 @@ public class powerUps : MonoBehaviour
     public Rigidbody2D rb;
     private void Start()
     {
-        animator.SetInteger ("type", powerupID);
+        animator.SetFloat ("Blend", powerupID);
     }
     private void FixedUpdate()
     {
         //incroment timer
         timer += 1.0F * Time.deltaTime;
 
-        if (timer >= 6)
+        if (timer >= 8)
         {
             //destroy game object
             GameObject.Destroy(gameObject);
@@ -31,9 +31,9 @@ public class powerUps : MonoBehaviour
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
-            if (powerupID == 1 && player.involActive == false) { player.invincibility(); }
-            if (powerupID == 2 && player.fireBuffActive == false) { player.fireBuff(); }
-            if (powerupID == 3) { player.addMissiles(); }
+            if (powerupID == 1 && player.involActive == false) { player.invincibility(); GameObject.Destroy(gameObject); }
+            if (powerupID == 2 && player.fireBuffActive == false) { player.fireBuff(); GameObject.Destroy(gameObject); }
+            if (powerupID == 3) { player.addMissiles(); GameObject.Destroy(gameObject); }
         }
     }
 }

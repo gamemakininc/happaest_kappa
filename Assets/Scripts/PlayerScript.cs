@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 public class PlayerScript : MonoBehaviour
@@ -37,9 +36,12 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     //swap variables
+    private float dumbdumb;
     private bool portSwap;
     private bool hasFired = false;
     //timers
+    private float itimer;
+    private float fRtimer;
     private float baceRefireRate;
     private float refireTime;
     public float nextFire;
@@ -127,6 +129,20 @@ public class PlayerScript : MonoBehaviour
         if (shield < maxShield)
         {
             shield += sRegen * Time.deltaTime;
+        }
+        if (involActive == true)
+        {//incroment timer
+            itimer += 1.0F * Time.deltaTime;
+            if (itimer >= 7) { involActive = false; }
+        }
+        if (fireBuffActive == true)
+        {//incroment timer
+            fRtimer += 1.0F * Time.deltaTime;
+            if (fRtimer >= 7) 
+            {   fireBuffActive = false;
+                //reset fire rate
+                nextFire = baceRefireRate;
+            }
         }
 
     }
@@ -218,11 +234,13 @@ public class PlayerScript : MonoBehaviour
             shield -= damage;
             //fail over shield to health
             if (shield < 0) { health += shield; shield = 0; }
-            //check health
-            if (health <= 0)
-            {
-                Die();
-            }
+
+        }
+        else if (involActive == true) { dumbdumb -= damage; }
+        //check health
+        if (health <= 0)
+        {
+            Die();
         }
     }
     void Die()
@@ -234,26 +252,23 @@ public class PlayerScript : MonoBehaviour
         //play sound effect
         audioSource.PlayOneShot(sounds[3]);
     }
-    public void invincibility() 
+    public void invincibility()
     {
-        involActive = true;
-        System.Threading.Thread.Sleep(5000);
-        involActive = false;
+        itimer = 0;
+        //dissable damage
+        involActive =true;
     }
     public void fireBuff() 
     {
+        //reset timer
+        fRtimer = 0;
         //dissable ability to pickup another similer buff
         fireBuffActive = true;
         //get bace fire rate in swapfile
         baceRefireRate = nextFire;
         //set fire delay to 0
         nextFire = 0;
-        //wait (MS)
-        System.Threading.Thread.Sleep(5000);
-        //reset fire rate
-        nextFire = baceRefireRate;
-        //enable pickup of buff
-        fireBuffActive = false;
+        
     }
     public void addMissiles() 
     {

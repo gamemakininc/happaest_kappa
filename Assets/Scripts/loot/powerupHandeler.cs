@@ -1,27 +1,23 @@
 ﻿using UnityEngine;
-[System.Serializable]
-public class powerup
+public class powerupHandeler : MonoBehaviour
 {
-    public powerUps thisLoot;
-    public int lootChance;
-}
-
-[CreateAssetMenu]
-public class powerupHandeler : ScriptableObject
-{
-    public powerup[] loots;
-    public powerUps lootPowerups() 
+    public GameObject[] powerUps;
+    public int swapint;
+    public float involChanceMin= 1;
+    public float involChanceMax = 3;
+    public float fireRateChanceMin = 4;
+    public float fireRateChanceMax = 5;
+    public float missileBounusChanceMin = 6;
+    public float missileBounusChanceMax = 10;
+    public void dropCalcultation()
     {
-        int cuProb=0;
-        int currentProb = Random.Range(0, 100);
-        for (int i = 0; i < loots.Length; i++) 
-        {
-            cuProb += loots[i].lootChance;
-            if (currentProb <= cuProb) 
-            {
-                return loots[i].thisLoot;
-            }
-        }
-        return null;
+        if (swapint < involChanceMin && swapint > missileBounusChanceMax) {return; }
+        if (swapint >= involChanceMin && swapint <= involChanceMax) { Instantiate(powerUps[1], transform.position, Quaternion.identity); }
+        if (swapint >= fireRateChanceMin && swapint <= fireRateChanceMax) { Instantiate(powerUps[2], transform.position, Quaternion.identity); }
+        if (swapint >= missileBounusChanceMin && swapint <= missileBounusChanceMax) { Instantiate(powerUps[3], transform.position, Quaternion.identity); }
+    }
+    private void Start()
+    {
+        swapint = Random.Range(1, 100);
     }
 }

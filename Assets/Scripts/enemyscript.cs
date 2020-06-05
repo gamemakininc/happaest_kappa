@@ -13,6 +13,7 @@ public class enemyscript : MonoBehaviour
 
     void Start()
     {
+        thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -65,23 +66,13 @@ public class enemyscript : MonoBehaviour
     {
         //spawn death sprite
         Instantiate(deathEffect, transform.position, Quaternion.identity);
-        makeLoot();
+        if (thisPowerup != null)
+        {
+            thisPowerup.dropCalcultation();
+        }
         //remove self
         Destroy(gameObject);
     }
-    void makeLoot()
-    {
-        if (thisPowerup != null) 
-        {
-            powerUps current = thisPowerup.lootPowerups();
-            if (current != null) 
-            {
-                Instantiate(current.gameObject, transform.position, Quaternion.identity);
-            }
-        }
-    }
-
-
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         //check if player/get player script
