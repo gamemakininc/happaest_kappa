@@ -15,15 +15,18 @@ public class enemyscript : MonoBehaviour
     {
         thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
+        if (transform.parent != null)
+            transform.parent = null;
     }
 
     //movement pattern
     public enum states
     {
-        straight, 
-        wavy, 
+        straight,
+        wavy,
         slide,
-        kamikaze
+        kamikaze,
+        paused
     }
 
     public states currentState;
@@ -51,9 +54,12 @@ public class enemyscript : MonoBehaviour
     private bool isTargeting = true;
     public float maxRadians = 1.0f;
 
+    //Paused Attributes
+    private Vector2 storedVelocity;
+    private states storedState = states.paused;
 
     //handel for bullet script
-    public void TakeDamage(int damage) 
+    public void TakeDamage(int damage)
     {
         health -= damage;
         //check health
@@ -62,10 +68,16 @@ public class enemyscript : MonoBehaviour
             Die();
         }
     }
-    void Die() 
+    void Die()
     {
         //spawn death sprite
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        makeLoot();
+        //remove self
+        Destroy(gameObject);
+    }
+    void makeLoot()
+    {
         if (thisPowerup != null)
         {
             thisPowerup.dropCalcultation();
@@ -73,6 +85,8 @@ public class enemyscript : MonoBehaviour
         //remove self
         Destroy(gameObject);
     }
+
+
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         //check if player/get player script
@@ -87,12 +101,17 @@ public class enemyscript : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //Restores velocity when unpausing
+        if (currentState != states.paused && storedVelocity != Vector2.zero)
+            rb.velocity = storedVelocity;
+
         //Check method of movement
         #region CurrentState
         switch (currentState)
         {
             case states.straight:
-                rb.velocity = transform.TransformDirection(new Vector2(0, speed)); break;
+                rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                break;
             case states.wavy:
                 if (waitTime > Mathf.Infinity)
                 {
@@ -109,17 +128,17 @@ public class enemyscript : MonoBehaviour
                 }
                 break;
             case states.slide:
-                if(waitTime > 0)
+                if (waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
                     rb.velocity = transform.TransformDirection(new Vector2(0, speed));
                 }
                 else
                 {
-                    if(slideTime > 0)
+                    if (slideTime > 0)
                     {
                         waitTime -= Time.deltaTime;
-                        if(moveRight)
+                        if (moveRight)
                             rb.velocity = transform.TransformDirection(new Vector2(speed * 1.5f, speed));
                         else
                             rb.velocity = transform.TransformDirection(new Vector2(-speed * 1.5f, speed));
@@ -143,6 +162,11 @@ public class enemyscript : MonoBehaviour
                     isTargeting = false;
                 }
                 break;
+            case states.paused:
+                if (storedVelocity == Vector2.zero)
+                    storedVelocity = rb.velocity;
+                rb.velocity = Vector2.zero;
+                break;
             default:
                 break;
         }
@@ -159,5 +183,17 @@ public class enemyscript : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
         rb.velocity = targetDirection;
+    }
+
+    private void OnBecameVisible()
+    {
+        rb.velocity = storedVelocity;
+        currentState = storedState;
+    }
+
+    private void OnBecameInvisible()
+    {
+        storedState = currentState;
+        currentState = states.paused;
     }
 }
