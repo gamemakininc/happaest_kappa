@@ -17,6 +17,13 @@ public class enemyscript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (transform.parent != null)
             transform.parent = null;
+
+        if(currentState != states.kamikaze || currentState != states.paused)
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        if (currentState == states.kamikaze)
+            health *= 4;
+
+        //Debug.Log("currentState = " + currentState);
     }
 
     //movement pattern
@@ -110,13 +117,13 @@ public class enemyscript : MonoBehaviour
         switch (currentState)
         {
             case states.straight:
-                rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 break;
             case states.wavy:
                 if (waitTime > Mathf.Infinity)
                 {
                     waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                    rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 }
                 else
                 {
@@ -124,14 +131,14 @@ public class enemyscript : MonoBehaviour
                     newX = transform.position.y - yChange;
                     Vector2 tempPosition = new Vector2(transform.position.x, newY);
                     transform.position = tempPosition;
-                    rb.velocity = transform.TransformDirection(new Vector2(rb.velocity.x, speed));
+                    rb.velocity = transform.InverseTransformDirection(new Vector2(rb.velocity.x, -speed));
                 }
                 break;
             case states.slide:
                 if (waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                    rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 }
                 else
                 {
@@ -139,13 +146,13 @@ public class enemyscript : MonoBehaviour
                     {
                         waitTime -= Time.deltaTime;
                         if (moveRight)
-                            rb.velocity = transform.TransformDirection(new Vector2(speed * 1.5f, speed));
+                            rb.velocity = transform.InverseTransformDirection(new Vector2(speed * 1.5f, -speed));
                         else
-                            rb.velocity = transform.TransformDirection(new Vector2(-speed * 1.5f, speed));
+                            rb.velocity = transform.InverseTransformDirection(new Vector2(-speed * 1.5f, -speed));
                     }
                     else
                     {
-                        rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                        rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                     }
                 }
                 break;
@@ -153,7 +160,7 @@ public class enemyscript : MonoBehaviour
                 if (waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
-                    rb.velocity = transform.TransformDirection(new Vector2(0, speed));
+                    rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 }
                 else if (isTargeting)
                 {
