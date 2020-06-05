@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 89656381989647454}
   - component: {fileID: 89656381989647453}
   - component: {fileID: 89656381989647452}
-  - component: {fileID: 6732624409525938085}
   - component: {fileID: 1248646553223435860}
+  - component: {fileID: -6286957572518117678}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -134,30 +134,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6732624409525938085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89656381989647451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUps:
-  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
-  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
-  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
-  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
-  swapint: 0
-  involChanceMin: 1
-  involChanceMax: 14
-  fireRateChanceMin: 15
-  fireRateChanceMax: 20
-  missileBounusChanceMin: 21
-  missileBounusChanceMax: 90
 --- !u!60 &1248646553223435860
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +163,21 @@ PolygonCollider2D:
       - {x: -0.0073664077, y: 0.23182757}
       - {x: -0.17125863, y: -0.056659453}
       - {x: -0.008907384, y: -0.21634914}
+--- !u!114 &-6286957572518117678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89656381989647451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0

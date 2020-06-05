@@ -16,9 +16,6 @@ public class PlayerScript : MonoBehaviour
     //set death sprite
     public int deathEffectSelector;
     public GameObject deathEffect;
-    //set player sprite
-    public int viewModelSelector;
-    public GameObject viewmodel;
     //build bullet 
     public int payload0Selector;
     public int payload1Selector;
