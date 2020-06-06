@@ -28,9 +28,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
     {
         if (ObserverScript.Instance.unlocks[itemIdentifyer] == true)
         {
-            if (itemIdentifyer == 32) { GetComponent<SpriteRenderer>().enabled = true; GetComponent<CircleCollider2D>().enabled = true; }
-            if (itemIdentifyer == 33) { GetComponent<SpriteRenderer>().enabled = true; GetComponent<CircleCollider2D>().enabled = true; }
             if (itemIdentifyer == 34) { GetComponent<SpriteRenderer>().enabled = true; GetComponent<CircleCollider2D>().enabled = true; }
+            if (itemIdentifyer == 35) { GetComponent<SpriteRenderer>().enabled = true; GetComponent<CircleCollider2D>().enabled = true; }
+            if (itemIdentifyer == 36) { GetComponent<SpriteRenderer>().enabled = true; GetComponent<CircleCollider2D>().enabled = true; }
             //pickup script
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
@@ -69,9 +69,9 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
         if (ObserverScript.Instance.unlocks[itemIdentifyer] == false)
         {
             //disable rendering and drag for secrit items
-            if (itemIdentifyer == 32) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
-            if (itemIdentifyer == 33) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
             if (itemIdentifyer == 34) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
+            if (itemIdentifyer == 35) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
+            if (itemIdentifyer == 36) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
 
             this.GetComponent<SpriteRenderer>().color = new Color (0,0,0,0.5f);
         }

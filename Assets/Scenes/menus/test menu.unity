@@ -614,7 +614,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &166090667
 CanvasGroup:
@@ -682,7 +682,7 @@ MonoBehaviour:
   itemName: dual plasma
   itemDescription: jaming a second in a small frame caused some inacuracy.
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 5
 --- !u!58 &176049375
 CircleCollider2D:
@@ -824,7 +824,7 @@ Transform:
   - {fileID: 1723667426}
   - {fileID: 1237164422}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &211799208
 GameObject:
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   itemName: twin cannons
   itemDescription: for when one just wont do.
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 2
 --- !u!58 &256309299
 CircleCollider2D:
@@ -1206,7 +1206,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  m_Sprite: {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1229,7 +1230,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &269496943
 CanvasGroup:
@@ -2283,7 +2284,7 @@ RectTransform:
   m_LocalScale: {x: 1.51, y: 1.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2517,7 +2518,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &521527524
 CanvasGroup:
@@ -2875,7 +2876,7 @@ MonoBehaviour:
   itemName: modifyed plasma bomb
   itemDescription: the midifacations cause the bomb to split after seperation
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 6
 --- !u!58 &590814565
 CircleCollider2D:
@@ -3671,7 +3672,7 @@ MonoBehaviour:
   itemName: plasma launcher
   itemDescription: a standard small frame plasma weapon
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 4
 --- !u!58 &828919202
 CircleCollider2D:
@@ -4780,7 +4781,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067,
+  m_Sprite: {fileID: 8484439125898418650, guid: 7b6fdf2102248d748b4dc21326044397,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -4804,7 +4805,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023191355
 GameObject:
@@ -4884,6 +4885,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023191355}
   m_CullTransparentMesh: 0
+--- !u!1001 &1026091087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1246358362003326, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_Name
+      value: Player_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4695606
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.425363
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70772356
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7064895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388124397020246, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713131757439341107, guid: 639ff02e5ad1f2e47bc35b63611d38e2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
 --- !u!1 &1053644364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5310,7 +5373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093698345
 GameObject:
@@ -5767,7 +5830,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  m_Sprite: {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5790,7 +5854,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &1142205703
 CanvasGroup:
@@ -6837,7 +6901,7 @@ MonoBehaviour:
   itemName: 
   itemDescription: 
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 1
 --- !u!58 &1300237490
 CircleCollider2D:
@@ -7162,7 +7226,7 @@ Transform:
   m_LocalScale: {x: 0.017889088, y: 0.017889088, z: 0.017889088}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311139984
 MonoBehaviour:
@@ -7600,7 +7664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067,
+  m_Sprite: {fileID: 9129779733956946149, guid: dc0d6cc97fada5a47a59624cae18ec0a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7624,7 +7688,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1437679885
 GameObject:
@@ -8376,7 +8440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 01010101010101010101010101010101010101010101010101010101010101010101
+  unlocks: 010000000000000000000000000000000000000000000000000000000000000000000000
   pBulletSelector: 0
   pSpeed: 0
   pHealth: 0
@@ -8416,7 +8480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645335525
 GameObject:
@@ -9045,7 +9109,7 @@ Transform:
   - {fileID: 482102091}
   - {fileID: 447719206}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1719295310
 MonoBehaviour:
@@ -9661,7 +9725,7 @@ Transform:
   m_LocalScale: {x: 0.92555726, y: 0.92555726, z: 0.99522287}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864903469
 GameObject:
@@ -10538,8 +10602,8 @@ MonoBehaviour:
   costBox: {fileID: 0}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship3
-  itemDescription: ship3
+  itemName: Eagle Ray Fighter
+  itemDescription: with its twin cannons this ship has quite a bite.
   typeOfItem: 4
   itemIdentifyer: 30
   itemID: 3
@@ -10622,7 +10686,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &2071199776
 CanvasGroup:
@@ -10741,7 +10805,7 @@ MonoBehaviour:
   itemName: shrapnel cannon
   itemDescription: sends hot metal everywhere
   typeOfItem: 3
-  itemIdentifyer: 33
+  itemIdentifyer: 35
   itemID: 3
 --- !u!58 &2088222027
 CircleCollider2D:
@@ -10880,7 +10944,7 @@ RectTransform:
   - {fileID: 289703720}
   - {fileID: 1377080322}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11169,7 +11233,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  m_Sprite: {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11192,7 +11257,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &2122198083
 CanvasGroup:
@@ -11338,5 +11403,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -21,11 +21,14 @@ public class ObserverScript : MonoBehaviour
     public int pBulletSelector;
     public float pSpeed;
     public float pHealth;
-    public int[] fitSetup;
     public float pShield;
     public float pSRegen;
     public float pRepair;
     public int mslBonus;
+    //0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun , 13 ship
+    //value of 0 for empty slot
+    public int[] fitSetup;
+
     //save for player payload slot0-1
     public int pP0;
     public int pP1;
@@ -37,16 +40,18 @@ public class ObserverScript : MonoBehaviour
     public bool bookmark1;
     public bool bookmark2;
 
+
+    //save preview variables slot1
     public int s1Shipselector;
     public int s1clears=0;
     public string s1name="Empty";
     public float s1unlocks=0.1f;
-
+    //save preview variables slot2
     public int s2Shipselector;
     public int s2clears=0;
     public string s2name="Empty";
     public float s2unlocks = 0.1f;
-
+    //save preview variables slot3
     public int s3Shipselector;
     public int s3clears=0;
     public string s3name="Empty";

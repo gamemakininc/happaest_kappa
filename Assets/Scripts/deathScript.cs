@@ -10,7 +10,7 @@ public class deathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sceneManedgerCan = GameObject.FindWithTag("MainCamera");
         unlocks = ObserverScript.Instance.unlocks;
     }
     public void death()

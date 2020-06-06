@@ -249,8 +249,8 @@ public class PlayerScript : MonoBehaviour
     }
     void Die()
     {
-        //spawn death sprite (wip)
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //spawn death sprite
+        Instantiate(deathEffect, transform.position, Quaternion.Euler(0, 0, -90));
         //remove self
         Destroy(gameObject);
         //play sound effect
