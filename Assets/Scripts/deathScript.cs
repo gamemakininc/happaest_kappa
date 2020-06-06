@@ -29,7 +29,7 @@ public class deathScript : MonoBehaviour
         //really long statement to check if it was last ship
         if (unlocks[28] == false && unlocks[29] == false && unlocks[30] == false && unlocks[31] == false && unlocks[32] == false && unlocks[33] == false && unlocks[34] == false && unlocks[35] == false)
         {//game over
-
+            sceneManedgerCan.GetComponent<sceneManager>().mainMenu();
         }
         else { sceneManedgerCan.GetComponent<sceneManager>().testMenu(); }
     }
