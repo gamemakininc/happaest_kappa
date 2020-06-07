@@ -31,9 +31,9 @@ public class powerUps : MonoBehaviour
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
-            if (powerupID == 1 && player.involActive == false) { player.invincibility(); GameObject.Destroy(gameObject); }
-            if (powerupID == 2 && player.fireBuffActive == false) { player.fireBuff(); GameObject.Destroy(gameObject); }
-            if (powerupID == 3) { player.addMissiles(); GameObject.Destroy(gameObject); }
+            if (powerupID == 1 && player.involActive == false) { player.invincibility(); Destroy(gameObject); }
+            if (powerupID == 2 && player.fireBuffActive == false) { player.fireBuff(); Destroy(gameObject); }
+            if (powerupID == 3) { player.addMissiles(); Destroy(gameObject); }
         }
     }
 }

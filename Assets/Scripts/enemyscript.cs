@@ -4,12 +4,14 @@
 public class enemyscript : MonoBehaviour
 {
     //set health
-    public int health = 100;
+    public int health = 10;
     //set death sprite
     public GameObject deathEffect;
     private Rigidbody2D rb;
     //loot table var
     public powerupHandeler thisPowerup;
+    //timer
+    private float timer;
 
     void Start()
     {
@@ -20,7 +22,7 @@ public class enemyscript : MonoBehaviour
         if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (currentState == states.kamikaze)
-            health *= 4;
+            health *= 2;
 
         storedState = currentState;
         //Debug.Log("currentState = " + currentState);
@@ -78,8 +80,12 @@ public class enemyscript : MonoBehaviour
     }
     void Die()
     {
-        //spawn death sprite
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        //allow skip if no death animation set
+        if (deathEffect != null)
+        {
+            //spawn death animation prefab
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
         makeLoot();
         //remove self
         Destroy(gameObject);
@@ -197,6 +203,8 @@ public class enemyscript : MonoBehaviour
 
     private void OnBecameVisible()
     {
+        //set tag to enable tracking missiles
+        transform.gameObject.tag = "enemy";
         //enabled = true;
         rb.velocity = storedVelocity;
         currentState = storedState;
@@ -206,7 +214,10 @@ public class enemyscript : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if(currentState != states.offcam)
+        //set tag to dissable tracking missiles
+        transform.gameObject.tag = "Untagged";
+
+        if (currentState != states.offcam)
             storedState = currentState;
 
         currentState = states.offcam;

@@ -13,6 +13,6 @@ public class TileScript : MonoBehaviour
         transform.parent = null;
         Destroy(parent);
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-1, 0);
+        rb.velocity = new Vector2(-2.5f, 0);
     }
 }
