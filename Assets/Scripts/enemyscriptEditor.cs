@@ -16,7 +16,6 @@ public class enemyScriptEditor : Editor
 
     private SerializedProperty amplitude;
     private SerializedProperty period;
-    private SerializedProperty shift;
     private SerializedProperty yChange;
 
     private SerializedProperty waitTime;
@@ -35,7 +34,6 @@ public class enemyScriptEditor : Editor
         speed = soTarget.FindProperty("speed");
         amplitude = soTarget.FindProperty("amplitude");
         period = soTarget.FindProperty("period");
-        shift = soTarget.FindProperty("shift");
         yChange = soTarget.FindProperty("yChange");
         waitTime = soTarget.FindProperty("waitTime");
         slideTime = soTarget.FindProperty("slideTime");
@@ -93,8 +91,7 @@ public class enemyScriptEditor : Editor
             case "Wavy":
                 EditorGUILayout.PropertyField(amplitude);
                 EditorGUILayout.PropertyField(period);
-                EditorGUILayout.PropertyField(shift);
-                EditorGUILayout.PropertyField(yChange);
+                //EditorGUILayout.PropertyField(yChange);
                 break;
             case "Slide":
                 EditorGUILayout.PropertyField(slideTime);
