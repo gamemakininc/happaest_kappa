@@ -16,6 +16,8 @@ public class enemyscript : MonoBehaviour
         thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-1, 0);
+        startY = transform.position.y;
+        startX = transform.position.x;
 
         if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -49,10 +51,11 @@ public class enemyscript : MonoBehaviour
     [Header("Wavy Attributes")]
     public float amplitude = 1;
     public float period = 0.3f;
-    public float shift;
-    public float yChange = 0.1f;
-    private float newX;
+    public float yChange = 0.1f; //Obsolete
+    private float newX; //Obsolete
     private float newY;
+    private float startY;
+    private float startX;
 
     [Header("Slide Attributes")]
     public float slideTime = 2.0f;
@@ -121,15 +124,16 @@ public class enemyscript : MonoBehaviour
                 rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 break;
             case states.wavy:
-                if (waitTime > Mathf.Infinity)
+                if (waitTime > Mathf.Infinity) //doesn't really work with wavy
                 {
                     waitTime -= Time.deltaTime;
                     rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 }
                 else
                 {
-                    newY = amplitude * Mathf.Sin(period * newY) + shift;
-                    newX = transform.position.y - yChange;
+                    newX = transform.position.x/* - yChange*/;
+                    newY = amplitude * Mathf.Sin(period * (newX - startX)) + startY;
+                    
                     Vector2 tempPosition = new Vector2(transform.position.x, newY);
                     transform.position = tempPosition;
                     rb.velocity = transform.InverseTransformDirection(new Vector2(rb.velocity.x, -speed));
