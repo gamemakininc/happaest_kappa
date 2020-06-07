@@ -7664,7 +7664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 9129779733956946149, guid: dc0d6cc97fada5a47a59624cae18ec0a,
+  m_Sprite: {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8444,11 +8444,11 @@ MonoBehaviour:
   pBulletSelector: 0
   pSpeed: 0
   pHealth: 0
-  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   pShield: 0
   pSRegen: 0
   pRepair: 0
   mslBonus: 0
+  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   pP0: 0
   pP1: 0
   levelsCleared: 0

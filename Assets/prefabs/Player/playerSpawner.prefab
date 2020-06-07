@@ -45,11 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefabs:
   - {fileID: 1246358362003326, guid: 639ff02e5ad1f2e47bc35b63611d38e2, type: 3}
-  - {fileID: 0}
+  - {fileID: 2815914210077100812, guid: 37e681de20a90ec4096792a8a8a31da1, type: 3}
   - {fileID: 7739602877054283212, guid: c2c52c5a615d5c2498b26d99f77888f7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 823744418884783563, guid: 6fc38a2f07aa8d9418525bd35e4fb17d, type: 3}
+  - {fileID: 3004133779655958297, guid: c638b924e8b03ce4480c93a906783ffd, type: 3}
   - {fileID: 4206964704927058168, guid: 54114ea6c41ef06468aff670c64c457e, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1628923623252545001, guid: a56b7f86b244d964d9013d384c708f33, type: 3}
+  - {fileID: 4340743194148284488, guid: 84417741f16355440949d80519a057ca, type: 3}
   fitsetup: 

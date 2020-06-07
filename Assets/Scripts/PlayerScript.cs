@@ -277,7 +277,7 @@ public class PlayerScript : MonoBehaviour
     public void addMissiles() 
     {
         //add missiles to all active missile slots
-        if (payload0Selector>0) { payload0Ammo += 5; }
-        if (payload1Selector>0) { payload1Ammo += 5; }
+        if (payload0Selector>=0) { payload0Ammo += 5; }
+        if (payload1Selector>=0) { payload1Ammo += 5; }
     }
 }
