@@ -55,6 +55,8 @@ public class enemyScriptEditor : Editor
         EditorGUILayout.PropertyField(speed);
         EditorGUILayout.PropertyField(waitTime);
 
+        Undo.RecordObject(target, "Changes made");
+
         myTarget.currentTab = GUILayout.Toolbar(myTarget.currentTab, new string[] { "Straight", "Wavy", "Slide", "Kamikaze" });
         switch (myTarget.currentTab)
         {
