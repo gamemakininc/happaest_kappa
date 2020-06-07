@@ -46,12 +46,11 @@ public class EnemyWavev2 : MonoBehaviour
         cameraBoundX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, 0)).x;
 
         SelectWave(out _selectedWave);
-        Debug.Log("Spawning Wave");
         currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
 
         currentState = states.spawning;
 
-        Debug.Log("Tile bounds.extents = " + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x);
+        //Debug.Log("Tile bounds.extents = " + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x);
     }
 
     private void Update()
@@ -117,7 +116,7 @@ public class EnemyWavev2 : MonoBehaviour
         previousTile = randNum;
         if (randNum > _tilePool.Count)
         {
-            Debug.Log("Spawn Elite");
+            //Debug.Log("Spawn Elite");
             randNum -= _tilePool.Count;
             selectedWave = _elitePool[randNum];
             //_elitePool.Remove(selectedWave);
@@ -125,7 +124,9 @@ public class EnemyWavev2 : MonoBehaviour
         }
         else
         {
-            Debug.Log("Spawn Wave");
+            //Debug.Log("Spawn Wave");
+            if (randNum == _tilePool.Count)
+                randNum--;
             selectedWave = _tilePool[randNum];
             //_tilePool.Remove(selectedWave);
             remainingWaves--;

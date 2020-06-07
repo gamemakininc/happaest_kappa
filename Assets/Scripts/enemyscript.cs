@@ -15,14 +15,14 @@ public class enemyscript : MonoBehaviour
     {
         thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
-        if (transform.parent != null)
-            transform.parent = null;
+        rb.velocity = new Vector2(-1, 0);
 
-        if(currentState != states.kamikaze || currentState != states.paused)
+        if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (currentState == states.kamikaze)
             health *= 4;
 
+        storedState = currentState;
         //Debug.Log("currentState = " + currentState);
     }
 
@@ -33,7 +33,8 @@ public class enemyscript : MonoBehaviour
         wavy,
         slide,
         kamikaze,
-        paused
+        paused,
+        offcam
     }
 
     public states currentState;
@@ -63,7 +64,7 @@ public class enemyscript : MonoBehaviour
 
     //Paused Attributes
     private Vector2 storedVelocity;
-    private states storedState = states.paused;
+    private states storedState;
 
     //handel for bullet script
     public void TakeDamage(int damage)
@@ -174,6 +175,8 @@ public class enemyscript : MonoBehaviour
                     storedVelocity = rb.velocity;
                 rb.velocity = Vector2.zero;
                 break;
+            case states.offcam:
+                break;
             default:
                 break;
         }
@@ -194,13 +197,19 @@ public class enemyscript : MonoBehaviour
 
     private void OnBecameVisible()
     {
+        //enabled = true;
         rb.velocity = storedVelocity;
         currentState = storedState;
+        if (transform.parent != null)
+            transform.parent = null;
     }
 
     private void OnBecameInvisible()
     {
-        storedState = currentState;
-        currentState = states.paused;
+        if(currentState != states.offcam)
+            storedState = currentState;
+
+        currentState = states.offcam;
+        //enabled = false;
     }
 }
