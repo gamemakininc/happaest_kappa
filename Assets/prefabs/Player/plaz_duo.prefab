@@ -157,7 +157,7 @@ MonoBehaviour:
   speed: 15
   rb: {fileID: 8838526378858117740}
   timer: 0
-  Damage: 2
+  Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
   enemy: {fileID: 0}
@@ -318,7 +318,7 @@ MonoBehaviour:
   speed: 15
   rb: {fileID: 4557276487829406458}
   timer: 0
-  Damage: 2
+  Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
   enemy: {fileID: 0}

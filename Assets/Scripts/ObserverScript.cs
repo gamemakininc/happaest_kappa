@@ -18,6 +18,8 @@ public class ObserverScript : MonoBehaviour
     */
     public bool[] unlocks;
     //player output from fitting system
+    public float efireRate;
+    public float fireRate;
     public int pBulletSelector;
     public float pSpeed;
     public float pHealth;

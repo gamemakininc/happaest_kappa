@@ -42,6 +42,7 @@ public class PlayerScript : MonoBehaviour
     private float fRtimer;
     private float baceRefireRate;
     private float refireTime;
+    public float enextFire;
     public float nextFire;
     //audio
     public AudioClip[] sounds;
@@ -63,6 +64,8 @@ public class PlayerScript : MonoBehaviour
         payload0Selector = ObserverScript.Instance.pP0 - 1;
         payload1Selector = ObserverScript.Instance.pP1 - 1;
         mslBonus = ObserverScript.Instance.mslBonus;
+        nextFire = ObserverScript.Instance.fireRate;
+        enextFire = ObserverScript.Instance.efireRate;
         //save location of RB and animator
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -83,9 +86,7 @@ public class PlayerScript : MonoBehaviour
         if (payload1Selector == 0) { payload0Ammo = 20 + mslBonus; }
         else if (payload1Selector == 1) { payload1Ammo = 15 + mslBonus; }
         else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
-        //fire rate augments
-        if (bulletSelector == 2) { nextFire += 0.25f; }
-        else if (bulletSelector == 0) { nextFire -= 0.15f; }
+        
     }
 
     //Update called once per frame
@@ -121,14 +122,14 @@ public class PlayerScript : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        //hp regen
+        //hp regen (check if hp below max)
         if (health < maxHealth)
         { 
             health += repair * Time.deltaTime;
         }
-        //shield regen
-        if (shield < maxShield&& hitTimer<=2)
-        {
+        //check if shield can regen(& has been long enough since last hit)
+        if (shield < maxShield && hitTimer<=2)
+        {//shield regen
             shield += sRegen * Time.deltaTime;
         }
         if (involActive == true)
@@ -139,13 +140,14 @@ public class PlayerScript : MonoBehaviour
         if (fireBuffActive == true)
         {//incroment timer
             fRtimer += 1.0F * Time.deltaTime;
+            //after some time dissable
             if (fRtimer >= 7) 
             {   fireBuffActive = false;
                 //reset fire rate
                 nextFire = baceRefireRate;
             }
         }
-        //incroment timer
+        //incroment timer (used for shield regen delay)
         hitTimer += 1.0F * Time.deltaTime;
 
     }
@@ -220,14 +222,35 @@ public class PlayerScript : MonoBehaviour
             }
         }
         hasFired = false;
-        //slot 0 skip or set to spawn unlimited dummys
     }
     public void Shoot()
     {
-            //add timer
-            refireTime = Time.time + nextFire;
-            //spawn bullet
+        //fire rate augments
+        if (bulletSelector == 0 || bulletSelector == 1)
+        { //spawn bullet
             Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
+            //reset timer
+            refireTime = Time.time + nextFire;
+        }
+        if (bulletSelector == 2)
+        {//spawn bullet
+            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
+            //reset timer
+            refireTime = Time.time + nextFire + 0.1f;
+        }
+
+        if (bulletSelector == 3 || bulletSelector == 4)
+        { //spawn bullet
+            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
+            //reset timer
+            refireTime = Time.time + enextFire;
+        }
+        if (bulletSelector == 5)
+        { //spawn bullet
+            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
+            //reset timer
+            refireTime = Time.time + enextFire + 0.1f;
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -277,7 +300,7 @@ public class PlayerScript : MonoBehaviour
     public void addMissiles() 
     {
         //add missiles to all active missile slots
-        if (payload0Selector>0) { payload0Ammo += 5; }
-        if (payload1Selector>0) { payload1Ammo += 5; }
+        if (payload0Selector>=0) { payload0Ammo += 5; }
+        if (payload1Selector>=0) { payload1Ammo += 5; }
     }
 }

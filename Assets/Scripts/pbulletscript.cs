@@ -13,13 +13,12 @@ public class pbulletscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (trackingMouse == false)
+        if (trackingMouse == false && trackingEnemy == false)
         {
-            if (trackingEnemy == false)
-            {
             rb.velocity = transform.up * speed;
-            }
         }
+        if (trackingMouse == true) { timer = -2; }
+
     }
     private void Update() 
     {

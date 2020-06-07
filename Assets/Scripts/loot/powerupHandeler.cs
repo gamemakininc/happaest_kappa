@@ -4,11 +4,11 @@ public class powerupHandeler : MonoBehaviour
     public GameObject[] powerUps;
     public int swapint;
     private float involChanceMin= 1;
-    private float involChanceMax = 20;
-    private float fireRateChanceMin = 21;
-    private float fireRateChanceMax = 59;
-    private float missileBounusChanceMin = 60;
-    private float missileBounusChanceMax = 100;
+    private float involChanceMax = 14;
+    private float fireRateChanceMin = 15;
+    private float fireRateChanceMax = 24;
+    private float missileBounusChanceMin = 25;
+    private float missileBounusChanceMax = 60;
     public void dropCalcultation()
     {
         if (swapint < involChanceMin && swapint > missileBounusChanceMax) { Instantiate(powerUps[0], transform.position, Quaternion.identity); }

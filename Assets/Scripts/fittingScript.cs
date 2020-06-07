@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class fittingScript : MonoBehaviour
 {
 	//set bace values
-	public float baceMoveSpeed = 6f;
+	private float baceERefireRate = 0.50f;
+	private float baceRefireRate = 0.40f;
+	private float baceMoveSpeed = 8f;
 	public float baceHealth = 100f;
 	public float baceSRegen = 0.5f;
 	public float baceRepair;
@@ -12,6 +14,8 @@ public class fittingScript : MonoBehaviour
 	public float maxPG;
 	public float maxWG;
 	//swap files
+	public float erefireRate;
+	public float refireRate;
 	public float MoveSpeed;
 	public int bulletSelector;
 	public int payload0Selector;
@@ -116,6 +120,7 @@ public class fittingScript : MonoBehaviour
 		shield=baceShield;
 		sRegen=baceSRegen;
 		MoveSpeed=baceMoveSpeed;
+		refireRate = baceRefireRate;
 		sDebuffSpeed = 1;
 		sDebuffHpr = 1;
 		sDebuffShieldr = 1;
@@ -141,9 +146,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) {  }
-		else if (fitSetup[counter] == 11) {  }
-		else if (fitSetup[counter] == 12) { health -= 10; }
+		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -154,9 +159,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { }
-		else if (fitSetup[counter] == 11) { }
-		else if (fitSetup[counter] == 12) { health -= 10; }
+		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -167,9 +172,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { }
-		else if (fitSetup[counter] == 11) { }
-		else if (fitSetup[counter] == 12) { health -= 10; }
+		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -180,9 +185,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { }
-		else if (fitSetup[counter] == 11) { }
-		else if (fitSetup[counter] == 12) { health -= 10; }
+		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -193,9 +198,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { }
-		else if (fitSetup[counter] == 11) { }
-		else if (fitSetup[counter] == 12) { health -= 10; }
+		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
 		counter++;
 		//check low slots
 		sDebuffSpeed = 1;
@@ -303,6 +308,8 @@ public class fittingScript : MonoBehaviour
 
 
 		//output to observer
+		ObserverScript.Instance.efireRate = erefireRate;
+		ObserverScript.Instance.fireRate = refireRate;
 		ObserverScript.Instance.fitSetup = fitSetup;
 		ObserverScript.Instance.pSpeed = MoveSpeed;
 		ObserverScript.Instance.pRepair = repair;

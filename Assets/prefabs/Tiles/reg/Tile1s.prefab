@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1524829016124400875}
   - component: {fileID: 8690726868454341479}
   - component: {fileID: 5035290209154920303}
+  - component: {fileID: 5167315485529114744}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,11 +67,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
   currentState: 0
-  speed: 1
+  speed: 3
   waitTime: 3
   currentTab: 0
   currentField: Straight
@@ -131,6 +132,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &5167315485529114744
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044326274783459822}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007648556, y: -4.798857e-11}
+  m_Size: {x: 0.31483215, y: 0.5263157}
+  m_Direction: 0
 --- !u!1 &2597024579137281643
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,9 +160,10 @@ GameObject:
   - component: {fileID: 2449641374820499784}
   - component: {fileID: 7831540565431502994}
   - component: {fileID: 8163992120713138228}
+  - component: {fileID: 6129645640823916788}
   m_Layer: 0
   m_Name: Enemy (4)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,11 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
   currentState: 0
-  speed: 1
+  speed: 3
   waitTime: 3
   currentTab: 0
   currentField: Straight
@@ -262,6 +280,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6129645640823916788
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2597024579137281643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007648556, y: -4.798857e-11}
+  m_Size: {x: 0.31483215, y: 0.5263157}
+  m_Direction: 0
 --- !u!1 &2778270902021796803
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +307,7 @@ GameObject:
   - component: {fileID: 6858879828002763666}
   - component: {fileID: 3497308524510889057}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: Tile1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,9 +511,10 @@ GameObject:
   - component: {fileID: 7925933219457216095}
   - component: {fileID: 6815116432005764877}
   - component: {fileID: 7625807921982722389}
+  - component: {fileID: 602686963131229351}
   m_Layer: 0
   m_Name: Enemy (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,11 +566,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
   currentState: 0
-  speed: 1
+  speed: 3
   waitTime: 3
   currentTab: 0
   currentField: Straight
@@ -596,6 +631,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &602686963131229351
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502981865323288107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007648556, y: -4.798857e-11}
+  m_Size: {x: 0.31483215, y: 0.5263157}
+  m_Direction: 0
 --- !u!1 &4954050480505846678
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,9 +659,10 @@ GameObject:
   - component: {fileID: 549246979139350937}
   - component: {fileID: 2341138060481525734}
   - component: {fileID: 8957123218038357109}
+  - component: {fileID: 3255328937110163378}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,11 +714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
   currentState: 0
-  speed: 1
+  speed: 3
   waitTime: 3
   currentTab: 0
   currentField: Straight
@@ -727,6 +779,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &3255328937110163378
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954050480505846678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007648556, y: -4.798857e-11}
+  m_Size: {x: 0.31483215, y: 0.5263157}
+  m_Direction: 0
 --- !u!1 &8036405678362025139
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,9 +807,10 @@ GameObject:
   - component: {fileID: 2157920490587420809}
   - component: {fileID: 151424800506335760}
   - component: {fileID: 5362392575811099094}
+  - component: {fileID: 6029637388106060807}
   m_Layer: 0
   m_Name: Enemy (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,11 +862,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
   currentState: 0
-  speed: 1
+  speed: 3
   waitTime: 3
   currentTab: 0
   currentField: Straight
@@ -858,3 +927,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6029637388106060807
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036405678362025139}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007648556, y: -4.798857e-11}
+  m_Size: {x: 0.31483215, y: 0.5263157}
+  m_Direction: 0
