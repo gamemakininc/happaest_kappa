@@ -54,7 +54,7 @@ public class mixMaster : MonoBehaviour
                 //if fade complete set current track switch swapbool so next track triggers on other output
                 if (swapf0 >= 1 && swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
             }
-            if (swapBool == false) {
+            else if (swapBool == false) {
                 //make shure bolth tracks active
                 if (as1.enabled == false || as1.enabled == false) { as1.enabled = true; as1.enabled = true;}
                 //start track
