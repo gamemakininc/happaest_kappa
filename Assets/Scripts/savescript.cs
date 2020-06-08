@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(ObserverScript))]
 public class savescript : MonoBehaviour
 {
+    private float fr;
+    private float efr;
     private int counter;
     private ObserverScript gameData;
     private string savePath;
@@ -24,6 +26,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame1.save";
         var save = new saves()
         {
+            efr = ObserverScript.Instance.efireRate,
+            fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
@@ -51,6 +55,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame2.save";
         var save = new saves()
         {
+            efr = ObserverScript.Instance.efireRate,
+            fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
@@ -78,6 +84,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame3.save";
         var save = new saves()
         {
+            efr = ObserverScript.Instance.efireRate,
+            fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
@@ -110,7 +118,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-
+            ObserverScript.Instance.efireRate = efr;
+            ObserverScript.Instance.fireRate = fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -148,6 +157,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
+            ObserverScript.Instance.efireRate = efr;
+            ObserverScript.Instance.fireRate = fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -183,6 +194,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
+            ObserverScript.Instance.efireRate = efr;
+            ObserverScript.Instance.fireRate = fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -227,14 +240,86 @@ public class savescript : MonoBehaviour
             counter = 0;
             swapint = 0;
             //loop to collect number of true bool
-            while (counter <= 33)
-            {
-                if (swapBArray[counter] == true) { swapint++; }
+            //while (swapint <= 36)
+            //{
+                if (swapBArray[0] == true) { swapint += 1; }
                 counter++;
-            }
-            //output to observer
-            ObserverScript.Instance.s1unlocks = swapfloat;
+            if (swapBArray[1] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[2] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[3] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[4] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[5] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[6] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[7] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[8] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[9] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[10] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[11] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[12] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[13] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[14] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[15] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[16] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[17] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[18] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[19] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[20] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[21] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[22] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[23] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[24] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[25] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[26] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[27] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[28] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[29] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[30] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[31] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[32] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[33] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[34] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[35] == true) { swapint += 1; }
+            counter++;
+            if (swapBArray[36] == true) { swapint += 1; }
+            counter++;
+            //}
 
+            //output to observer
+            ObserverScript.Instance.s1unlocks = swapint;
         }
         savePath = Application.persistentDataPath + "savegame2.save";
         if (File.Exists(savePath))
@@ -254,13 +339,14 @@ public class savescript : MonoBehaviour
             counter = 0;
             swapint = 0;
             //loop to collect number of true bool
-            while (counter <= 33)
+            while (swapint <= 35)
             {
-                if (swapBArray[counter]==true) { swapint++; }
+                if (swapBArray[counter] == true) { swapint += 1; }
+                Debug.Log(counter);
                 counter++;
             }
             //output to observer
-            ObserverScript.Instance.s2unlocks = swapfloat;
+            ObserverScript.Instance.s2unlocks = swapint;
 
         }
 
@@ -282,11 +368,12 @@ public class savescript : MonoBehaviour
             counter = 0;
             swapint = 0;
             //loop to collect number of true bool
-            while (counter <= 33)
+            while (swapint <= 35)
             {
-                if (swapBArray[counter] == true) { swapint+=1; }
+                if (swapBArray[counter] == true) { swapint += 1; }
                 counter++;
             }
+
             //output to observer
             ObserverScript.Instance.s3unlocks = swapint;
         }

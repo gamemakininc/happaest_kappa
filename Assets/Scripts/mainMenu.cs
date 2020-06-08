@@ -28,10 +28,16 @@ public class mainMenu : MonoBehaviour
     private int swapint2;
     private int infswapint1;
     private int infswapint2;
+    //continue variable
+    public bool gameInProgress = false;
+    public GameObject continuebtn;
+    public bool[] unlocks;
 
     // Start is called before the first frame update
     void Start()
     {
+        unlocks = ObserverScript.Instance.unlocks;
+        continueStatus();
         mixMaster.Instance.nTrack = 0;
         mainmenu();
     }
@@ -68,6 +74,15 @@ public class mainMenu : MonoBehaviour
                 rbswap2.velocity = new Vector2(rbswap2.velocity.x, 0);
             }
         }
+    }
+    public void continueStatus()
+    {
+        //check if any ships unlocked
+        if (unlocks[28] == true || unlocks[29] == true || unlocks[30] == true || unlocks[31] == true || unlocks[32] == true || unlocks[33] == true || unlocks[34] == true || unlocks[35] == true)
+        //allow use of continue btn
+        { continuebtn.GetComponent<Button>().enabled = true; }
+        //if all ships locked play is impossible so lock continue btn
+        else { continuebtn.GetComponent<Button>().enabled = false; }
     }
     public void mainmenu()
     {

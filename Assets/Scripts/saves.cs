@@ -2,6 +2,8 @@
 public class saves
 {
     //player output from fitting system
+    public float fr;
+    public float efr;
     public int pBulletSelector;
     public float pSpeed;
     public float pHealth;

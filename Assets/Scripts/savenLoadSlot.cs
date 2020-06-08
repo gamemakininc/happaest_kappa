@@ -32,15 +32,12 @@ public class savenLoadSlot : MonoBehaviour
 
         if (slot == 0)
         {
-            //update unlocks into int%
-            //s1unlocks *= 100;
-            //Mathf.RoundToInt(s1unlocks);
 
             //populate save1box
             namebox.GetComponent<Text>().text = s1name;
             clearsbox.GetComponent<Text>().text = s1clears + "";
             spritebox.GetComponent<SpriteRenderer>().sprite = ships[s1Shipselector];
-            float a = s1unlocks / 34;
+            float a = s1unlocks / 37;
             s1unlocks = a * 100;
             s1unlocks=Mathf.RoundToInt(s1unlocks);
             unlocksbox.GetComponent<Text>().text = s1unlocks + "%";
@@ -48,31 +45,23 @@ public class savenLoadSlot : MonoBehaviour
         else if (slot == 1)
         {
 
-            //update unlocks into int%
-            //s2unlocks *= 100;
-            //Mathf.RoundToInt(s2unlocks);
-
             //populate save2box
             namebox.GetComponent<Text>().text = s2name;
             clearsbox.GetComponent<Text>().text = s2clears + "";
             spritebox.GetComponent<SpriteRenderer>().sprite = ships[s2Shipselector];
-            float a = s2unlocks / 34;
+            float a = s2unlocks / 37;
             s2unlocks = a * 100;
             s2unlocks=Mathf.RoundToInt(s2unlocks);
             unlocksbox.GetComponent<Text>().text = s2unlocks + "%";
         }
         else if (slot == 2)
         {
-            
-            //update unlocks into int%
-            //s3unlocks *= 100;
-            //Mathf.RoundToInt(s3unlocks);
 
-            //populate save3mox
+            //populate save3box
             namebox.GetComponent<Text>().text = s3name;
             clearsbox.GetComponent<Text>().text = s3clears + "";
             spritebox.GetComponent<SpriteRenderer>().sprite = ships[s3Shipselector];
-            float a = s3unlocks / 34;
+            float a = s3unlocks / 37;
             s3unlocks = a * 100;
             s3unlocks = Mathf.RoundToInt(s3unlocks);
             unlocksbox.GetComponent<Text>().text = s3unlocks + "%";
