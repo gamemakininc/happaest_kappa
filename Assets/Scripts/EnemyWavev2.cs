@@ -16,7 +16,7 @@ public class EnemyWavev2 : MonoBehaviour
     [Header("Tiles")]
     [HideInInspector]
     public GameObject currentTile;
-    private int previousTile = -1;
+    private GameObject previousTile;
     public GameObject[] tilePool;
     public GameObject[] elitePool;
         private List<GameObject> _tilePool;
@@ -76,7 +76,7 @@ public class EnemyWavev2 : MonoBehaviour
                 {
                     //Debug.Log("Spawning Wave");
                     SelectWave(out _selectedWave);
-                    currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
+                    currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX + xDif, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
                     return;
 
                     //tileEdgeX = currentTile.transform.position.x + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x;
@@ -107,28 +107,22 @@ public class EnemyWavev2 : MonoBehaviour
     //Selects which prefab to spawn
     void SelectWave(out GameObject selectedWave) 
     {
-        int totalWaves = _tilePool.Count + _elitePool.Count;
-        //Debug.Log(totalWaves);
-        int randNum = Mathf.RoundToInt(Random.Range(0, totalWaves));
-        //prevents the same tile being used twice
-        while(randNum == previousTile || randNum > _tilePool.Count && remainingElites == 0 || randNum < _tilePool.Count && remainingWaves == 0)
-            randNum = Mathf.RoundToInt(Random.Range(0, totalWaves));
-        previousTile = randNum;
-        if (randNum > _tilePool.Count)
+        //Currently 20% chance of elite wave, 80% chance of normal wave
+        float waveWeight = Mathf.RoundToInt(Random.Range(0.0f, 10.0f)) / 10;
+        while(waveWeight > .89f && remainingElites <= 0 || waveWeight < .89f && remainingWaves <= 0)
+            waveWeight = Mathf.RoundToInt(Random.Range(0.0f, 10.0f)) / 10;
+
+        if(waveWeight > .89f)
         {
-            //Debug.Log("Spawn Elite");
-            randNum -= _tilePool.Count;
-            selectedWave = _elitePool[randNum];
-            //_elitePool.Remove(selectedWave);
+            selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
+            while(selectedWave == previousTile)
+                selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
             remainingElites--;
-        }
-        else
+        } else
         {
-            //Debug.Log("Spawn Wave");
-            if (randNum == _tilePool.Count)
-                randNum--;
-            selectedWave = _tilePool[randNum];
-            //_tilePool.Remove(selectedWave);
+            selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
+            while (selectedWave == previousTile)
+                selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
             remainingWaves--;
         }
         return;
