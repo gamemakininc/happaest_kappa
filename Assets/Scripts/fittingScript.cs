@@ -58,6 +58,9 @@ public class fittingScript : MonoBehaviour
 	
 	public void Start()
 	{
+
+		mixMaster.Instance.nTrack = 3;
+
 		slotsfake[0] = true;
 		slotsfake[1] = true;
 		slotsfake[2] = true;
