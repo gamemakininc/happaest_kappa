@@ -74,14 +74,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &4508183522729568613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -222,14 +223,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &3771181795079417930
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -370,14 +372,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &627507476277578950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -471,7 +474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4661360557332971756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.61, y: -0.24, z: 0}
+  m_LocalPosition: {x: 4.75, y: 0, z: 0}
   m_LocalScale: {x: 9.5, y: 10, z: 1}
   m_Children:
   - {fileID: 8078862402929213123}
@@ -640,14 +643,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &2102914134144901606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -788,14 +792,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &411816797336559751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -887,7 +892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5941694934005908336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.4962015, y: -0.03851252, z: 0}
+  m_LocalPosition: {x: 9.4962015, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 18133396494410739}
@@ -1018,14 +1023,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &3538619165119569884
 SpriteRenderer:
   m_ObjectHideFlags: 0
