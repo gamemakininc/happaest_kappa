@@ -20,6 +20,7 @@ public class enemyscript : MonoBehaviour
         rb.velocity = new Vector2(-1, 0);
         startY = transform.position.y;
         startX = transform.position.x;
+        cameraBoundX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, 0)).x;
 
         if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -37,6 +38,7 @@ public class enemyscript : MonoBehaviour
         wavy,
         slide,
         kamikaze,
+        sidescroll,
         paused,
         offcam
     }
@@ -47,6 +49,8 @@ public class enemyscript : MonoBehaviour
 
     [HideInInspector]
     public int currentTab;
+    [HideInInspector]
+    public int currentTab2;
     [HideInInspector]
     public string currentField;
 
@@ -66,6 +70,11 @@ public class enemyscript : MonoBehaviour
     [Header("Kamikaze Attributes")]
     private bool isTargeting = true;
     public float maxRadians = 1.0f;
+
+    [Header("Side Scroller Attributes")]
+    private float cameraBoundX;
+    public Vector2 sideVelocity = new Vector2(0, -1.5f);
+
 
     //Paused Attributes
     private Vector2 storedVelocity;
@@ -172,12 +181,21 @@ public class enemyscript : MonoBehaviour
                 {
                     waitTime -= Time.deltaTime;
                     rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
-                }
-                else if (isTargeting)
+                } else if (isTargeting)
                 {
                     rb.velocity = new Vector2(0, 0);
                     Kamikaze();
                     isTargeting = false;
+                }
+                break;
+            case states.sidescroll:
+                if (waitTime > 0 && transform.position.x < cameraBoundX)
+                {
+                    waitTime -= Time.deltaTime;
+                    rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
+                } else if(waitTime <= 0)
+                {
+                    rb.velocity = sideVelocity;
                 }
                 break;
             case states.paused:
@@ -221,6 +239,8 @@ public class enemyscript : MonoBehaviour
         //set tag to dissable tracking missiles
         transform.gameObject.tag = "Untagged";
 
+        if (currentState == states.sidescroll)
+            return;
         if (currentState != states.offcam)
             storedState = currentState;
 

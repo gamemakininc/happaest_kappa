@@ -24,6 +24,8 @@ public class enemyScriptEditor : Editor
 
     private SerializedProperty maxRadians;
 
+    private SerializedProperty sideVelocity;
+
     private void OnEnable()
     {
         myTarget = (enemyscript)target;
@@ -39,6 +41,7 @@ public class enemyScriptEditor : Editor
         slideTime = soTarget.FindProperty("slideTime");
         moveRight = soTarget.FindProperty("moveRight");
         maxRadians = soTarget.FindProperty("maxRadians");
+        sideVelocity = soTarget.FindProperty("sideVelocity");
     }
 
     public override void OnInspectorGUI()
@@ -57,24 +60,39 @@ public class enemyScriptEditor : Editor
 
         Undo.RecordObject(target, "Changes made");
 
-        myTarget.currentTab = GUILayout.Toolbar(myTarget.currentTab, new string[] { "Straight", "Wavy", "Slide", "Kamikaze" });
+        myTarget.currentTab = GUILayout.Toolbar(myTarget.currentTab, new string[] { "Straight", "Wavy", "Slide", "Kamikaze"});
         switch (myTarget.currentTab)
         {
             case 0:
+                myTarget.currentTab2 = 5;
                 myTarget.currentField = "Straight";
                 myTarget.currentState = enemyscript.states.straight;
                 break;
             case 1:
+                myTarget.currentTab2 = 5;
                 myTarget.currentField = "Wavy";
                 myTarget.currentState = enemyscript.states.wavy;
                 break;
             case 2:
+                myTarget.currentTab2 = 5;
                 myTarget.currentField = "Slide";
                 myTarget.currentState = enemyscript.states.slide;
                 break;
             case 3:
+                myTarget.currentTab2 = 5;
                 myTarget.currentField = "Kamikaze";
                 myTarget.currentState = enemyscript.states.kamikaze;
+                break;
+            default:
+                break;
+        }
+        myTarget.currentTab2 = GUILayout.Toolbar(myTarget.currentTab2, new string[] { "Sidescroll" });
+        switch (myTarget.currentTab2)
+        {
+            case 0:
+                myTarget.currentTab = 5;
+                myTarget.currentField = "Sidescroll";
+                myTarget.currentState = enemyscript.states.sidescroll;
                 break;
             default:
                 break;
@@ -101,6 +119,9 @@ public class enemyScriptEditor : Editor
                 break;
             case "Kamikaze":
                 EditorGUILayout.PropertyField(maxRadians);
+                break;
+            case "Sidescroll":
+                EditorGUILayout.PropertyField(sideVelocity);
                 break;
             default:
                 break;
