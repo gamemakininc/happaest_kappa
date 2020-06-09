@@ -209,14 +209,15 @@ MonoBehaviour:
   speed: 1
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: 
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!50 &39689550
 Rigidbody2D:
   serializedVersion: 4
@@ -687,6 +688,7 @@ GameObject:
   - component: {fileID: 1503072451}
   - component: {fileID: 1503072450}
   - component: {fileID: 1503072449}
+  - component: {fileID: 1503072452}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -759,6 +761,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1503072452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503072448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead8437629342d94fa37bb651c970be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveCount: 8
+  eliteWaves: 0
+  Boss: {fileID: 0}
+  currentTile: {fileID: 0}
+  tilePool:
+  - {fileID: 2778270902021796803, guid: 308ca1cf61c3cca4a9014be610c02fbc, type: 3}
+  - {fileID: 3441351785680952161, guid: e305e7421140d2143864a7c17591d274, type: 3}
+  - {fileID: 5941694934005908336, guid: 0e9ad4970ff691f48854f18178f9d60d, type: 3}
+  - {fileID: 5784932388889679215, guid: 613b370c92831d34c84f4cf4906caefe, type: 3}
+  - {fileID: 4565897630690109501, guid: fbd6baf6d04934d4b8607ce9dc005d7d, type: 3}
+  - {fileID: 3021310206164126036, guid: b8c9082708f7a5149b31f0a9966a307b, type: 3}
+  elitePool:
+  - {fileID: 2778270902021796803, guid: 308ca1cf61c3cca4a9014be610c02fbc, type: 3}
 --- !u!1001 &1750483660
 PrefabInstance:
   m_ObjectHideFlags: 0
