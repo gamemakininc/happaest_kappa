@@ -32,6 +32,9 @@ public class deathScript : MonoBehaviour
             sceneManedgerCan.GetComponent<sceneManager>().mainMenu();
         }
         else { sceneManedgerCan.GetComponent<sceneManager>().testMenu(); }
+        ObserverScript.Instance.bookmark0 = false;
+        ObserverScript.Instance.bookmark1 = false;
+        ObserverScript.Instance.bookmark2 = false;
     }
     // Update is called once per frame
     void Update()

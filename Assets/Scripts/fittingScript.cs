@@ -52,7 +52,7 @@ public class fittingScript : MonoBehaviour
 	//value of 0 for empty slot
 	public int[] fitSetup = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	//slot isnt true
-	public bool[] slotsfake;
+	public bool[] slotsfake=new bool[] { true, true, true, true, true, true, true, true, true, true, true, true, false, };
 	//a counter
 	private int counter = 0;
 	

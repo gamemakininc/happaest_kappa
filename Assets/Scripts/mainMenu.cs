@@ -232,8 +232,4 @@ public class mainMenu : MonoBehaviour
         //set current menu to swapint2
         infswapint2 = 8;
     }
-    public void changeName() 
-    {
-        ObserverScript.Instance.playerName = playerNameBox.GetComponent<Text>().text;
-    }
 }
