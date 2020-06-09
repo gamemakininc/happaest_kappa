@@ -76,6 +76,7 @@ public class EnemyWavev2 : MonoBehaviour
                 {
                     //Debug.Log("Spawning Wave");
                     SelectWave(out _selectedWave);
+                    Debug.Log(_selectedWave.name);
                     currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX + xDif, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
                     return;
 
@@ -108,11 +109,12 @@ public class EnemyWavev2 : MonoBehaviour
     void SelectWave(out GameObject selectedWave) 
     {
         //Currently 20% chance of elite wave, 80% chance of normal wave
-        float waveWeight = Mathf.RoundToInt(Random.Range(0.0f, 10.0f)) / 10;
+        float waveWeight = Random.Range(0.0f, 1.0f);
+        
         while(waveWeight > .89f && remainingElites <= 0 || waveWeight < .89f && remainingWaves <= 0)
-            waveWeight = Mathf.RoundToInt(Random.Range(0.0f, 10.0f)) / 10;
-
-        if(waveWeight > .89f)
+            waveWeight = Random.Range(0.0f, 1.0f);
+        
+        if (waveWeight > .89f)
         {
             selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
             while(selectedWave == previousTile)
@@ -120,11 +122,13 @@ public class EnemyWavev2 : MonoBehaviour
             remainingElites--;
         } else
         {
-            selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
+            selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _tilePool.Count - 1))];
             while (selectedWave == previousTile)
-                selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
+                selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _tilePool.Count - 1))];
             remainingWaves--;
         }
+        
+        previousTile = selectedWave;
         return;
     }
 
