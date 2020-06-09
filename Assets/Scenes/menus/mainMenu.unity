@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 113480248}
   - component: {fileID: 113480249}
   m_Layer: 0
-  m_Name: f18_0
+  m_Name: 1f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 115842794}
   - component: {fileID: 115842793}
   m_Layer: 5
-  m_Name: numunlocks
+  m_Name: 3numunlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 151253363}
   - component: {fileID: 151253362}
   m_Layer: 5
-  m_Name: numclears
+  m_Name: 1numclears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 173354516}
   - component: {fileID: 173354515}
   m_Layer: 5
-  m_Name: unlocks
+  m_Name: 2unlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2260,7 +2260,7 @@ GameObject:
   - component: {fileID: 465482317}
   - component: {fileID: 465482316}
   m_Layer: 5
-  m_Name: levels cleared
+  m_Name: 3levels cleared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2978,7 +2978,7 @@ GameObject:
   - component: {fileID: 556048178}
   - component: {fileID: 556048177}
   m_Layer: 5
-  m_Name: savename
+  m_Name: 3savename
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3056,7 +3056,7 @@ GameObject:
   - component: {fileID: 562482745}
   - component: {fileID: 562482744}
   m_Layer: 5
-  m_Name: unlocks
+  m_Name: 3unlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4134,7 +4134,7 @@ GameObject:
   - component: {fileID: 877213651}
   - component: {fileID: 877213650}
   m_Layer: 5
-  m_Name: numunlocks
+  m_Name: 2numunlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4451,7 +4451,7 @@ GameObject:
   - component: {fileID: 965443579}
   - component: {fileID: 965443578}
   m_Layer: 5
-  m_Name: levels cleared
+  m_Name: 1levels cleared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4922,7 +4922,7 @@ GameObject:
   - component: {fileID: 1037343405}
   - component: {fileID: 1037343406}
   m_Layer: 1
-  m_Name: Square
+  m_Name: 1Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5467,7 +5467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5546,7 +5546,7 @@ GameObject:
   - component: {fileID: 1093353622}
   - component: {fileID: 1093353621}
   m_Layer: 5
-  m_Name: savename
+  m_Name: 2savename
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5995,7 +5995,7 @@ GameObject:
   - component: {fileID: 1254397331}
   - component: {fileID: 1254397332}
   m_Layer: 1
-  m_Name: Square
+  m_Name: 2Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6076,7 +6076,7 @@ GameObject:
   - component: {fileID: 1313375904}
   - component: {fileID: 1313375905}
   m_Layer: 0
-  m_Name: f18_0
+  m_Name: 3f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7030,7 +7030,7 @@ GameObject:
   - component: {fileID: 1429070720}
   - component: {fileID: 1429070719}
   m_Layer: 5
-  m_Name: numunlocks
+  m_Name: 1numunlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7108,7 +7108,7 @@ GameObject:
   - component: {fileID: 1471679704}
   - component: {fileID: 1471679703}
   m_Layer: 5
-  m_Name: levels cleared
+  m_Name: 2levels cleared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7702,7 +7702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -7982,7 +7982,7 @@ GameObject:
   - component: {fileID: 1570923061}
   - component: {fileID: 1570923060}
   m_Layer: 5
-  m_Name: savename
+  m_Name: 1savename
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8405,7 +8405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -8832,7 +8832,7 @@ GameObject:
   - component: {fileID: 1691983939}
   - component: {fileID: 1691983940}
   m_Layer: 1
-  m_Name: Square
+  m_Name: 3Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9063,7 +9063,7 @@ GameObject:
   - component: {fileID: 1734025156}
   - component: {fileID: 1734025155}
   m_Layer: 5
-  m_Name: unlocks
+  m_Name: 1unlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9613,7 +9613,7 @@ GameObject:
   - component: {fileID: 1861878060}
   - component: {fileID: 1861878061}
   m_Layer: 0
-  m_Name: f18_0
+  m_Name: 2f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9695,7 +9695,7 @@ GameObject:
   - component: {fileID: 1884063955}
   - component: {fileID: 1884063954}
   m_Layer: 5
-  m_Name: numclears
+  m_Name: 2numclears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10712,7 +10712,7 @@ GameObject:
   - component: {fileID: 2125218771}
   - component: {fileID: 2125218770}
   m_Layer: 5
-  m_Name: numclears
+  m_Name: 3numclears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

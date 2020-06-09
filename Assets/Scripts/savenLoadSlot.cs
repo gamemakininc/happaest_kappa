@@ -32,6 +32,11 @@ public class savenLoadSlot : MonoBehaviour
 
         if (slot == 0)
         {
+            //populate s1 variables
+            s1Shipselector = ObserverScript.Instance.s1Shipselector;
+            s1name = ObserverScript.Instance.s1name;
+            s1clears = ObserverScript.Instance.s1clears;
+            s1unlocks = ObserverScript.Instance.s1unlocks;
 
             //populate save1box
             namebox.GetComponent<Text>().text = s1name;
@@ -44,6 +49,11 @@ public class savenLoadSlot : MonoBehaviour
         }
         else if (slot == 1)
         {
+            //populate s2 variables
+            s2Shipselector = ObserverScript.Instance.s2Shipselector;
+            s2name = ObserverScript.Instance.s2name;
+            s2clears = ObserverScript.Instance.s2clears;
+            s2unlocks = ObserverScript.Instance.s2unlocks;
 
             //populate save2box
             namebox.GetComponent<Text>().text = s2name;
@@ -56,6 +66,11 @@ public class savenLoadSlot : MonoBehaviour
         }
         else if (slot == 2)
         {
+            //populate s3 variables
+            s3Shipselector = ObserverScript.Instance.s3Shipselector;
+            s3name = ObserverScript.Instance.s3name;
+            s3clears = ObserverScript.Instance.s3clears;
+            s3unlocks = ObserverScript.Instance.s3unlocks;
 
             //populate save3box
             namebox.GetComponent<Text>().text = s3name;
@@ -70,21 +85,6 @@ public class savenLoadSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //populate s1 variables
-        s1Shipselector = ObserverScript.Instance.s1Shipselector;
-        s1name = ObserverScript.Instance.s1name;
-        s1clears = ObserverScript.Instance.s1clears;
-        s1unlocks = ObserverScript.Instance.s1unlocks;
-        //populate s2 variables
-        s2Shipselector = ObserverScript.Instance.s2Shipselector;
-        s2name = ObserverScript.Instance.s2name;
-        s2clears = ObserverScript.Instance.s2clears;
-        s2unlocks = ObserverScript.Instance.s2unlocks;
-        //populate s3 variables
-        s3Shipselector = ObserverScript.Instance.s3Shipselector;
-        s3name = ObserverScript.Instance.s3name;
-        s3clears = ObserverScript.Instance.s3clears;
-        s3unlocks = ObserverScript.Instance.s3unlocks;
         loadPlaceMats();
     }
 
