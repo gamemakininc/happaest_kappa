@@ -65,23 +65,21 @@ public class EnemyWavev2 : MonoBehaviour
         switch (currentState) //States
         {
             case states.spawning:
-                if(remainingWaves == 0 && remainingElites == 0)
-                {
-                    currentState = states.boss;
-                    return;
-                }
                 float xDif = tileEdgeX - cameraBoundX; //The distance between the camera's right border and the right edge of the tile
                 //Debug.Log("xDif = " + xDif);
                 if(xDif < float.Epsilon)
                 {
+                    if (remainingWaves == 0 && remainingElites == 0)
+                    {
+                        currentState = states.boss;
+                        return;
+                    }
+
                     //Debug.Log("Spawning Wave");
                     SelectWave(out _selectedWave);
                     Debug.Log(_selectedWave.name);
                     currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX + xDif, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
                     return;
-
-                    //tileEdgeX = currentTile.transform.position.x + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x;
-                    //xDif = tileEdgeX - cameraBoundX;
                 }
                 break;
             case states.paused:
@@ -135,6 +133,7 @@ public class EnemyWavev2 : MonoBehaviour
     void OnLevelComplete() //Runs when currentState = states.win
     {
         Debug.Log("Level Complete");
+        Camera.main.GetComponent<sceneManager>().briefing();
         currentState = states.paused;
     }
 }
