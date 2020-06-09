@@ -77,7 +77,6 @@ MonoBehaviour:
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
@@ -225,7 +224,6 @@ MonoBehaviour:
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
@@ -576,7 +574,6 @@ MonoBehaviour:
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
@@ -724,7 +721,6 @@ MonoBehaviour:
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
@@ -872,7 +868,6 @@ MonoBehaviour:
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
