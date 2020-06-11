@@ -84,13 +84,18 @@ public class enemyScriptEditor : Editor
             default:
                 break;
         }
-        myTarget.currentTab2 = GUILayout.Toolbar(myTarget.currentTab2, new string[] { "Sidescroll" });
+        myTarget.currentTab2 = GUILayout.Toolbar(myTarget.currentTab2, new string[] { "Sidescroll", "Paused" });
         switch (myTarget.currentTab2)
         {
             case 0:
                 myTarget.currentTab = 5;
                 myTarget.currentField = "Sidescroll";
                 myTarget.currentState = enemyscript.states.sidescroll;
+                break;
+            case 1:
+                myTarget.currentTab = 5;
+                myTarget.currentField = "Paused";
+                myTarget.currentState = enemyscript.states.paused;
                 break;
             default:
                 break;
@@ -120,6 +125,8 @@ public class enemyScriptEditor : Editor
                 break;
             case "Sidescroll":
                 EditorGUILayout.PropertyField(sideVelocity);
+                break;
+            case "Paused":
                 break;
             default:
                 break;
