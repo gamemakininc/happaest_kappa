@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 89656381989647455}
   - component: {fileID: 89656381989647454}
-  - component: {fileID: 89656381989647453}
   - component: {fileID: 89656381989647452}
   - component: {fileID: 1248646553223435860}
   - component: {fileID: -6286957572518117678}
+  - component: {fileID: 437891730751559837}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -31,7 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5768765266281764322}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -56,34 +57,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &89656381989647453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89656381989647451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  deathEffect: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
-    type: 3}
-  thisPowerup: {fileID: 0}
-  currentState: 0
-  speed: 1
-  waitTime: 3
-  currentTab: 0
-  currentField: Straight
-  amplitude: 1
-  period: 1.5
-  shift: -5
-  yChange: 0.0005
-  slideTime: 2
-  moveRight: 1
-  maxRadians: 1
 --- !u!212 &89656381989647452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -181,3 +154,65 @@ MonoBehaviour:
   - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
   - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
   swapint: 0
+--- !u!114 &437891730751559837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89656381989647451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  deathEffect: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
+    type: 3}
+  thisPowerup: {fileID: 0}
+  boss: 0
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
+  currentState: 0
+  speed: 1
+  waitTime: 3
+  currentTab: 0
+  currentTab2: 5
+  currentField: Straight
+  amplitude: 1
+  period: 0.3
+  yChange: 0.1
+  slideTime: 2
+  moveRight: 0
+  maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
+--- !u!1 &1680944568892647834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5768765266281764322}
+  m_Layer: 0
+  m_Name: mgport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5768765266281764322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680944568892647834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.011, y: 0.219, z: -4.351393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 89656381989647455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

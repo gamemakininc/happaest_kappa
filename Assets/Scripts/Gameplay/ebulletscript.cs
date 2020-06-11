@@ -12,10 +12,19 @@ public class ebulletscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            if (trackingEnemy == false)
-            {
+        if (trackingEnemy == false)
+        {
             rb.velocity = transform.up * speed;
-            }
+        }
+        else
+        {
+            //get object with tag
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            //move??
+            Vector3 direction = player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+            rb.rotation = angle;
+        }
     }
     private void Update() 
     {
@@ -29,14 +38,7 @@ public class ebulletscript : MonoBehaviour
         }
         if (trackingEnemy==true) 
         {
-            //get object with tag
-            player = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
-            //move??
-            Vector3 direction = player.position - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg-90f;
-            rb.rotation = angle;
             rb.velocity = transform.up * speed;
-
         }
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)

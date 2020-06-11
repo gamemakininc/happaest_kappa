@@ -12,9 +12,13 @@ public class enemyscript : MonoBehaviour
     public powerupHandeler thisPowerup;
     //timer
     private float timer;
+    public bool boss;
+    public GameObject ebullet;
+    public Transform mgport;
 
     void Start()
     {
+        if (boss == false) { timer = Random.Range(-2, 0); }
         thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-1, 0);
@@ -128,6 +132,13 @@ public class enemyscript : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (boss == false) { 
+            timer += 1 * Time.fixedDeltaTime;
+            if (timer >= 1.5) {
+                Instantiate(ebullet, mgport.position, mgport.rotation);
+            }
+        
+        }
         //Restores velocity when unpausing
         if (currentState != states.paused && storedVelocity != Vector2.zero)
             rb.velocity = storedVelocity;

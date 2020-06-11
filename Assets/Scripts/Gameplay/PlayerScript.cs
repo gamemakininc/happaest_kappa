@@ -262,8 +262,8 @@ public class PlayerScript : MonoBehaviour
             }
         if (bulletSelector == 6) 
         {
-            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
-            refireTime = Time.time + enextFire;
+            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
+            refireTime = Time.time + 0.1f;
         }
 
     }

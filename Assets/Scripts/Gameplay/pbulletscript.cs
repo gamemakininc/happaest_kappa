@@ -24,23 +24,19 @@ public class pbulletscript : MonoBehaviour
             }
             if (trackingMouse == true) { timer = -2; }
         if (islasor==true) { timer = 1.5f; }
-        RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].right);
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].up);
         if (hitInfo)
         {
             enemyscript enemy = hitInfo.transform.GetComponent<enemyscript>();
             if (enemy != null)
             {
-                enemy.TakeDamage(4);
-
-                lineRenderer.SetPosition(0, laserBeam[0].position);
+                enemy.TakeDamage(Damage);
                 laserBeam[1].position = hitInfo.point;
-                lineRenderer.SetPosition(1, laserBeam[1].position);
             }
             else
             {
-                lineRenderer.SetPosition(0, laserBeam[0].position);
-                laserBeam[1].position = laserBeam[0].right * 100;
-                lineRenderer.SetPosition(1, laserBeam[1].position);
+                laserBeam[1].position = laserBeam[0].up * 10000;
             }
             lineRenderer.enabled = true;
             laserVisible = 0;
@@ -48,6 +44,11 @@ public class pbulletscript : MonoBehaviour
     }
     private void Update() 
     {
+        if (islasor == true)
+        {
+            lineRenderer.SetPosition(0, laserBeam[0].position);
+            lineRenderer.SetPosition(1, laserBeam[1].position);
+        }
         //incroment timer
         timer += 1.0F * Time.deltaTime;
         //check timer
@@ -85,7 +86,7 @@ public class pbulletscript : MonoBehaviour
         if (laserVisible <= 1)
         {
             laserVisible = laserVisible + 1 * Time.deltaTime;
-            if (laserVisible >= 0.3f) { lineRenderer.enabled = false; }
+            if (laserVisible >= 0.1f) { lineRenderer.enabled = false; }
         }
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)
