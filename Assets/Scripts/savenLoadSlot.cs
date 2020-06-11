@@ -7,16 +7,19 @@ public class savenLoadSlot : MonoBehaviour
     public int slot;
     private string swapstring;
 
+    public int s1diff;
     public float s1unlocks;
     public int s1Shipselector;
     public int s1clears = 0;
     public string s1name = "Empty";
 
+    public int s2diff;
     public float s2unlocks;
     public int s2Shipselector;
     public int s2clears = 0;
     public string s2name = "Empty";
 
+    public int s3diff;
     public float s3unlocks=1;
     public int s3Shipselector;
     public int s3clears = 0;
@@ -33,6 +36,7 @@ public class savenLoadSlot : MonoBehaviour
         if (slot == 0)
         {
             //populate s1 variables
+            s1diff = ObserverScript.Instance.s1diff;//currently unused
             s1Shipselector = ObserverScript.Instance.s1Shipselector;
             s1name = ObserverScript.Instance.s1name;
             s1clears = ObserverScript.Instance.s1clears;
@@ -50,6 +54,7 @@ public class savenLoadSlot : MonoBehaviour
         else if (slot == 1)
         {
             //populate s2 variables
+            s2diff = ObserverScript.Instance.s2diff;//currently unused
             s2Shipselector = ObserverScript.Instance.s2Shipselector;
             s2name = ObserverScript.Instance.s2name;
             s2clears = ObserverScript.Instance.s2clears;
@@ -67,6 +72,7 @@ public class savenLoadSlot : MonoBehaviour
         else if (slot == 2)
         {
             //populate s3 variables
+            s3diff = ObserverScript.Instance.s3diff;//currently unused
             s3Shipselector = ObserverScript.Instance.s3Shipselector;
             s3name = ObserverScript.Instance.s3name;
             s3clears = ObserverScript.Instance.s3clears;

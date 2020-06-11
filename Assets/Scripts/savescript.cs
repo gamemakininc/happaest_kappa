@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(ObserverScript))]
 public class savescript : MonoBehaviour
 {
+    public int diff;
     private float fr;
     private float efr;
     private int counter;
@@ -26,6 +27,7 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame1.save";
         var save = new saves()
         {
+            diff=ObserverScript.Instance.diff,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
@@ -55,6 +57,7 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame2.save";
         var save = new saves()
         {
+            diff = ObserverScript.Instance.diff,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
@@ -84,6 +87,7 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame3.save";
         var save = new saves()
         {
+            diff = ObserverScript.Instance.diff,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
             fitSetup = ObserverScript.Instance.fitSetup,
@@ -118,8 +122,9 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.efireRate = efr;
-            ObserverScript.Instance.fireRate = fr;
+            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.efireRate = save.efr;
+            ObserverScript.Instance.fireRate = save.fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -157,8 +162,9 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.efireRate = efr;
-            ObserverScript.Instance.fireRate = fr;
+            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.efireRate = save.efr;
+            ObserverScript.Instance.fireRate = save.fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -194,8 +200,9 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.efireRate = efr;
-            ObserverScript.Instance.fireRate = fr;
+            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.efireRate = save.efr;
+            ObserverScript.Instance.fireRate = save.fr;
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
@@ -232,6 +239,7 @@ public class savescript : MonoBehaviour
             }
             swapIntArray = save.fitSetup;
             swapint = swapIntArray[13];
+            ObserverScript.Instance.s1diff = save.diff;
             ObserverScript.Instance.s1Shipselector = swapint;
             ObserverScript.Instance.s1clears = save.levelsCleared;
             ObserverScript.Instance.s1name = save.playerName;
@@ -260,6 +268,7 @@ public class savescript : MonoBehaviour
             }
             swapIntArray = save.fitSetup;
             swapint = swapIntArray[13];
+            ObserverScript.Instance.s2diff = save.diff;
             ObserverScript.Instance.s2Shipselector = swapint;
             ObserverScript.Instance.s2clears = save.levelsCleared;
             ObserverScript.Instance.s2name = save.playerName;
@@ -289,6 +298,7 @@ public class savescript : MonoBehaviour
             }
             swapIntArray = save.fitSetup;
             swapint = swapIntArray[13];
+            ObserverScript.Instance.s3diff = save.diff;
             ObserverScript.Instance.s3Shipselector = swapint;
             ObserverScript.Instance.s3clears = save.levelsCleared;
             ObserverScript.Instance.s3name = save.playerName;

@@ -124,6 +124,7 @@ public class fittingScript : MonoBehaviour
 		sRegen=baceSRegen;
 		MoveSpeed=baceMoveSpeed;
 		refireRate = baceRefireRate;
+		erefireRate = baceERefireRate;
 		sDebuffSpeed = 1;
 		sDebuffHpr = 1;
 		sDebuffShieldr = 1;

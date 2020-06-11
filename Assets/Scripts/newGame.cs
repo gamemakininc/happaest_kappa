@@ -11,18 +11,25 @@ public class newGame : MonoBehaviour
     public void newGameVoid()
     {
         counter = 0;
+        //clear all unlocks
         while (counter <= 36) 
         {
             ObserverScript.Instance.unlocks[counter] = false;
             counter++;
         }
+        //unlock0 should allways be unlocked
         ObserverScript.Instance.unlocks[0] = true;
+        //get player name
         ObserverScript.Instance.playerName = nameBox.GetComponent<Text>().text;
 
+        //if easiest selected
         if (diffaculty[0].isOn == true)
         {
+            //set difficulty tracker to lowest position
+            ObserverScript.Instance.diff = 0;
+            //reset counter
             counter = 0;
-            //loop to collect number of true bool
+            //loop to unlock all the things
             while (counter <= 33)
             {
                 ObserverScript.Instance.unlocks[counter] = true;
@@ -31,6 +38,9 @@ public class newGame : MonoBehaviour
         }
         else if (diffaculty[1].isOn == true)
         {
+            //set difficulty tracker
+            ObserverScript.Instance.diff = 1;
+            //unlock easy specific items
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
             ObserverScript.Instance.unlocks[30] = true;
@@ -42,7 +52,9 @@ public class newGame : MonoBehaviour
         }
         else if (diffaculty[2].isOn == true)
         {
-
+            //set difficulty tracker
+            ObserverScript.Instance.diff = 2;
+            //unlock medium specific items
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
             ObserverScript.Instance.unlocks[30] = true;
@@ -50,7 +62,9 @@ public class newGame : MonoBehaviour
         }
         else if (diffaculty[3].isOn == true)
         {
-
+            //set difficulty tracker to highest position
+            ObserverScript.Instance.diff = 3;
+            //unlock hard specific items
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
         }

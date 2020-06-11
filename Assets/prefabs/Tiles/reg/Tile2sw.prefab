@@ -74,14 +74,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &5369221981102315000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -304,14 +305,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &9092746352782027427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -452,14 +454,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 1
+  currentTab2: 5
   currentField: Wavy
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &7401649303738854338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -600,14 +603,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 1
+  currentTab2: 0
   currentField: Wavy
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &3878398762531170235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -874,14 +878,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 1
+  currentTab2: 5
   currentField: Wavy
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &8299473485045466850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1022,14 +1027,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &5765744742022831144
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1170,14 +1176,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 5
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &4974424350491239233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1318,14 +1325,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &7534780402965124972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1466,14 +1474,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 1
+  currentTab2: 0
   currentField: Wavy
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &2912528517748409266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1614,14 +1623,15 @@ MonoBehaviour:
   speed: 3
   waitTime: 3
   currentTab: 0
+  currentTab2: 0
   currentField: Straight
   amplitude: 1
   period: 1.5
-  shift: -5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
   maxRadians: 1
+  sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &6038642000428089064
 SpriteRenderer:
   m_ObjectHideFlags: 0

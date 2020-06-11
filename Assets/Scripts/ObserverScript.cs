@@ -35,6 +35,7 @@ public class ObserverScript : MonoBehaviour
     public int pP0;
     public int pP1;
     //misc savegame variables
+    public int diff;
     public int levelsCleared;
     public string playerName;
     //swap vars
@@ -44,16 +45,19 @@ public class ObserverScript : MonoBehaviour
 
 
     //save preview variables slot1
+    public int s1diff;
     public int s1Shipselector;
     public int s1clears=0;
     public string s1name="Empty";
     public float s1unlocks=0.1f;
     //save preview variables slot2
+    public int s2diff;
     public int s2Shipselector;
     public int s2clears=0;
     public string s2name="Empty";
     public float s2unlocks = 0.1f;
     //save preview variables slot3
+    public int s3diff;
     public int s3Shipselector;
     public int s3clears=0;
     public string s3name="Empty";

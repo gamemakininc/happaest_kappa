@@ -2,6 +2,7 @@
 public class saves
 {
     //player output from fitting system
+    public int diff;
     public float fr;
     public float efr;
     public int pBulletSelector;

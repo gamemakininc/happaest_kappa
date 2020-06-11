@@ -70,12 +70,12 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
@@ -219,12 +219,12 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
@@ -368,12 +368,12 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
@@ -639,12 +639,12 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
@@ -788,12 +788,12 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
@@ -1019,18 +1019,18 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  currentState: 3
   speed: 3
   waitTime: 3
-  currentTab: 0
-  currentTab2: 0
-  currentField: Straight
+  currentTab: 3
+  currentTab2: 5
+  currentField: Kamikaze
   amplitude: 1
   period: 1.5
   yChange: 0.0005
   slideTime: 2
   moveRight: 1
-  maxRadians: 1
+  maxRadians: 0.5
   sideVelocity: {x: 0, y: -1.5}
 --- !u!212 &3538619165119569884
 SpriteRenderer:

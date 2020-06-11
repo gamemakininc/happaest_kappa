@@ -39,6 +39,7 @@ public class enemyscript : MonoBehaviour
         slide,
         kamikaze,
         sidescroll,
+        still,
         paused,
         offcam
     }
@@ -197,6 +198,8 @@ public class enemyscript : MonoBehaviour
                 {
                     rb.velocity = sideVelocity;
                 }
+                break;
+            case states.still:
                 break;
             case states.paused:
                 if (storedVelocity == Vector2.zero)
