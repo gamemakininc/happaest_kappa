@@ -160,7 +160,11 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &7827873572616260317
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +325,11 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &8259624815046067215
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7776289191362384123}
   - component: {fileID: 5612404589901051804}
+  - component: {fileID: 9195891933119837681}
   m_Layer: 0
   m_Name: plaz_trio
   m_TagString: Untagged
@@ -369,12 +378,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rb: {fileID: 0}
+  rb: {fileID: 9195891933119837681}
   timer: 0
   Damage: 0
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
+--- !u!50 &9195891933119837681
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8259624815046067215}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8798810943525347936
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,4 +569,8 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0

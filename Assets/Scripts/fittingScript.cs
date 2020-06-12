@@ -734,7 +734,7 @@ public class fittingScript : MonoBehaviour
 			counter++;
 		}
 		//set bace values
-		bulletSelector = 6;
+		bulletSelector = 7;
 		baceMoveSpeed = 7f;
 		baceHealth = 100f;
 		baceSRegen = 2f;

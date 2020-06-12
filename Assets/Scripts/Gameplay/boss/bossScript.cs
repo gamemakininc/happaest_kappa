@@ -1,14 +1,24 @@
-﻿using UnityEngine;
+﻿using Unity.Burst;
+using UnityEngine;
 
-public class bossMovement : MonoBehaviour
+public class bossScript : MonoBehaviour
 {
+    //patrol variables
     public Transform[] movepoints;
-    public int tracker;//set to # of movepoints in editor 
+    public int tracker;//set to # of movepoints
     public int points;
     public float speed=3;
-    public float lfireTime;
-    public float lCoolDown;
+    //rb because everything has a rb :(
     public Rigidbody2D rb;
+    //bullet storage nothing to see here
+    public GameObject[] bullets; //0normal, 1aimed, 2laser
+    //burst delays
+    public float lCoolDown;
+    public float gunCooldown;
+    public float aimedGunCooldown;
+    //gun ports 
+    public GameObject[] gunPorts;//0-2streaght, 3-4 aimed, 5-6 laser
+
     private void Start()
     {
         tracker = movepoints.Length;

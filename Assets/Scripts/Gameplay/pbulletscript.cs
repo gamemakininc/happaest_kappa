@@ -18,28 +18,31 @@ public class pbulletscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            if (trackingMouse == false && trackingEnemy == false && islasor == false)
-            {
-                rb.velocity = transform.up * speed;
-            }
-            if (trackingMouse == true) { timer = -2; }
-        if (islasor==true) { timer = 1.5f; }
-
-        RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].up);
-        if (hitInfo)
+        if (trackingMouse == false && trackingEnemy == false && islasor == false)
         {
-            enemyscript enemy = hitInfo.transform.GetComponent<enemyscript>();
-            if (enemy != null)
+            rb.velocity = transform.up * speed;
+        }
+        if (trackingMouse == true) { timer = -2; }
+        if (islasor == false) { lineRenderer = new LineRenderer(); }
+        if (islasor == true) { timer = 1.5f; }
+        if (islasor == true)
+        {
+            RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].up);
+            if (hitInfo)
             {
-                enemy.TakeDamage(Damage);
-                laserBeam[1].position = hitInfo.point;
+                enemyscript enemy = hitInfo.transform.GetComponent<enemyscript>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(Damage);
+                    laserBeam[1].position = hitInfo.point;
+                }
+                else
+                {
+                    laserBeam[1].position = laserBeam[0].up * 10000;
+                }
+                lineRenderer.enabled = true;
+                laserVisible = 0;
             }
-            else
-            {
-                laserBeam[1].position = laserBeam[0].up * 10000;
-            }
-            lineRenderer.enabled = true;
-            laserVisible = 0;
         }
     }
     private void Update() 
@@ -83,10 +86,13 @@ public class pbulletscript : MonoBehaviour
             transform.up = direction;
             rb.velocity = transform.up * speed;
         }
-        if (laserVisible <= 1)
+        if (islasor == true)
         {
-            laserVisible = laserVisible + 1 * Time.deltaTime;
-            if (laserVisible >= 0.1f) { lineRenderer.enabled = false; }
+            if (laserVisible <= 1)
+            {
+                laserVisible = laserVisible + 1 * Time.deltaTime;
+                if (laserVisible >= 0.1f) { lineRenderer.enabled = false; }
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)

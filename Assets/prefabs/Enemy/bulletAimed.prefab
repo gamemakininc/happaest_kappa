@@ -125,7 +125,7 @@ MonoBehaviour:
   speed: 10
   rb: {fileID: 5297302924047063934}
   timer: 0
-  Damage: 0
+  Damage: 4
   trackingEnemy: 0
   player: {fileID: 0}
 --- !u!50 &5297302924047063934

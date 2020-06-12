@@ -70,6 +70,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3
@@ -219,6 +222,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3
@@ -368,6 +374,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3
@@ -460,7 +469,7 @@ GameObject:
   - component: {fileID: 6416255085825962846}
   - component: {fileID: 2754991928403606301}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: Tile2k
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,6 +648,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3
@@ -788,6 +800,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3
@@ -1019,6 +1034,9 @@ MonoBehaviour:
   health: 10
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
+  shootDissabled: 1
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
   currentState: 3
   speed: 3
   waitTime: 3

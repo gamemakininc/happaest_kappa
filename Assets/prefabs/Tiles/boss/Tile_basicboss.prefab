@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 3115562977312378667}
   - component: {fileID: 3115562977312378666}
   - component: {fileID: 3115562977312378665}
-  - component: {fileID: 3115562977312378664}
+  - component: {fileID: 3534812142369026408}
   - component: {fileID: 3115562977312378663}
   - component: {fileID: 3115562977312378662}
   m_Layer: 0
@@ -518,7 +518,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3115562977312378664
+--- !u!114 &3534812142369026408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,15 +530,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   deathEffect: {fileID: 0}
   thisPowerup: {fileID: 0}
-  currentState: 0
+  shootDissabled: 0
+  ebullet: {fileID: 0}
+  mgport: {fileID: 0}
+  currentState: 6
   speed: 1
   waitTime: 3
-  currentTab: 0
-  currentTab2: 5
-  currentField: Straight
+  currentTab: 5
+  currentTab2: 1
+  currentField: Paused
   amplitude: 1
   period: 0.3
   yChange: 0.1
@@ -569,9 +572,22 @@ MonoBehaviour:
   tracker: 0
   points: 0
   speed: 3
-  lfireTime: 0
-  lCoolDown: 0
   rb: {fileID: 0}
+  bullets:
+  - {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
+  - {fileID: 5297302924047063933, guid: e8cb043e4bd11264c9757ed91d44bd9e, type: 3}
+  - {fileID: 160846384171456764, guid: 19e4a30d3736d5746876027074720551, type: 3}
+  lCoolDown: 10
+  gunCooldown: 4
+  aimedGunCooldown: 7
+  gunPorts:
+  - {fileID: 5678529767482925447}
+  - {fileID: 6161727007253613141}
+  - {fileID: 5698858703143191275}
+  - {fileID: 396235400636614264}
+  - {fileID: 8692623013946993461}
+  - {fileID: 2931417020092650341}
+  - {fileID: 1665053170994855864}
 --- !u!61 &3115562977312378662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -582,7 +598,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0148739815}

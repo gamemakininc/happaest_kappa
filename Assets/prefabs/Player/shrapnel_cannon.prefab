@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7515828105677691542}
   - component: {fileID: 729648990340196771}
+  - component: {fileID: -3658224675017538382}
   m_Layer: 0
   m_Name: shrapnel_cannon
   m_TagString: Untagged
@@ -47,12 +48,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rb: {fileID: 0}
+  rb: {fileID: -3658224675017538382}
   timer: 0
   Damage: 0
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
+--- !u!50 &-3658224675017538382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516345062458998654}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4360556707035717343
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +228,11 @@ MonoBehaviour:
   Damage: 2
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &4360917590862246413
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +382,11 @@ MonoBehaviour:
   Damage: 2
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &4361016656365091687
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,4 +536,8 @@ MonoBehaviour:
   Damage: 2
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0

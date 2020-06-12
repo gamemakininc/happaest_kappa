@@ -2104,6 +2104,7 @@ MonoBehaviour:
   - {fileID: -9085544022142751405, guid: 836d2b639e684ed4cbe9ae5a98c283e9, type: 3}
   - {fileID: -7803929622608457016, guid: 836d2b639e684ed4cbe9ae5a98c283e9, type: 3}
   - {fileID: 5300029064943698393, guid: 836d2b639e684ed4cbe9ae5a98c283e9, type: 3}
+  - {fileID: -1633062477486519462, guid: 836d2b639e684ed4cbe9ae5a98c283e9, type: 3}
   otherSprite: {fileID: 0}
   cSprite: {fileID: 0}
   itemId: 0
@@ -8363,6 +8364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f18ba89ef252408dad8c5daf6afbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diff: 0
   saveSlot: 0
   swapint: 0
   swapfloat: 0
@@ -8379,7 +8381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 010000000000000000000000000000000000000000000000000000000000000000000000
+  unlocks: 010101010101010101010101010101010101010101010101010101010101010101010101
   efireRate: 0
   fireRate: 0
   pBulletSelector: 0
@@ -8392,19 +8394,23 @@ MonoBehaviour:
   fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   pP0: 0
   pP1: 0
+  diff: 0
   levelsCleared: 0
   playerName: Empty
   bookmark0: 0
   bookmark1: 0
   bookmark2: 0
+  s1diff: 0
   s1Shipselector: 0
   s1clears: 0
   s1name: Empty
   s1unlocks: 0.1
+  s2diff: 0
   s2Shipselector: 0
   s2clears: 0
   s2name: Empty
   s2unlocks: 0.1
+  s3diff: 0
   s3Shipselector: 0
   s3clears: 0
   s3name: Empty
@@ -10905,15 +10911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c3763dd5e575147a90fa73cb1aa516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pBulletSelector: 0
-  pSpeed: 0
-  phealth: 0
-  pShield: 0
-  pFitSetup: 
-  pSRegen: 0
-  pRepair: 0
-  pPl0: 0
-  pPl1: 0
 --- !u!95 &2101735546
 Animator:
   serializedVersion: 3

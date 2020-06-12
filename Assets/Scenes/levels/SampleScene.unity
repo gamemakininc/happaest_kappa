@@ -171,7 +171,7 @@ MonoBehaviour:
   unlocks: 01000000000000000000000000000000000000000000000000000000000001000000000000
   efireRate: 0.4
   fireRate: 0.3
-  pBulletSelector: 7
+  pBulletSelector: 6
   pSpeed: 7
   pHealth: 0
   pShield: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ead8437629342d94fa37bb651c970be4, type: 3}
   m_Name: 

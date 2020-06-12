@@ -45,7 +45,7 @@ public class enemyScriptEditor : Editor
     public override void OnInspectorGUI()
     {
         //Uncomment this to restore default editor
-        //base.OnInspectorGUI();
+        base.OnInspectorGUI();
 
         soTarget.Update();
         EditorGUI.BeginChangeCheck();
@@ -84,7 +84,7 @@ public class enemyScriptEditor : Editor
             default:
                 break;
         }
-        myTarget.currentTab2 = GUILayout.Toolbar(myTarget.currentTab2, new string[] { "Sidescroll", "Paused" });
+               myTarget.currentTab2 = GUILayout.Toolbar(myTarget.currentTab2, new string[] { "Sidescroll", "Paused" });
         switch (myTarget.currentTab2)
         {
             case 0:
@@ -92,7 +92,7 @@ public class enemyScriptEditor : Editor
                 myTarget.currentField = "Sidescroll";
                 myTarget.currentState = enemyscript.states.sidescroll;
                 break;
-            case 1:
+                            case 1:
                 myTarget.currentTab = 5;
                 myTarget.currentField = "Paused";
                 myTarget.currentState = enemyscript.states.paused;
@@ -126,7 +126,7 @@ public class enemyScriptEditor : Editor
             case "Sidescroll":
                 EditorGUILayout.PropertyField(sideVelocity);
                 break;
-            case "Paused":
+                            case "Paused":
                 break;
             default:
                 break;
