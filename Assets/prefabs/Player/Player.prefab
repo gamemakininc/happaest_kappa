@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114747760686312880}
   - component: {fileID: 8713131757439341107}
   m_Layer: 0
-  m_Name: Player_0
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,22 +201,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 100
+  health: 1e+9
   repair: 0
   maxShield: 0
   shield: 0
   sRegen: 0.5
   deathEffectSelector: 0
-  deathEffect: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
-    type: 3}
+  deathEffect:
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 7052740348494417466, guid: 28a5e9f774cc27a43915aa63ca546530, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 6052574519058911341, guid: 334987f427beaa842a234501869696c1, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   payload0Selector: 0
   payload1Selector: 0
   payload0Ammo: 0
   payload1Ammo: 0
   wPorts:
-  - {fileID: 4957156825432886}
-  - {fileID: 4267765368324324}
-  - {fileID: 4208706793169000}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   BulletPrefabs:
   - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   - {fileID: 195438850944218402, guid: 9d6a13e64e5155a4ca016cc47ed81c22, type: 3}
@@ -224,6 +231,7 @@ MonoBehaviour:
   - {fileID: 5004865427797476403, guid: 452575d293c35cb41a1065556bb7534e, type: 3}
   - {fileID: 6761477947585304962, guid: 25c9b36fba93b644d8f61677c6a2081a, type: 3}
   - {fileID: 8259624815046067215, guid: ba6e1b7d46e8e7c49851bdeed855406b, type: 3}
+  - {fileID: 5229980862504995035, guid: 43eecead9fd97954c8630e2295435c80, type: 3}
   MissilePrefabs:
   - {fileID: 1168608532995092, guid: 89ad803d146842d4e8e882ee16dbb009, type: 3}
   - {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419, type: 3}
@@ -232,19 +240,37 @@ MonoBehaviour:
   mslBonus: 0
   MoveSpeed: 8.5
   forwardSpeed: 0.7
-  rb: {fileID: 50662472852933602}
+  rb: {fileID: 0}
   animator: {fileID: 0}
   dumbdumb: 0
-  nextFire: 0.35
   sounds:
   - {fileID: 8300000, guid: 8d1f1ca1a73cb374eb751bef97be1abf, type: 3}
   - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
   - {fileID: 8300000, guid: ef6d559e2098a3f4b9fb08e36caabba3, type: 3}
   - {fileID: 8300000, guid: d321bacbd9d4a5346b500793680afc9a, type: 3}
   - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
-  audioSource: {fileID: 8713131757439341107}
+  audioSource: {fileID: 0}
   involActive: 0
   fireBuffActive: 0
+  viewmodel:
+  - {fileID: 21300006, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  - {fileID: -8542968065503311658, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 727102200155412664, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -8811244820750126997, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 1373859652910129586, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: 7412717729738197967, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: -6546374417971923516, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
+  - {fileID: 958393111218982286, guid: 7b6fdf2102248d748b4dc21326044397, type: 3}
+  animationset:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 9100000, guid: 5a012f544de4b8f439ca42f6ad30e537, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 9100000, guid: 0a37d157b40f94645b020e0c25e236d8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  shipselect: 0
 --- !u!82 &8713131757439341107
 AudioSource:
   m_ObjectHideFlags: 0

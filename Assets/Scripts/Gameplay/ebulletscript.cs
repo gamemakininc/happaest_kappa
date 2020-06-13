@@ -31,7 +31,7 @@ public class ebulletscript : MonoBehaviour
         //incroment timer
         timer += 1.0F * Time.deltaTime;
         //check timer
-        if (timer >= 2)
+        if (timer >= 4)
         {
             //destroy game object
             GameObject.Destroy(gameObject);

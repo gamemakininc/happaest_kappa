@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Specialized;
+using UnityEngine;
 
 public class bosslaser : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class bosslaser : MonoBehaviour
     {
         //set default values
         fireBeam.enabled = true;
-        GetComponent<Collider2D>().enabled = false;
         damageTimer = 0;
         chargeTimer=0;
     }
@@ -25,7 +25,7 @@ public class bosslaser : MonoBehaviour
     void Update()
     {
         //incroment hit timer
-        hitTimer += 1 * Time.deltaTime;
+        hitTimer += 0.5f * Time.deltaTime;
         //update lasors start and end points
         fireBeam.SetPosition(0, laserBeam[0].position);
         fireBeam.SetPosition(1, laserBeam[1].position);
@@ -46,28 +46,26 @@ public class bosslaser : MonoBehaviour
             fireBeam.colorGradient = colors[1];
             //enable damage beam
             fireBeam.enabled = true;
-            this.GetComponent<Collider2D>().enabled = true;
-            fireBeam.enabled = true;
+            
+            RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].right*50);
+            if (hitInfo)
+            {
+                Debug.Log("hit something");
+                Debug.DrawRay(laserBeam[0].position, laserBeam[0].right*50, Color.blue);
+                PlayerScript Player = hitInfo.transform.GetComponent<PlayerScript>();
+                if (Player != null)
+                {
+                    Debug.Log("player");
+                    if (hitTimer >= .5)
+                    {
+                        Player.TakeDamage(Damage);
+                        hitTimer = 0;
+                    }
+                }
+            }
         }
         if (damageTimer >= 1) { Destroy(gameObject); }
     }
-    private void OnTriggerStay2D(Collider2D hitInfo)
-    {
-        
-        if (hitTimer >= 0.6f)
-        {
-            //check if enemy/get enemy script
-            PlayerScript player = hitInfo.GetComponent<PlayerScript>();
-            if (player != null)
-            {
-                //damage enemy
-                //player.TakeDamage(Damage);
-                Debug.Log("boss lazor hit");
-                hitTimer = 0;
-
-
-            }
-        }
-    }
+    
 
 }
