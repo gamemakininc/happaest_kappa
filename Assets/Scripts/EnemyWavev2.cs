@@ -87,7 +87,8 @@ public class EnemyWavev2 : MonoBehaviour
             case states.boss:
                 if (_Boss)
                 {
-                    Instantiate(_Boss, Vector3.zero, Quaternion.Euler(0.0f, 0.0f, 0.0f));
+                    float xDif2 = tileEdgeX - cameraBoundX;
+                    Instantiate(_Boss, new Vector2(cameraBoundX + xDif2, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f));
                     _Boss = null;
                 }
                 else
@@ -133,6 +134,9 @@ public class EnemyWavev2 : MonoBehaviour
     void OnLevelComplete() //Runs when currentState = states.win
     {
         Debug.Log("Level Complete");
+        ObserverScript.Instance.bookmark0 = false;
+        ObserverScript.Instance.bookmark1 = false;
+        ObserverScript.Instance.bookmark2 = false;
         Camera.main.GetComponent<sceneManager>().briefing();
         currentState = states.paused;
     }

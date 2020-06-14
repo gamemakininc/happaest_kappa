@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 89656381989647451, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 89656381989647455, guid: c1fefe63e4fd86343a89460a42fcb3a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -295,6 +300,11 @@ PrefabInstance:
       propertyPath: currentField
       value: Wavy
       objectReference: {fileID: 0}
+    - target: {fileID: 1680944568892647834, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fefe63e4fd86343a89460a42fcb3a4, type: 3}
 --- !u!4 &2416087000572255698 stripped
@@ -314,6 +324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 89656381989647451, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 89656381989647455, guid: c1fefe63e4fd86343a89460a42fcb3a4,
         type: 3}
@@ -395,6 +410,11 @@ PrefabInstance:
       propertyPath: currentField
       value: Wavy
       objectReference: {fileID: 0}
+    - target: {fileID: 1680944568892647834, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fefe63e4fd86343a89460a42fcb3a4, type: 3}
 --- !u!4 &4020362174091215879 stripped
@@ -414,6 +434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 89656381989647451, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 89656381989647455, guid: c1fefe63e4fd86343a89460a42fcb3a4,
         type: 3}
@@ -495,6 +520,11 @@ PrefabInstance:
       propertyPath: currentField
       value: Straight
       objectReference: {fileID: 0}
+    - target: {fileID: 1680944568892647834, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fefe63e4fd86343a89460a42fcb3a4, type: 3}
 --- !u!4 &4616708088047550325 stripped
@@ -514,6 +544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 89656381989647451, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 89656381989647455, guid: c1fefe63e4fd86343a89460a42fcb3a4,
         type: 3}
@@ -595,6 +630,11 @@ PrefabInstance:
       propertyPath: currentField
       value: Wavy
       objectReference: {fileID: 0}
+    - target: {fileID: 1680944568892647834, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fefe63e4fd86343a89460a42fcb3a4, type: 3}
 --- !u!4 &5219607337320665111 stripped
@@ -614,6 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 89656381989647451, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 89656381989647455, guid: c1fefe63e4fd86343a89460a42fcb3a4,
         type: 3}
@@ -694,6 +739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currentField
       value: Straight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680944568892647834, guid: c1fefe63e4fd86343a89460a42fcb3a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fefe63e4fd86343a89460a42fcb3a4, type: 3}
