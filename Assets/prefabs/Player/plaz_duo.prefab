@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8870247707727081749}
   - component: {fileID: 8838526378858117740}
   - component: {fileID: 4099150113361260112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plaz_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,11 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &4698310677202554077
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +179,7 @@ GameObject:
   - component: {fileID: 4507823347287296387}
   - component: {fileID: 4557276487829406458}
   - component: {fileID: 9040247787214100166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plaz_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +325,11 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!1 &6761477947585304962
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +382,11 @@ MonoBehaviour:
   Damage: 0
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!50 &4400017781044233919
 Rigidbody2D:
   serializedVersion: 4

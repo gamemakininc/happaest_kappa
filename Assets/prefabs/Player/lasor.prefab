@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5229980862504995032}
   - component: {fileID: 4369204954309169302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lasor
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5229980863429946221}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lasor (1)
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2646056288677020607}
   - component: {fileID: 4957359299233716101}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}

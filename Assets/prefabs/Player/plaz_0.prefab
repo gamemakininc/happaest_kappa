@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4235665473893581165}
   - component: {fileID: 4285642252050106900}
   - component: {fileID: 8733169393082408488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plaz_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,4 +160,8 @@ MonoBehaviour:
   Damage: 4
   trackingMouse: 0
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0

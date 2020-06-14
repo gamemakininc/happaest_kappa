@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7974717760687105993}
   - component: {fileID: 8038294346384630305}
   - component: {fileID: 6598898851286210423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pmissilemouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,11 @@ MonoBehaviour:
   Damage: 16
   trackingMouse: 1
   trackingEnemy: 0
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!50 &8038294346384630305
 Rigidbody2D:
   serializedVersion: 4

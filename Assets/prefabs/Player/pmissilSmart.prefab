@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4597570701285036794}
   - component: {fileID: 4533994124128229138}
   - component: {fileID: 789755246006215236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pmissilSmart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,11 @@ MonoBehaviour:
   Damage: 13
   trackingMouse: 0
   trackingEnemy: 1
-  enemy: {fileID: 0}
+  islasor: 0
+  Enemy: {fileID: 0}
+  laserBeam: []
+  lineRenderer: {fileID: 0}
+  laserVisible: 0
 --- !u!50 &4533994124128229138
 Rigidbody2D:
   serializedVersion: 4
