@@ -266,7 +266,7 @@ public class PlayerScript : MonoBehaviour
         }
 
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         hitTimer = 0;
         if (involActive == false)

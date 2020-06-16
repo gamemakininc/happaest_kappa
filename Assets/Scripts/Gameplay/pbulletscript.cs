@@ -107,4 +107,8 @@ public class pbulletscript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void die()
+    {
+        Destroy(gameObject);
+    }
 }

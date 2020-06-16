@@ -56,7 +56,7 @@ public class bosslaser : MonoBehaviour
                 if (Player != null)
                 {
                     Debug.Log("player");
-                    if (hitTimer >= .5)
+                    if (hitTimer >= 0.2)
                     {
                         Player.TakeDamage(Damage);
                         hitTimer = 0;

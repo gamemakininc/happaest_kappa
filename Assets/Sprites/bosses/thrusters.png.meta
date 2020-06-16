@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: 7b6fdf2102248d748b4dc21326044397
+guid: 84e2acdcb8236ae44b6414f28e1ae2f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6175851847360532666
-    second: aj-37_0
+      213: 4219128882442154958
+    second: thrusters_0
   - first:
-      213: -7130890530539032064
-    second: aj-37_1
+      213: -8994283386610341791
+    second: thrusters_1
   - first:
-      213: 958393111218982286
-    second: aj-37_2
+      213: -522610020282785242
+    second: thrusters_2
   - first:
-      213: -1087909604659468096
-    second: aj-37_3
+      213: 6583992622383675329
+    second: thrusters_3
   - first:
-      213: -1138134947760710434
-    second: aj-37_4
+      213: -4080142555250927909
+    second: thrusters_4
   - first:
-      213: 6834188408831569378
-    second: aj-37_5
+      213: 6597250037500241967
+    second: thrusters_5
   - first:
-      213: -3267186699708525221
-    second: aj-37_6
+      213: -4351864421329025505
+    second: thrusters_6
   - first:
-      213: 8484439125898418650
-    second: aj-37_7
-  - first:
-      213: 7220633490157383569
-    second: aj-37_8
-  - first:
-      213: -7355157313073133334
-    second: aj-37_9
+      213: -1407437808979188013
+    second: thrusters_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,11 +65,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,211 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aj-37_0
+      name: thrusters_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 39
-        width: 33
-        height: 33
+        x: 3
+        y: 133
+        width: 60
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab05d5bb88805b550800000000000000
-      internalID: 6175851847360532666
+      spriteID: ec33e8b5d5b5d8a30800000000000000
+      internalID: 4219128882442154958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_1
+      name: thrusters_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 39
-        width: 33
-        height: 33
+        x: 64
+        y: 133
+        width: 60
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0023603f7dcf90d90800000000000000
-      internalID: -7130890530539032064
+      spriteID: 168a4e3e9e2ed2380800000000000000
+      internalID: -8994283386610341791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_2
+      name: thrusters_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 133
+        width: 60
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6222cf894f05fb8f0800000000000000
+      internalID: -522610020282785242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thrusters_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 133
+        width: 60
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7b8f4186a0f5b50800000000000000
+      internalID: 6583992622383675329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thrusters_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5
+        width: 60
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd65059a6fb6067c0800000000000000
+      internalID: -4080142555250927909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thrusters_5
       rect:
         serializedVersion: 2
         x: 63
-        y: 39
-        width: 33
-        height: 33
+        y: 5
+        width: 60
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8d8365f475ec4d00800000000000000
-      internalID: 958393111218982286
+      spriteID: f2862a394f32e8b50800000000000000
+      internalID: 6597250037500241967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_3
+      name: thrusters_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 39
-        width: 33
-        height: 33
+        x: 131
+        y: 5
+        width: 60
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c869828af7f6e0f0800000000000000
-      internalID: -1087909604659468096
+      spriteID: f16c500bd521b93c0800000000000000
+      internalID: -4351864421329025505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_4
+      name: thrusters_7
       rect:
         serializedVersion: 2
-        x: 127
-        y: 39
-        width: 33
-        height: 33
+        x: 192
+        y: 5
+        width: 60
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edcd34c8b488430f0800000000000000
-      internalID: -1138134947760710434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aj-37_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ed6f74162ae7de50800000000000000
-      internalID: 6834188408831569378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aj-37_6
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b551ef4c10f98a2d0800000000000000
-      internalID: -3267186699708525221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aj-37_7
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad9d999be68ceb570800000000000000
-      internalID: 8484439125898418650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aj-37_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19fae1a17e7d43460800000000000000
-      internalID: 7220633490157383569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aj-37_9
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 0
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae8c82f946b3de990800000000000000
-      internalID: -7355157313073133334
+      spriteID: 3d6675805c6c77ce0800000000000000
+      internalID: -1407437808979188013
       vertices: []
       indices: 
       edges: []
