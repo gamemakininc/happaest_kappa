@@ -2,21 +2,24 @@
 
 public class ebulletscript : MonoBehaviour
 {
+
     public float speed;
     public Rigidbody2D rb;
     public float timer;
     public int Damage;
-    public bool trackingEnemy;
+    public bool aimed;
+    public bool tracking;
+    //tracking
     public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (trackingEnemy == false)
+        if (aimed == false && tracking == false)
         {
             rb.velocity = transform.up * speed;
         }
-        else
+        else if (aimed == true)
         {
             //get object with tag
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -24,6 +27,10 @@ public class ebulletscript : MonoBehaviour
             Vector3 direction = player.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
             rb.rotation = angle;
+        }
+        else if (tracking == true) 
+        {
+            timer -= 4;
         }
     }
     private void Update() 
@@ -36,8 +43,19 @@ public class ebulletscript : MonoBehaviour
             //destroy game object
             GameObject.Destroy(gameObject);
         }
-        if (trackingEnemy==true) 
+        if (aimed == true) 
         {
+            rb.velocity = transform.up * speed;
+        }
+        if (tracking == true)
+        {
+            //get object with tag
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            //set rotation
+            Vector3 direction = player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+            rb.rotation = angle;
+            //move
             rb.velocity = transform.up * speed;
         }
     }
@@ -45,6 +63,14 @@ public class ebulletscript : MonoBehaviour
     {
         //check if enemy/get enemy script
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
+        pbulletscript pBullet = hitInfo.GetComponent<pbulletscript>();
+        if (pBullet != null) 
+        {
+            //remove pbullet
+            pBullet.die();
+            //remove ebullet
+            Destroy(gameObject);
+        }
         if (player != null)
         {
             //damage enemy

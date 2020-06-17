@@ -18,6 +18,7 @@ public class thrusterFire : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         //check for scripts
+        enemyscript enemy =hitInfo.GetComponent<enemyscript>();
         ebulletscript ebullet = hitInfo.GetComponent<ebulletscript>();
         pbulletscript pbullet = hitInfo.GetComponent<pbulletscript>();
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
@@ -37,6 +38,7 @@ public class thrusterFire : MonoBehaviour
             //damage player
             player.TakeDamage(damage);
         }
+        if (enemy != null) {enemy.TakeDamage(damage); }
     }
 
 }

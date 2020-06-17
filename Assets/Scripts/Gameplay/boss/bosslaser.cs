@@ -25,7 +25,7 @@ public class bosslaser : MonoBehaviour
     void Update()
     {
         //incroment hit timer
-        hitTimer += 0.5f * Time.deltaTime;
+        hitTimer += 0.3f * Time.deltaTime;
         //update lasors start and end points
         fireBeam.SetPosition(0, laserBeam[0].position);
         fireBeam.SetPosition(1, laserBeam[1].position);
@@ -34,7 +34,7 @@ public class bosslaser : MonoBehaviour
         {
             //set color to charge
             fireBeam.colorGradient = colors[0];
-            chargeTimer += 0.04f * Time.deltaTime;
+            chargeTimer += 0.08f * Time.deltaTime;
             if (chargeTimer <= 0.17f) { fireBeam.widthMultiplier = chargeTimer; }
             if (chargeTimer >= 0.17 && chargeTimer <= 0.18) { fireBeam.enabled = false; }
         }

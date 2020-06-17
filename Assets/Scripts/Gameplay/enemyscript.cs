@@ -4,7 +4,7 @@
 public class enemyscript : MonoBehaviour
 {
     //set health
-    public int health = 10;
+    public float health = 10;
     //set death sprite
     public GameObject deathEffect;
     private Rigidbody2D rb;
@@ -86,7 +86,7 @@ public class enemyscript : MonoBehaviour
     private states storedState;
 
     //handel for bullet script
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         //check health
