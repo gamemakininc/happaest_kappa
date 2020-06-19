@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8176337041651461470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gunport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8176337042443018020}
   - component: {fileID: 8176337042443018019}
   - component: {fileID: 8176337042443018018}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cannon turret
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 8176337043092340245}
   - component: {fileID: 8176337043092340244}
   - component: {fileID: 8176337043092340246}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,6 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8176337043092340246}
+  bossTracker: {fileID: 0}
+  parentScript: {fileID: 0}
+  location: 0
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -335,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8176337043175724242}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gunport2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

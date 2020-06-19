@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 601901651838754301}
   - component: {fileID: 601901651838754300}
   - component: {fileID: 601901651838754291}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tflame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 601901652349285287}
   - component: {fileID: 601901652349285280}
   - component: {fileID: 601901652349285286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: thouseing
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 601901651838754290}
   body: {fileID: 601901653915181538}
+  bossTracker: {fileID: 0}
 --- !u!1 &601901653915181538
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ GameObject:
   - component: {fileID: 601901653915181539}
   - component: {fileID: 601901653915181549}
   - component: {fileID: 601901653915181548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: thrusters
   m_TagString: enemy
   m_Icon: {fileID: 0}

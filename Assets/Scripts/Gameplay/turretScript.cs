@@ -4,6 +4,11 @@ public class turretScript : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    //script trackers
+    public sbosstracker bossTracker;
+    public enemyscript parentScript;
+    //location int for boss handeler
+    public int location;
     //fire select
     public bool laser;
     public bool missle;
@@ -18,12 +23,13 @@ public class turretScript : MonoBehaviour
     //fire ports
     public Transform port1;
     public Transform port2;
-    //refire rate
+
     public float refire;
 
     private bool swapBool;
     private float tweenSpeed;
     public float tweentime = 0.08f;
+
 
 
     public void fire()
@@ -116,5 +122,7 @@ public class turretScript : MonoBehaviour
         }
         if (fireTime > 0) { fire(); }
         if (fireTime <= 0) { oneShot = false; firing = false; }
+        if (parentScript == null) { bossTracker.gInputInt = location; bossTracker.updateVarsTurret(); }
+
     }
 }

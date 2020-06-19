@@ -2034,10 +2034,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3784267281992267089, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+    - target: {fileID: 846864637321623963, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: location
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 846864637666246187, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: location
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 846864638426794662, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: location
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 846864638885615760, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: location
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 846864638985162443, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: location
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756543538072680141, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
         type: 3}
       propertyPath: m_Name
       value: Tile_staticboss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784267281992267089, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
+        type: 3}
+      propertyPath: m_Name
+      value: _staticbossboss
       objectReference: {fileID: 0}
     - target: {fileID: 5559042263304795392, guid: 8562de0c0f455ea448a0b51b2d9f96d8,
         type: 3}

@@ -6,6 +6,7 @@ public class thrusterScript : MonoBehaviour
     public float health;
     public GameObject flame;
     public GameObject body;
+    public sbosstracker bossTracker;
 
 
 
@@ -33,9 +34,18 @@ public class thrusterScript : MonoBehaviour
     }
     public void die() 
     {
+        //update animator
         body.GetComponent<Animator>().SetBool("broken", true);
+        //dissable colliders
         body.GetComponent<Collider2D>().enabled = false;
         flame.GetComponent<Collider2D>().enabled = false;
+        //update bosstracker script
+        bossTracker.tInputInt = location;
+        bossTracker.updateVarsThrust();
+        //dissable related scripts
+        flame.GetComponent<thrusterFire>().enabled = false;
+        body.GetComponent<thrusterFire>().enabled = false;
+
 
     }
     public void turnOn() 

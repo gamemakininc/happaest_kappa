@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3391642861617439902}
   - component: {fileID: 3391642861617439903}
   - component: {fileID: 3391642861617439900}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lazor turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3391642861680242187}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gunport2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3391642862120609028}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gunport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 3391642862700322755}
   - component: {fileID: 3391642862700322752}
   - component: {fileID: 3391642862700322754}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,6 +323,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3391642862700322754}
+  bossTracker: {fileID: 0}
+  parentScript: {fileID: 0}
+  location: 0
   laser: 1
   missle: 0
   player: {fileID: 0}
