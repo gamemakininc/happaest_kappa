@@ -31,7 +31,10 @@ public class TileScript : MonoBehaviour
         if (freeze && xDif < float.Epsilon || freeze && xDif < 0) //Freezes tile on Screen
         {
             rb.velocity = Vector2.zero;
-            freeze = false;
+        }
+        else
+        {
+            rb.velocity = new Vector2(speed, 0);
         }
     }
 }

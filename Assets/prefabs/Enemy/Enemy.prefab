@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 89656381989647454}
   - component: {fileID: 89656381989647452}
   - component: {fileID: -6286957572518117678}
+  - component: {fileID: 2439589186357224441}
   - component: {fileID: 437891730751559837}
   - component: {fileID: 8792193728842546180}
   m_Layer: 0
@@ -125,6 +126,21 @@ MonoBehaviour:
   - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
   - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
   swapint: 0
+--- !u!114 &2439589186357224441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89656381989647451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 0}
+  health: 10
+  thisPowerup: {fileID: 0}
 --- !u!114 &437891730751559837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,11 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  deathEffect: {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a,
-    type: 3}
-  thisPowerup: {fileID: 0}
-  boss: 0
+  shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 5768765266281764322}
   currentState: 0

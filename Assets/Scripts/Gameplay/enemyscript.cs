@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(enemyhealth))]
 public class enemyscript : MonoBehaviour
 {
-    //set health
-    public float health = 10;
-    //set death sprite
-    public GameObject deathEffect;
+    
     private Rigidbody2D rb;
-    //loot table var
-    public powerupHandeler thisPowerup;
     //timer
     private float timer;
     public bool shootDissabled;
@@ -18,7 +14,6 @@ public class enemyscript : MonoBehaviour
 
     void Start()
     {
-        thisPowerup = GetComponent<powerupHandeler>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-1, 0);
         startY = transform.position.y;
@@ -28,7 +23,7 @@ public class enemyscript : MonoBehaviour
         if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (currentState == states.kamikaze)
-            health *= 2;
+            GetComponent<enemyhealth>().health *= 2;
 
         storedState = currentState;
         //Debug.Log("currentState = " + currentState);
@@ -73,63 +68,18 @@ public class enemyscript : MonoBehaviour
     public bool moveRight;
 
     [Header("Kamikaze Attributes")]
-    private bool isTargeting = true;
     public float maxRadians = 1.0f;
+    private bool isTargeting = true;
 
     [Header("Side Scroller Attributes")]
-    private float cameraBoundX;
     public Vector2 sideVelocity = new Vector2(0, -1.5f);
+    private float cameraBoundX;
 
 
     //Paused Attributes
     private Vector2 storedVelocity;
     private states storedState;
-
-    //handel for bullet script
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        //check health
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-    void Die()
-    {
-        //allow skip if no death animation set
-        if (deathEffect != null)
-        {
-            //spawn death animation prefab
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-        }
-        makeLoot();
-        //remove self
-        Destroy(gameObject);
-    }
-    void makeLoot()
-    {
-        if (thisPowerup != null)
-        {
-            thisPowerup.dropCalcultation();
-        }
-        //remove self
-        Destroy(gameObject);
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        //check if player/get player script
-        PlayerScript player = hitInfo.GetComponent<PlayerScript>();
-        if (player != null)
-        {
-            //damage player
-            player.TakeDamage(health);
-            //remove enemy
-            Destroy(gameObject);
-        }
-    }
+    
     void FixedUpdate()
     {
         //Restores velocity when unpausing

@@ -8,8 +8,8 @@ public class enemyScriptEditor : Editor
     private enemyscript myTarget;
     private SerializedObject soTarget;
 
-    private SerializedProperty health;
-    private SerializedProperty deathEffect;
+    //private SerializedProperty health;
+    //private SerializedProperty deathEffect;
     private SerializedProperty speed;
 
     private SerializedProperty amplitude;
@@ -29,8 +29,8 @@ public class enemyScriptEditor : Editor
         myTarget = (enemyscript)target;
         soTarget = new SerializedObject(target);
 
-        health = soTarget.FindProperty("health");
-        deathEffect = soTarget.FindProperty("deathEffect");
+        //health = soTarget.FindProperty("health");
+        //deathEffect = soTarget.FindProperty("deathEffect");
         speed = soTarget.FindProperty("speed");
         amplitude = soTarget.FindProperty("amplitude");
         period = soTarget.FindProperty("period");
@@ -51,8 +51,8 @@ public class enemyScriptEditor : Editor
         EditorGUI.BeginChangeCheck();
 
         #region Render Properties
-        EditorGUILayout.PropertyField(health);
-        EditorGUILayout.PropertyField(deathEffect);
+        //EditorGUILayout.PropertyField(health);
+        //EditorGUILayout.PropertyField(deathEffect);
         EditorGUILayout.PropertyField(speed);
         EditorGUILayout.PropertyField(waitTime);
 
@@ -126,7 +126,7 @@ public class enemyScriptEditor : Editor
             case "Sidescroll":
                 EditorGUILayout.PropertyField(sideVelocity);
                 break;
-                            case "Paused":
+            case "Paused":
                 break;
             default:
                 break;
