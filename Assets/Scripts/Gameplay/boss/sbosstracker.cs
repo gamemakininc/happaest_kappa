@@ -18,11 +18,13 @@ public class sbosstracker : MonoBehaviour
     private int turretsMax;
     private int turretsCurrent;
     private int tuCounter;
-    //
+    //swaps
     public int gInputInt;//handel for turret script
     public int tInputInt;//handel for thruster script
     private int swapint;
     private int counter;
+    private bool t1Fired;
+    private bool t2Fired;
 
     //weapon timers
     public float thrustTimer;
@@ -33,13 +35,14 @@ public class sbosstracker : MonoBehaviour
     private float t1Stop;
     private float t2Start;
     private float t2Stop;
-    private bool t1Fired;
-    private bool t2Fired;
+
     //selecter counter
     private int selecterCounter;
     private float lazorCounter;
-    // Start is called before the first frame update 
+    //stage trackers
+    private bool slow;
 
+    // Start is called before the first frame update 
     void Start()
     {
         thrustIntMax = thrusters.Length;
@@ -98,7 +101,15 @@ public class sbosstracker : MonoBehaviour
         cannonTimer += 1 * Time.deltaTime; 
         laserTimer += 1 * Time.deltaTime; 
         thrustTimer += 1 * Time.deltaTime;
-        //inital thruster fire
+        if (slow == false)
+        {
+            if (thrustTimer >= 3) 
+            {
+                this.GetComponent<TileScript>().speed -= 1 * Time.deltaTime;
+                if (this.GetComponent<TileScript>().speed >= 0) { this.GetComponent<TileScript>().freeze = true; slow = true; }
+            }
+        }
+        //thruster fire
         if (t1Start >= thrustTimer) 
         {
             //turn thruster array1 on
@@ -130,7 +141,7 @@ public class sbosstracker : MonoBehaviour
             thrusterObj[3].GetComponent<thrusterScript>().turnOn();
             thrusterObj[4].GetComponent<thrusterScript>().turnOn();
             thrusterObj[5].GetComponent<thrusterScript>().turnOn();
-            if (t1Stop >= thrustTimer)
+            if (t2Stop >= thrustTimer)
             {
                 //turn thrusters off
                 thrusterObj[3].GetComponent<thrusterScript>().turnOff();
@@ -138,7 +149,7 @@ public class sbosstracker : MonoBehaviour
                 thrusterObj[5].GetComponent<thrusterScript>().turnOff();
                 //build new timer
                 t2Start = Random.Range(1, 5);
-                t2Stop = Random.Range(1, 5) + t1Start;
+                t2Stop = Random.Range(1, 5) + t2Start;
                 t2Fired = true;
                 if (t1Fired == true)
                 {

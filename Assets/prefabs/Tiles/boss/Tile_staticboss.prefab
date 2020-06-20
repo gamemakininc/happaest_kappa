@@ -1722,7 +1722,8 @@ GameObject:
   - component: {fileID: 3209731233845332744}
   - component: {fileID: 3209731233845332751}
   - component: {fileID: 3209731233845332750}
-  - component: {fileID: 3209731233845332749}
+  - component: {fileID: 1993703859567287403}
+  - component: {fileID: 7868114793591874632}
   m_Layer: 0
   m_Name: lazor_turret (3)
   m_TagString: Untagged
@@ -1843,7 +1844,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3209731233845332749
+--- !u!114 &1993703859567287403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1852,28 +1853,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3209731233845332748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &7868114793591874632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209731233845332748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &3209731233845377670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1889,8 @@ GameObject:
   - component: {fileID: 3209731233845377666}
   - component: {fileID: 3209731233845377669}
   - component: {fileID: 3209731233845377668}
-  - component: {fileID: 3209731233845377671}
+  - component: {fileID: 6894478580830129619}
+  - component: {fileID: 3111495696704039714}
   m_Layer: 0
   m_Name: lazor_turret (1)
   m_TagString: Untagged
@@ -2007,7 +2011,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3209731233845377671
+--- !u!114 &6894478580830129619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2016,28 +2020,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3209731233845377670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &3111495696704039714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209731233845377670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &3209731233899676057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234182611339}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 3209731235196828373}
+  parentScript: {fileID: 0}
   location: 1
   laser: 1
   missle: 0
@@ -2275,7 +2281,8 @@ GameObject:
   - component: {fileID: 3209731234339656054}
   - component: {fileID: 3209731234339656049}
   - component: {fileID: 3209731234339656048}
-  - component: {fileID: 3209731234339656051}
+  - component: {fileID: 1993597856890980808}
+  - component: {fileID: 2739381806435438206}
   m_Layer: 0
   m_Name: lazor_turret (2)
   m_TagString: Untagged
@@ -2396,7 +2403,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3209731234339656051
+--- !u!114 &1993597856890980808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2405,28 +2412,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3209731234339656050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &2739381806435438206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209731234339656050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &3209731234626517836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995093977}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 3209731233845377671}
+  parentScript: {fileID: 0}
   location: 0
   laser: 1
   missle: 0
@@ -2692,7 +2701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995138643}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 3209731233845332749}
+  parentScript: {fileID: 0}
   location: 2
   laser: 1
   missle: 0
@@ -2739,7 +2748,8 @@ GameObject:
   - component: {fileID: 3209731235196828368}
   - component: {fileID: 3209731235196828375}
   - component: {fileID: 3209731235196828374}
-  - component: {fileID: 3209731235196828373}
+  - component: {fileID: 3333985264861565990}
+  - component: {fileID: 4314460681721336157}
   m_Layer: 0
   m_Name: lazor_turret (4)
   m_TagString: Untagged
@@ -2860,7 +2870,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3209731235196828373
+--- !u!114 &3333985264861565990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2869,28 +2879,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3209731235196828372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &4314460681721336157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209731235196828372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &3209731235268210753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,7 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731235303991853}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 3209731234339656051}
+  parentScript: {fileID: 0}
   location: 3
   laser: 1
   missle: 0
@@ -3150,7 +3162,8 @@ GameObject:
   - component: {fileID: 4954608033822404935}
   - component: {fileID: 4954608033822404934}
   - component: {fileID: 4954608033822404937}
-  - component: {fileID: 4954608033822404936}
+  - component: {fileID: 1523048837617103849}
+  - component: {fileID: 9194870045506411385}
   m_Layer: 0
   m_Name: missile_turret (3)
   m_TagString: Untagged
@@ -3271,7 +3284,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608033822404936
+--- !u!114 &1523048837617103849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3280,28 +3293,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608033822404939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &9194870045506411385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608033822404939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &4954608033839107269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,7 +3417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608033839107265}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608034538633458}
+  parentScript: {fileID: 0}
   location: 8
   laser: 0
   missle: 1
@@ -3627,7 +3642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608034488354171}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608033822404936}
+  parentScript: {fileID: 0}
   location: 12
   laser: 0
   missle: 1
@@ -3704,7 +3719,8 @@ GameObject:
   - component: {fileID: 4954608034538633469}
   - component: {fileID: 4954608034538633468}
   - component: {fileID: 4954608034538633459}
-  - component: {fileID: 4954608034538633458}
+  - component: {fileID: 3422398275911188836}
+  - component: {fileID: 8562552906930655472}
   m_Layer: 0
   m_Name: missile_turret (1)
   m_TagString: Untagged
@@ -3825,7 +3841,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608034538633458
+--- !u!114 &3422398275911188836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3834,28 +3850,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608034538633457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &8562552906930655472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608034538633457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &4954608034752003045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,7 +3886,8 @@ GameObject:
   - component: {fileID: 4954608034752003049}
   - component: {fileID: 4954608034752003048}
   - component: {fileID: 4954608034752003047}
-  - component: {fileID: 4954608034752003046}
+  - component: {fileID: 8892489848782876755}
+  - component: {fileID: 3610964373784769683}
   m_Layer: 0
   m_Name: missile_turret (2)
   m_TagString: Untagged
@@ -3989,7 +4008,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608034752003046
+--- !u!114 &8892489848782876755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3998,28 +4017,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608034752003045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &3610964373784769683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608034752003045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &4954608034758009942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,7 +4083,8 @@ GameObject:
   - component: {fileID: 4954608034768229267}
   - component: {fileID: 4954608034768229266}
   - component: {fileID: 4954608034768229277}
-  - component: {fileID: 4954608034768229276}
+  - component: {fileID: 6551232413141118862}
+  - component: {fileID: 3242368734439253409}
   m_Layer: 0
   m_Name: missile_turret (6)
   m_TagString: Untagged
@@ -4183,7 +4205,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608034768229276
+--- !u!114 &6551232413141118862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4192,28 +4214,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608034768229279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &3242368734439253409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608034768229279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &4954608034784763868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,7 +4280,8 @@ GameObject:
   - component: {fileID: 4954608034792341603}
   - component: {fileID: 4954608034792341602}
   - component: {fileID: 4954608034792341613}
-  - component: {fileID: 4954608034792341612}
+  - component: {fileID: 7759590085589516902}
+  - component: {fileID: 242633036574608409}
   m_Layer: 0
   m_Name: missile_turret (5)
   m_TagString: Untagged
@@ -4377,7 +4402,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608034792341612
+--- !u!114 &7759590085589516902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4386,28 +4411,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608034792341615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &242633036574608409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608034792341615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &4954608034803103654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4568,7 +4595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035116923945}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608035542517786}
+  parentScript: {fileID: 0}
   location: 10
   laser: 0
   missle: 1
@@ -4703,7 +4730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035144558511}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608034768229276}
+  parentScript: {fileID: 0}
   location: 13
   laser: 0
   missle: 1
@@ -4838,7 +4865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035160788949}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608034752003046}
+  parentScript: {fileID: 0}
   location: 9
   laser: 0
   missle: 1
@@ -4973,7 +5000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035187553375}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 4954608034792341612}
+  parentScript: {fileID: 0}
   location: 11
   laser: 0
   missle: 1
@@ -5140,7 +5167,8 @@ GameObject:
   - component: {fileID: 4954608035542517781}
   - component: {fileID: 4954608035542517780}
   - component: {fileID: 4954608035542517787}
-  - component: {fileID: 4954608035542517786}
+  - component: {fileID: 1254513580880597384}
+  - component: {fileID: 5102249634776762583}
   m_Layer: 0
   m_Name: missile_turret (4)
   m_TagString: Untagged
@@ -5261,7 +5289,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4954608035542517786
+--- !u!114 &1254513580880597384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5270,28 +5298,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4954608035542517785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &5102249634776762583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954608035542517785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8278433617192987962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,7 +5364,8 @@ GameObject:
   - component: {fileID: 8278433617235916436}
   - component: {fileID: 8278433617235916437}
   - component: {fileID: 8278433617235916434}
-  - component: {fileID: 8278433617235916435}
+  - component: {fileID: 2655423081220526432}
+  - component: {fileID: 4158176642822834418}
   m_Layer: 0
   m_Name: cannon_turret (3)
   m_TagString: enemy
@@ -5455,7 +5486,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8278433617235916435
+--- !u!114 &2655423081220526432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5464,28 +5495,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8278433617235916432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &4158176642822834418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278433617235916432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8278433617341324806
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,7 +5619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617341324802}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 8278433617999691574}
+  parentScript: {fileID: 0}
   location: 4
   laser: 0
   missle: 0
@@ -5781,7 +5814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617574778791}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 8278433617235916435}
+  parentScript: {fileID: 0}
   location: 7
   laser: 0
   missle: 0
@@ -5858,7 +5891,8 @@ GameObject:
   - component: {fileID: 8278433617999691569}
   - component: {fileID: 8278433617999691568}
   - component: {fileID: 8278433617999691575}
-  - component: {fileID: 8278433617999691574}
+  - component: {fileID: 7836168368132680634}
+  - component: {fileID: 8399802310828564042}
   m_Layer: 0
   m_Name: cannon_turret (1)
   m_TagString: enemy
@@ -5979,7 +6013,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8278433617999691574
+--- !u!114 &7836168368132680634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5988,28 +6022,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8278433617999691573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &8399802310828564042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278433617999691573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8278433618130416150
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,7 +6176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618215901393}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 8278433618874137061}
+  parentScript: {fileID: 0}
   location: 6
   laser: 0
   missle: 0
@@ -6305,7 +6341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618436734577}
   bossTracker: {fileID: 0}
-  parentScript: {fileID: 8278433619054124869}
+  parentScript: {fileID: 0}
   location: 5
   laser: 0
   missle: 0
@@ -6382,7 +6418,8 @@ GameObject:
   - component: {fileID: 8278433618874137058}
   - component: {fileID: 8278433618874137059}
   - component: {fileID: 8278433618874137060}
-  - component: {fileID: 8278433618874137061}
+  - component: {fileID: 7342499339251086060}
+  - component: {fileID: 8030802237485118932}
   m_Layer: 0
   m_Name: cannon_turret (4)
   m_TagString: enemy
@@ -6503,7 +6540,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8278433618874137061
+--- !u!114 &7342499339251086060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6512,28 +6549,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8278433618874137062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &8030802237485118932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278433618874137062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8278433619054124870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6546,7 +6585,8 @@ GameObject:
   - component: {fileID: 8278433619054124866}
   - component: {fileID: 8278433619054124867}
   - component: {fileID: 8278433619054124868}
-  - component: {fileID: 8278433619054124869}
+  - component: {fileID: 7442872365658469484}
+  - component: {fileID: 6552116138917235893}
   m_Layer: 0
   m_Name: cannon_turret (2)
   m_TagString: enemy
@@ -6667,7 +6707,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8278433619054124869
+--- !u!114 &7442872365658469484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6676,28 +6716,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8278433619054124870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 10
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+--- !u!114 &6552116138917235893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278433619054124870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8278433619095078124
 GameObject:
   m_ObjectHideFlags: 0
