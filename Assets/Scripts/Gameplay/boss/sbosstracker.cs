@@ -25,14 +25,21 @@ public class sbosstracker : MonoBehaviour
     private int counter;
 
     //weapon timers
-    private float thrustTimer;
+    public float thrustTimer;
     private float laserTimer;
     private float cannonTimer;
     private float missileTimer;
+    private float t1Start;
+    private float t1Stop;
+    private float t2Start;
+    private float t2Stop;
+    private bool t1Fired;
+    private bool t2Fired;
     //selecter counter
     private int selecterCounter;
     private float lazorCounter;
     // Start is called before the first frame update 
+
     void Start()
     {
         thrustIntMax = thrusters.Length;
@@ -41,7 +48,10 @@ public class sbosstracker : MonoBehaviour
         turretsMax = turrets.Length;
         turretsCurrent = turretsMax;
         tuCounter = turretsMax - 1;
-
+        t1Start = 3;
+        t2Start = 3;
+        t1Stop = 6;
+        t2Stop = 6;
     }
     //update currents
     public void updateVarsThrust()
@@ -88,24 +98,82 @@ public class sbosstracker : MonoBehaviour
         cannonTimer += 1 * Time.deltaTime; 
         laserTimer += 1 * Time.deltaTime; 
         thrustTimer += 1 * Time.deltaTime;
-        selecterCounter = 0;
+        //inital thruster fire
+        if (t1Start >= thrustTimer) 
+        {
+            //turn thruster array1 on
+            thrusterObj[0].GetComponent<thrusterScript>().turnOn();
+            thrusterObj[1].GetComponent<thrusterScript>().turnOn();
+            thrusterObj[2].GetComponent<thrusterScript>().turnOn();
+            if (t1Stop >= thrustTimer)
+            {
+                //turn thrusters off
+                thrusterObj[0].GetComponent<thrusterScript>().turnOff();
+                thrusterObj[1].GetComponent<thrusterScript>().turnOff();
+                thrusterObj[2].GetComponent<thrusterScript>().turnOff();
+                //build new timer
+                t1Start = Random.Range(1, 5);
+                t1Stop = Random.Range(1, 5)+t1Start;
+                t1Fired = true;
+                if (t2Fired == true)
+                {
+                    //reset timer
+                    thrustTimer = 0;
+                    //reset fired checks
+                    t1Fired = false;
+                    t2Fired = false;
+                }
+            }
+        }
+        if (t2Start >= thrustTimer)
+        {
+            thrusterObj[3].GetComponent<thrusterScript>().turnOn();
+            thrusterObj[4].GetComponent<thrusterScript>().turnOn();
+            thrusterObj[5].GetComponent<thrusterScript>().turnOn();
+            if (t1Stop >= thrustTimer)
+            {
+                //turn thrusters off
+                thrusterObj[3].GetComponent<thrusterScript>().turnOff();
+                thrusterObj[4].GetComponent<thrusterScript>().turnOff();
+                thrusterObj[5].GetComponent<thrusterScript>().turnOff();
+                //build new timer
+                t2Start = Random.Range(1, 5);
+                t2Stop = Random.Range(1, 5) + t1Start;
+                t2Fired = true;
+                if (t1Fired == true)
+                {
+                    //reset timer
+                    thrustTimer = 0;
+                    //reset fired checks
+                    t1Fired = false;
+                    t2Fired = false;
+                }
+            }
+
+        }
         //fire first volly
         if (laserTimer >= 1 && laserTimer <= 1.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null) 
         {
-            if (laserObj[1] != null || laserObj[2] != null || laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if (laserObj[1] != null || laserObj[2] != null || laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter+1.5 && missileTimer <= selecterCounter+2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
-        else if (missileObj[selecterCounter] == null) 
+        else if (missileObj[selecterCounter] == null)
         {
-            if (missileObj[1] != null || missileObj[2] != null || missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if (missileObj[1] != null || missileObj[2] != null || missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter+2 && cannonTimer <= selecterCounter+2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
-        else if (cannonObj[selecterCounter] == null) 
+        else if (cannonObj[selecterCounter] == null)
         {
-            if (cannonObj[1] != null || cannonObj[2] != null || cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if (cannonObj[1] != null || cannonObj[2] != null || cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -114,19 +182,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter+0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if (laserObj[2] != null || laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if (laserObj[2] != null || laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[2] != null || missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[2] != null || missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[2] != null || cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[2] != null || cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -135,19 +209,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[3] != null || laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[3] != null || missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[3] != null || cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -156,19 +236,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[4] != null || laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[4] != null || missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[4] != null || cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -177,19 +263,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[5] != null || laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[5] != null || missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[5] != null || cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -198,19 +290,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[6] != null || laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[6] != null || missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[6] != null || cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -219,19 +317,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[7] != null || laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[7] != null || laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[7] != null || missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[7] != null || missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[7] != null || cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -240,19 +344,25 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[8] != null || laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[8] != null || laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[8] != null || missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[8] != null || missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[8] != null || cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[8] != null || cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
@@ -261,40 +371,35 @@ public class sbosstracker : MonoBehaviour
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (laserObj[selecterCounter] == null)
         {
-            if ( laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( laserObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { laserTimer = 0; }
         }
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (missileObj[selecterCounter] == null)
         {
-            if ( missileObj[9] != null || missileObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( missileObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { missileTimer = 0; }
         }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null)
         {
-            if ( cannonObj[9] != null || cannonObj[10] != null) {/*do nothing*/ }
+            //check if future turrets in the array are not null
+            if ( cannonObj[9] != null ) {/*do nothing*/ }
+            //if all future turrets null reset timer
             else { cannonTimer = 0; }
         }
         selecterCounter++;
         lazorCounter += 3;
         //fire tenth volly
         if (laserTimer >= lazorCounter && laserTimer <= lazorCounter + 0.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
-        else if (laserObj[selecterCounter] == null)
-        {
-            if (laserObj[9] != null || laserObj[10] != null) {/*do nothing*/ }
-            else { laserTimer = 0; }
-        }
+        else if (laserObj[selecterCounter] == null) { laserTimer = 0; }//reset timer
         if (missileTimer >= selecterCounter + 1.5 && missileTimer <= selecterCounter + 2 && missileObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
-        else if (missileObj[selecterCounter] == null)
-        { missileTimer = 0; }
+        else if (missileObj[selecterCounter] == null) { missileTimer = 0; }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
-        else if (cannonObj[selecterCounter] == null)
-        {cannonTimer = 0; }
-        selecterCounter++;
-        lazorCounter += 3;
-
-
-
+        else if (cannonObj[selecterCounter] == null) {cannonTimer = 0; }
     }
 }
