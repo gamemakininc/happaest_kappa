@@ -8,6 +8,6 @@ public class SetTileOffset : MonoBehaviour
     //Use this to offset tile so that it spawns on the edge of the camera
     void Awake()
     {
-        transform.position = transform.position + new Vector3(GetComponent<SpriteRenderer>().bounds.extents.x, 0, 0);
+        transform.position = new Vector3(GetComponent<SpriteRenderer>().bounds.extents.x, 0, 0);
     }
 }
