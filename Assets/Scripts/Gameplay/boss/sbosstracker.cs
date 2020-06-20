@@ -51,10 +51,10 @@ public class sbosstracker : MonoBehaviour
         turretsMax = turrets.Length;
         turretsCurrent = turretsMax;
         tuCounter = turretsMax - 1;
-        t1Start = 3;
-        t2Start = 3;
-        t1Stop = 6;
-        t2Stop = 6;
+        t1Start = 4;
+        t2Start = 4;
+        t1Stop = 8;
+        t2Stop = 8;
     }
     //update currents
     public void updateVarsThrust()
@@ -97,70 +97,76 @@ public class sbosstracker : MonoBehaviour
     void Update()
     {
         //run timers
-        missileTimer += 1 * Time.deltaTime; 
-        cannonTimer += 1 * Time.deltaTime; 
-        laserTimer += 1 * Time.deltaTime; 
+        missileTimer += 1 * Time.deltaTime;
+        cannonTimer += 1 * Time.deltaTime;
+        laserTimer += 1 * Time.deltaTime;
         thrustTimer += 1 * Time.deltaTime;
         if (slow == false)
         {
-            if (thrustTimer >= 3) 
+            if (thrustTimer >= 4)
             {
-                this.GetComponent<TileScript>().speed -= 1 * Time.deltaTime;
+                this.GetComponent<TileScript>().speed += 0.2f * Time.deltaTime;
+                if (thrustTimer >= 5)
+                {
+                    this.GetComponent<TileScript>().speed += 0.2f * Time.deltaTime;
+                }
+                if (thrustTimer >= 5.5)
+                {
+                    this.GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
+                }
                 if (this.GetComponent<TileScript>().speed >= 0) { this.GetComponent<TileScript>().freeze = true; slow = true; }
             }
         }
         //thruster fire
-        if (t1Start >= thrustTimer) 
+        if (thrusters[0] == true || thrusters[1] == true || thrusters[2] == true)
         {
-            //turn thruster array1 on
-            thrusterObj[0].GetComponent<thrusterScript>().turnOn();
-            thrusterObj[1].GetComponent<thrusterScript>().turnOn();
-            thrusterObj[2].GetComponent<thrusterScript>().turnOn();
-            if (t1Stop >= thrustTimer)
+            if (t1Start <= thrustTimer)
             {
-                //turn thrusters off
-                thrusterObj[0].GetComponent<thrusterScript>().turnOff();
-                thrusterObj[1].GetComponent<thrusterScript>().turnOff();
-                thrusterObj[2].GetComponent<thrusterScript>().turnOff();
-                //build new timer
-                t1Start = Random.Range(1, 5);
-                t1Stop = Random.Range(1, 5)+t1Start;
-                t1Fired = true;
-                if (t2Fired == true)
+                //turn thruster array1 on
+                if (thrusterObj[0] != null) { thrusterObj[0].GetComponent<thrusterScript>().turnOn(); }
+                if (thrusterObj[1] != null) { thrusterObj[1].GetComponent<thrusterScript>().turnOn(); }
+                if (thrusterObj[2] != null) { thrusterObj[2].GetComponent<thrusterScript>().turnOn(); }
+                if (t1Stop <= thrustTimer)
                 {
-                    //reset timer
-                    thrustTimer = 0;
-                    //reset fired checks
-                    t1Fired = false;
-                    t2Fired = false;
+                    //turn thrusters off
+                    if (thrusterObj[0] != null) { thrusterObj[0].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrusterObj[1] != null) { thrusterObj[1].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrusterObj[2] != null) { thrusterObj[2].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrustTimer>10)
+                    {
+                        //build new timer
+                        t1Start = Random.Range(3, 5);
+                        t1Stop = Random.Range(1, 3) + t1Start;
+                        //reset timer
+                        thrustTimer = 0;
+                    }
                 }
             }
         }
-        if (t2Start >= thrustTimer)
+        if (thrusters[3] == true || thrusters[4] == true || thrusters[5] == true) 
         {
-            thrusterObj[3].GetComponent<thrusterScript>().turnOn();
-            thrusterObj[4].GetComponent<thrusterScript>().turnOn();
-            thrusterObj[5].GetComponent<thrusterScript>().turnOn();
-            if (t2Stop >= thrustTimer)
+            if (t2Start <= thrustTimer)
             {
-                //turn thrusters off
-                thrusterObj[3].GetComponent<thrusterScript>().turnOff();
-                thrusterObj[4].GetComponent<thrusterScript>().turnOff();
-                thrusterObj[5].GetComponent<thrusterScript>().turnOff();
-                //build new timer
-                t2Start = Random.Range(1, 5);
-                t2Stop = Random.Range(1, 5) + t2Start;
-                t2Fired = true;
-                if (t1Fired == true)
+                if (thrusterObj[3] != null) { thrusterObj[3].GetComponent<thrusterScript>().turnOn(); }
+                if (thrusterObj[4] != null) { thrusterObj[4].GetComponent<thrusterScript>().turnOn(); }
+                if (thrusterObj[5] != null) { thrusterObj[5].GetComponent<thrusterScript>().turnOn(); }
+                if (t2Stop <= thrustTimer)
                 {
-                    //reset timer
-                    thrustTimer = 0;
-                    //reset fired checks
-                    t1Fired = false;
-                    t2Fired = false;
+                    //turn thrusters off
+                    if (thrusterObj[3] != null) { thrusterObj[3].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrusterObj[4] != null) { thrusterObj[4].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrusterObj[5] != null) { thrusterObj[5].GetComponent<thrusterScript>().turnOff(); }
+                    if (thrustTimer>10)
+                    {
+                        //build new timer
+                        t2Start = Random.Range(3, 5);
+                        t2Stop = Random.Range(1, 3) + t2Start;
+                        //reset timer
+                        thrustTimer = 0;
+                    }
                 }
-            }
 
+            }
         }
         //fire first volly
         if (laserTimer >= 1 && laserTimer <= 1.5 && laserObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
@@ -412,5 +418,10 @@ public class sbosstracker : MonoBehaviour
         else if (missileObj[selecterCounter] == null) { missileTimer = 0; }
         if (cannonTimer >= selecterCounter + 2 && cannonTimer <= selecterCounter + 2.5 && cannonObj[selecterCounter] != null) { laserObj[selecterCounter].GetComponent<turretScript>().fire(); }
         else if (cannonObj[selecterCounter] == null) {cannonTimer = 0; }
+        if (selecterCounter > 9) { selecterCounter = 9; }
+        if (cannonTimer>12) { cannonTimer = 0; }
+        if (missileTimer>10.5) { missileTimer = 0; }
+        if (laserTimer> 28.5) { laserTimer = 0; }
+
     }
 }

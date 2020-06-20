@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -481,7 +481,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -792,7 +792,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -896,7 +896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1207,7 +1207,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1784,7 +1784,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1951,7 +1951,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2177,7 +2177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2203,8 +2203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234182611339}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 3333985264861565990}
   location: 1
   laser: 1
   missle: 0
@@ -2343,7 +2343,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2539,7 +2539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995093977}
-  bossTracker: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
   parentScript: {fileID: 0}
   location: 0
   laser: 1
@@ -2674,7 +2674,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2700,8 +2700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995138643}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 1993703859567287403}
   location: 2
   laser: 1
   missle: 0
@@ -2810,7 +2810,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3006,7 +3006,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3032,8 +3032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731235303991853}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 1993597856890980808}
   location: 3
   laser: 1
   missle: 0
@@ -3224,7 +3224,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3390,7 +3390,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3416,8 +3416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608033839107265}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 3422398275911188836}
   location: 8
   laser: 0
   missle: 1
@@ -3615,7 +3615,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3641,8 +3641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608034488354171}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 1523048837617103849}
   location: 12
   laser: 0
   missle: 1
@@ -3781,7 +3781,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3948,7 +3948,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4145,7 +4145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4342,7 +4342,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4568,7 +4568,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4594,8 +4594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035116923945}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 1254513580880597384}
   location: 10
   laser: 0
   missle: 1
@@ -4703,7 +4703,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4729,8 +4729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035144558511}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 6551232413141118862}
   location: 13
   laser: 0
   missle: 1
@@ -4838,7 +4838,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4864,8 +4864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035160788949}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 8892489848782876755}
   location: 9
   laser: 0
   missle: 1
@@ -4973,7 +4973,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4999,8 +4999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035187553375}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 7759590085589516902}
   location: 11
   laser: 0
   missle: 1
@@ -5229,7 +5229,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5426,7 +5426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5592,7 +5592,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5618,8 +5618,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617341324802}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 7836168368132680634}
   location: 4
   laser: 0
   missle: 0
@@ -5787,7 +5787,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5813,8 +5813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617574778791}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 2655423081220526432}
   location: 7
   laser: 0
   missle: 0
@@ -5953,7 +5953,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6149,7 +6149,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6175,8 +6175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618215901393}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 7342499339251086060}
   location: 6
   laser: 0
   missle: 0
@@ -6314,7 +6314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6340,8 +6340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618436734577}
-  bossTracker: {fileID: 0}
-  parentScript: {fileID: 0}
+  bossTracker: {fileID: 1079564860312538246}
+  parentScript: {fileID: 7442872365658469484}
   location: 5
   laser: 0
   missle: 0
@@ -6480,7 +6480,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6647,7 +6647,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -6,7 +6,7 @@ public class turretScript : MonoBehaviour
 
     //script trackers
     public sbosstracker bossTracker;
-    public enemyscript parentScript;
+    public enemyhealth parentScript;
     //location int for boss handeler
     public int location;
     //fire select
