@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4267765368324324}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: uPortR
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 95763696456690150}
   - component: {fileID: 114747760686312880}
   - component: {fileID: 8713131757439341107}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 1e+9
+  health: 100
   repair: 0
   maxShield: 0
   shield: 0
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4208706793169000}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: mgport
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4957156825432886}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: uPortL
   m_TagString: Untagged
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}

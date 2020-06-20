@@ -235,10 +235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62394eba85893bf42b8453f081314007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: 0
+  location: 4
   health: 50
   flame: {fileID: 846864637886142415}
   body: {fileID: 846864638100335583}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &846864637395952793
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,10 +300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62394eba85893bf42b8453f081314007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: 0
+  location: 5
   health: 50
   flame: {fileID: 846864637964929742}
   body: {fileID: 846864638027577054}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &846864637535624335
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,10 +573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62394eba85893bf42b8453f081314007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: 0
+  location: 2
   health: 50
   flame: {fileID: 846864637155709055}
   body: {fileID: 846864638829522031}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &846864637886142415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1134,7 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 846864638928413938}
   body: {fileID: 846864636995082466}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &846864638829522031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,10 +1299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62394eba85893bf42b8453f081314007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: 0
+  location: 3
   health: 50
   flame: {fileID: 846864638387943108}
   body: {fileID: 846864637637397204}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &846864638928413938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,10 +1435,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62394eba85893bf42b8453f081314007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: 0
+  location: 1
   health: 50
   flame: {fileID: 846864638420377759}
   body: {fileID: 846864637535624335}
+  bossTracker: {fileID: 1808817369897920506}
 --- !u!1 &2756543538072680141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,20 +1470,20 @@ Transform:
   m_LocalPosition: {x: 9.5, y: 0, z: 0}
   m_LocalScale: {x: 19, y: 10, z: 1}
   m_Children:
+  - {fileID: 3209731233845377667}
+  - {fileID: 3209731234339656055}
+  - {fileID: 3209731233845332745}
   - {fileID: 3209731235196828369}
+  - {fileID: 8278433618874137057}
+  - {fileID: 8278433617235916439}
+  - {fileID: 8278433619054124865}
+  - {fileID: 8278433617999691570}
   - {fileID: 4954608034768229264}
   - {fileID: 4954608034792341600}
   - {fileID: 4954608035542517782}
   - {fileID: 4954608033822404932}
   - {fileID: 4954608034752003050}
-  - {fileID: 8278433617235916439}
-  - {fileID: 8278433618874137057}
-  - {fileID: 3209731233845377667}
-  - {fileID: 3209731234339656055}
-  - {fileID: 8278433617999691570}
-  - {fileID: 8278433619054124865}
   - {fileID: 4954608034538633470}
-  - {fileID: 3209731233845332745}
   - {fileID: 846864636995082467}
   - {fileID: 846864637535624334}
   - {fileID: 846864638829522030}
@@ -1570,6 +1576,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f6c45c28d820d48b84d8a04db76d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2928479753530415306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6745933159641401618}
+  - component: {fileID: 1808817369897920506}
+  m_Layer: 0
+  m_Name: boss_tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6745933159641401618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928479753530415306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.8989916, y: -1.2543513, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5559042263304795392}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808817369897920506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928479753530415306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb5f7c41c96c2b4d97dd9adef74e589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrusters: 010101010101
+  thrusterObj: []
+  turrets: 0101010101010101010101010101
+  laserObj:
+  - {fileID: 3209731234995093981}
+  - {fileID: 3209731235303991849}
+  - {fileID: 3209731234995138647}
+  - {fileID: 3209731234182611343}
+  cannonObj:
+  - {fileID: 8278433617341324806}
+  - {fileID: 8278433618436734581}
+  - {fileID: 8278433617574778787}
+  - {fileID: 8278433618215901397}
+  missileObj:
+  - {fileID: 4954608033839107269}
+  - {fileID: 4954608035160788945}
+  - {fileID: 4954608034488354175}
+  - {fileID: 4954608035116923949}
+  - {fileID: 4954608035187553371}
+  - {fileID: 4954608035144558507}
+  gInputInt: 0
+  tInputInt: 0
 --- !u!1 &3209731233341868692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1745,7 @@ GameObject:
   - component: {fileID: 3209731233845332750}
   - component: {fileID: 3209731233845332749}
   m_Layer: 0
-  m_Name: lazor turret (3)
+  m_Name: lazor_turret (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1693,7 +1764,7 @@ Transform:
   m_Children:
   - {fileID: 3209731234995138640}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 13
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3209731233845332744
 SpriteRenderer:
@@ -1838,7 +1909,7 @@ GameObject:
   - component: {fileID: 3209731233845377668}
   - component: {fileID: 3209731233845377671}
   m_Layer: 0
-  m_Name: lazor turret (1)
+  m_Name: lazor_turret (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1857,7 +1928,7 @@ Transform:
   m_Children:
   - {fileID: 3209731234995093978}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3209731233845377666
 SpriteRenderer:
@@ -2147,6 +2218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234182611339}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 3209731235196828373}
+  location: 1
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -2224,7 +2298,7 @@ GameObject:
   - component: {fileID: 3209731234339656048}
   - component: {fileID: 3209731234339656051}
   m_Layer: 0
-  m_Name: lazor turret (2)
+  m_Name: lazor_turret (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2243,7 +2317,7 @@ Transform:
   m_Children:
   - {fileID: 3209731235303991854}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 9
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3209731234339656054
 SpriteRenderer:
@@ -2503,6 +2577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995093977}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 3209731233845377671}
+  location: 0
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -2635,6 +2712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731234995138643}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 3209731233845332749}
+  location: 2
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -2682,7 +2762,7 @@ GameObject:
   - component: {fileID: 3209731235196828374}
   - component: {fileID: 3209731235196828373}
   m_Layer: 0
-  m_Name: lazor turret (4)
+  m_Name: lazor_turret (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2701,7 +2781,7 @@ Transform:
   m_Children:
   - {fileID: 3209731234182611336}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3209731235196828368
 SpriteRenderer:
@@ -2961,6 +3041,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3209731235303991853}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 3209731234339656051}
+  location: 3
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -3023,6 +3106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7399734414223070674}
+  - {fileID: 6745933159641401618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3090,7 +3174,7 @@ GameObject:
   - component: {fileID: 4954608033822404937}
   - component: {fileID: 4954608033822404936}
   m_Layer: 0
-  m_Name: missile turret (3)
+  m_Name: missile_turret (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3109,7 +3193,7 @@ Transform:
   m_Children:
   - {fileID: 4954608034488354172}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608033822404935
 SpriteRenderer:
@@ -3339,6 +3423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608033839107265}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608034538633458}
+  location: 8
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -3561,6 +3648,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608034488354171}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608033822404936}
+  location: 12
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -3638,7 +3728,7 @@ GameObject:
   - component: {fileID: 4954608034538633459}
   - component: {fileID: 4954608034538633458}
   m_Layer: 0
-  m_Name: missile turret (1)
+  m_Name: missile_turret (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3657,7 +3747,7 @@ Transform:
   m_Children:
   - {fileID: 4954608033839107270}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608034538633469
 SpriteRenderer:
@@ -3802,7 +3892,7 @@ GameObject:
   - component: {fileID: 4954608034752003047}
   - component: {fileID: 4954608034752003046}
   m_Layer: 0
-  m_Name: missile turret (2)
+  m_Name: missile_turret (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3821,7 +3911,7 @@ Transform:
   m_Children:
   - {fileID: 4954608035160788946}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 5
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608034752003049
 SpriteRenderer:
@@ -3996,7 +4086,7 @@ GameObject:
   - component: {fileID: 4954608034768229277}
   - component: {fileID: 4954608034768229276}
   m_Layer: 0
-  m_Name: missile turret (6)
+  m_Name: missile_turret (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4015,7 +4105,7 @@ Transform:
   m_Children:
   - {fileID: 4954608035144558504}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608034768229267
 SpriteRenderer:
@@ -4190,7 +4280,7 @@ GameObject:
   - component: {fileID: 4954608034792341613}
   - component: {fileID: 4954608034792341612}
   m_Layer: 0
-  m_Name: missile turret (5)
+  m_Name: missile_turret (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4209,7 +4299,7 @@ Transform:
   m_Children:
   - {fileID: 4954608035187553368}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 2
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608034792341603
 SpriteRenderer:
@@ -4499,6 +4589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035116923945}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608035542517786}
+  location: 10
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -4631,6 +4724,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035144558511}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608034768229276}
+  location: 13
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -4763,6 +4859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035160788949}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608034752003046}
+  location: 9
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -4895,6 +4994,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4954608035187553375}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 4954608034792341612}
+  location: 11
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -5062,7 +5164,7 @@ GameObject:
   - component: {fileID: 4954608035542517787}
   - component: {fileID: 4954608035542517786}
   m_Layer: 0
-  m_Name: missile turret (4)
+  m_Name: missile_turret (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5081,7 +5183,7 @@ Transform:
   m_Children:
   - {fileID: 4954608035116923950}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4954608035542517781
 SpriteRenderer:
@@ -5256,7 +5358,7 @@ GameObject:
   - component: {fileID: 8278433617235916434}
   - component: {fileID: 8278433617235916435}
   m_Layer: 0
-  m_Name: cannon turret (3)
+  m_Name: cannon_turret (3)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5275,7 +5377,7 @@ Transform:
   m_Children:
   - {fileID: 8278433617574778786}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8278433617235916436
 SpriteRenderer:
@@ -5505,6 +5607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617341324802}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 8278433617999691574}
+  location: 4
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -5697,6 +5802,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433617574778791}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 8278433617235916435}
+  location: 7
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -5774,7 +5882,7 @@ GameObject:
   - component: {fileID: 8278433617999691575}
   - component: {fileID: 8278433617999691574}
   m_Layer: 0
-  m_Name: cannon turret (1)
+  m_Name: cannon_turret (1)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5793,7 +5901,7 @@ Transform:
   m_Children:
   - {fileID: 8278433617341324807}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8278433617999691569
 SpriteRenderer:
@@ -6053,6 +6161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618215901393}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 8278433618874137061}
+  location: 6
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -6215,6 +6326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8278433618436734577}
+  bossTracker: {fileID: 1808817369897920506}
+  parentScript: {fileID: 8278433619054124869}
+  location: 5
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -6292,7 +6406,7 @@ GameObject:
   - component: {fileID: 8278433618874137060}
   - component: {fileID: 8278433618874137061}
   m_Layer: 0
-  m_Name: cannon turret (4)
+  m_Name: cannon_turret (4)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6311,7 +6425,7 @@ Transform:
   m_Children:
   - {fileID: 8278433618215901396}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8278433618874137058
 SpriteRenderer:
@@ -6456,7 +6570,7 @@ GameObject:
   - component: {fileID: 8278433619054124868}
   - component: {fileID: 8278433619054124869}
   m_Layer: 0
-  m_Name: cannon turret (2)
+  m_Name: cannon_turret (2)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6475,7 +6589,7 @@ Transform:
   m_Children:
   - {fileID: 8278433618436734580}
   m_Father: {fileID: 7399734414223070674}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8278433619054124866
 SpriteRenderer:
