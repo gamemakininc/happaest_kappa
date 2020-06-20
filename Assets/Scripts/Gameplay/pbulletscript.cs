@@ -30,7 +30,7 @@ public class pbulletscript : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].up);
             if (hitInfo)
             {
-                enemyscript enemy = hitInfo.transform.GetComponent<enemyscript>();
+                enemyhealth enemy = hitInfo.transform.GetComponent<enemyhealth>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(Damage);
@@ -98,7 +98,7 @@ public class pbulletscript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         //check if enemy/get enemy script
-        enemyscript enemy = hitInfo.GetComponent<enemyscript>();
+        enemyhealth enemy = hitInfo.GetComponent<enemyhealth>();
         if (enemy != null)
         {
             //damage enemy
