@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class enemyhealth : MonoBehaviour
 {
@@ -22,6 +20,7 @@ public class enemyhealth : MonoBehaviour
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
+            
             //damage player
             player.TakeDamage(health);
             //remove enemy
@@ -47,6 +46,11 @@ public class enemyhealth : MonoBehaviour
         {
             //spawn death animation prefab
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
+        if (GetComponentInChildren<turretScript>() != null)
+        {
+            GetComponentInChildren<turretScript>().die();
+            Debug.Log(this.transform + "sent info to" + GetComponentInChildren<Transform>());
         }
         makeLoot();
         //remove self
