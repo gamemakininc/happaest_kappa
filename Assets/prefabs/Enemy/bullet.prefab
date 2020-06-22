@@ -126,7 +126,9 @@ MonoBehaviour:
   rb: {fileID: 7436617211859324443}
   timer: 0
   Damage: 4
-  trackingEnemy: 0
+  aimed: 0
+  tracking: 0
+  value: 1
   player: {fileID: 0}
 --- !u!50 &7436617211859324443
 Rigidbody2D:

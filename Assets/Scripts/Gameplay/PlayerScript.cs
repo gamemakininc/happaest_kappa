@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 public class PlayerScript : MonoBehaviour
@@ -6,10 +8,12 @@ public class PlayerScript : MonoBehaviour
     //idK
     Vector2 movement;
     //set health
+    public Image hpBar;
     public float maxHealth;
     public float health;
     public float repair;
     //shield and regen
+    public Image sBar;
     public float maxShield;
     public float shield;
     public float sRegen = .5f;
@@ -136,7 +140,7 @@ public class PlayerScript : MonoBehaviour
             health += repair * Time.deltaTime;
         }
         //check if shield can regen(& has been long enough since last hit)
-        if (shield < maxShield && hitTimer<=2)
+        if (shield < maxShield && hitTimer>=2)
         {//shield regen
             shield += sRegen * Time.deltaTime;
         }
@@ -157,7 +161,10 @@ public class PlayerScript : MonoBehaviour
         }
         //incroment timer (used for shield regen delay)
         hitTimer += 1.0F * Time.deltaTime;
-
+        float x;
+        if (maxShield < 1) { sBar.fillAmount = 0f; }
+        else if (maxShield > 1) { sBar.fillAmount = shield/maxShield; }
+        hpBar.fillAmount = health/maxHealth;
     }
     //delta time based  
     private void FixedUpdate()

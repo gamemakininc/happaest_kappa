@@ -143,6 +143,7 @@ MonoBehaviour:
   Damage: 8
   aimed: 0
   tracking: 1
+  value: 2
   player: {fileID: 0}
 --- !u!70 &4563226769521994271
 CapsuleCollider2D:

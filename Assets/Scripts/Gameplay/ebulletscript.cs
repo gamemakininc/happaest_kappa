@@ -9,6 +9,8 @@ public class ebulletscript : MonoBehaviour
     public int Damage;
     public bool aimed;
     public bool tracking;
+    
+    public int value;//score value of enemy
     //tracking
     public Transform player;
 
@@ -64,8 +66,9 @@ public class ebulletscript : MonoBehaviour
         //check if enemy/get enemy script
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         pbulletscript pBullet = hitInfo.GetComponent<pbulletscript>();
-        if (pBullet != null) 
+        if (pBullet != null)
         {
+            ObserverScript.Instance.score += value;
             //remove pbullet
             pBullet.die();
             //remove ebullet

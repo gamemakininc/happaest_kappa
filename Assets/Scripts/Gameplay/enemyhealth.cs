@@ -8,6 +8,7 @@ public class enemyhealth : MonoBehaviour
     public float health = 10;
     //loot table var
     public powerupHandeler thisPowerup;
+    public int value;//score value of enemy
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class enemyhealth : MonoBehaviour
             Die();
         }
     }
-
+    //should not trigger if not killed by player.
     void Die()
     {
         //allow skip if no death animation set
@@ -52,6 +53,7 @@ public class enemyhealth : MonoBehaviour
             GetComponentInChildren<turretScript>().die();
             Debug.Log(this.transform + "sent info to" + GetComponentInChildren<Transform>());
         }
+        ObserverScript.Instance.score += value;
         makeLoot();
         //remove self
         Destroy(gameObject);

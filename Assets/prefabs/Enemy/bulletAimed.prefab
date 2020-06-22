@@ -128,6 +128,7 @@ MonoBehaviour:
   Damage: 4
   aimed: 1
   tracking: 0
+  value: 1
   player: {fileID: 0}
 --- !u!50 &5297302924047063934
 Rigidbody2D:

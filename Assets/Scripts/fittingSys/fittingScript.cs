@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class fittingScript : MonoBehaviour
 {
 	//set bace values
-	private float baceERefireRate = 0.50f;
-	private float baceRefireRate = 0.40f;
+	private float baceERefireRate = 0.40f;
+	private float baceRefireRate = 0.30f;
 	private float baceMoveSpeed = 8f;
 	public float baceHealth = 100f;
 	public float baceSRegen = 0.5f;
