@@ -7,7 +7,7 @@ public class ObserverScript : MonoBehaviour
     /*
       should corrispond to 'item designator'
       zero should allways be true!
-      0          default unlocks(slot clears t1 ships)
+      0          default unlocks(slot clears )
       1-3,7-9    shields
       4-6,10-12  health
       13-18      speed mods
@@ -18,30 +18,31 @@ public class ObserverScript : MonoBehaviour
     */
     public bool[] unlocks;
     //player output from fitting system
-    public float efireRate;
-    public float fireRate;
-    public int pBulletSelector;
-    public float pSpeed;
-    public float pHealth;
-    public float pShield;
-    public float pSRegen;
-    public float pRepair;
-    public int mslBonus;
+    public float efireRate;//fire rate for blasma weapons
+    public float fireRate;//fire rate for cannons
+    public int pBulletSelector;//could be reworked
+    public float pSpeed;//minovering speed
+    public float pHealth;//health
+    public float pShield;//another health bar to go over your health so you can heal while you heal
+    public float pSRegen;//shield repair rate
+    public float pRepair;//health repair rate
+    public int mslBonus;//adds missiles above default at level start
     //0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun , 13 ship
     //value of 0 for empty slot
-    public int[] fitSetup;
+    public int[] fitSetup;//holds variables for fitting system
 
     //save for player payload slot0-1
-    public int pP0;
-    public int pP1;
+    public int pP0;//whats in missile slot 1
+    public int pP1;//ditto
     //misc savegame variables
-    public int diff;
-    public int levelsCleared;
-    public string playerName;
+    public int diff;//int to carry difficulty level to level
+    public int levelsCleared;//stores ##of win conditions collected
+    public string playerName;//stores current player name
+    public int score;
     //swap vars
-    public bool bookmark0;
-    public bool bookmark1;
-    public bool bookmark2;
+    public bool bookmark0;//event system any event triggered this rotation
+    public bool bookmark1;//event system fitting system event triggered
+    public bool bookmark2;//event system briefing room event triggered
 
 
     //save preview variables slot1

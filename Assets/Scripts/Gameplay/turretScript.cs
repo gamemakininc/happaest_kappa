@@ -6,7 +6,7 @@ public class turretScript : MonoBehaviour
 
     //script trackers
     public sbosstracker bossTracker;
-    public enemyscript parentScript;
+    public enemyhealth parentScript;
     //location int for boss handeler
     public int location;
     //fire select
@@ -31,7 +31,13 @@ public class turretScript : MonoBehaviour
     public float tweentime = 0.08f;
 
 
+    public void die() 
+    {
+        bossTracker.gInputInt = location;
+        bossTracker.updateVarsTurret();
 
+    }
+    //why is it setup this way? am i stupid?
     public void fire()
     {
         if (laser == true)//should be only one to freeze rotation
@@ -39,7 +45,7 @@ public class turretScript : MonoBehaviour
             if (oneShot == false)
             {
                 //spawn bullet
-                Instantiate(bullets[0], port1.position, port1.rotation);
+                Instantiate(bullets[0], port1.position, port1.rotation, parent: port1);
                 fireTime = 7.5f;
                 firing = true;
             }
@@ -96,14 +102,11 @@ public class turretScript : MonoBehaviour
             }
         }
     }
-    // Start is called before the first frame update
     void Start()
     {
         firing = false;
         oneShot = false;
     }
-
-    // Update is called once per frame
     void Update()
     {
         //degrade timers
@@ -120,9 +123,8 @@ public class turretScript : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.z, targetAangle, ref tweenSpeed, tweentime);
             rb.rotation = angle;
         }
-        if (fireTime > 0) { fire(); }
-        if (fireTime <= 0) { oneShot = false; firing = false; }
-        if (parentScript == null) { bossTracker.gInputInt = location; bossTracker.updateVarsTurret(); }
+        if (fireTime > 0) { fire(); }//fire while fireing WOW
+        if (fireTime <= 0) { oneShot = false; firing = false; }//reset when not fireing
 
     }
 }

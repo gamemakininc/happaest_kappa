@@ -19,7 +19,7 @@ public class thrusterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (health <= 0) { die(); }
     }
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
@@ -37,14 +37,14 @@ public class thrusterScript : MonoBehaviour
         //update animator
         body.GetComponent<Animator>().SetBool("broken", true);
         //dissable colliders
-        body.GetComponent<Collider2D>().enabled = false;
+        this.GetComponent<Collider2D>().enabled = false;
         flame.GetComponent<Collider2D>().enabled = false;
         //update bosstracker script
         bossTracker.tInputInt = location;
         bossTracker.updateVarsThrust();
-        //dissable related scripts
-        flame.GetComponent<thrusterFire>().enabled = false;
-        body.GetComponent<thrusterFire>().enabled = false;
+        //remove script objects
+        Destroy(flame);//not working for some reason
+        Destroy(gameObject);
 
 
     }

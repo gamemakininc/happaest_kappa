@@ -8,6 +8,7 @@ public class TileScript : MonoBehaviour
     public float speed = -2.5f;
     [Tooltip("Freezes the tile on Screen")]
     public bool freeze;
+    private bool frozen;
 
     private float cameraBoundX;
     private float tileEdgeX;
@@ -26,6 +27,10 @@ public class TileScript : MonoBehaviour
 
     private void Update()
     {
+        if (frozen == false) 
+        {
+            if (freeze == true) { speed = 0; frozen = true; }
+        }
         float xDif = tileEdgeX - cameraBoundX;
 
         if (freeze && xDif < float.Epsilon || freeze && xDif < 0) //Freezes tile on Screen
