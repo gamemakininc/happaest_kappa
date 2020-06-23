@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3034711989906515187}
   - component: {fileID: 1350051818387086914}
   - component: {fileID: 4718350615129140325}
+  - component: {fileID: 8809314853721344301}
   m_Layer: 0
   m_Name: Star3 Animated
   m_TagString: Untagged
@@ -102,3 +103,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8809314853721344301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077731530418702468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0691a7bad8b04b419b4209febfd98a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starType: 2
