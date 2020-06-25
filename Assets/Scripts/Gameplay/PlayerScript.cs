@@ -161,7 +161,6 @@ public class PlayerScript : MonoBehaviour
         }
         //incroment timer (used for shield regen delay)
         hitTimer += 1.0F * Time.deltaTime;
-        float x;
         if (maxShield < 1) { sBar.fillAmount = 0f; }
         else if (maxShield > 1) { sBar.fillAmount = shield/maxShield; }
         hpBar.fillAmount = health/maxHealth;
@@ -293,8 +292,11 @@ public class PlayerScript : MonoBehaviour
     }
     void Die()
     {
-        //spawn death sprite
-        Instantiate(deathEffect[shipselect], transform.position, Quaternion.Euler(0, 0, -90));
+        if (deathEffect[shipselect] != null)
+        {
+            //spawn death sprite
+            Instantiate(deathEffect[shipselect], transform.position, Quaternion.Euler(0, 0, -90));
+        }
         //remove self
         Destroy(gameObject);
         //play sound effect

@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menus/saveGame.unity
     guid: 276a1c850ae5b4e4e9d7797577ff1e93
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/levels/SampleScene.unity
+    guid: 0a9794fe53fc3654f9f5d10457f44f2f
+  - enabled: 1
+    path: Assets/Scenes/levels/Combat.unity
+    guid: d8d7341894bee2c4bbddc0ab946903fe
   m_configObjects: {}

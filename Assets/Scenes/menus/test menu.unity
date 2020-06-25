@@ -2265,7 +2265,6 @@ GameObject:
   - component: {fileID: 483033091}
   - component: {fileID: 483033092}
   - component: {fileID: 483033093}
-  - component: {fileID: 483033094}
   m_Layer: 0
   m_Name: test
   m_TagString: Untagged
@@ -2354,52 +2353,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &483033094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483033090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ef12759262116418b64b58dd5ae600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baceHealth: 100
-  baceSRegen: 0.5
-  baceRepair: 0
-  baceShield: 0
-  maxPG: 0
-  maxWG: 0
-  erefireRate: 0
-  refireRate: 0
-  MoveSpeed: 0
-  bulletSelector: 0
-  payload0Selector: 0
-  payload1Selector: 0
-  health: 0
-  shield: 0
-  sRegen: 0
-  repair: 0
-  mslBonus: 0
-  Weight: 0
-  power: 0
-  inputLoc: 0
-  slotsLoc: []
-  healthOutput: {fileID: 0}
-  regenOutput: {fileID: 0}
-  p0AmmoOutput: {fileID: 0}
-  p1AmmoOutput: {fileID: 0}
-  PGbar: {fileID: 0}
-  WGbar: {fileID: 0}
-  pgText: {fileID: 0}
-  wgText: {fileID: 0}
-  speedInfo: {fileID: 0}
-  p0ammocount: 0
-  p1ammocount: 0
-  fitSetup: 
-  slotsfake: 
 --- !u!1 &521527519
 GameObject:
   m_ObjectHideFlags: 0
@@ -9077,6 +9030,7 @@ MonoBehaviour:
   baceShield: 0
   maxPG: 0
   maxWG: 0
+  SlotAdded: 0
   erefireRate: 0
   refireRate: 0
   MoveSpeed: 0
@@ -9148,7 +9102,15 @@ MonoBehaviour:
   wgCost: 0
   pgCost: 0
   spriteLoc: {fileID: 1719295304}
-  swapsprites: []
+  swapsprites:
+  - {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: 8484439125898418650, guid: 7b6fdf2102248d748b4dc21326044397, type: 3}
+  - {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
   otherSprite: {fileID: 0}
   cSprite: {fileID: 0}
   itemId: 0

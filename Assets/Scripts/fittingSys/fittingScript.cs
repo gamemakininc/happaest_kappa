@@ -14,6 +14,7 @@ public class fittingScript : MonoBehaviour
 	public float maxPG;
 	public float maxWG;
 	//swap files
+	public bool SlotAdded;
 	public float erefireRate;
 	public float refireRate;
 	public float MoveSpeed;
@@ -58,6 +59,7 @@ public class fittingScript : MonoBehaviour
 	
 	public void Start()
 	{
+		SlotAdded = false;
 
 		mixMaster.Instance.nTrack = 3;
 
@@ -208,7 +210,27 @@ public class fittingScript : MonoBehaviour
 		counter++;
 		//check low slots
 		sDebuffSpeed = 1;
-		if (fitSetup[counter] == 1) { healthBoost(); }
+		if (fitSetup[counter] == 0) 
+		{
+			if (SlotAdded == true) 
+			{
+				//check if any missile mods fitted
+				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
+				{/*do nothing*/ }
+				else
+				{ 
+					//relock slot
+					slotsfake[10] = true;
+					payload0Selector = 0;
+					fitSetup[10] = 0;
+					//update gui
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				}
+				
+			}
+		}
+		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -217,11 +239,82 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
+		else if (fitSetup[counter] == 10)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 3;
+			//update ui
+			p0ammocount += 3;
+			p1ammocount += 3;
+		}
+		else if (fitSetup[counter] == 11)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 6;
+			//update ui
+			p0ammocount += 6;
+			p1ammocount += 6;
+		}
+		else if (fitSetup[counter] == 12)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 12;
+			//update ui
+			p0ammocount += 12;
+			p1ammocount += 12;
+		}
 		counter++;
-		if (fitSetup[counter] == 1) { healthBoost(); }
+		if (fitSetup[counter] == 0)
+		{
+			if (SlotAdded == true)
+			{
+				//check if any missile mods fitted
+				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
+				{/*do nothing*/ }
+				else
+				{
+					//relock slot
+					slotsfake[10] = true;
+					payload0Selector = 0;
+					fitSetup[10] = 0;
+					//update gui
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				}
+
+			}
+		}
+		else if(fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -230,11 +323,82 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
+		else if (fitSetup[counter] == 10)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 3;
+			//update ui
+			p0ammocount += 3;
+			p1ammocount += 3;
+		}
+		else if (fitSetup[counter] == 11)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 6;
+			//update ui
+			p0ammocount += 6;
+			p1ammocount += 6;
+		}
+		else if (fitSetup[counter] == 12)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 12;
+			//update ui
+			p0ammocount += 12;
+			p1ammocount += 12;
+		}
 		counter++;
-		if (fitSetup[counter] == 1) { healthBoost(); }
+		if (fitSetup[counter] == 0)
+		{
+			if (SlotAdded == true)
+			{
+				//check if any missile mods fitted
+				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
+				{/*do nothing*/ }
+				else
+				{
+					//relock slot
+					slotsfake[10] = true;
+					payload0Selector = 0;
+					fitSetup[10] = 0;
+					//update gui
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				}
+
+			}
+		}
+		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -243,11 +407,82 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
+		else if (fitSetup[counter] == 10)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 3;
+			//update ui
+			p0ammocount += 3;
+			p1ammocount += 3;
+		}
+		else if (fitSetup[counter] == 11)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 6;
+			//update ui
+			p0ammocount += 6;
+			p1ammocount += 6;
+		}
+		else if (fitSetup[counter] == 12)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 12;
+			//update ui
+			p0ammocount += 12;
+			p1ammocount += 12;
+		}
 		counter++;
-		if (fitSetup[counter] == 1) { healthBoost(); }
+		if (fitSetup[counter] == 0)
+		{
+			if (SlotAdded == true)
+			{
+				//check if any missile mods fitted
+				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
+				{/*do nothing*/ }
+				else
+				{
+					//relock slot
+					slotsfake[10] = true;
+					payload0Selector = 0;
+					fitSetup[10] = 0;
+					//update gui
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				}
+
+			}
+		}
+		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -256,11 +491,82 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
+		else if (fitSetup[counter] == 10)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 3;
+			//update ui
+			p0ammocount += 3;
+			p1ammocount += 3;
+		}
+		else if (fitSetup[counter] == 11)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 6;
+			//update ui
+			p0ammocount += 6;
+			p1ammocount += 6;
+		}
+		else if (fitSetup[counter] == 12)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 12;
+			//update ui
+			p0ammocount += 12;
+			p1ammocount += 12;
+		}
 		counter++;
-		if (fitSetup[counter] == 1) { healthBoost(); }
+		if (fitSetup[counter] == 0)
+		{
+			if (SlotAdded == true)
+			{
+				//check if any missile mods fitted
+				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
+				{/*do nothing*/ }
+				else
+				{
+					//relock slot
+					slotsfake[10] = true;
+					payload0Selector = 0;
+					fitSetup[10] = 0;
+					//update gui
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				}
+
+			}
+		}
+		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -269,9 +575,60 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { fuel(); }
 		else if (fitSetup[counter] == 8) { fuel(); }
 		else if (fitSetup[counter] == 9) { fuel(); }
-		else if (fitSetup[counter] == 10) { mslBonus += 3; p0ammocount += 3; p1ammocount += 3; }
-		else if (fitSetup[counter] == 11) { mslBonus += 6; p0ammocount += 6; p1ammocount += 6; }
-		else if (fitSetup[counter] == 12) { mslBonus += 12; p0ammocount += 12; p1ammocount += 12; }
+		else if (fitSetup[counter] == 10)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 3;
+			//update ui
+			p0ammocount += 3;
+			p1ammocount += 3;
+		}
+		else if (fitSetup[counter] == 11)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 6;
+			//update ui
+			p0ammocount += 6;
+			p1ammocount += 6;
+		}
+		else if (fitSetup[counter] == 12)
+		{
+			//if no missile slots avalible unlock p0
+			if (slotsfake[10] == true && slotsfake[11] == true)
+			{
+				slotsfake[10] = false;
+				//update slot
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
+				slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+				//set swap to tell the game a slot was added
+				SlotAdded = true;
+			}
+			//add missiles to load profile
+			mslBonus += 12;
+			//update ui
+			p0ammocount += 12;
+			p1ammocount += 12;
+		}
 		counter++;
 		//check payload
 		if (fitSetup[counter] == 1) { payload0Selector = 1; p0ammocount += 20; }
