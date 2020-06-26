@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
+using UnityEngine.SceneManagement;
 public class eventSystem : MonoBehaviour
 {
+    public Transform endPoint;
+    public GameObject slider;
+    public int eventLingth;
+    public bool typeing;
+    public float letterPause = 0.2f;
+    public string[] message;
+    public GameObject speechBox;
+    public int msgselect;
     public GameObject mstartbtn;
     public bool eventAllreadyTriggered=false;
-    public bool eventTriedhangar=false;
+    public bool eventTriedFitting=false;
     public bool eventTriedBriefing=false;
     public bool[] unlocks;
     private int swapint;
@@ -20,14 +29,14 @@ public class eventSystem : MonoBehaviour
     {
         //import variables
         eventAllreadyTriggered = ObserverScript.Instance.bookmark0;
-        eventTriedhangar = ObserverScript.Instance.bookmark1;
+        eventTriedFitting = ObserverScript.Instance.bookmark1;
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
         //reset swapbool
         swapBool = false;
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/ }
-        else if (eventTriedhangar == true) {/*do nothing*/ }
+        else if (eventTriedFitting == true) {/*do nothing*/ }
         else if (ObserverScript.Instance.levelsCleared <= 0) {/*do nothing*/}
         //poll RNG
         else if (swapint <= 60)
@@ -82,9 +91,9 @@ public class eventSystem : MonoBehaviour
         }
 
         //dissable ability to retrigger
-        eventTriedhangar = true;
+        eventTriedFitting = true;
         //update bookmark (reset on mission completion or fail do not reset on mission start)
-        ObserverScript.Instance.bookmark1= eventTriedhangar;
+        ObserverScript.Instance.bookmark1= eventTriedFitting;
     }
     public void briefingLoadEvents()
     //mod unlocks
@@ -176,9 +185,56 @@ public class eventSystem : MonoBehaviour
         }
         //no reset measure needed as trigger is mission start btn
     }
+    IEnumerator TypeText()
+    {
+        typeing = true;
+        foreach (char letter in message[msgselect].ToCharArray())
+        {
+
+            if (speechBox.GetComponent<Text>().text == message[msgselect]) { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; }
+            
+            speechBox.GetComponent<Text>().text += letter;
+            yield return 0;
+            yield return new WaitForSeconds(letterPause);
+        }
+        typeing = false;
+    }
+    public void btnpressed() 
+    {
+        if (typeing == true)
+        {
+            //hopefully bypass the text box fill in
+            speechBox.GetComponent<Text>().text = message[msgselect];
+
+        }
+        else if (typeing == false) 
+        {
+            if (msgselect > eventLingth) { eventEnd(); }
+            else if (msgselect <= eventLingth) { msgselect++; TypeText(); }
+        }
+    }
+    void eventStart()
+    {
+        //chat menu into frame
+        slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 2);
+
+    }
+    void eventEnd() 
+    {
+        //reload active scene(easy way to retrigger lock checks)     
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     private void Start()
     {
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
+        else if (hangar == true) { }
+    }
+    private void Update()
+    {
+        if (Vector2.Distance(slider.transform.position, endPoint.position) < 0.05)
+        {
+            slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
+        }
     }
 }
