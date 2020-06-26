@@ -12,9 +12,10 @@ public class StarAnimator : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Animator>().SetInteger(0, starType);
+        if(GetComponent<Animator>() != null)
+            GetComponent<Animator>().SetInteger(0, starType);
 
-        if(starType == 0)
+        if (starType == 0)
         {
             GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length - 1)].GetComponent<SpriteRenderer>().sprite;
             GetComponent<Animator>().enabled = false;
