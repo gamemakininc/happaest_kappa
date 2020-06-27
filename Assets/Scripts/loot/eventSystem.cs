@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+
 public class eventSystem : MonoBehaviour
 {
     public Transform endPoint;
@@ -10,12 +11,25 @@ public class eventSystem : MonoBehaviour
     public bool typeing;
     public float letterPause = 0.2f;
     public string[] message;
-    public GameObject speechBox;
+    public Text speechBox;
     public int msgselect;
     public GameObject mstartbtn;
     public bool eventAllreadyTriggered=false;
     public bool eventTriedFitting=false;
     public bool eventTriedBriefing=false;
+    //unlocks 
+    /*
+      should corrispond to 'item designator'
+      zero should allways be true!
+      0          default unlocks(slot clears )
+      1-3,7-9    shields
+      4-6,10-12  health
+      13-18      speed mods
+      19-24      misc mods
+      25-27      missiles
+      28-35      ships (last two should have spechal unlock conditions)
+      36         guns (should be last unlock)
+    */
     public bool[] unlocks;
     private int swapint;
     private bool swapBool=false;
@@ -52,12 +66,54 @@ public class eventSystem : MonoBehaviour
                 //set rng
                 swapint = Random.Range(1, 6);
                 //unlock something (hopefully)
-                if (unlocks[28] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[28] = true; }
-                if (unlocks[29] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[29] = true; }
-                if (unlocks[30] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[30] = true; }
-                if (unlocks[31] == false && swapint == 4) { swapBool = true; ObserverScript.Instance.unlocks[31] = true; }
-                if (unlocks[32] == false && swapint == 5) { swapBool = true; ObserverScript.Instance.unlocks[32] = true; }
-                if (unlocks[33] == false && swapint == 6) { swapBool = true; ObserverScript.Instance.unlocks[33] = true; }
+                if (unlocks[28] == false && swapint == 1) 
+                { 
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[28] = true;
+                    msgselect = 0;
+                    eventLingth = 1;
+                    eventStart();
+                }
+                if (unlocks[29] == false && swapint == 2)
+                {
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[29] = true;
+                    msgselect = 2;
+                    eventLingth = 3;
+                    eventStart();
+                }
+                if (unlocks[30] == false && swapint == 3)
+                {
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[30] = true;
+                    msgselect = 4;
+                    eventLingth = 5;
+                    eventStart();
+                }
+                if (unlocks[31] == false && swapint == 4)
+                {
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[31] = true;
+                    msgselect = 6;
+                    eventLingth = 7;
+                    eventStart();
+                }
+                if (unlocks[32] == false && swapint == 5)
+                {
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[32] = true;
+                    msgselect = 8;
+                    eventLingth = 9;
+                    eventStart();
+                }
+                if (unlocks[33] == false && swapint == 6)
+                {
+                    swapBool = true;
+                    ObserverScript.Instance.unlocks[33] = true;
+                    msgselect = 10;
+                    eventLingth = 11;
+                    eventStart();
+                }
                 counter++;
 
                 //escape clause incase number dosent come up in reasonable time.
@@ -76,12 +132,54 @@ public class eventSystem : MonoBehaviour
                     //set rng
                     swapint = Random.Range(1, 6);
                     //unlock something (hopefully)
-                    if (unlocks[1] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[1] = true; }
-                    if (unlocks[2] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[2] = true; }
-                    if (unlocks[3] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[3] = true; }
-                    if (unlocks[4] == false && swapint == 4) { swapBool = true; ObserverScript.Instance.unlocks[4] = true; }
-                    if (unlocks[5] == false && swapint == 5) { swapBool = true; ObserverScript.Instance.unlocks[5] = true; }
-                    if (unlocks[6] == false && swapint == 6) { swapBool = true; ObserverScript.Instance.unlocks[6] = true; }
+                    if (unlocks[1] == false && swapint == 1)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[1] = true;
+                        msgselect = 12;
+                        eventLingth = 13;
+                        eventStart();
+                    }
+                    if (unlocks[2] == false && swapint == 2)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[2] = true;
+                        msgselect = 14;
+                        eventLingth = 15;
+                        eventStart();
+                    }
+                    if (unlocks[3] == false && swapint == 3)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[3] = true;
+                        msgselect = 16;
+                        eventLingth = 17;
+                        eventStart();
+                    }
+                    if (unlocks[4] == false && swapint == 4)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[4] = true;
+                        msgselect = 18;
+                        eventLingth = 19;
+                        eventStart();
+                    }
+                    if (unlocks[5] == false && swapint == 5)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[5] = true;
+                        msgselect = 20;
+                        eventLingth = 21;
+                        eventStart();
+                    }
+                    if (unlocks[6] == false && swapint == 6)
+                    {
+                        swapBool = true;
+                        ObserverScript.Instance.unlocks[6] = true;
+                        msgselect = 22;
+                        eventLingth = 23;
+                        eventStart();
+                    }
                     counter++;
                     //escape clause incase number dosent come up in reasonable time.
                     if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
@@ -188,9 +286,10 @@ public class eventSystem : MonoBehaviour
     IEnumerator TypeText()
     {
         typeing = true;
+        speechBox.text = " ";
         foreach (char letter in message[msgselect].ToCharArray())
         {
-
+            
             if (speechBox.GetComponent<Text>().text == message[msgselect]) { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; }
             
             speechBox.GetComponent<Text>().text += letter;
@@ -204,7 +303,7 @@ public class eventSystem : MonoBehaviour
         if (typeing == true)
         {
             //hopefully bypass the text box fill in
-            speechBox.GetComponent<Text>().text = message[msgselect];
+            speechBox.text = message[msgselect];
 
         }
         else if (typeing == false) 
@@ -216,8 +315,8 @@ public class eventSystem : MonoBehaviour
     void eventStart()
     {
         //chat menu into frame
-        slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 2);
-
+        slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 15);
+        TypeText();
     }
     void eventEnd() 
     {
@@ -232,7 +331,7 @@ public class eventSystem : MonoBehaviour
     }
     private void Update()
     {
-        if (Vector2.Distance(slider.transform.position, endPoint.position) < 0.05)
+        if (slider.transform.position.y>=endPoint.transform.position.y)
         {
             slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
         }

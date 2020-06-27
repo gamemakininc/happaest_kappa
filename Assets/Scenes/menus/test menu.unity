@@ -2377,7 +2377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493037802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -219.4, z: -4050.7512}
+  m_LocalPosition: {x: 0, y: -211.5, z: -4050.7512}
   m_LocalScale: {x: 90.01669, y: 90.01669, z: 45.008347}
   m_Children: []
   m_Father: {fileID: 2101735544}
@@ -3865,6 +3865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 843101542}
+  - component: {fileID: 843101543}
   m_Layer: 0
   m_Name: eventslider
   m_TagString: Untagged
@@ -3880,7 +3881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843101541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -448.1, z: -4050.7512}
+  m_LocalPosition: {x: 0, y: -457, z: -4050.7512}
   m_LocalScale: {x: 90.01669, y: 90.01669, z: 45.008347}
   m_Children:
   - {fileID: 1600711235}
@@ -3890,6 +3891,27 @@ Transform:
   m_Father: {fileID: 2101735544}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &843101543
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843101541}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &844530816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,13 +7285,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 0}
-  slider: {fileID: 0}
+  endPoint: {fileID: 493037803}
+  slider: {fileID: 843101541}
   eventLingth: 0
   typeing: 0
   letterPause: 0.2
-  message: []
-  speechBox: {fileID: 0}
+  message:
+  - hi
+  - fighter1 unlocked
+  - hello
+  - fighter2 unlocked
+  - sup
+  - fighter3 unlocked
+  - hello
+  - fighter4 unlocked
+  - hi
+  - fighter5 unlocked
+  - sup
+  - fighter6 unlocked
+  - hello
+  - small shield boost unlocked
+  - hello
+  - medium shield boost unlocked
+  - sup
+  - large shield boost unlocked
+  - sup
+  - small armor boost unlocked
+  - hello
+  - medium armor boost unlocked
+  - hello
+  - large armor boost unlocked
+  speechBox: {fileID: 1310619297}
   msgselect: 0
   mstartbtn: {fileID: 0}
   eventAllreadyTriggered: 0
@@ -8789,7 +8835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 010101010101010101010101010101010101010101010101010101010101010101010101
+  unlocks: 000000000000000000000000000000000000000000000000000000000000000000000000
   efireRate: 0
   fireRate: 0
   pBulletSelector: 0
@@ -8803,7 +8849,7 @@ MonoBehaviour:
   pP0: 0
   pP1: 0
   diff: 0
-  levelsCleared: 0
+  levelsCleared: 3
   playerName: Empty
   score: 0
   bookmark0: 0
