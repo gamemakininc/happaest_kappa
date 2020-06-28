@@ -9,7 +9,7 @@ public class eventSystem : MonoBehaviour
     public GameObject slider;
     public int eventLingth;
     public bool typeing;
-    public float letterPause = 0.2f;
+    public float letterPause;
     public string[] message;
     public Text speechBox;
     public int msgselect;
@@ -279,44 +279,53 @@ public class eventSystem : MonoBehaviour
                 if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
                 if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             }
+            //??
             mstartbtn.GetComponent<Button>().interactable = true;
         }
         //no reset measure needed as trigger is mission start btn
     }
     IEnumerator TypeText()
     {
+        //tell button loop is running
         typeing = true;
+        //clear text box
         speechBox.text = " ";
+        //l00p to fil in the text box letter by letter
         foreach (char letter in message[msgselect].ToCharArray())
         {
-            
-            if (speechBox.GetComponent<Text>().text == message[msgselect]) { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; }
-            
-            speechBox.GetComponent<Text>().text += letter;
+            //if text box filled in skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip
+            if (speechBox.text == message[msgselect]) { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; }
+            //type a letter
+            speechBox.text += letter;
+            //wait
             yield return 0;
             yield return new WaitForSeconds(letterPause);
         }
+        //tell button loop is over
         typeing = false;
     }
     public void btnpressed() 
     {
+        //if typetext active
         if (typeing == true)
         {
             //hopefully bypass the text box fill in
             speechBox.text = message[msgselect];
 
         }
+        //if waiting for next input
         else if (typeing == false) 
         {
-            if (msgselect > eventLingth) { eventEnd(); }
-            else if (msgselect <= eventLingth) { msgselect++; TypeText(); }
+            //check if its last page of event script
+            if (msgselect >= eventLingth) { eventEnd(); }
+            //if its not start next page
+            else if (msgselect <= eventLingth) { msgselect++; StartCoroutine(TypeText()); }
         }
     }
     void eventStart()
     {
         //chat menu into frame
         slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 15);
-        TypeText();
     }
     void eventEnd() 
     {
@@ -325,15 +334,21 @@ public class eventSystem : MonoBehaviour
     }
     private void Start()
     {
+        //check location variables
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
         else if (hangar == true) { }
+        //clear text box
+        speechBox.text = " ";
     }
     private void Update()
     {
         if (slider.transform.position.y>=endPoint.transform.position.y)
         {
+            //stop movement
             slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
+            //start typeing
+            StartCoroutine(TypeText());
         }
     }
 }
