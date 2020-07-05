@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 511640298551401231}
   - component: {fileID: 1902887060413671190}
   - component: {fileID: 7302803664161697621}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile2sd
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

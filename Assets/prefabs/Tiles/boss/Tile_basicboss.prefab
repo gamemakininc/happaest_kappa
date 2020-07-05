@@ -146,9 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 120
-  deathEffect: {fileID: 0}
-  thisPowerup: {fileID: 0}
   shootDissabled: 1
   ebullet: {fileID: 0}
   mgport: {fileID: 0}
@@ -165,6 +162,7 @@ MonoBehaviour:
   moveRight: 0
   maxRadians: 1
   sideVelocity: {x: 0, y: -1.5}
+  storedState: 0
 --- !u!114 &4982162692907130297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,9 +301,9 @@ GameObject:
   - component: {fileID: 3515284773504725275}
   - component: {fileID: 5762461752951650648}
   - component: {fileID: 3960009188312709492}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_basicbossship
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,6 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f6c45c28d820d48b84d8a04db76d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: -2.5
+  freeze: 0
 --- !u!95 &3960009188312709492
 Animator:
   serializedVersion: 3

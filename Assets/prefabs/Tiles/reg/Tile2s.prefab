@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027747359602777802}
   - component: {fileID: 6359684854006458681}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4182221266494678774}
   m_Layer: 0
   m_Name: Tile2s
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

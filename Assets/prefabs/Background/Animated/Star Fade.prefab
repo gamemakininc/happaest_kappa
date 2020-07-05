@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5256138269526444133}
   - component: {fileID: 3313259823398855363}
   - component: {fileID: 6410007620863510930}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Star Fade
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7714597600129760679}
   - component: {fileID: 5410527957517911751}
   - component: {fileID: 4718078351271758381}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StarSheet_0
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
