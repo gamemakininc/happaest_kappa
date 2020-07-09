@@ -43,6 +43,7 @@ public class ObserverScript : MonoBehaviour
     public bool bookmark0;//event system any event triggered this rotation
     public bool bookmark1;//event system fitting system event triggered
     public bool bookmark2;//event system briefing room event triggered
+    public int esSwap;//a swap int used by the event system for mission interupt event
 
 
     //save preview variables slot1

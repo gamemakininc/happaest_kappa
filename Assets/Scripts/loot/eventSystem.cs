@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class eventSystem : MonoBehaviour
 {
+    public Sprite[] speakers;
     public Transform endPoint;
     public GameObject slider;
     public int eventLingth;
@@ -64,51 +65,57 @@ public class eventSystem : MonoBehaviour
             while (swapBool == false)
             {
                 //set rng
-                swapint = Random.Range(1, 6);
+                swapint = Random.Range(28, 33);
                 //unlock something (hopefully)
-                if (unlocks[28] == false && swapint == 1) 
+                if (unlocks[28] == false && swapint == 28) 
                 { 
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[28] = true;
                     msgselect = 0;
                     eventLingth = 1;
                     eventStart();
                 }
-                if (unlocks[29] == false && swapint == 2)
+                if (unlocks[29] == false && swapint == 29)
                 {
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[29] = true;
                     msgselect = 2;
                     eventLingth = 3;
                     eventStart();
                 }
-                if (unlocks[30] == false && swapint == 3)
+                if (unlocks[30] == false && swapint == 30)
                 {
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[30] = true;
                     msgselect = 4;
                     eventLingth = 5;
                     eventStart();
                 }
-                if (unlocks[31] == false && swapint == 4)
+                if (unlocks[31] == false && swapint == 31)
                 {
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[31] = true;
                     msgselect = 6;
                     eventLingth = 7;
                     eventStart();
                 }
-                if (unlocks[32] == false && swapint == 5)
+                if (unlocks[32] == false && swapint == 32)
                 {
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[32] = true;
                     msgselect = 8;
                     eventLingth = 9;
                     eventStart();
                 }
-                if (unlocks[33] == false && swapint == 6)
+                if (unlocks[33] == false && swapint == 33)
                 {
                     swapBool = true;
+                    //eventAllreadyTriggered=true;
                     ObserverScript.Instance.unlocks[33] = true;
                     msgselect = 10;
                     eventLingth = 11;
@@ -135,6 +142,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[1] == false && swapint == 1)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[1] = true;
                         msgselect = 12;
                         eventLingth = 13;
@@ -143,6 +151,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[2] == false && swapint == 2)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[2] = true;
                         msgselect = 14;
                         eventLingth = 15;
@@ -151,6 +160,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[3] == false && swapint == 3)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[3] = true;
                         msgselect = 16;
                         eventLingth = 17;
@@ -159,6 +169,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[4] == false && swapint == 4)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[4] = true;
                         msgselect = 18;
                         eventLingth = 19;
@@ -167,6 +178,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[5] == false && swapint == 5)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[5] = true;
                         msgselect = 20;
                         eventLingth = 21;
@@ -175,6 +187,7 @@ public class eventSystem : MonoBehaviour
                     if (unlocks[6] == false && swapint == 6)
                     {
                         swapBool = true;
+                        //eventAllreadyTriggered=true;
                         ObserverScript.Instance.unlocks[6] = true;
                         msgselect = 22;
                         eventLingth = 23;
@@ -215,26 +228,170 @@ public class eventSystem : MonoBehaviour
             while (swapBool == false)
             {
                 //set rng
-                swapint = Random.Range(1, 18);
+                swapint = Random.Range(7, 24);
                 //unlock something (hopefully)
-                if (unlocks[7] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[7] = true; }
-                if (unlocks[8] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[8] = true; }
-                if (unlocks[9] == false && swapint == 3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
-                if (unlocks[10] == false && swapint == 4) { swapBool = true; ObserverScript.Instance.unlocks[10] = true; }
-                if (unlocks[11] == false && swapint == 5) { swapBool = true; ObserverScript.Instance.unlocks[11] = true; }
-                if (unlocks[12] == false && swapint == 6) { swapBool = true; ObserverScript.Instance.unlocks[12] = true; }
-                if (unlocks[13] == false && swapint == 7) { swapBool = true; ObserverScript.Instance.unlocks[13] = true; }
-                if (unlocks[14] == false && swapint == 8) { swapBool = true; ObserverScript.Instance.unlocks[14] = true; }
-                if (unlocks[15] == false && swapint == 9) { swapBool = true; ObserverScript.Instance.unlocks[15] = true; }
-                if (unlocks[16] == false && swapint == 10) { swapBool = true; ObserverScript.Instance.unlocks[16] = true; }
-                if (unlocks[17] == false && swapint == 11) { swapBool = true; ObserverScript.Instance.unlocks[17] = true; }
-                if (unlocks[18] == false && swapint == 12) { swapBool = true; ObserverScript.Instance.unlocks[18] = true; }
-                if (unlocks[19] == false && swapint == 13) { swapBool = true; ObserverScript.Instance.unlocks[19] = true; }
-                if (unlocks[20] == false && swapint == 14) { swapBool = true; ObserverScript.Instance.unlocks[20] = true; }
-                if (unlocks[21] == false && swapint == 15) { swapBool = true; ObserverScript.Instance.unlocks[21] = true; }
-                if (unlocks[22] == false && swapint == 16) { swapBool = true; ObserverScript.Instance.unlocks[29] = true; }
-                if (unlocks[23] == false && swapint == 17) { swapBool = true; ObserverScript.Instance.unlocks[22] = true; }
-                if (unlocks[24] == false && swapint == 18) { swapBool = true; ObserverScript.Instance.unlocks[24] = true; }
+                if (unlocks[7] == false && swapint == 7)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[7] = true;
+                    msgselect = 0;
+                    eventLingth = 1;
+                    eventStart();
+                }
+                if (unlocks[8] == false && swapint == 8)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[8] = true;
+                    msgselect = 2;
+                    eventLingth = 3;
+                    eventStart();
+                }
+                if (unlocks[9] == false && swapint == 9)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[9] = true;
+                    msgselect = 4;
+                    eventLingth = 5;
+                    eventStart();
+                }
+                if (unlocks[10] == false && swapint == 10)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[10] = true;
+                    msgselect = 6;
+                    eventLingth = 7;
+                    eventStart();
+                }
+                if (unlocks[11] == false && swapint == 11)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[11] = true;
+                    msgselect = 8;
+                    eventLingth = 9;
+                    eventStart();
+                }
+                if (unlocks[12] == false && swapint == 12)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[12] = true;
+                    msgselect = 10;
+                    eventLingth = 11;
+                    eventStart();
+                }
+                if (unlocks[13] == false && swapint == 13)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[13] = true;
+                    msgselect = 12;
+                    eventLingth = 13;
+                    eventStart();
+                }
+                if (unlocks[14] == false && swapint == 14)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[14] = true;
+                    msgselect = 14;
+                    eventLingth = 15;
+                    eventStart();
+                }
+                if (unlocks[15] == false && swapint == 15)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[15] = true;
+                    msgselect = 16;
+                    eventLingth = 17;
+                    eventStart();
+                }
+                if (unlocks[16] == false && swapint == 16)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[16] = true;
+                    msgselect = 18;
+                    eventLingth = 19;
+                    eventStart();
+                }
+                if (unlocks[17] == false && swapint == 17)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[17] = true;
+                    msgselect = 20;
+                    eventLingth = 21;
+                    eventStart();
+                }
+                if (unlocks[18] == false && swapint == 18)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[18] = true;
+                    msgselect = 22;
+                    eventLingth = 23;
+                    eventStart();
+                }
+                if (unlocks[19] == false && swapint == 19)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[19] = true;
+                    msgselect = 24;
+                    eventLingth = 25;
+                    eventStart();
+                }
+                if (unlocks[20] == false && swapint == 20)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[20] = true;
+                    msgselect = 26;
+                    eventLingth = 27;
+                    eventStart();
+                }
+                if (unlocks[21] == false && swapint == 21)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[21] = true;
+                    msgselect = 28;
+                    eventLingth = 29;
+                    eventStart();
+                }
+                if (unlocks[22] == false && swapint == 22)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[22] = true;
+                    msgselect = 30;
+                    eventLingth = 31;
+                    eventStart();
+                }
+                if (unlocks[23] == false && swapint == 23)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[23] = true;
+                    msgselect = 32;
+                    eventLingth = 33;
+                    eventStart();
+                }
+                if (unlocks[24] == false && swapint == 24)
+                {
+                    swapBool = true;
+                    //eventAllreadyTriggered=true;
+                    ObserverScript.Instance.unlocks[24] = true;
+                    msgselect = 34;
+                    eventLingth = 35;
+                    eventStart();
+                }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
                 if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
@@ -268,8 +425,8 @@ public class eventSystem : MonoBehaviour
                 //set rng
                 swapint = Random.Range(1, 3);
                 //unlock something (hopefully)
-                if (unlocks[35] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[7] = true; }
-                if (unlocks[34] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[8] = true; }
+                if (unlocks[35] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[35] = true; }
+                if (unlocks[34] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[34] = true; }
                 if (unlocks[34] == true && unlocks[35] == true)
                 {
                 if (unlocks[36] == false&& swapint==1 || swapint==3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
@@ -283,6 +440,10 @@ public class eventSystem : MonoBehaviour
             mstartbtn.GetComponent<Button>().interactable = true;
         }
         //no reset measure needed as trigger is mission start btn
+    }
+    public void hangarEvents()
+    {
+
     }
     IEnumerator TypeText()
     {
@@ -337,7 +498,7 @@ public class eventSystem : MonoBehaviour
         //check location variables
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
-        else if (hangar == true) { }
+        else if (hangar == true) { swapint = ObserverScript.Instance.esSwap; }
         //clear text box
         speechBox.text = " ";
     }

@@ -720,6 +720,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipOne() 
 	{
+		//clear slot added bool
+		SlotAdded = false;
+		//set slot layout
 		slotsfake[0] = true;
 		slotsfake[1] = true;
 		slotsfake[2] = true;
@@ -769,8 +772,11 @@ public class fittingScript : MonoBehaviour
 		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
 		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
 	}
-	void shipTwo() 
+	void shipTwo()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = true;
 		slotsfake[2] = true;
@@ -821,6 +827,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipThree()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = true;
 		slotsfake[2] = true;
@@ -869,6 +878,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipFour()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = false;
 		slotsfake[2] = true;
@@ -919,6 +931,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipFive()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = false;
 		slotsfake[2] = true;
@@ -969,6 +984,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void shipSix()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = false;
 		slotsfake[2] = false;
@@ -1019,6 +1037,9 @@ public class fittingScript : MonoBehaviour
 	}
 	void secritShipTwo()
 	{
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = false;
 		slotsfake[2] = false;
@@ -1069,6 +1090,10 @@ public class fittingScript : MonoBehaviour
 	}
 	void secritShipOne()
 	{
+
+		//clear slot added bool
+		SlotAdded = false;
+
 		slotsfake[0] = false;
 		slotsfake[1] = false;
 		slotsfake[2] = false;
@@ -1116,10 +1141,6 @@ public class fittingScript : MonoBehaviour
 		healthOutput.GetComponent<Text>().text = ("hull:" + baceHealth + "  rep rate:" + baceRepair);
 		regenOutput.GetComponent<Text>().text = ("shields:" + baceShield + " boost rate:" + baceSRegen);
 		speedInfo.GetComponent<Text>().text = ("speed:" + baceMoveSpeed);
-	}
-	public void Update() 
-	{
-
 	}
 
 }
