@@ -18,6 +18,7 @@ public class eventSystem : MonoBehaviour
     public bool eventAllreadyTriggered=false;
     public bool eventTriedFitting=false;
     public bool eventTriedBriefing=false;
+    public bool eventTriedInterrupt = false;
     //unlocks 
     /*
       should corrispond to 'item designator'
@@ -402,16 +403,20 @@ public class eventSystem : MonoBehaviour
         eventTriedBriefing = true;
         //update bookmark (reset on mission completion or fail do not reset on mission start)
         ObserverScript.Instance.bookmark2 = eventTriedBriefing;
+        ObserverScript.Instance.bookmark0 = eventAllreadyTriggered;
     }
     public void missionInterruptEvents()
     //unlock secret ships later to be moved to 'questlines' and replaced with missiles(with retuned drop rates)
     {
+
+        eventTriedInterrupt = ObserverScript.Instance.bookmark3;
         eventAllreadyTriggered = ObserverScript.Instance.bookmark0;
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/}
-        else if (ObserverScript.Instance.levelsCleared <= 50) {/*do nothing*/}
+        else if (eventTriedInterrupt==true) {/*do nothing*/}
+        else if (ObserverScript.Instance.levelsCleared <= 3) {/*do nothing*/}
         //reroll check not neccicary because trigger is menu change
         //poll RNG
         else if (swapint <= 20)
@@ -421,15 +426,54 @@ public class eventSystem : MonoBehaviour
             counter = 0;
             while (swapBool == false)
             {
-
-                //set rng
+                //set RNG
                 swapint = Random.Range(1, 3);
-                //unlock something (hopefully)
-                if (unlocks[35] == false && swapint == 1) { swapBool = true; ObserverScript.Instance.unlocks[35] = true; }
-                if (unlocks[34] == false && swapint == 2) { swapBool = true; ObserverScript.Instance.unlocks[34] = true; }
-                if (unlocks[34] == true && unlocks[35] == true)
+                //if 1 check missiles
+                if (swapint == 1 && unlocks[25] == false || unlocks[26] == false || unlocks[27] == false)
                 {
-                if (unlocks[36] == false&& swapint==1 || swapint==3) { swapBool = true; ObserverScript.Instance.unlocks[9] = true; }
+                    //check next missile to unlock
+                    if (unlocks[25] == false)
+                    {
+                        //set esSwap to handoff info to 'hangar' scene
+                        ObserverScript.Instance.esSwap = 1;
+                        //tell loop it is done incase script still runs after ecene change somehow
+                        swapBool = true;
+                        //change scene
+                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                    }
+                    else if (unlocks[26] == false)
+                    {
+                        ObserverScript.Instance.esSwap = 2;
+                        swapBool = true;
+                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                    }
+                    else if (unlocks[27] == false)
+                    {
+                        ObserverScript.Instance.esSwap = 3;
+                        swapBool = true;
+                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                    }
+                }
+                else if (swapint == 2 && unlocks[35] == false || unlocks[34] == false) 
+                {
+                    if (unlocks[34] == false)
+                    {
+                        //set esSwap to handoff info to 'hangar' scene
+                        ObserverScript.Instance.esSwap = 4;
+                        //tell loop it is done incase script still runs after ecene change somehow
+                        swapBool = true;
+                        //change scene
+                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                    }
+                    else if (unlocks[35] == false) 
+                    {
+                        //set esSwap to handoff info to 'hangar' scene
+                        ObserverScript.Instance.esSwap = 5;
+                        //tell loop it is done incase script still runs after ecene change somehow
+                        swapBool = true;
+                        //change scene
+                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                    }
                 }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
@@ -439,7 +483,8 @@ public class eventSystem : MonoBehaviour
             //??
             mstartbtn.GetComponent<Button>().interactable = true;
         }
-        //no reset measure needed as trigger is mission start btn
+        eventTriedInterrupt = true;
+        ObserverScript.Instance.bookmark3 = true;
     }
     public void hangarEvents()
     {
@@ -455,7 +500,8 @@ public class eventSystem : MonoBehaviour
         foreach (char letter in message[msgselect].ToCharArray())
         {
             //if text box filled in skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip
-            if (speechBox.text == message[msgselect]) { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; }
+            if (speechBox.text == message[msgselect]) 
+            { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break;}
             //type a letter
             speechBox.text += letter;
             //wait

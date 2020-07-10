@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/levels/Combat.unity
     guid: d8d7341894bee2c4bbddc0ab946903fe
+  - enabled: 1
+    path: Assets/Scenes/menus/hangar.unity
+    guid: ef22351cade719a4cb10774269dd0abb
   m_configObjects: {}

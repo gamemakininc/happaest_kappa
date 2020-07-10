@@ -31,4 +31,8 @@ public class sceneManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("saveGame");
 	}
+	public void hangar()
+	{
+		SceneManager.LoadScene("hangar");
+	}
 }

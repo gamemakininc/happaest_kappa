@@ -78,7 +78,7 @@ public class enemyscript : MonoBehaviour
 
     //Paused Attributes
     private Vector2 storedVelocity;
-    private states storedState;
+    public states storedState;
     
     void FixedUpdate()
     {
