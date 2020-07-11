@@ -2,9 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class eventSystem : MonoBehaviour
 {
+    public Text btn1Txt;
+    public Text btn2Txt;
     public Sprite[] speakers;
     public Transform endPoint;
     public GameObject slider;
@@ -14,7 +17,7 @@ public class eventSystem : MonoBehaviour
     public string[] message;
     public Text speechBox;
     public int msgselect;
-    public GameObject mstartbtn;
+    public GameObject btn;
     public bool eventAllreadyTriggered=false;
     public bool eventTriedFitting=false;
     public bool eventTriedBriefing=false;
@@ -421,7 +424,7 @@ public class eventSystem : MonoBehaviour
         //poll RNG
         else if (swapint <= 20)
         { // i would like to make this one launch its own scene later
-            mstartbtn.GetComponent<Button>().interactable=false;
+            btn.GetComponent<Button>().interactable=false;
             ObserverScript.Instance.bookmark0 = true;
             counter = 0;
             while (swapBool == false)
@@ -481,15 +484,65 @@ public class eventSystem : MonoBehaviour
                 if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             }
             //??
-            mstartbtn.GetComponent<Button>().interactable = true;
+            btn.GetComponent<Button>().interactable = true;
         }
         eventTriedInterrupt = true;
         ObserverScript.Instance.bookmark3 = true;
     }
     public void hangarEvents()
     {
+        if (swapint == 0) { FindObjectOfType<Camera>().GetComponent<sceneManager>().briefing(); }
+        else if (swapint == 1) { missileUnlock1(); msgselect = 0; eventLingth = 4; }
+        else if (swapint == 2) { missileUnlock2(); msgselect = 5; eventLingth = 9; }
+        else if (swapint == 3) { missileUnlock3(); msgselect = 10; eventLingth = 14; }
+        else if (swapint == 3) { shipUnlock1(); msgselect = 15; eventLingth = 19; }
+        else if (swapint == 3) { shipUnlock2(); msgselect = 22; eventLingth = 26; }
+    }
+    public void missileUnlock1()
+    {
+        if (msgselect == 0) { }
+        if (msgselect == 1) { }
+        if (msgselect == 2) { }
+        if (msgselect == 3) { }
+        if (msgselect == 4) { }
 
     }
+    public void missileUnlock2()
+    {
+        if (msgselect == 5) { }
+        if (msgselect == 6) { }
+        if (msgselect == 7) { }
+        if (msgselect == 8) { }
+        if (msgselect == 9) { }
+    }
+    public void missileUnlock3()
+    {
+        if (msgselect == 10) { }
+        if (msgselect == 11) { }
+        if (msgselect == 12) { }
+        if (msgselect == 13) { }
+        if (msgselect == 14) { }
+
+    }
+    public void shipUnlock1()
+    {
+        if (msgselect == 15) { }
+        if (msgselect == 16) { }
+        if (msgselect == 17) { }
+        if (msgselect == 18) { }
+        if (msgselect == 19) { }
+
+    }
+    public void shipUnlock2()
+    {
+        if (msgselect == 20) { }
+        if (msgselect == 21) { }
+        if (msgselect == 22) { }
+        if (msgselect == 23) { }
+        if (msgselect == 24) { }
+
+    }
+
     IEnumerator TypeText()
     {
         //tell button loop is running
@@ -513,20 +566,31 @@ public class eventSystem : MonoBehaviour
     }
     public void btnpressed() 
     {
-        //if typetext active
-        if (typeing == true)
+        if (hangar==true) 
         {
-            //hopefully bypass the text box fill in
-            speechBox.text = message[msgselect];
-
+            if (typeing == true)
+            {
+                //hopefully bypass the text box fill in
+                speechBox.text = message[msgselect];
+            }
+            if (typeing == false) {  }
         }
-        //if waiting for next input
-        else if (typeing == false) 
-        {
-            //check if its last page of event script
-            if (msgselect >= eventLingth) { eventEnd(); }
-            //if its not start next page
-            else if (msgselect <= eventLingth) { msgselect++; StartCoroutine(TypeText()); }
+        else {
+            //if typetext active
+            if (typeing == true)
+            {
+                //hopefully bypass the text box fill in
+                speechBox.text = message[msgselect];
+
+            }
+            //if waiting for next input
+            else if (typeing == false)
+            {
+                //check if its last page of event script
+                if (msgselect >= eventLingth) { eventEnd(); }
+                //if its not start next page
+                else if (msgselect <= eventLingth) { msgselect++; StartCoroutine(TypeText()); }
+            }
         }
     }
     void eventStart()
@@ -541,10 +605,11 @@ public class eventSystem : MonoBehaviour
     }
     private void Start()
     {
+
         //check location variables
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
-        else if (hangar == true) { swapint = ObserverScript.Instance.esSwap; }
+        else if (hangar == true) { swapint = ObserverScript.Instance.esSwap; hangarEvents(); }
         //clear text box
         speechBox.text = " ";
     }

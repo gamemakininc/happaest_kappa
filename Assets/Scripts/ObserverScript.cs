@@ -45,6 +45,8 @@ public class ObserverScript : MonoBehaviour
     public bool bookmark2;//event system briefing room event triggered
     public bool bookmark3;//event system mission interupt event triggered
     public int esSwap;//a swap int used by the event system for mission interupt event
+    public int mProgressMissile;//hold the current place on missile mission line
+    public int mProgressShip;//hold the current place on ship unlock missions.
 
 
     //save preview variables slot1
