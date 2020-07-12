@@ -19,13 +19,18 @@ public class StarAnimator : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length - 1)].GetComponent<SpriteRenderer>().sprite;
             GetComponent<Animator>().enabled = false;
-            Invoke("EnableAnim", Random.Range(0.0f, 1.0f));
+            Invoke("EnableAnim", Random.Range(0.0f, 0.25f));
         }
     }
 
     void EnableAnim() //Adds random delay to the start of Fade animation
     {
         GetComponent<Animator>().enabled = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
 

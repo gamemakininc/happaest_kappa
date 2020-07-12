@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2553751669554847180}
   - component: {fileID: 5256138269526444133}
   - component: {fileID: 3313259823398855363}
-  - component: {fileID: 6410007620863510930}
   m_Layer: 13
   m_Name: Star Fade
   m_TagString: Background
@@ -125,24 +124,3 @@ MonoBehaviour:
   - {fileID: 1544139577146597090, guid: 10d03142c44a4d34fa2c3015a977baa5, type: 3}
   - {fileID: 3479738563013932785, guid: 669d6ba4e20987a4980cb6c06c2f67bf, type: 3}
   - {fileID: 8450655237335124378, guid: 11ac24718697ca24587efc0af7404c8b, type: 3}
---- !u!50 &6410007620863510930
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3989423325903270887}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

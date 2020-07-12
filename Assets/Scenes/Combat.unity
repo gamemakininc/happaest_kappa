@@ -286,6 +286,54 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!1 &225189219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225189221}
+  - component: {fileID: 225189220}
+  m_Layer: 14
+  m_Name: PostProcessing Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &225189220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225189219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: a354e9fe671038842bf8b2a89910efa1, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!4 &225189221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225189219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334305825
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,9 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573802121}
   - component: {fileID: 573802120}
-  - component: {fileID: 573802119}
-  - component: {fileID: 573802118}
-  - component: {fileID: 573802117}
+  - component: {fileID: 573802122}
   m_Layer: 14
   m_Name: Background Camera
   m_TagString: MainCamera
@@ -522,75 +568,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &573802117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573802116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd86cf3220c9ab94dbd15f283310221f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  propsPerSecond: 1.5
-  speedMultiplier: 1
-  backgroundElements:
-  - name: Stars
-    props:
-    - {fileID: 5664768123807279494, guid: 6127a11d8db8b9f468f49b8a170a5420, type: 3}
-    - {fileID: 2206745642525963469, guid: 76d364251397757438b237a6ed523f3d, type: 3}
-    - {fileID: 3920391221266366143, guid: 9abe225893dba1247ad9907a865b3aa2, type: 3}
-    - {fileID: 1544139577146597090, guid: 10d03142c44a4d34fa2c3015a977baa5, type: 3}
-    - {fileID: 3479738563013932785, guid: 669d6ba4e20987a4980cb6c06c2f67bf, type: 3}
-    weight: 6
-  - name: Brighter Stars
-    props:
-    - {fileID: 8450655237335124378, guid: 11ac24718697ca24587efc0af7404c8b, type: 3}
-    - {fileID: 8229284808459956564, guid: a481d60228715374db6a59ed9081d9c4, type: 3}
-    weight: 1
-  - name: Animated Stars
-    props:
-    - {fileID: 3989423325903270887, guid: 7e8bb71edbf246f4e91b7912fd50b6c4, type: 3}
-    - {fileID: 5705343631420530572, guid: e421f54e4e4af464c83bbb8d6053c200, type: 3}
-    - {fileID: 5077731530418702468, guid: 769f18835e2ab4f4d9e7df8154f9d7e3, type: 3}
-    - {fileID: 7687978330494088076, guid: 09fc461626838364bbded3c34583687d, type: 3}
-    weight: 1
---- !u!114 &573802118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573802116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead8437629342d94fa37bb651c970be4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveCount: 3
-  eliteWaves: 0
-  Boss: {fileID: 0}
-  currentTile: {fileID: 0}
-  tilePool:
-  - {fileID: 2778270902021796803, guid: 308ca1cf61c3cca4a9014be610c02fbc, type: 3}
-  - {fileID: 3441351785680952161, guid: e305e7421140d2143864a7c17591d274, type: 3}
-  - {fileID: 5941694934005908336, guid: 0e9ad4970ff691f48854f18178f9d60d, type: 3}
-  - {fileID: 1984085199342536288, guid: bb3f614b3a281f74a90506e28d362f13, type: 3}
-  - {fileID: 1231263621636347704, guid: b4944431ce16473419a5b7af330cbd99, type: 3}
-  - {fileID: 775048107606662550, guid: 7f8115baae6c55b48a8ed6b87b4ea52d, type: 3}
-  - {fileID: 5639820192243932827, guid: 341b6422c460d9344a38f4aa27e8db47, type: 3}
-  elitePool:
-  - {fileID: 2778270902021796803, guid: 308ca1cf61c3cca4a9014be610c02fbc, type: 3}
---- !u!81 &573802119
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573802116}
-  m_Enabled: 1
 --- !u!20 &573802120
 Camera:
   m_ObjectHideFlags: 0
@@ -648,6 +625,66 @@ Transform:
   m_Father: {fileID: 1503072451}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &573802122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573802116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 573802121}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 16384
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &617169397
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +719,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &621918727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621918728}
+  - component: {fileID: 621918730}
+  - component: {fileID: 621918729}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &621918728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621918727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &621918729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621918727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057913507aeeeea4aa9d9a6c5f8de13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: -1, y: 0}
+--- !u!50 &621918730
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621918727}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1001 &928643959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -973,6 +1076,7 @@ GameObject:
   - component: {fileID: 1503072449}
   - component: {fileID: 1503072452}
   - component: {fileID: 1503072453}
+  - component: {fileID: 1503072454}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1084,6 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd86cf3220c9ab94dbd15f283310221f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundParent: {fileID: 621918727}
   propsPerSecond: 1.5
   speedMultiplier: 1
   backgroundElements:
@@ -1105,8 +1210,25 @@ MonoBehaviour:
     - {fileID: 3989423325903270887, guid: 7e8bb71edbf246f4e91b7912fd50b6c4, type: 3}
     - {fileID: 5705343631420530572, guid: e421f54e4e4af464c83bbb8d6053c200, type: 3}
     - {fileID: 5077731530418702468, guid: 769f18835e2ab4f4d9e7df8154f9d7e3, type: 3}
+    weight: 3
+  - name: Animated Bright Stars
+    props:
     - {fileID: 7687978330494088076, guid: 09fc461626838364bbded3c34583687d, type: 3}
     weight: 1
+--- !u!114 &1503072454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503072448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8512e8d8959c20d41aaabdaeef52e99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  background: {fileID: 621918727}
 --- !u!95 &1681053586 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6618121263970739562, guid: 2601f73d34680aa48aa42a0607e25403,

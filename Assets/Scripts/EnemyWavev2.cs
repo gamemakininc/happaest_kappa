@@ -61,13 +61,20 @@ public class EnemyWavev2 : MonoBehaviour
             //The right border of the background tile
             tileEdgeX = currentTile.transform.position.x + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x;
         }
+        else
+            tileEdgeX = 0;
 
         switch (currentState) //States
         {
             case states.spawning:
+                if (!currentTile)
+                {
+                    SelectWave(out _selectedWave);
+                    currentTile = Instantiate(_selectedWave, new Vector2(cameraBoundX, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f)).transform.GetChild(0).gameObject;
+                }
                 float xDif = tileEdgeX - cameraBoundX; //The distance between the camera's right border and the right edge of the tile
                 //Debug.Log("xDif = " + xDif);
-                if(xDif < float.Epsilon)
+                if (xDif < float.Epsilon)
                 {
                     if (remainingWaves == 0 && remainingElites == 0)
                     {
