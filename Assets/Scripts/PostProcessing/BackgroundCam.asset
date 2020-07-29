@@ -1,5 +1,135 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6240714016269360347
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.08
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &-6230336793213439828
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.08
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &-2626231941405020467
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.15
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &-2550128442799735033
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &-750227109928477678
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.08
+  jitter:
+    overrideState: 1
+    value: 1
+  trashTex:
+    overrideState: 1
+    value: {fileID: 2800000, guid: 7afe01b3a3c51eb488d90b5fd0adb478, type: 3}
+    defaultState: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 2519357434215281496}
+  - {fileID: 6931670721226343440}
 --- !u!114 &2519357434215281496
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -32,7 +163,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2
+    value: 1.96
   threshold:
     overrideState: 1
     value: 0.6
@@ -61,3 +192,81 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &3992854119536785470
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.08
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &4677971426167615443
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 0
+    value: 0
+  jitter:
+    overrideState: 0
+    value: 0.5
+  trashTex:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &6931670721226343440
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GlitchShader
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchShader
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  drift:
+    overrideState: 1
+    value: 0.08
+  jitter:
+    overrideState: 1
+    value: 0.21
+  trashTex:
+    overrideState: 1
+    value: {fileID: 2800000, guid: 7afe01b3a3c51eb488d90b5fd0adb478, type: 3}
+    defaultState: 1
