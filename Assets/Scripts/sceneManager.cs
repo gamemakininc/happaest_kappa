@@ -3,6 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour 
 {
+	public static sceneManager Instance { get; private set; }
+	private void Awake()
+	{//
+		if (Instance == null)
+		{//
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+	}
 	//change scene to 'combat'
 	public void Combat() 
 	{

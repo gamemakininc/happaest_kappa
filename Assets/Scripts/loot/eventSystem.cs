@@ -442,19 +442,19 @@ public class eventSystem : MonoBehaviour
                         //tell loop it is done incase script still runs after ecene change somehow
                         swapBool = true;
                         //change scene
-                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                        sceneManager.Instance.hangar();
                     }
                     else if (unlocks[26] == false)
                     {
                         ObserverScript.Instance.esSwap = 2;
                         swapBool = true;
-                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                        sceneManager.Instance.hangar();
                     }
                     else if (unlocks[27] == false)
                     {
                         ObserverScript.Instance.esSwap = 3;
                         swapBool = true;
-                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                        sceneManager.Instance.hangar();
                     }
                 }
                 else if (swapint == 2 && unlocks[35] == false || unlocks[34] == false) 
@@ -466,7 +466,7 @@ public class eventSystem : MonoBehaviour
                         //tell loop it is done incase script still runs after ecene change somehow
                         swapBool = true;
                         //change scene
-                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                        sceneManager.Instance.hangar();
                     }
                     else if (unlocks[35] == false) 
                     {
@@ -475,7 +475,7 @@ public class eventSystem : MonoBehaviour
                         //tell loop it is done incase script still runs after ecene change somehow
                         swapBool = true;
                         //change scene
-                        FindObjectOfType<Camera>().GetComponent<sceneManager>().hangar();
+                        sceneManager.Instance.hangar();
                     }
                 }
                 counter++;
@@ -491,7 +491,7 @@ public class eventSystem : MonoBehaviour
     }
     public void hangarEvents()
     {
-        if (swapint == 0) { FindObjectOfType<Camera>().GetComponent<sceneManager>().briefing(); Debug.Log("error: no value sent to hangar"); }
+        if (swapint == 0) { sceneManager.Instance.briefing(); Debug.Log("error: no value sent to hangar"); }
         else if (swapint == 1) { msgselect = 0; eventLingth = 6; eventStart(); }
         else if (swapint == 2) { msgselect = 7; eventLingth = 13; eventStart(); }
         else if (swapint == 3) { msgselect = 14; eventLingth = 20; eventStart(); }
@@ -687,7 +687,7 @@ public class eventSystem : MonoBehaviour
             {
                 if (msgselect == 5 || msgselect == 6 || msgselect == 12 || msgselect == 13 || msgselect == 19 || msgselect == 20 || msgselect == 26 || msgselect == 27 || msgselect == 33 || msgselect == 34)
                 {
-                    FindObjectOfType<Camera>().GetComponent<sceneManager>().Invoke(ObserverScript.Instance.missionType , 0);
+                    sceneManager.Instance.Invoke(ObserverScript.Instance.missionType , 0);
                     Debug.Log("attempted to leave");
                 }
             }
