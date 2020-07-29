@@ -101,21 +101,28 @@ public class fittingScript : MonoBehaviour
 			if (counter <= 12) 
 			{
 				if (slotsfake[counter] == true) {/*skip*/}
+				else if (fitSetup[counter] <= 0) {/*skip*/}
+				else
+				{
+					//pick slot set value
+					slotsLoc[counter].GetComponent<itemDropHandeler>().itemId = fitSetup[counter];
+					slotsLoc[counter].GetComponent<itemDropHandeler>().updateSprite();
+					Debug.Log("set slot " + counter);
+				}
 			}
 			//check if item fitted
-			else if (fitSetup[counter]<=0) {/*skip*/}
 			else
 			{
 				//pick slot set value
 				slotsLoc[counter].GetComponent<itemDropHandeler>().itemId = fitSetup[counter];
 				//update slot
-				slotsLoc[counter].GetComponent<itemDropHandeler>().loadOverride();
+				slotsLoc[counter].GetComponent<itemDropHandeler>().updateSprite();
+				Debug.Log("set slot " + counter);
 			}
-			Debug.Log("set slot "+counter);
 			counter++;
 		}
-		Debug.Log("SetOutputs");
 		SetOutputs();
+		Debug.Log("SetOutputs");
 		power = ObserverScript.Instance.pgBookmark;
 		Weight = ObserverScript.Instance.wgBookmark;
 		//update PG/WG ui elements
@@ -795,13 +802,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 0;
 		maxPG = 15 ;
 		maxWG = 13 ;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
-
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
 		PGbar.fillAmount = pgfill;
@@ -849,12 +858,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 0;
 		maxPG = 15;
 		maxWG = 14;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -902,10 +914,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 0;
 		maxPG = 24;
 		maxWG = 20;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -953,12 +970,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 100;
 		maxPG = 20;
 		maxWG = 24;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -1006,12 +1026,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 20;
 		maxPG = 40;
 		maxWG = 45;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -1059,12 +1082,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 40;
 		maxPG = 45;
 		maxWG = 40;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -1112,12 +1138,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 100;
 		maxPG = 60;
 		maxWG = 65;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
@@ -1166,12 +1195,15 @@ public class fittingScript : MonoBehaviour
 		baceShield = 100;
 		maxPG = 60;
 		maxWG = 65;
-		power = maxPG;
-		Weight = maxWG;
-		fitSetup[12] = bulletSelector;
-		//push gun selection and set sprite
-		slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-		slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
 
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;

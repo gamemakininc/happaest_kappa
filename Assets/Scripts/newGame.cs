@@ -68,5 +68,6 @@ public class newGame : MonoBehaviour
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
         }
+        sceneManager.Instance.briefing();
     }
 }

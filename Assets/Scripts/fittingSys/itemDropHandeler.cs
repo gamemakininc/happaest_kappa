@@ -44,12 +44,6 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
 
 
     }
-    public void loadOverride() 
-    { //used to load a setup from memory
-        //set sprite
-        spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
-
-    }
     public void reset()
     {
         if (isGun == false)
