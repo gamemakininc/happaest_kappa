@@ -2,10 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class eventSystem : MonoBehaviour
 {
+    public SpriteRenderer cSpeaker;
     public Text btn1Txt;
     public Text btn2Txt;
     public Sprite[] speakers;
@@ -220,7 +220,7 @@ public class eventSystem : MonoBehaviour
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*do nothing*/ }
         else if (eventTriedBriefing == true) {/*do nothing*/ }
-        else if (ObserverScript.Instance.levelsCleared <= 0) {/*do nothing*/}
+        else if (ObserverScript.Instance.levelsCleared < 0) {/*do nothing*/}
         //poll RNG
         else if (swapint <= 60) 
         {
@@ -491,68 +491,97 @@ public class eventSystem : MonoBehaviour
     }
     public void hangarEvents()
     {
-        if (swapint == 0) { FindObjectOfType<Camera>().GetComponent<sceneManager>().briefing(); }
-        else if (swapint == 1) { missileUnlock1(); msgselect = 0; eventLingth = 4; }
-        else if (swapint == 2) { missileUnlock2(); msgselect = 5; eventLingth = 9; }
-        else if (swapint == 3) { missileUnlock3(); msgselect = 10; eventLingth = 14; }
-        else if (swapint == 3) { shipUnlock1(); msgselect = 15; eventLingth = 19; }
-        else if (swapint == 3) { shipUnlock2(); msgselect = 22; eventLingth = 26; }
+        if (swapint == 0) { FindObjectOfType<Camera>().GetComponent<sceneManager>().briefing(); Debug.Log("error: no value sent to hangar"); }
+        else if (swapint == 1) { msgselect = 0; eventLingth = 6; eventStart(); }
+        else if (swapint == 2) { msgselect = 7; eventLingth = 13; eventStart(); }
+        else if (swapint == 3) { msgselect = 14; eventLingth = 20; eventStart(); }
+        else if (swapint == 3) { msgselect = 21; eventLingth = 27; eventStart(); }
+        else if (swapint == 3) { msgselect = 28; eventLingth = 34; eventStart(); }
     }
+    //corrently just for refrence---------------
     public void missileUnlock1()
     {
-        if (msgselect == 0) { }
-        if (msgselect == 1) { }
-        if (msgselect == 2) { }
-        if (msgselect == 3) { }
-        if (msgselect == 4) { }
-
+        if (msgselect == 0) { }//request
+        //if (msgselect == 1) { } responce 1 (should never be true) "yes"
+        //if (msgselect == 2) { } responce 2 (should never be true) "no"
+        //if (msgselect == 3) { } additional "no" (for an are you shure)
+        if (msgselect == 4) { }//are you shure?
+        if (msgselect == 5) { }//thanks (end event and incroment event)
+        if (msgselect == 6) { }//thanks... for nothing(end event no incroment)
     }
     public void missileUnlock2()
     {
-        if (msgselect == 5) { }
-        if (msgselect == 6) { }
         if (msgselect == 7) { }
-        if (msgselect == 8) { }
-        if (msgselect == 9) { }
-    }
-    public void missileUnlock3()
-    {
-        if (msgselect == 10) { }
+        //if (msgselect == 8) { }
+        //if (msgselect == 9) { }
+        //if (msgselect == 10) { }
         if (msgselect == 11) { }
         if (msgselect == 12) { }
         if (msgselect == 13) { }
-        if (msgselect == 14) { }
-
     }
-    public void shipUnlock1()
+    public void missileUnlock3()
     {
-        if (msgselect == 15) { }
-        if (msgselect == 16) { }
-        if (msgselect == 17) { }
+        if (msgselect == 14) { }
+        //if (msgselect == 15) { }
+        //if (msgselect == 16) { }
+        //if (msgselect == 17) { }
         if (msgselect == 18) { }
         if (msgselect == 19) { }
-
-    }
-    public void shipUnlock2()
-    {
         if (msgselect == 20) { }
-        if (msgselect == 21) { }
-        if (msgselect == 22) { }
-        if (msgselect == 23) { }
-        if (msgselect == 24) { }
-
     }
-
+    public void shipUnlock1Part1()
+    {
+        if (msgselect == 21) { }
+        //if (msgselect == 22) { }
+        //if (msgselect == 23) { }
+        //if (msgselect == 24) { }
+        if (msgselect == 25) { }
+        if (msgselect == 26) { }
+        if (msgselect == 27) { }
+    }
+    public void shipUnlock1Part2()
+    {
+        if (msgselect == 0) { }
+        //if (msgselect == 1) { }
+        //if (msgselect == 2) { }
+        //if (msgselect == 3) { }
+        if (msgselect == 4) { }
+        if (msgselect == 5) { }
+        if (msgselect == 6) { }
+    }
+    public void shipUnlock2Part1()
+    {
+        if (msgselect == 28) { }
+        //if (msgselect == 29) { }
+        //if (msgselect == 30) { }
+        //if (msgselect == 31) { }
+        if (msgselect == 32) { }
+        if (msgselect == 33) { }
+        if (msgselect == 34) { }
+    }
+    public void shipUnlock2Part2()
+    {
+        if (msgselect == 7) { }
+        //if (msgselect == 8) { }
+        //if (msgselect == 9) { }
+        //if (msgselect == 10) { }
+        if (msgselect == 11) { }
+        if (msgselect == 12) { }
+        if (msgselect == 13) { }
+    }
+    //--------------end refrence
     IEnumerator TypeText()
     {
+        //make skip btn interactable 
+        if (hangar == true) { btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
         //tell button loop is running
         typeing = true;
         //clear text box
-        speechBox.text = " ";
+        speechBox.text = "";
         //l00p to fil in the text box letter by letter
         foreach (char letter in message[msgselect].ToCharArray())
         {
-            //if text box filled in skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip skip
+            //if text box filled in skip.
             if (speechBox.text == message[msgselect]) 
             { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break;}
             //type a letter
@@ -561,8 +590,89 @@ public class eventSystem : MonoBehaviour
             yield return 0;
             yield return new WaitForSeconds(letterPause);
         }
+        //set responce btns
+        if (hangar == true) 
+        {
+            if (msgselect == 0) { btn1Txt.text = message[1]; btn2Txt.text = message[2]; }
+            else if (msgselect == 3) { btn1Txt.text = message[1]; btn2Txt.text = message[3]; }
+
+            else if (msgselect == 7) { btn1Txt.text = message[8]; btn2Txt.text = message[9]; }
+            else if (msgselect == 11) { btn1Txt.text = message[8]; btn2Txt.text = message[10]; }
+
+            else if (msgselect == 14) { btn1Txt.text = message[15]; btn2Txt.text = message[16]; }
+            else if (msgselect == 18) { btn1Txt.text = message[15]; btn2Txt.text = message[17]; }
+
+            else if (msgselect == 21) { btn1Txt.text = message[22]; btn2Txt.text = message[23]; }
+            else if (msgselect == 25) { btn1Txt.text = message[22]; btn2Txt.text = message[24]; }
+
+            else if (msgselect == 28) { btn1Txt.text = message[29]; btn2Txt.text = message[30]; }
+            else if (msgselect == 34) { btn1Txt.text = message[29]; btn2Txt.text = message[31]; }
+            //clear skip btn from being interactable
+            if (msgselect != 5 || msgselect != 6 || msgselect != 12 || msgselect != 13 || msgselect != 19 || msgselect != 20 || msgselect != 26 || msgselect != 27 || msgselect != 33 || msgselect != 34)
+            {
+                btn.GetComponent<CanvasGroup>().interactable = false;
+                btn.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            }
+        }
         //tell button loop is over
         typeing = false;
+    }
+    public void selection1() 
+    {//yes
+        if (typeing == true)
+        {
+            //hopefully bypass the text box fill in
+            speechBox.text = message[msgselect];
+        }
+        else if (typeing == false) 
+        {
+            //missile1
+            if (msgselect == 0) { msgselect = 5; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect==3) { msgselect = 5; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //missile2
+            else if (msgselect == 7) { msgselect = 12; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 11) { msgselect = 12; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //missile3
+            else if (msgselect == 14) { msgselect = 19; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 18) { msgselect = 19; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //ship1
+            else if (msgselect == 21) { msgselect = 26; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 25) { msgselect = 26; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //ship2
+            else if (msgselect == 28) { msgselect = 33; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 34) { msgselect = 33; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            btn1Txt.text = ("");
+            btn2Txt.text = ("");
+        }
+    }
+    public void selection2()
+    {//no
+        if (typeing == true)
+        {
+            //hopefully bypass the text box fill in
+            speechBox.text = message[msgselect];
+        }
+        else if (typeing == false)
+        {
+            //missile1
+            if (msgselect == 0) { msgselect = 4; StartCoroutine(TypeText()); }
+            else if (msgselect == 3) { msgselect = 6; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //missile2
+            else if (msgselect == 7) { msgselect = 11; StartCoroutine(TypeText()); }
+            else if (msgselect == 11) { msgselect = 13; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //missile3
+            else if (msgselect == 14) { msgselect = 18; StartCoroutine(TypeText()); }
+            else if (msgselect == 18) { msgselect = 20; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //ship1
+            else if (msgselect == 21) { msgselect = 25; StartCoroutine(TypeText()); }
+            else if (msgselect == 25) { msgselect = 27; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            //ship2
+            else if (msgselect == 28) { msgselect = 32; StartCoroutine(TypeText()); }
+            else if (msgselect == 32) { msgselect = 34; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+        }
+
+        btn1Txt.text = ("");
+        btn2Txt.text = ("");
     }
     public void btnpressed() 
     {
@@ -573,7 +683,14 @@ public class eventSystem : MonoBehaviour
                 //hopefully bypass the text box fill in
                 speechBox.text = message[msgselect];
             }
-            if (typeing == false) {  }
+            if (typeing == false) 
+            {
+                if (msgselect == 5 || msgselect == 6 || msgselect == 12 || msgselect == 13 || msgselect == 19 || msgselect == 20 || msgselect == 26 || msgselect == 27 || msgselect == 33 || msgselect == 34)
+                {
+                    FindObjectOfType<Camera>().GetComponent<sceneManager>().Invoke(ObserverScript.Instance.missionType , 0);
+                    Debug.Log("attempted to leave");
+                }
+            }
         }
         else {
             //if typetext active
@@ -597,6 +714,10 @@ public class eventSystem : MonoBehaviour
     {
         //chat menu into frame
         slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 15);
+        //start typeing
+        StartCoroutine(TypeText());
+        btn1Txt.text = ("");
+        btn2Txt.text = ("");
     }
     void eventEnd() 
     {
@@ -605,11 +726,10 @@ public class eventSystem : MonoBehaviour
     }
     private void Start()
     {
-
         //check location variables
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
-        else if (hangar == true) { swapint = ObserverScript.Instance.esSwap; hangarEvents(); }
+        else if (hangar == true) {btn1Txt.text=(" "); btn2Txt.text = (" "); swapint = ObserverScript.Instance.esSwap; hangarEvents(); }
         //clear text box
         speechBox.text = " ";
     }
@@ -619,8 +739,6 @@ public class eventSystem : MonoBehaviour
         {
             //stop movement
             slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
-            //start typeing
-            StartCoroutine(TypeText());
         }
     }
 }

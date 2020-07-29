@@ -13,10 +13,9 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
     private fittingScript parent;
     public Sprite[] swapsprites;
     public Sprite otherSprite;
-    public Sprite cSprite;
     public int itemId;
     public ItemDragHandler.Slot typeOfItem = ItemDragHandler.Slot.HIGH;
-    public int inputLoc;
+    public int inputLoc;//1=moduel 2=ship slot
     public bool slotNull = false;
     public bool slotNeedUpdate;
     public void OnDrop(PointerEventData eventData)
@@ -43,6 +42,12 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
             }
         }
 
+
+    }
+    public void loadOverride() 
+    { //used to load a setup from memory
+        //set sprite
+        spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
 
     }
     public void reset()

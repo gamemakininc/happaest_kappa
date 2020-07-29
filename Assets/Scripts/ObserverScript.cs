@@ -30,6 +30,8 @@ public class ObserverScript : MonoBehaviour
     //0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun , 13 ship
     //value of 0 for empty slot
     public int[] fitSetup;//holds variables for fitting system
+    public float pgBookmark;
+    public float wgBookmark;
 
     //save for player payload slot0-1
     public int pP0;//whats in missile slot 1
@@ -47,7 +49,7 @@ public class ObserverScript : MonoBehaviour
     public int esSwap;//a swap int used by the event system for mission interupt event
     public int mProgressMissile;//hold the current place on missile mission line
     public int mProgressShip;//hold the current place on ship unlock missions.
-
+    public string missionType;//hold the type of mission to start 
 
     //save preview variables slot1
     public int s1diff;
@@ -79,7 +81,9 @@ public class ObserverScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+    public void setfighter() { missionType = ("combat()"); }
+    public void setCapital() { missionType = ("SampleScene()"); }
+    public void setStation() { missionType = ("briefing()"); }
     private void Start()
     {
 

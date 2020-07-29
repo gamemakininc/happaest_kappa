@@ -14,6 +14,7 @@ public class fittingScript : MonoBehaviour
 	public float maxPG;
 	public float maxWG;
 	//swap files
+	public bool isStart;
 	public bool SlotAdded;
 	public float erefireRate;
 	public float refireRate;
@@ -60,30 +61,63 @@ public class fittingScript : MonoBehaviour
 	public void Start()
 	{
 		SlotAdded = false;
+		isStart = true;
 
-		mixMaster.Instance.nTrack = 3;
+		//get fitsetup
+		fitSetup = ObserverScript.Instance.fitSetup;
+		//set ship
+		if (fitSetup[13] == 0)
+		{//if ship null lock all slots
+			slotsfake[0] = true;
+			slotsfake[1] = true;
+			slotsfake[2] = true;
+			slotsfake[3] = true;
+			slotsfake[4] = true;
+			slotsfake[5] = true;
+			slotsfake[6] = true;
+			slotsfake[7] = true;
+			slotsfake[8] = true;
+			slotsfake[9] = true;
+			slotsfake[10] = true;
+			slotsfake[11] = true;
+			slotsfake[12] = true;
+		}
+		//else set appropriate ship
+		else if (fitSetup[13] == 1) { shipOne(); }
+		else if (fitSetup[13] == 2) { shipTwo(); }
+		else if (fitSetup[13] == 3) { shipThree(); }
+		else if (fitSetup[13] == 4) { shipFour(); }
+		else if (fitSetup[13] == 5) { shipFive(); }
+		else if (fitSetup[13] == 6) { shipSix(); }
+		else if (fitSetup[13] == 7) { secritShipOne(); }
+		else if (fitSetup[13] == 8) { secritShipTwo(); }
 
-		slotsfake[0] = true;
-		slotsfake[1] = true;
-		slotsfake[2] = true;
-		slotsfake[3] = true;
-		slotsfake[4] = true;
-		slotsfake[5] = true;
-		slotsfake[6] = true;
-		slotsfake[7] = true;
-		slotsfake[8] = true;
-		slotsfake[9] = true;
-		slotsfake[10] = true;
-		slotsfake[11] = true;
-		slotsfake[12] = true;
+		//reset counter
 		counter = 0;
-		//update slots and clear fitted items
-		while (counter <= 12)
+		//update slots and set prefits
+		while (counter <= 13)
 		{
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			//check slot exists
+			if (counter <= 12) 
+			{
+				if (slotsfake[counter] == true) {/*skip*/}
+			}
+			//check if item fitted
+			else if (fitSetup[counter]<=0) {/*skip*/}
+			else
+			{
+				//pick slot set value
+				slotsLoc[counter].GetComponent<itemDropHandeler>().itemId = fitSetup[counter];
+				//update slot
+				slotsLoc[counter].GetComponent<itemDropHandeler>().loadOverride();
+			}
+			Debug.Log("set slot "+counter);
 			counter++;
 		}
+		Debug.Log("SetOutputs");
+		SetOutputs();
+		power = ObserverScript.Instance.pgBookmark;
+		Weight = ObserverScript.Instance.wgBookmark;
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
 		PGbar.fillAmount = pgfill;
@@ -91,8 +125,9 @@ public class fittingScript : MonoBehaviour
 		WGbar.fillAmount = wgfill;
 		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
 		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
-		//set local array to observer array
-		fitSetup = ObserverScript.Instance.fitSetup;
+		isStart = false;
+		//play song
+		mixMaster.Instance.nTrack = 3;
 	}
 	public void input()
 	{
@@ -131,13 +166,17 @@ public class fittingScript : MonoBehaviour
 		sDebuffHpr = 1;
 		sDebuffShieldr = 1;
 		mslBonus = 0;
-		//update values in drop handelers scripts
-		while (counter <= 12)
+		//skip if starting the level
+		if (isStart != true)
 		{
-			fitSetup[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().itemId;
-			Weight -= slotsLoc[counter].GetComponent<itemDropHandeler>().wgCost;
-			power -= slotsLoc[counter].GetComponent<itemDropHandeler>().pgCost;
-			counter++;
+			//update values in drop handelers scripts
+			while (counter <= 12)
+			{
+				fitSetup[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().itemId;
+				Weight -= slotsLoc[counter].GetComponent<itemDropHandeler>().wgCost;
+				power -= slotsLoc[counter].GetComponent<itemDropHandeler>().pgCost;
+				counter++;
+			}
 		}
 		//reset counter
 		counter = 0;
@@ -681,6 +720,9 @@ public class fittingScript : MonoBehaviour
 		ObserverScript.Instance.pP0 = payload0Selector;
 		ObserverScript.Instance.pP1 = payload1Selector;
 		ObserverScript.Instance.mslBonus = mslBonus;
+		ObserverScript.Instance.pgBookmark = power;
+		ObserverScript.Instance.wgBookmark = Weight;
+
 	}
 	void shildBoost() 
 	{

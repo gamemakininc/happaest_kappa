@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: triton
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: ship2
@@ -2381,7 +2381,7 @@ Transform:
   m_LocalScale: {x: 90.01669, y: 90.01669, z: 45.008347}
   m_Children: []
   m_Father: {fileID: 2101735544}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521527519
 GameObject:
@@ -2417,7 +2417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: ship1
@@ -2865,7 +2865,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 843101544}
           m_MethodName: btnpressed
           m_Mode: 1
           m_Arguments:
@@ -3911,7 +3911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843101541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -457, z: -4050.7512}
+  m_LocalPosition: {x: 0, y: -457, z: 0}
   m_LocalScale: {x: 90.01669, y: 90.01669, z: 45.008347}
   m_Children:
   - {fileID: 1600711235}
@@ -3919,7 +3919,7 @@ Transform:
   - {fileID: 1310619296}
   - {fileID: 572080702}
   m_Father: {fileID: 2101735544}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &843101543
 Rigidbody2D:
@@ -3954,9 +3954,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakers: []
-  endPoint: {fileID: 0}
-  slider: {fileID: 0}
+  cSpeaker: {fileID: 1499467403}
+  btn1Txt: {fileID: 0}
+  btn2Txt: {fileID: 0}
+  speakers:
+  - {fileID: 6278486218923484563, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  - {fileID: -1086991788418008460, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  - {fileID: -360123686633694459, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  endPoint: {fileID: 493037803}
+  slider: {fileID: 843101541}
   eventLingth: 0
   typeing: 0
   letterPause: 0
@@ -3985,12 +3991,13 @@ MonoBehaviour:
   - shield 2 unlocked
   - hello6m.
   - shield 3 unlocked
-  speechBox: {fileID: 0}
+  speechBox: {fileID: 1310619297}
   msgselect: 0
-  mstartbtn: {fileID: 0}
+  btn: {fileID: 0}
   eventAllreadyTriggered: 0
   eventTriedFitting: 0
   eventTriedBriefing: 0
+  eventTriedInterrupt: 0
   unlocks: 
   hangar: 0
   fitting: 1
@@ -5527,8 +5534,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1499807265
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5947,7 +5954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: ship5
@@ -7548,7 +7555,7 @@ RectTransform:
   m_Children:
   - {fileID: 1093698346}
   m_Father: {fileID: 2101735544}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8099,6 +8106,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1442518866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442518867}
+  - component: {fileID: 1442518869}
+  - component: {fileID: 1442518868}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1442518867
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442518866}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2101735544}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -484, y: 72}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1442518868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442518866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1442518869
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442518866}
+  m_CullTransparentMesh: 0
 --- !u!1 &1478404824
 GameObject:
   m_ObjectHideFlags: 0
@@ -8878,7 +8963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 000000000000000000000000000000000000000000000000000000000000000000000000
+  unlocks: 010101010101010101010101010101010101010101010101010101010101010101010101
   efireRate: 0
   fireRate: 0
   pBulletSelector: 0
@@ -8898,7 +8983,11 @@ MonoBehaviour:
   bookmark0: 0
   bookmark1: 0
   bookmark2: 0
+  bookmark3: 0
   esSwap: 0
+  mProgressMissile: 0
+  mProgressShip: 0
+  missionType: 
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -9431,7 +9520,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1719295309}
   - component: {fileID: 1719295308}
-  - component: {fileID: 1719295307}
   - component: {fileID: 1719295305}
   - component: {fileID: 1719295312}
   - component: {fileID: 1719295310}
@@ -9459,27 +9547,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2459362
---- !u!50 &1719295307
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719295304}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1719295308
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9518,7 +9585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11055,7 +11122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: Eagle Ray Fighter
@@ -11397,6 +11464,7 @@ RectTransform:
   - {fileID: 319571228}
   - {fileID: 1664945890}
   - {fileID: 584568859}
+  - {fileID: 1442518867}
   - {fileID: 1377080322}
   - {fileID: 843101542}
   - {fileID: 493037803}
@@ -11606,7 +11674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pgCost: -9000
   wgCost: -9000
-  costBox: {fileID: 0}
+  costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: ship4
