@@ -31,6 +31,9 @@ TextureImporter:
     second: wepIcons_8
   - first:
       213: -1633062477486519462
+    second: wepIcons_6
+  - first:
+      213: 2950433113880516856
     second: wepIcons_10
   externalObjects: {}
   serializedVersion: 11
@@ -133,7 +136,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 115
-        y: 0
+        y: 38
         width: 38
         height: 38
       alignment: 0
@@ -216,8 +219,8 @@ TextureImporter:
       name: wepIcons_4
       rect:
         serializedVersion: 2
-        x: 115
-        y: 38
+        x: 38
+        y: 37
         width: 38
         height: 38
       alignment: 0
@@ -237,8 +240,8 @@ TextureImporter:
       name: wepIcons_5
       rect:
         serializedVersion: 2
-        x: 115
-        y: 76
+        x: 38
+        y: 0
         width: 38
         height: 38
       alignment: 0
@@ -279,7 +282,7 @@ TextureImporter:
       name: wepIcons_7
       rect:
         serializedVersion: 2
-        x: 38
+        x: 76
         y: 38
         width: 38
         height: 38
@@ -300,8 +303,8 @@ TextureImporter:
       name: wepIcons_8
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
+        x: 115
+        y: 76
         width: 38
         height: 38
       alignment: 0
@@ -318,12 +321,33 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wepIcons_10
+      name: wepIcons_6
       rect:
         serializedVersion: 2
         x: 76
         y: 76
         width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b856d34523659e0800000000000000
+      internalID: -1633062477486519462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wepIcons_10
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 39
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -332,8 +356,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b856d34523659e0800000000000000
-      internalID: -1633062477486519462
+      spriteID: 8f8d566f84b02f820800000000000000
+      internalID: 2950433113880516856
       vertices: []
       indices: 
       edges: []

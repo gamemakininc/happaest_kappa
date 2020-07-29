@@ -82,13 +82,13 @@ TextureImporter:
     second: icons_pl2
   - first:
       213: -5166432130525955749
-    second: icons_istab
+    second: icons_fr1
   - first:
       213: 7627503616358371109
-    second: icons_frC
+    second: icons_fr0
   - first:
       213: -1414468336072662494
-    second: icons_fr3
+    second: icons_fr2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -738,7 +738,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_istab
+      name: icons_fr1
       rect:
         serializedVersion: 2
         x: 228
@@ -759,7 +759,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_frC
+      name: icons_fr0
       rect:
         serializedVersion: 2
         x: 228
@@ -780,7 +780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_fr3
+      name: icons_fr2
       rect:
         serializedVersion: 2
         x: 228

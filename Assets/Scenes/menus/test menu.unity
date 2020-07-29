@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 176049374}
   - component: {fileID: 176049377}
   m_Layer: 0
-  m_Name: wepIcons_7
+  m_Name: wepIcons_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,7 +782,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7803929622608457016, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
+  m_Sprite: {fileID: -4670129794958055648, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2166,6 +2166,7 @@ GameObject:
   - component: {fileID: 482102093}
   - component: {fileID: 482102092}
   - component: {fileID: 482102094}
+  - component: {fileID: 482102095}
   m_Layer: 0
   m_Name: payload1
   m_TagString: fittingSlot
@@ -2295,6 +2296,34 @@ MonoBehaviour:
   inputLoc: 1
   slotNull: 0
   slotNeedUpdate: 0
+--- !u!114 &482102095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482102090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 482102094}
+          m_MethodName: undo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &483033090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +3038,7 @@ GameObject:
   - component: {fileID: 590814564}
   - component: {fileID: 590814567}
   m_Layer: 0
-  m_Name: wepIcons_8
+  m_Name: wepIcons_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3106,7 +3135,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5300029064943698393, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
+  m_Sprite: {fileID: 7942495214423568460, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3427,6 +3456,12 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300020, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300022, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2696506250795634678, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 6621252853494989987, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 7627503616358371109, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5166432130525955749, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 0
@@ -3526,6 +3561,7 @@ GameObject:
   - component: {fileID: 781113724}
   - component: {fileID: 781113723}
   - component: {fileID: 781113725}
+  - component: {fileID: 781113726}
   m_Layer: 0
   m_Name: payload0
   m_TagString: fittingSlot
@@ -3655,6 +3691,34 @@ MonoBehaviour:
   inputLoc: 1
   slotNull: 0
   slotNeedUpdate: 0
+--- !u!114 &781113726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781113721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 781113725}
+          m_MethodName: undo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &792814270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4744,6 +4808,12 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300020, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300022, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2696506250795634678, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 6621252853494989987, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 7627503616358371109, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5166432130525955749, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 0
@@ -6382,7 +6452,7 @@ GameObject:
   - component: {fileID: 1237164423}
   - component: {fileID: 1237164425}
   m_Layer: 0
-  m_Name: wepIcons_7
+  m_Name: wepIcons_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6491,7 +6561,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4670129794958055648, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
+  m_Sprite: {fileID: 2950433113880516856, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6938,6 +7008,12 @@ MonoBehaviour:
   - {fileID: -1290855366162983238, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -299690340437171572, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -2978653956524333172, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -7043791851686128366, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5596424546413140268, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -4297203505398261690, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 4202938828118557322, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 2189712646507832853, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 3876512272233767631, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 1
@@ -7858,6 +7934,12 @@ MonoBehaviour:
   - {fileID: -1290855366162983238, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -299690340437171572, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -2978653956524333172, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -7043791851686128366, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5596424546413140268, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -4297203505398261690, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 4202938828118557322, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 2189712646507832853, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 3876512272233767631, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 1
@@ -8937,6 +9019,12 @@ MonoBehaviour:
   - {fileID: -1290855366162983238, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -299690340437171572, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -2978653956524333172, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -7043791851686128366, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5596424546413140268, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -4297203505398261690, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 4202938828118557322, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 2189712646507832853, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 3876512272233767631, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 1
@@ -9001,8 +9089,36 @@ MonoBehaviour:
   pRepair: 0
   mslBonus: 0
   fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  pgBookmark: 0
-  wgBookmark: 0
+  wgBookmarks:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  pgBookmarks:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   pP0: 0
   pP1: 0
   diff: 0
@@ -9060,7 +9176,7 @@ GameObject:
   - component: {fileID: 1645335528}
   - component: {fileID: 1645335530}
   m_Layer: 0
-  m_Name: wepIcons_9
+  m_Name: wepIcons_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9105,7 +9221,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7737339653152134672, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
+  m_Sprite: {fileID: 5300029064943698393, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9532,6 +9648,12 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300020, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300022, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2696506250795634678, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 6621252853494989987, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 7627503616358371109, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5166432130525955749, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 0
@@ -9773,7 +9895,7 @@ GameObject:
   - component: {fileID: 1723667427}
   - component: {fileID: 1723667429}
   m_Layer: 0
-  m_Name: epIcons_8
+  m_Name: epIcons_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9882,7 +10004,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7942495214423568460, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
+  m_Sprite: {fileID: -7737339653152134672, guid: 836d2b639e684ed4cbe9ae5a98c283e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10032,6 +10154,12 @@ MonoBehaviour:
   - {fileID: -1290855366162983238, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -299690340437171572, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -2978653956524333172, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -7043791851686128366, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5596424546413140268, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -4297203505398261690, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 4202938828118557322, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 2189712646507832853, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 3876512272233767631, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 1
@@ -10975,6 +11103,12 @@ MonoBehaviour:
   - {fileID: -1290855366162983238, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -299690340437171572, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: -2978653956524333172, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -7043791851686128366, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5596424546413140268, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -4297203505398261690, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 4202938828118557322, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 2189712646507832853, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 3876512272233767631, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 1
@@ -11660,6 +11794,12 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300020, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   - {fileID: 21300022, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2696506250795634678, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 6621252853494989987, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: 7627503616358371109, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -5166432130525955749, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 0

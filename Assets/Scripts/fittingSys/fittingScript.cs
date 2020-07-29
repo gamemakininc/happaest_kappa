@@ -106,8 +106,10 @@ public class fittingScript : MonoBehaviour
 				{
 					//pick slot set value
 					slotsLoc[counter].GetComponent<itemDropHandeler>().itemId = fitSetup[counter];
+					slotsLoc[counter].GetComponent<itemDropHandeler>().pgCost = ObserverScript.Instance.pgBookmarks[counter];
+					slotsLoc[counter].GetComponent<itemDropHandeler>().wgCost = ObserverScript.Instance.wgBookmarks[counter];
 					slotsLoc[counter].GetComponent<itemDropHandeler>().updateSprite();
-					Debug.Log("set slot " + counter);
+					Debug.Log("set slot " + counter +" "+fitSetup[counter]);
 				}
 			}
 			//check if item fitted
@@ -123,8 +125,6 @@ public class fittingScript : MonoBehaviour
 		}
 		SetOutputs();
 		Debug.Log("SetOutputs");
-		power = ObserverScript.Instance.pgBookmark;
-		Weight = ObserverScript.Instance.wgBookmark;
 		//update PG/WG ui elements
 		float pgfill = power / maxPG;
 		PGbar.fillAmount = pgfill;
@@ -138,7 +138,7 @@ public class fittingScript : MonoBehaviour
 	}
 	public void input()
 	{
-		if (inputLoc == 1) { SetOutputs(); }
+		if (inputLoc == 1) { SetOutputs();}
 		else if (inputLoc == 2) { setShip(); }
 	}
 	public void setShip() 
@@ -162,11 +162,11 @@ public class fittingScript : MonoBehaviour
 		p1ammocount = 0;
 		power = maxPG;
 		Weight = maxWG;
-		health=baceHealth;
-		repair=baceRepair;
-		shield=baceShield;
-		sRegen=baceSRegen;
-		MoveSpeed=baceMoveSpeed;
+		health = baceHealth;
+		repair = baceRepair;
+		shield = baceShield;
+		sRegen = baceSRegen;
+		MoveSpeed = baceMoveSpeed;
 		refireRate = baceRefireRate;
 		erefireRate = baceERefireRate;
 		sDebuffSpeed = 1;
@@ -179,9 +179,15 @@ public class fittingScript : MonoBehaviour
 			//update values in drop handelers scripts
 			while (counter <= 12)
 			{
+				//set slot item to local fitsetup slot
 				fitSetup[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().itemId;
+				//subtract pg/wg used by fitted item
 				Weight -= slotsLoc[counter].GetComponent<itemDropHandeler>().wgCost;
 				power -= slotsLoc[counter].GetComponent<itemDropHandeler>().pgCost;
+				//store item costs
+				ObserverScript.Instance.pgBookmarks[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().pgCost;
+				ObserverScript.Instance.wgBookmarks[counter] = slotsLoc[counter].GetComponent<itemDropHandeler>().wgCost;
+
 				counter++;
 			}
 		}
@@ -256,15 +262,15 @@ public class fittingScript : MonoBehaviour
 		counter++;
 		//check low slots
 		sDebuffSpeed = 1;
-		if (fitSetup[counter] == 0) 
+		if (fitSetup[counter] == 0)
 		{
-			if (SlotAdded == true) 
+			if (SlotAdded == true)
 			{
 				//check if any missile mods fitted
 				if (fitSetup[5] == 10 || fitSetup[5] == 11 || fitSetup[5] == 12 || fitSetup[6] == 10 || fitSetup[6] == 11 || fitSetup[6] == 12 || fitSetup[7] == 10 || fitSetup[7] == 11 || fitSetup[7] == 12 || fitSetup[8] == 10 || fitSetup[8] == 11 || fitSetup[8] == 12 || fitSetup[9] == 10 || fitSetup[9] == 11 || fitSetup[9] == 12)
 				{/*do nothing*/ }
 				else
-				{ 
+				{
 					//relock slot
 					slotsfake[10] = true;
 					payload0Selector = 0;
@@ -273,7 +279,7 @@ public class fittingScript : MonoBehaviour
 					slotsLoc[10].GetComponent<itemDropHandeler>().slotNull = slotsfake[10];
 					slotsLoc[10].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
 				}
-				
+
 			}
 		}
 		else if (fitSetup[counter] == 1) { healthBoost(); }
@@ -360,7 +366,7 @@ public class fittingScript : MonoBehaviour
 
 			}
 		}
-		else if(fitSetup[counter] == 1) { healthBoost(); }
+		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
 		else if (fitSetup[counter] == 4) { healthRegen(); }
@@ -707,11 +713,11 @@ public class fittingScript : MonoBehaviour
 		WGbar.fillAmount = wgfill;
 		wgText.GetComponent<Text>().text = (maxWG + " / " + Weight);
 		pgText.GetComponent<Text>().text = (maxPG + " / " + power);
-		p0AmmoOutput.GetComponent<Text>().text = (p0ammocount + "/"+ p0ammocount);
-		p1AmmoOutput.GetComponent<Text>().text = (p1ammocount + "/"+ p1ammocount);
-		healthOutput.GetComponent<Text>().text = ("hull:"+health + "  rep rate:" + repair);
-		regenOutput.GetComponent<Text>().text = ("shields:" + shield +" boost rate:"+sRegen);
-		speedInfo.GetComponent<Text>().text = ("speed:"+MoveSpeed);
+		p0AmmoOutput.GetComponent<Text>().text = (p0ammocount + "/" + p0ammocount);
+		p1AmmoOutput.GetComponent<Text>().text = (p1ammocount + "/" + p1ammocount);
+		healthOutput.GetComponent<Text>().text = ("hull:" + health + "  rep rate:" + repair);
+		regenOutput.GetComponent<Text>().text = ("shields:" + shield + " boost rate:" + sRegen);
+		speedInfo.GetComponent<Text>().text = ("speed:" + MoveSpeed);
 
 
 		//output to observer
@@ -727,9 +733,6 @@ public class fittingScript : MonoBehaviour
 		ObserverScript.Instance.pP0 = payload0Selector;
 		ObserverScript.Instance.pP1 = payload1Selector;
 		ObserverScript.Instance.mslBonus = mslBonus;
-		ObserverScript.Instance.pgBookmark = power;
-		ObserverScript.Instance.wgBookmark = Weight;
-
 	}
 	void shildBoost() 
 	{

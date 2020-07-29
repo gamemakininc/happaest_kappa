@@ -11,7 +11,7 @@ public class ObserverScript : MonoBehaviour
       1-3,7-9    shields
       4-6,10-12  health
       13-18      speed mods
-      19-24      misc mods
+      19-24      fire rate mods
       25-27      missiles
       28-35      ships (last two should have spechal unlock conditions)
       36         guns (should be last unlock)
@@ -30,8 +30,8 @@ public class ObserverScript : MonoBehaviour
     //0-4 high slots, 5-9 low slots, 10-11 payload, 12 gun , 13 ship
     //value of 0 for empty slot
     public int[] fitSetup;//holds variables for fitting system
-    public float pgBookmark;
-    public float wgBookmark;
+    public float[] wgBookmarks;
+    public float[] pgBookmarks;
 
     //save for player payload slot0-1
     public int pP0;//whats in missile slot 1

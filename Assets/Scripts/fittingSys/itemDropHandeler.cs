@@ -46,12 +46,7 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
     }
     public void reset()
     {
-        if (isGun == false)
-        {
-            itemId = 0;
-            wgCost = 0;
-            pgCost = 0;
-        }
+        
             spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
         if (slotNull == true)
         {
@@ -60,7 +55,14 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
             spriteLoc.GetComponent<SpriteRenderer>().enabled = false;
             //dissable collider
             this.GetComponent<PolygonCollider2D>().enabled = false;
-            slotNeedUpdate = false;
+            slotNeedUpdate = false; 
+            //reset 
+            if (isGun == false)
+            {
+                itemId = 0;
+                wgCost = 0;
+                pgCost = 0;
+            }
         }
         if (slotNull == false)
         {
@@ -71,12 +73,12 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
             this.GetComponent<PolygonCollider2D>().enabled = true;
             slotNeedUpdate = false;
         }
-
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        slotNeedUpdate = false;
     }
 
     // Update is called once per frame
@@ -90,5 +92,20 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
     public void updateSprite()
     {
         spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
+        Debug.Log("sprite tried to update");
+    }
+    public void undo() 
+    {
+        //reset slot
+        if (isGun == false)
+        {
+            itemId = 0;
+            wgCost = 0;
+            pgCost = 0;
+        }
+        //update sprite
+        spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
+        //tell fittingscript slot is empty
+        parent.input();
     }
 }
