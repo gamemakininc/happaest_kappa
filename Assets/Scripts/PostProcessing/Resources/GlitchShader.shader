@@ -1,4 +1,4 @@
-﻿Shader "Hidden/Custom/Glitch Shader"
+﻿Shader "Hidden/Custom/GlitchShader"
 {
 	HLSLINCLUDE
 

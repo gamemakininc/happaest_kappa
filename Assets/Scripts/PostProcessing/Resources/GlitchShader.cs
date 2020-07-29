@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 [Serializable]
-[PostProcess(typeof(GlitchShaderRenderer), PostProcessEvent.AfterStack, "Custom/Glitch Shader")]
+[PostProcess(typeof(GlitchShaderRenderer), PostProcessEvent.AfterStack, "Custom/GlitchShader")]
 public sealed class GlitchShader : PostProcessEffectSettings
 {
     [Range(0,1), Tooltip("Amount of color drift")]
@@ -17,7 +17,7 @@ public sealed class GlitchShaderRenderer : PostProcessEffectRenderer<GlitchShade
 {
     public override void Render(PostProcessRenderContext context)
     {
-        var sheet = context.propertySheets.Get(Shader.Find("Hidden/Custom/Glitch Shader"));
+        var sheet = context.propertySheets.Get(Shader.Find("Hidden/Custom/GlitchShader"));
         sheet.properties.SetFloat("_Drift", settings.drift);
         sheet.properties.SetFloat("_Jitter", settings.jitter);
         sheet.properties.SetTexture("_TrashTex", settings.trashTex.value);
