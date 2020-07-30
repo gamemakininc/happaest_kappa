@@ -4,7 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(ObserverScript))]
 public class savescript : MonoBehaviour
 {
-    public int diff;
     private float fr;
     private float efr;
     private int counter;
@@ -27,22 +26,27 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame1.save";
         var save = new saves()
         {
-            diff=ObserverScript.Instance.diff,
+            unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            fitSetup = ObserverScript.Instance.fitSetup,
+            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            pSpeed = ObserverScript.Instance.pSpeed,
+            pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
-            pHealth = ObserverScript.Instance.pHealth,
             pRepair = ObserverScript.Instance.pRepair,
-            pSpeed = ObserverScript.Instance.pSpeed,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            mslBonus = ObserverScript.Instance.mslBonus,
+            fitSetup = ObserverScript.Instance.fitSetup,
+            wgBookmarks = ObserverScript.Instance.wgBookmarks,
+            pgBookmarks = ObserverScript.Instance.pgBookmarks,
             pP0 = ObserverScript.Instance.pP0,
             pP1 = ObserverScript.Instance.pP1,
-            mslBonus = ObserverScript.Instance.mslBonus,
-            unlocks = ObserverScript.Instance.unlocks,
+            diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
+            score = ObserverScript.Instance.score,
+            levelScore = ObserverScript.Instance.levelScore,
+
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -57,22 +61,26 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame2.save";
         var save = new saves()
         {
-            diff = ObserverScript.Instance.diff,
+            unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            fitSetup = ObserverScript.Instance.fitSetup,
+            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            pSpeed = ObserverScript.Instance.pSpeed,
+            pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
-            pHealth = ObserverScript.Instance.pHealth,
             pRepair = ObserverScript.Instance.pRepair,
-            pSpeed = ObserverScript.Instance.pSpeed,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            mslBonus = ObserverScript.Instance.mslBonus,
+            fitSetup = ObserverScript.Instance.fitSetup,
+            wgBookmarks = ObserverScript.Instance.wgBookmarks,
+            pgBookmarks = ObserverScript.Instance.pgBookmarks,
             pP0 = ObserverScript.Instance.pP0,
             pP1 = ObserverScript.Instance.pP1,
-            mslBonus = ObserverScript.Instance.mslBonus,
-            unlocks = ObserverScript.Instance.unlocks,
+            diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
+            score = ObserverScript.Instance.score,
+            levelScore = ObserverScript.Instance.levelScore,
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -87,22 +95,26 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame3.save";
         var save = new saves()
         {
-            diff = ObserverScript.Instance.diff,
+            unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            fitSetup = ObserverScript.Instance.fitSetup,
+            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            pSpeed = ObserverScript.Instance.pSpeed,
+            pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
             pSRegen = ObserverScript.Instance.pSRegen,
-            pHealth = ObserverScript.Instance.pHealth,
             pRepair = ObserverScript.Instance.pRepair,
-            pSpeed = ObserverScript.Instance.pSpeed,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
+            mslBonus = ObserverScript.Instance.mslBonus,
+            fitSetup = ObserverScript.Instance.fitSetup,
+            wgBookmarks = ObserverScript.Instance.wgBookmarks,
+            pgBookmarks = ObserverScript.Instance.pgBookmarks,
             pP0 = ObserverScript.Instance.pP0,
             pP1 = ObserverScript.Instance.pP1,
-            mslBonus = ObserverScript.Instance.mslBonus,
-            unlocks = ObserverScript.Instance.unlocks,
+            diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
+            score = ObserverScript.Instance.score,
+            levelScore = ObserverScript.Instance.levelScore,
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -122,22 +134,27 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.pSpeed = save.pSpeed;
+            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
-            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pRepair = save.pRepair;
-            ObserverScript.Instance.pSpeed = save.pSpeed;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.mslBonus = save.mslBonus;
+            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
+            ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.pP0 = save.pP0;
             ObserverScript.Instance.pP1 = save.pP1;
-            ObserverScript.Instance.mslBonus = save.mslBonus;
-            ObserverScript.Instance.unlocks = save.unlocks;
+            ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;
+            ObserverScript.Instance.score = save.score;
+            ObserverScript.Instance.levelScore = save.levelScore;
+           
 
             Debug.Log("data loaded slot1");
             // update save info in observer
@@ -162,22 +179,26 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.pSpeed = save.pSpeed;
+            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
-            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pRepair = save.pRepair;
-            ObserverScript.Instance.pSpeed = save.pSpeed;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.mslBonus = save.mslBonus;
+            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
+            ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.pP0 = save.pP0;
             ObserverScript.Instance.pP1 = save.pP1;
-            ObserverScript.Instance.mslBonus = save.mslBonus;
-            ObserverScript.Instance.unlocks = save.unlocks;
+            ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;
+            ObserverScript.Instance.score = save.score;
+            ObserverScript.Instance.levelScore = save.levelScore;
 
             Debug.Log("data loaded slot2");
             // update save info in observer
@@ -200,22 +221,26 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
-            ObserverScript.Instance.diff = save.diff;
+            ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.pSpeed = save.pSpeed;
+            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;
             ObserverScript.Instance.pSRegen = save.pSRegen;
-            ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pRepair = save.pRepair;
-            ObserverScript.Instance.pSpeed = save.pSpeed;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
+            ObserverScript.Instance.mslBonus = save.mslBonus;
+            ObserverScript.Instance.fitSetup = save.fitSetup;
+            ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
+            ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.pP0 = save.pP0;
             ObserverScript.Instance.pP1 = save.pP1;
-            ObserverScript.Instance.mslBonus = save.mslBonus;
-            ObserverScript.Instance.unlocks = save.unlocks;
+            ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;
+            ObserverScript.Instance.score = save.score;
+            ObserverScript.Instance.levelScore = save.levelScore;
 
             Debug.Log("data loaded slot3");
             // update save info in observer

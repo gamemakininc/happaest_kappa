@@ -40,7 +40,8 @@ public class ObserverScript : MonoBehaviour
     public int diff;//int to carry difficulty level to level
     public int levelsCleared;//stores ##of win conditions collected
     public string playerName;//stores current player name
-    public int score;
+    public int score;//total score
+    public int levelScore;//score gained in current level
     //swap vars
     public bool bookmark0;//event system any event triggered this rotation
     public bool bookmark1;//event system fitting system event triggered
