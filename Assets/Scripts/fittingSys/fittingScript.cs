@@ -790,6 +790,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 	}
 	void shipTwo()
 	{
@@ -839,6 +841,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 
 	}
 	void shipThree()
@@ -889,6 +893,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 
 	}
 	void shipFour()
@@ -939,6 +945,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 
 	}
 	void shipFive()
@@ -989,6 +997,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 
 	}
 	void shipSix()
@@ -1018,7 +1028,7 @@ public class fittingScript : MonoBehaviour
 			counter++;
 		}
 		//set bace values
-		bulletSelector = 7;
+		bulletSelector = 6;
 		baceMoveSpeed = 7f;
 		baceHealth = 120f;
 		baceSRegen = 0.4f;
@@ -1039,57 +1049,8 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
-
-	}
-	void secritShipTwo()
-	{
-		//clear slot added bool
-		SlotAdded = false;
-
-		slotsfake[0] = false;
-		slotsfake[1] = false;
-		slotsfake[2] = false;
-		slotsfake[3] = false;
-		slotsfake[4] = false;
-		slotsfake[5] = false;
-		slotsfake[6] = false;
-		slotsfake[7] = false;
-		slotsfake[8] = false;
-		slotsfake[9] = false;
-		slotsfake[10] = false;
-		slotsfake[11] = false;
-		slotsfake[12] = false;
-		counter = 0;
-		//update slots and clear fitted items
-		while (counter <= 12)
-		{
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
-			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
-			counter++;
-		}
-		//set bace values
-		bulletSelector = 8;
-		baceMoveSpeed = 7f;
-		baceHealth = 100f;
-		baceSRegen = 1f;
-		baceRepair = 0;
-		baceShield = 100;
-		maxPG = 60;
-		maxWG = 65;
-		if (isStart == false)
-		{
-			power = maxPG;
-			Weight = maxWG;
-			health = baceHealth;
-			repair = baceRepair;
-			shield = baceShield;
-			sRegen = baceSRegen;
-			fitSetup[12] = bulletSelector;
-			//push gun selection and set sprite
-			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
-			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
-		}
-
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 	}
 	void secritShipOne()
 	{
@@ -1140,6 +1101,60 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
+
+	}
+	void secritShipTwo()
+	{
+		//clear slot added bool
+		SlotAdded = false;
+
+		slotsfake[0] = false;
+		slotsfake[1] = false;
+		slotsfake[2] = false;
+		slotsfake[3] = false;
+		slotsfake[4] = false;
+		slotsfake[5] = false;
+		slotsfake[6] = false;
+		slotsfake[7] = false;
+		slotsfake[8] = false;
+		slotsfake[9] = false;
+		slotsfake[10] = false;
+		slotsfake[11] = false;
+		slotsfake[12] = false;
+		counter = 0;
+		//update slots and clear fitted items
+		while (counter <= 12)
+		{
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNull = slotsfake[counter];
+			slotsLoc[counter].GetComponent<itemDropHandeler>().slotNeedUpdate = true;
+			counter++;
+		}
+		//set bace values
+		bulletSelector = 8;
+		baceMoveSpeed = 7f;
+		baceHealth = 100f;
+		baceSRegen = 1f;
+		baceRepair = 0;
+		baceShield = 100;
+		maxPG = 60;
+		maxWG = 65;
+		if (isStart == false)
+		{
+			power = maxPG;
+			Weight = maxWG;
+			health = baceHealth;
+			repair = baceRepair;
+			shield = baceShield;
+			sRegen = baceSRegen;
+			fitSetup[12] = bulletSelector;
+			//push gun selection and set sprite
+			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
+			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+		}
+		//update bullet selector
+		ObserverScript.Instance.pBulletSelector = bulletSelector;
 
 	}
 	private void Update()

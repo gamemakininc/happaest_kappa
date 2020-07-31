@@ -4,14 +4,7 @@ using UnityEngine.UI;
 public class mainMenu : MonoBehaviour
 {
     //bg scroll variables
-    public Vector3 start;
-    public Vector3 end;
     public GameObject playerNameBox;
-    public GameObject scroll0;
-    public GameObject scroll1;
-    public Rigidbody2D rb0;
-    public Rigidbody2D rb1;
-    public float speed = 0.1f;
     //maim menu location variables
     //movespots 0offscreen, 1enterpoint, 2main onscreen, 3load onscreen
     public Transform[] menuPoints;
@@ -45,9 +38,6 @@ public class mainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //bgscroll
-        rb0.velocity = new Vector2(0, speed * -1);
-        rb1.velocity = new Vector2(0, speed * -1);
         if (inpoint == true)
         {
             //move menu into frame

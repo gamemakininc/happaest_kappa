@@ -89,6 +89,9 @@ TextureImporter:
   - first:
       213: -1414468336072662494
     second: icons_fr2
+  - first:
+      213: 8890533060992490834
+    second: icons_G
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -796,6 +799,27 @@ TextureImporter:
       bones: []
       spriteID: 222e952ea8cce5ce0800000000000000
       internalID: -1414468336072662494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_G
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dd25407b4816b70800000000000000
+      internalID: 8890533060992490834
       vertices: []
       indices: 
       edges: []
