@@ -270,6 +270,12 @@ public class PlayerScript : MonoBehaviour
             Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
             refireTime = Time.time + 0.1f;
         }
+        if (bulletSelector == 7)
+        {
+            Instantiate(BulletPrefabs[6], wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
+            Instantiate(BulletPrefabs[6], wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
+            refireTime = Time.time + 0.1f;
+        }
 
     }
     public void TakeDamage(float damage)

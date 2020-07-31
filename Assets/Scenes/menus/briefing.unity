@@ -969,7 +969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f18ba89ef252408dad8c5daf6afbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 0
   saveSlot: 0
   swapint: 0
   swapfloat: 0
@@ -997,14 +996,15 @@ MonoBehaviour:
   pRepair: 0
   mslBonus: 0
   fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  pgBookmark: 0
-  wgBookmark: 0
+  wgBookmarks: []
+  pgBookmarks: []
   pP0: 0
   pP1: 0
   diff: 0
   levelsCleared: 3
   playerName: Empty
   score: 0
+  levelScore: 0
   bookmark0: 0
   bookmark1: 0
   bookmark2: 0
@@ -1644,7 +1644,6 @@ GameObject:
   - component: {fileID: 1895791604}
   - component: {fileID: 1895791603}
   - component: {fileID: 1895791602}
-  - component: {fileID: 1895791606}
   - component: {fileID: 1895791605}
   m_Layer: 5
   m_Name: m1btn
@@ -1792,27 +1791,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!223 &1895791606
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895791600}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1499807265
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &7427085370445493424
 GameObject:
   m_ObjectHideFlags: 0
