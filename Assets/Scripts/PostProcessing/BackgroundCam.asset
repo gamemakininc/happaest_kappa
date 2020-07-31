@@ -18,16 +18,16 @@ MonoBehaviour:
     value: 1
   drift:
     overrideState: 1
-    value: 0.69
+    value: 0
   jitter:
     overrideState: 1
-    value: 0.81
+    value: 0
   cutoff:
     overrideState: 1
-    value: 0.595
+    value: 0
   jump:
     overrideState: 1
-    value: -0.18
+    value: 0
   trashTex:
     overrideState: 1
     value: {fileID: 2800000, guid: 7afe01b3a3c51eb488d90b5fd0adb478, type: 3}
@@ -283,7 +283,7 @@ MonoBehaviour:
     value: 0.6
   softKnee:
     overrideState: 1
-    value: 0.268
+    value: 0.24
   clamp:
     overrideState: 1
     value: 65472

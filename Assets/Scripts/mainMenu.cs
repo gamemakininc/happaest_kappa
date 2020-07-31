@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class mainMenu : MonoBehaviour
 {
     //bg scroll variables
     public GameObject playerNameBox;
+    public PostProcessVolume ppv;
+    public bool effPeak;
+    private GlitchShader gs;
+    public float effecTimer;
+    public bool effGo;
     //maim menu location variables
     //movespots 0offscreen, 1enterpoint, 2main onscreen, 3load onscreen
     public Transform[] menuPoints;
@@ -29,6 +35,7 @@ public class mainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ppv.profile.TryGetSettings(out gs);
         unlocks = ObserverScript.Instance.unlocks;
         continueStatus();
         mixMaster.Instance.nTrack = 0;
@@ -64,6 +71,27 @@ public class mainMenu : MonoBehaviour
                 rbswap2.velocity = new Vector2(rbswap2.velocity.x, 0);
             }
         }
+        //bg scroll effects
+        if (effGo == true)
+        {
+            if (effecTimer <= 1 && effPeak == false)
+            {
+                effecTimer = 2*Time.deltaTime;
+                gs.drift.value = effecTimer;
+                gs.jitter.value = effecTimer;
+                if (effecTimer >= 1)
+                {
+                    effPeak = true;
+                }
+            }
+            if (effecTimer >= 0 && effPeak == true)
+            {
+                effecTimer = -2*Time.deltaTime;
+                gs.drift.value = effecTimer;
+                gs.jitter.value = effecTimer;
+                if (gs.drift <= 0) { effGo = false; effPeak = false; }
+            }
+        }
     }
     public void continueStatus()
     {
@@ -76,6 +104,8 @@ public class mainMenu : MonoBehaviour
     }
     public void mainmenu()
     {
+        //start bg effect cycle
+        effGo = true;
         //set position to start point
         menuParents[0].transform.position = menuPoints[1].position;
         //get rb of next scene
@@ -99,6 +129,8 @@ public class mainMenu : MonoBehaviour
     }
     public void newGameMenu()
     {
+        //start bg effect cycle
+        effGo = true;
         //set position to start point
         menuParents[1].transform.position = menuPoints[1].position;
         //get rb of next scene
@@ -118,6 +150,8 @@ public class mainMenu : MonoBehaviour
     }
     public void loadGameMenu()
     {
+        //start bg effect cycle
+        effGo = true;
         //set position to start point
         menuParents[2].transform.position = menuPoints[1].position;
         //get rb of next scene
@@ -137,8 +171,10 @@ public class mainMenu : MonoBehaviour
         //info
         else if (menucurrent[4] == true) { swapint2 = 4; outpoint = true; rbswap2 = menuParents[4].GetComponent<Rigidbody2D>(); }
     }
-    public void settingsMenu() 
+    public void settingsMenu()
     {
+        //start bg effect cycle
+        effGo = true;
         //set position to start point
         menuParents[3].transform.position = menuPoints[1].position;
         //get rb of next scene
@@ -156,8 +192,10 @@ public class mainMenu : MonoBehaviour
         //info
         else if (menucurrent[4] == true) { swapint2 = 4; outpoint = true; rbswap2 = menuParents[4].GetComponent<Rigidbody2D>(); }
     }
-    public void clearInfo() 
+    public void clearInfo()
     {
+        //start bg effect cycle
+        effGo = true;
         //move all subscenes out of frame
         menuParents[5].transform.position = menuPoints[4].position;
         menuParents[6].transform.position = menuPoints[4].position;
@@ -166,6 +204,8 @@ public class mainMenu : MonoBehaviour
     }
     public void infoMenu()
     {
+        //start bg effect cycle
+        effGo = true;
         //set position to start point
         menuParents[4].transform.position = menuPoints[1].position;
         //get rb of next scene
@@ -183,8 +223,11 @@ public class mainMenu : MonoBehaviour
         //info
         if (menucurrent[4] == true) { swapint2 = 4; outpoint = true; rbswap2 = menuParents[4].GetComponent<Rigidbody2D>(); }
     }
-    public void infoMainPage() 
+    public void infoMainPage()
     {
+        //start bg effect cycle
+        effGo = true;
+
         infswapint1 = 5;
         menuParents[infswapint1].transform.position = menuPoints[3].position;
         //move privious menu
@@ -197,6 +240,9 @@ public class mainMenu : MonoBehaviour
     }
     public void infoFittingPage()
     {
+        //start bg effect cycle
+        effGo = true;
+
         infswapint1 = 6;
         menuParents[infswapint1].transform.position = menuPoints[3].position;
         //move privious menu
@@ -206,6 +252,9 @@ public class mainMenu : MonoBehaviour
     }
     public void infoEnemyPage()
     {
+        //start bg effect cycle
+        effGo = true;
+
         infswapint1 = 7;
         menuParents[infswapint1].transform.position = menuPoints[3].position;
         //move privious menu
@@ -215,6 +264,9 @@ public class mainMenu : MonoBehaviour
     }
     public void infoLorePage()
     {
+        //start bg effect cycle
+        effGo = true;
+
         infswapint1 = 8;
         menuParents[infswapint1].transform.position = menuPoints[3].position;
         //move privious menu

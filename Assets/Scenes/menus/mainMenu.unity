@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 32191801}
   - component: {fileID: 32191802}
   - component: {fileID: 32191803}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: genericfileicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113480248}
   - component: {fileID: 113480249}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 1f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 164073709}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 'infopAFSguide '
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -1575,7 +1575,7 @@ GameObject:
   - component: {fileID: 303627110}
   - component: {fileID: 303627112}
   - component: {fileID: 303627111}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: diffTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384501194}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: infopEnemyDescguide
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -2139,7 +2139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406655325}
   - component: {fileID: 406655326}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: body Bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2447,7 +2447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464575927}
   - component: {fileID: 464575926}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: PostProcessing Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2574,7 +2574,7 @@ GameObject:
   - component: {fileID: 476337015}
   - component: {fileID: 476337017}
   - component: {fileID: 476337016}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: diffTitle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2729,7 +2729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487853041}
   - component: {fileID: 487853042}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: newGameGuide
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -3061,7 +3061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507004068}
   - component: {fileID: 507004069}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: body Bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3220,7 +3220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544815163}
   - component: {fileID: 544815164}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: body Bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3763,7 +3763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616504525}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: infoLoreDumpguide
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -4031,7 +4031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711874656}
   - component: {fileID: 711874657}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: settingsguide
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -4650,7 +4650,7 @@ GameObject:
   - component: {fileID: 820075585}
   - component: {fileID: 820075586}
   m_Layer: 5
-  m_Name: hard on
+  m_Name: hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4724,7 +4724,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &870752270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,7 +5523,7 @@ GameObject:
   - component: {fileID: 993508389}
   - component: {fileID: 993508388}
   - component: {fileID: 993508387}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5600,7 +5600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001593452}
   - component: {fileID: 1001593453}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: infoguide
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -5764,7 +5764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037343405}
   - component: {fileID: 1037343406}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: 1Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5846,7 +5846,7 @@ GameObject:
   - component: {fileID: 1041634607}
   - component: {fileID: 1041634606}
   m_Layer: 5
-  m_Name: hard
+  m_Name: medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6687,7 +6687,7 @@ GameObject:
   - component: {fileID: 1191644075}
   - component: {fileID: 1191644074}
   - component: {fileID: 1191644073}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6922,7 +6922,7 @@ GameObject:
   - component: {fileID: 1253914033}
   - component: {fileID: 1253914035}
   m_Layer: 5
-  m_Name: easy
+  m_Name: NG+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7020,7 +7020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254397331}
   - component: {fileID: 1254397332}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: 2Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7101,7 +7101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313375904}
   - component: {fileID: 1313375905}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 3f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7466,7 +7466,7 @@ GameObject:
   - component: {fileID: 1354316511}
   - component: {fileID: 1354316513}
   - component: {fileID: 1354316512}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: settingstittleBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7545,7 +7545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374107030}
   - component: {fileID: 1374107031}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: body Bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8125,7 +8125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421379611}
   - component: {fileID: 1421379612}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: body Bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8362,7 +8362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474696565}
   - component: {fileID: 1474696566}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: loadguide
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -8755,7 +8755,7 @@ GameObject:
   - component: {fileID: 1541125349}
   - component: {fileID: 1541125351}
   - component: {fileID: 1541125350}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8834,7 +8834,7 @@ GameObject:
   - component: {fileID: 1544637008}
   - component: {fileID: 1544637007}
   - component: {fileID: 1544637006}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9453,8 +9453,8 @@ Camera:
   m_GameObject: {fileID: 1590230543}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.027367398, g: 0.027730813, b: 0.028301895, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9515,6 +9515,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameBox: {fileID: 993508386}
+  ppv: {fileID: 464575926}
+  effPeak: 0
+  effecTimer: 0
+  effGo: 0
   menuPoints:
   - {fileID: 1173817508}
   - {fileID: 88284546}
@@ -9648,7 +9652,7 @@ GameObject:
   - component: {fileID: 1614365525}
   - component: {fileID: 1614365524}
   - component: {fileID: 1614365523}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: newGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10228,7 +10232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691983939}
   - component: {fileID: 1691983940}
-  m_Layer: 1
+  m_Layer: 5
   m_Name: 3Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10612,7 +10616,7 @@ GameObject:
   - component: {fileID: 1752007214}
   - component: {fileID: 1752007213}
   m_Layer: 5
-  m_Name: medium
+  m_Name: easy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10664,7 +10668,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!224 &1752007214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10772,7 +10776,7 @@ GameObject:
   - component: {fileID: 1762709855}
   - component: {fileID: 1762709857}
   - component: {fileID: 1762709856}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: settingstittle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10929,7 +10933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785799415}
   - component: {fileID: 1785799416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: genericfileicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11244,7 +11248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861878060}
   - component: {fileID: 1861878061}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 2f18_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11403,7 +11407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900594190}
   - component: {fileID: 1900594191}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: genericfileicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11937,7 +11941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086977694}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: infopMainguide
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -12433,7 +12437,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 2133436221}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 8192
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -12492,7 +12496,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.10746708, g: 0.15488523, b: 0.3301887, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
