@@ -60,13 +60,31 @@ public class inputManedger : MonoBehaviour
     void Update()
     {
         //horizontal calculation
-        if (GetButtonDown("left") == true && Horizontal >= -1) { Horizontal -= slideAmt * Time.deltaTime; }
-        if (GetButtonDown("right") == true && Horizontal <= 1) { Horizontal += slideAmt * Time.deltaTime; }
+        if (GetButtonDown("left") == true) { Horizontal = -1; }
+        if (GetButtonDown("right") == true) { Horizontal = 1; }
         //vertical calculation
-        if (GetButtonDown("up") == true && Vertical <= 1) { Vertical += slideAmt * Time.deltaTime; }
-        if (GetButtonDown("down") == true && Vertical >= -1) { Vertical -= slideAmt * Time.deltaTime; }
+        if (GetButtonDown("up") == true ) { Vertical = 1; }
+        if (GetButtonDown("down") == true ) { Vertical = -1; }
         //reset
-        if (GetButtonDown("left") == false && GetButtonDown("right") == false) { Horizontal = 0; }
-        if (GetButtonDown("up")==false && GetButtonDown("down") == false) { Vertical = 0; }
+        if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal > 0.01) 
+        { 
+            Horizontal = -slideAmt*Time.deltaTime;
+            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Horizontal = 0; }
+        }
+        if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal < -0.01) 
+        { 
+            Horizontal = slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.1&& Horizontal<=0.1) { Horizontal = 0; }
+        }
+        if (GetButtonDown("up")==false && GetButtonDown("down") == false&& Vertical > 0.01) 
+        { 
+            Vertical = -slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Vertical = 0; }
+        }
+        if (GetButtonDown("up") == false && GetButtonDown("down") == false&& Vertical < -0.01) 
+        {
+            Vertical = slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Vertical = 0; }
+        }
     }
 }

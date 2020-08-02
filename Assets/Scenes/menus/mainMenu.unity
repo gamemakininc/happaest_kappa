@@ -6654,7 +6654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Horizontal: 0
   Vertical: 0
-  slideAmt: 0
+  slideAmt: 5
   kb: 
 --- !u!1 &902079759
 GameObject:
