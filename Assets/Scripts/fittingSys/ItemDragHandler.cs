@@ -69,11 +69,13 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
         if (ObserverScript.Instance.unlocks[itemIdentifyer] == false)
         {
             //disable rendering and drag for secrit items
-            if (itemIdentifyer == 34) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
-            if (itemIdentifyer == 35) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
-            if (itemIdentifyer == 36) { GetComponent<SpriteRenderer>().enabled = false; GetComponent<CircleCollider2D>().enabled = false; }
-
+            if (itemIdentifyer == 34) { GetComponent<SpriteRenderer>().enabled = false; }
+            if (itemIdentifyer == 35) { GetComponent<SpriteRenderer>().enabled = false; }
+            if (itemIdentifyer == 36) { GetComponent<SpriteRenderer>().enabled = false; }
+            //set color to shadow
             this.GetComponent<SpriteRenderer>().color = new Color (0,0,0,0.5f);
+            //dissable collider
+            GetComponent<CircleCollider2D>().enabled = false;
         }
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
     }

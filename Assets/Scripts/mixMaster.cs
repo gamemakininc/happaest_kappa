@@ -50,7 +50,7 @@ public class mixMaster : MonoBehaviour
                 as0.volume = swapf0;
                 as1.volume = swapf1;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf0 >= 1 && swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
+                if (swapf0 >= ObserverScript.Instance.mvol && swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
             }
             else if (swapBool == false) {
                 //make shure bolth tracks active
@@ -64,7 +64,7 @@ public class mixMaster : MonoBehaviour
                 as0.volume = swapf0;
                 as1.volume = swapf1;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf1 >= 1 && swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; }
+                if (swapf1 >= ObserverScript.Instance.mvol && swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; }
 
             }
         }

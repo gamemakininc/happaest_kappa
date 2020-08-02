@@ -74,19 +74,19 @@ public class mainMenu : MonoBehaviour
         //bg scroll effects
         if (effGo == true)
         {
-            if (effecTimer <= 1 && effPeak == false)
+            if (effecTimer <= .5f && effPeak == false)
             {
-                effecTimer = 2*Time.deltaTime;
+                effecTimer += 0.8f*Time.deltaTime;
                 gs.drift.value = effecTimer;
                 gs.jitter.value = effecTimer;
-                if (effecTimer >= 1)
+                if (effecTimer >= .5)
                 {
                     effPeak = true;
                 }
             }
             if (effecTimer >= 0 && effPeak == true)
             {
-                effecTimer = -2*Time.deltaTime;
+                effecTimer += -0.8f*Time.deltaTime;
                 gs.drift.value = effecTimer;
                 gs.jitter.value = effecTimer;
                 if (gs.drift <= 0) { effGo = false; effPeak = false; }

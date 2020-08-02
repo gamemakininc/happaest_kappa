@@ -6,23 +6,28 @@ public class pbulletscript : MonoBehaviour
     public Rigidbody2D rb;
     public float timer;
     public int Damage;
-    public bool trackingMouse;
+    public bool aimed;
     public bool trackingEnemy;
     public bool islasor;
     public Transform Enemy;
     public Transform[] laserBeam;
     public LineRenderer lineRenderer;
     public float laserVisible;
+    public bool mouseAiming;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if (trackingMouse == false && trackingEnemy == false && islasor == false)
+        if (aimed == false && trackingEnemy == false && islasor == false)
         {
             rb.velocity = transform.up * speed;
         }
-        if (trackingMouse == true) { timer = -2; }
+        if (aimed == true) 
+        { 
+            timer = -2;
+            mouseAiming = ObserverScript.Instance.mouseAiming;
+        }
         if (islasor == false) { lineRenderer = new LineRenderer(); }
         if (islasor == true) { timer = 1.5f; }
         if (islasor == true)
@@ -44,6 +49,7 @@ public class pbulletscript : MonoBehaviour
                 laserVisible = 0;
             }
         }
+
     }
     private void Update() 
     {
@@ -72,16 +78,17 @@ public class pbulletscript : MonoBehaviour
             rb.velocity = transform.up * speed;
 
         }
-        if (trackingMouse==true) 
-        {
+        if (aimed == true)
+        {//change to track a croshair game object to allow mouse aiming toggle
+
             //get mouse location
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             //set angle twards mouse
-            Vector2 direction = new Vector2 (
-                mousePosition.x - transform.position.x,
-                mousePosition.y - transform.position.y
-                );
+            Vector2 direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y
+            );
             //go forward
             transform.up = direction;
             rb.velocity = transform.up * speed;

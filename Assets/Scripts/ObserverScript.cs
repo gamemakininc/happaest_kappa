@@ -70,6 +70,29 @@ public class ObserverScript : MonoBehaviour
     public int s3clears=0;
     public string s3name="Empty";
     public float s3unlocks = 0.1f;
+
+    //settings (global save file)
+    public float mvol;//hold value of music maximum volume
+    public float sfxvol;//hold value for maximum sfx volume
+    public bool mouseAiming;
+    /*
+     key map
+     0  player left
+     1  player up
+     2  player down
+     3  player right
+
+     4  fire1
+     5  fire2
+     6  fire3
+
+     7  crosshair left
+     8  crosshair up
+     9 crosshair down
+     10 crosshair right
+     */
+    public KeyCode[] keybinds;
+    public bool ngp;//unlocks new game plus
     private void Awake()
     {//
         if (Instance == null)

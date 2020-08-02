@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour 
 {
-	public static sceneManager Instance { get; private set; }
 	
 	//change scene to 'combat'
 	public void Combat() 

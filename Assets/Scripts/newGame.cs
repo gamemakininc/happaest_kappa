@@ -7,7 +7,12 @@ public class newGame : MonoBehaviour
     public Toggle[] diffaculty;
     public GameObject nameBox;
     private int counter;
+    sceneManager sceneManager;
 
+    private void Start()
+    {
+        sceneManager = FindObjectOfType<sceneManager>();
+    }
     public void newGameVoid()
     {
         counter = 0;
@@ -68,6 +73,6 @@ public class newGame : MonoBehaviour
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
         }
-        sceneManager.Instance.briefing();
+        sceneManager.briefing();
     }
 }

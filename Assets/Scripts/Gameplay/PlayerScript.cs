@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     //idK
+    public inputManedger im;
     Vector2 movement;
     //set health
     public Image hpBar;
@@ -59,7 +60,7 @@ public class PlayerScript : MonoBehaviour
     public RuntimeAnimatorController[] animationset;
     public int shipselect;
     private void Start()
-    { 
+    {
         //set variables from observer
         maxShield = ObserverScript.Instance.pShield;
         shield = maxShield;
@@ -97,7 +98,7 @@ public class PlayerScript : MonoBehaviour
         else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
         this.GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
         this.GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
-
+        im = FindObjectOfType<inputManedger>();
 
     }
 
@@ -105,10 +106,11 @@ public class PlayerScript : MonoBehaviour
     private void Update()
     {
         //input
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //left right
+        movement.x = im.getAxis("Horizontal");
+        movement.y = im.getAxis("Vertical");
         //fire gun
-        if (Input.GetButton("Fire1") && Time.time > refireTime)
+        if (im.GetButtonDown("fire1") && Time.time > refireTime)
         {
             Shoot();
             //check bullet selector for what sound to play
@@ -120,12 +122,12 @@ public class PlayerScript : MonoBehaviour
             else if (bulletSelector == 5) { audioSource.PlayOneShot(sounds[4]); }
         }
         //fire missile slot1
-        if (Input.GetButtonDown("Fire2"))
+        if (im.GetButtonDown("fire2"))
         {
             p0shoot();
         }
         //fire missile slot2
-        if (Input.GetButtonDown("Fire3"))
+        if (im.GetButtonDown("fire3"))
         {
             p1shoot();
         }
@@ -265,13 +267,14 @@ public class PlayerScript : MonoBehaviour
                 //reset timer
                 refireTime = Time.time + enextFire + 0.1f;
             }
+        //lasers only equipable to the secrit ships
         if (bulletSelector == 6) 
-        {
+        {//spawn laser
             Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
             refireTime = Time.time + 0.1f;
         }
         if (bulletSelector == 7)
-        {
+        {//spawn laser
             Instantiate(BulletPrefabs[6], wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
             Instantiate(BulletPrefabs[6], wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
             refireTime = Time.time + 0.1f;
@@ -313,6 +316,7 @@ public class PlayerScript : MonoBehaviour
         itimer = 0;
         //dissable damage
         involActive =true;
+        //add post processing effect
     }
     public void fireBuff() 
     {
@@ -324,7 +328,6 @@ public class PlayerScript : MonoBehaviour
         baceRefireRate = nextFire;
         //set fire delay to 0
         nextFire = 0;
-        
     }
     public void addMissiles() 
     {
