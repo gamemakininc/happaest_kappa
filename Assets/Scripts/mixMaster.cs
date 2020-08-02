@@ -44,13 +44,16 @@ public class mixMaster : MonoBehaviour
                 //start track
                 if (oneshot == true) { oneshot = false; as0.loop= true; as0.clip=(soundtrack[nTrack]); as0.Play(); }
                 //crossfadeset values
-                swapf0 += 0.5f * Time.deltaTime;
+                if (swapf0 >= ObserverScript.Instance.mvol)
+                {
+                    swapf0 += 0.5f * Time.deltaTime;
+                }
                 swapf1 += -0.5f * Time.deltaTime;
                 //crossfade apply values
                 as0.volume = swapf0;
                 as1.volume = swapf1;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf0 >= ObserverScript.Instance.mvol && swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
+                if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
             }
             else if (swapBool == false) {
                 //make shure bolth tracks active
@@ -58,13 +61,16 @@ public class mixMaster : MonoBehaviour
                 //start track
                 if (oneshot == false) { oneshot = true; as1.loop = true; as1.clip = (soundtrack[nTrack]); as1.Play(); }
                 //crossfade set values
-                swapf1 += 0.5f * Time.deltaTime;
+                if (swapf0 >= ObserverScript.Instance.mvol)
+                {
+                    swapf1 += 0.5f * Time.deltaTime;
+                }
                 swapf0 += -0.5f * Time.deltaTime;
                 //crossfade apply values
                 as0.volume = swapf0;
                 as1.volume = swapf1;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf1 >= ObserverScript.Instance.mvol && swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; }
+                if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; }
 
             }
         }

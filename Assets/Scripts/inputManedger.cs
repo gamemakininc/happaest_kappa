@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 //this is a component of observer.
 [RequireComponent(typeof(ObserverScript))]
@@ -11,6 +12,11 @@ public class inputManedger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        updateKeys();
+    }
+    Dictionary<string, KeyCode> keyBinds;
+    public void updateKeys()
+    {
         kb = ObserverScript.Instance.keybinds;
         keyBinds = new Dictionary<string, KeyCode>();
         //movement keys for player
@@ -19,17 +25,15 @@ public class inputManedger : MonoBehaviour
         keyBinds["down"] = kb[2];
         keyBinds["right"] = kb[3];
         //fire keys
-        keyBinds["fire1"]=kb[4];
-        keyBinds["fire2"]=kb[5];
-        keyBinds["fire3"]=kb[6];
+        keyBinds["fire1"] = kb[4];
+        keyBinds["fire2"] = kb[5];
+        keyBinds["fire3"] = kb[6];
         //movement keys for crosshair
         keyBinds["cleft"] = kb[7];
         keyBinds["cup"] = kb[8];
         keyBinds["cdown"] = kb[9];
         keyBinds["cright"] = kb[10];
     }
-    Dictionary<string, KeyCode> keyBinds;
-
     public bool GetButtonDown( string buttonName ) 
     {
         if (keyBinds.ContainsKey(buttonName) == false)
@@ -56,7 +60,6 @@ public class inputManedger : MonoBehaviour
         }
 
     }
-    // Update is called once per frame
     void Update()
     {
         //horizontal calculation
