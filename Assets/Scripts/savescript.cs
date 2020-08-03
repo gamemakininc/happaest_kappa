@@ -342,4 +342,49 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s3unlocks = swapint;
         }
     }
+    public void saveSettings() 
+    {
+        savePath = Application.persistentDataPath + "settings.htm";
+        var sSettings = new settings()
+        {
+            mvol = ObserverScript.Instance.mvol,
+            sfxvol = ObserverScript.Instance.sfxvol,
+            mouseAiming = ObserverScript.Instance.mouseAiming,
+            keybinds = ObserverScript.Instance.keybinds,
+            ngp = ObserverScript.Instance.ngp,
+        };
+        var binaryFormatter = new BinaryFormatter();
+        using (var fileStream = File.Create(savePath))
+        {
+            binaryFormatter.Serialize(fileStream, sSettings);
+        }
+        Debug.Log("settings saved");
+
+    }
+    public void loadSettings()
+    {
+        savePath = Application.persistentDataPath + "settings.htm";
+        if (File.Exists(savePath))
+        {
+            settings sSettings;
+            var binaryFormatter = new BinaryFormatter();
+            using (var fileStream = File.Open(savePath, FileMode.Open))
+            {
+                sSettings = (settings)binaryFormatter.Deserialize(fileStream);
+            }
+            ObserverScript.Instance.mvol = sSettings.mvol;
+            ObserverScript.Instance.sfxvol = sSettings.sfxvol;
+            ObserverScript.Instance.mouseAiming = sSettings.mouseAiming;
+            ObserverScript.Instance.keybinds = sSettings.keybinds;
+            ObserverScript.Instance.ngp = sSettings.ngp;
+
+            Debug.Log("settings loaded");
+            // update save info in observer
+            setPlaceMats();
+        }
+        else
+        {
+            Debug.LogWarning("settings save non existant");
+        }
+    }
 }

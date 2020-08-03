@@ -110,7 +110,7 @@ public class ObserverScript : MonoBehaviour
     public void setStation() { missionType = ("briefing()"); }
     private void Start()
     {
-
+        GetComponent<savescript>().loadSettings();
 
     }
 

@@ -49,9 +49,9 @@ public class bosslaser : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.Raycast(laserBeam[0].position, laserBeam[0].right*50);
             if (hitInfo)
             {
-                Debug.DrawRay(laserBeam[0].position, laserBeam[0].right*50, Color.blue);
+                //Debug.DrawRay(laserBeam[0].position, laserBeam[0].right*50, Color.blue);
                 PlayerScript Player = hitInfo.transform.GetComponent<PlayerScript>();
-                Debug.Log("hit something: "+ hitInfo.transform);
+                //Debug.Log("hit something: "+ hitInfo.transform);
                 if (Player != null)
                 {
                     if (hitTimer >= 0.2)
@@ -64,6 +64,5 @@ public class bosslaser : MonoBehaviour
         }
         if (damageTimer >= 1) { Destroy(gameObject); }
     }
-    
 
 }

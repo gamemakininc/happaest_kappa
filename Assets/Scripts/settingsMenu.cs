@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using System;
 
 public class settingsMenu : MonoBehaviour
@@ -51,6 +50,14 @@ public class settingsMenu : MonoBehaviour
         //set vars in observer script from sliders
         ObserverScript.Instance.mvol = mVolSli.value;
         ObserverScript.Instance.sfxvol = sfxVolSli.value;
+        if (mixMaster.Instance.swapBool == true)
+        {
+            mixMaster.Instance.as1.volume = ObserverScript.Instance.mvol;
+        }
+        else if (mixMaster.Instance.swapBool == false)
+        {
+            mixMaster.Instance.as0.volume = ObserverScript.Instance.mvol;
+        }
         keyText[0].text = keyBinds[0].ToString();
         keyText[1].text = keyBinds[1].ToString();
         keyText[2].text = keyBinds[2].ToString();
@@ -112,5 +119,39 @@ public class settingsMenu : MonoBehaviour
         ObserverScript.Instance.mouseAiming = mouseAim.isOn;
         ObserverScript.Instance.keybinds = keyBinds;
         im.updateKeys();
+        FindObjectOfType<savescript>().saveSettings();
+    }
+    public void defaults() 
+    {
+        //reset keybinds
+        keyBinds[0] = KeyCode.A;
+        keyBinds[0] = KeyCode.W;
+        keyBinds[0] = KeyCode.S;
+        keyBinds[0] = KeyCode.F;
+        keyBinds[0] = KeyCode.Mouse0;
+        keyBinds[0] = KeyCode.Mouse1;
+        keyBinds[0] = KeyCode.Mouse2;
+        keyBinds[0] = KeyCode.LeftArrow;
+        keyBinds[0] = KeyCode.UpArrow;
+        keyBinds[0] = KeyCode.DownArrow;
+        keyBinds[0] = KeyCode.RightArrow;
+        ObserverScript.Instance.keybinds = keyBinds;
+        im.updateKeys();
+        //reset volume
+        mVolSli.value = 1;
+        sfxVolSli.value = 1;
+        ObserverScript.Instance.mvol = mVolSli.value;
+        ObserverScript.Instance.sfxvol = sfxVolSli.value;
+        if (mixMaster.Instance.swapBool == true)
+        {
+            mixMaster.Instance.as1.volume = ObserverScript.Instance.mvol;
+        }
+        else if (mixMaster.Instance.swapBool == false)
+        {
+            mixMaster.Instance.as0.volume = ObserverScript.Instance.mvol;
+        }
+        //set mouse aim
+        mouseAim.isOn = true;
+        ObserverScript.Instance.mouseAiming = mouseAim.isOn;
     }
 }

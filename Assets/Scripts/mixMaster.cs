@@ -6,7 +6,7 @@ public class mixMaster : MonoBehaviour
 
     public AudioSource as0;
     public AudioSource as1;
-    private bool swapBool;
+    public bool swapBool;
     public AudioClip[] soundtrack;
     public bool oneshot;
     public int nTrack;

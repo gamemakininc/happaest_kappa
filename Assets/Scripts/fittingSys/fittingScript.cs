@@ -770,7 +770,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 1;
-		baceMoveSpeed = 6f;
+		baceMoveSpeed = 7f;
 		baceHealth = 100f;
 		baceSRegen = 0.4f;
 		baceRepair = 0;
@@ -821,7 +821,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 4;
-		baceMoveSpeed = 6f;
+		baceMoveSpeed = 7f;
 		baceHealth = 100f;
 		baceSRegen = 0.4f;
 		baceRepair = 0;
@@ -873,7 +873,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 2;
-		baceMoveSpeed = 6f;
+		baceMoveSpeed = 7f;
 		baceHealth = 99f;
 		baceSRegen = 0.4f;
 		baceRepair = 0;
@@ -925,7 +925,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 5;
-		baceMoveSpeed = 6f;
+		baceMoveSpeed = 7f;
 		baceHealth = 50f;
 		baceSRegen = 2f;
 		baceRepair = 0;
@@ -977,7 +977,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 3;
-		baceMoveSpeed = 6f;
+		baceMoveSpeed = 7f;
 		baceHealth = 100f;
 		baceSRegen = 0.4f;
 		baceRepair = 0;
@@ -1029,7 +1029,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 6;
-		baceMoveSpeed = 7f;
+		baceMoveSpeed = 8f;
 		baceHealth = 120f;
 		baceSRegen = 0.4f;
 		baceRepair = 0;
@@ -1081,7 +1081,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 7;
-		baceMoveSpeed = 7f;
+		baceMoveSpeed = 8f;
 		baceHealth = 100f;
 		baceSRegen = 2f;
 		baceRepair = 0;
@@ -1133,7 +1133,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 8;
-		baceMoveSpeed = 7f;
+		baceMoveSpeed = 8f;
 		baceHealth = 100f;
 		baceSRegen = 1f;
 		baceRepair = 0;

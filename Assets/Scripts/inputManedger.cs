@@ -71,23 +71,23 @@ public class inputManedger : MonoBehaviour
         //reset
         if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal > 0.01) 
         { 
-            Horizontal = -slideAmt*Time.deltaTime;
-            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Horizontal = 0; }
+            Horizontal -= slideAmt*Time.deltaTime;
+            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Horizontal = 0; }
         }
         if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal < -0.01) 
         { 
-            Horizontal = slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.1&& Horizontal<=0.1) { Horizontal = 0; }
+            Horizontal += slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.01&& Horizontal<=0.01) { Horizontal = 0; }
         }
         if (GetButtonDown("up")==false && GetButtonDown("down") == false&& Vertical > 0.01) 
         { 
-            Vertical = -slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Vertical = 0; }
+            Vertical -= slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
         }
         if (GetButtonDown("up") == false && GetButtonDown("down") == false&& Vertical < -0.01) 
         {
-            Vertical = slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.1 && Horizontal <= 0.1) { Vertical = 0; }
+            Vertical += slideAmt * Time.deltaTime; ;
+            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
         }
     }
 }
