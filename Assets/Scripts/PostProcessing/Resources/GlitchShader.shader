@@ -11,6 +11,7 @@
 		float _Jitter;
 		float _Cutoff;
 		float _Jump;
+		float _Displacement;
 		
 		float4 Frag(VaryingsDefault i) : SV_Target
 		{
@@ -19,8 +20,8 @@
 			float4 offset = SAMPLE_TEXTURE2D(_TrashTex, sampler_TrashTex, i.texcoord);
 			float w_c = step(_Cutoff, offset * 0.99);
 
-			half4 src1 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x - (_Drift / 30) + ((offset.x - 0.5) * _Jitter / 30 * w_c), i.texcoord.y + (_Jump * -0.2)));
-			half4 src2 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x + (_Drift / 30) + ((offset.x - 0.5) * _Jitter / 30 * w_c), i.texcoord.y + (_Jump * -0.2)));
+			half4 src1 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x - (_Drift / 30) + ((offset.x - 0.5) * _Jitter / 30 * w_c), i.texcoord.y + (_Jump * -0.2) + (_Displacement * 0.04)));
+			half4 src2 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x + (_Drift / 30) + ((offset.x - 0.5) * _Jitter / 30 * w_c), i.texcoord.y + (_Jump * -0.2) - (_Displacement * 0.04)));
 
 			return half4(src1.r, src2.g, src1.b, 1);
 		}

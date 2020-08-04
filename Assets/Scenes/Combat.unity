@@ -296,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225189221}
   - component: {fileID: 225189220}
+  - component: {fileID: 225189222}
   m_Layer: 14
   m_Name: PostProcessing Volume
   m_TagString: Untagged
@@ -334,6 +335,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225189222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225189219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbf2cf9968ad9d4fb38bdcb44cd5628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drift:
+    overrideState: 0
+    value: 0
+  jitter:
+    overrideState: 0
+    value: 0
+  cutoff:
+    overrideState: 0
+    value: 0
+  jump:
+    overrideState: 0
+    value: 0
+  constantGlitch: 0
 --- !u!1 &334305825
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,17 +938,17 @@ PrefabInstance:
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6523498303310306290, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}

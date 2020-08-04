@@ -14,6 +14,8 @@ public sealed class GlitchShader : PostProcessEffectSettings
     public FloatParameter cutoff = new FloatParameter { value = 0.0f };
     [Range(-1, 1), Tooltip("Amount of vertical displacement")]
     public FloatParameter jump = new FloatParameter { value = 0.0f };
+    [Range(-1, 1), Tooltip("Displacement between red and green textures")]
+    public FloatParameter displacement = new FloatParameter { value = 0.0f };
     public TextureParameter trashTex = new TextureParameter();
 }
 
@@ -26,6 +28,7 @@ public sealed class GlitchShaderRenderer : PostProcessEffectRenderer<GlitchShade
         sheet.properties.SetFloat("_Jitter", settings.jitter);
         sheet.properties.SetFloat("_Cutoff", settings.cutoff);
         sheet.properties.SetFloat("_Jump", settings.jump);
+        sheet.properties.SetFloat("_Displacement", settings.displacement);
         sheet.properties.SetTexture("_TrashTex", settings.trashTex.value);
         context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
     }
