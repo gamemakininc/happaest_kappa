@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6385b549e5679b84b90176da8bba250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  im: {fileID: 0}
   hpBar: {fileID: 6423580168970541566}
   maxHealth: 100
   health: 100
@@ -382,7 +383,7 @@ MonoBehaviour:
   - {fileID: -8811244820750126997, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
   - {fileID: 1373859652910129586, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
   - {fileID: 7412717729738197967, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
-  - {fileID: -6546374417971923516, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
+  - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
   - {fileID: 958393111218982286, guid: 7b6fdf2102248d748b4dc21326044397, type: 3}
   animationset:
   - {fileID: 0}
@@ -391,7 +392,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 9100000, guid: 0a37d157b40f94645b020e0c25e236d8, type: 2}
-  - {fileID: 0}
+  - {fileID: 9100000, guid: 028bac33e93a1d34aa15c1a8a57a3da6, type: 2}
   - {fileID: 0}
   shipselect: 0
 --- !u!82 &2479004553997606591

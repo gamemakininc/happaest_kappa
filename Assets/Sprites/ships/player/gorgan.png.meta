@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 7b6fdf2102248d748b4dc21326044397
+guid: c36ccc6897d1eae42a27122bc180c76b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6175851847360532666
-    second: aj-37_0
+      213: -2099289590135711607
+    second: gorgan_0
   - first:
-      213: -7130890530539032064
-    second: aj-37_1
+      213: -1291416614587270469
+    second: gorgan_1
   - first:
-      213: 958393111218982286
-    second: aj-37_2
+      213: -6730395109318709099
+    second: gorgan_2
   - first:
-      213: -1087909604659468096
-    second: aj-37_3
+      213: 1021334139481529550
+    second: gorgan_3
   - first:
-      213: -1138134947760710434
-    second: aj-37_4
+      213: -2668339239981863601
+    second: gorgan_4
   - first:
-      213: 6834188408831569378
-    second: aj-37_5
+      213: -8926911034264340715
+    second: gorgan_5
   - first:
-      213: -3267186699708525221
-    second: aj-37_6
+      213: 2269017498368279438
+    second: gorgan_6
   - first:
-      213: 8484439125898418650
-    second: aj-37_7
+      213: 7906284131563390015
+    second: gorgan_7
   - first:
-      213: 7220633490157383569
-    second: aj-37_8
+      213: -65215223479076458
+    second: gorgan_8
   - first:
-      213: -7355157313073133334
-    second: aj-37_9
+      213: 4330281582510936657
+    second: gorgan_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,10 +92,10 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 2
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -104,10 +104,10 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 2
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -116,10 +116,10 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 2
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -129,211 +129,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aj-37_0
+      name: gorgan_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 39
-        width: 33
-        height: 33
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab05d5bb88805b550800000000000000
-      internalID: 6175851847360532666
+      spriteID: 98819438d33ddd2e0800000000000000
+      internalID: -2099289590135711607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_1
+      name: gorgan_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 39
-        width: 33
-        height: 33
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0023603f7dcf90d90800000000000000
-      internalID: -7130890530539032064
+      spriteID: bbafc766e67f31ee0800000000000000
+      internalID: -1291416614587270469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_2
+      name: gorgan_2
       rect:
         serializedVersion: 2
-        x: 63
-        y: 39
-        width: 33
-        height: 33
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8d8365f475ec4d00800000000000000
-      internalID: 958393111218982286
+      spriteID: 5903807ae45d892a0800000000000000
+      internalID: -6730395109318709099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_3
+      name: gorgan_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 39
-        width: 33
-        height: 33
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c869828af7f6e0f0800000000000000
-      internalID: -1087909604659468096
+      spriteID: ecc96c41df18c2e00800000000000000
+      internalID: 1021334139481529550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_4
+      name: gorgan_4
       rect:
         serializedVersion: 2
-        x: 127
-        y: 39
-        width: 33
-        height: 33
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edcd34c8b488430f0800000000000000
-      internalID: -1138134947760710434
+      spriteID: f4d25a4499728fad0800000000000000
+      internalID: -2668339239981863601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_5
+      name: gorgan_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed6f74162ae7de50800000000000000
-      internalID: 6834188408831569378
+      spriteID: 517b82d06bd3d1480800000000000000
+      internalID: -8926911034264340715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_6
+      name: gorgan_6
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 33
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b551ef4c10f98a2d0800000000000000
-      internalID: -3267186699708525221
+      spriteID: e83036b946b2d7f10800000000000000
+      internalID: 2269017498368279438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_7
+      name: gorgan_7
       rect:
         serializedVersion: 2
-        x: 63
+        x: 64
         y: 0
-        width: 33
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad9d999be68ceb570800000000000000
-      internalID: 8484439125898418650
+      spriteID: f34c4234783c8bd60800000000000000
+      internalID: 7906284131563390015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_8
+      name: gorgan_8
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 33
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19fae1a17e7d43460800000000000000
-      internalID: 7220633490157383569
+      spriteID: 699f49a891f481ff0800000000000000
+      internalID: -65215223479076458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aj-37_9
+      name: gorgan_9
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 33
-        height: 33
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae8c82f946b3de990800000000000000
-      internalID: -7355157313073133334
+      spriteID: 1521bfe0820481c30800000000000000
+      internalID: 4330281582510936657
       vertices: []
       indices: 
       edges: []
