@@ -418,14 +418,13 @@ public class eventSystem : MonoBehaviour
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
         //check for event elegitability
-        if (eventAllreadyTriggered == true) {/*do nothing*/}
-        else if (eventTriedInterrupt==true) {/*do nothing*/}
-        else if (ObserverScript.Instance.levelsCleared <= 3) {/*do nothing*/}
+        if (eventAllreadyTriggered == true) {/*start mission*/ }
+        else if (eventTriedInterrupt==true) {/*start mission*/ }
+        else if (ObserverScript.Instance.levelsCleared <= 15) {/*start mission*/ }
         //reroll check not neccicary because trigger is menu change
         //poll RNG
         else if (swapint <= 20)
-        { // i would like to make this one launch its own scene later
-            btn.GetComponent<Button>().interactable=false;
+        {
             ObserverScript.Instance.bookmark0 = true;
             counter = 0;
             while (swapBool == false)
@@ -442,7 +441,7 @@ public class eventSystem : MonoBehaviour
                         ObserverScript.Instance.esSwap = 1;
                         //tell loop it is done incase script still runs after ecene change somehow
                         swapBool = true;
-                        //change scene
+                        //change scene to hangar
                         sm.hangar();
                     }
                     else if (unlocks[26] == false)
@@ -688,7 +687,7 @@ public class eventSystem : MonoBehaviour
             {
                 if (msgselect == 5 || msgselect == 6 || msgselect == 12 || msgselect == 13 || msgselect == 19 || msgselect == 20 || msgselect == 26 || msgselect == 27 || msgselect == 33 || msgselect == 34)
                 {
-                    sm.Invoke(ObserverScript.Instance.missionType , 0);
+                    //sm.startMission();
                     Debug.Log("attempted to leave");
                 }
             }

@@ -1028,6 +1028,11 @@ MonoBehaviour:
   s3clears: 0
   s3name: Empty
   s3unlocks: 0.1
+  mvol: 0
+  sfxvol: 0
+  mouseAiming: 0
+  keybinds: 
+  ngp: 0
 --- !u!4 &1003342820
 Transform:
   m_ObjectHideFlags: 0

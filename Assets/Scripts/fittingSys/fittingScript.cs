@@ -779,6 +779,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 13 ;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG; 
 			health = baceHealth;
@@ -792,6 +793,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 	}
 	void shipTwo()
 	{
@@ -830,6 +832,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 14;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;
@@ -843,6 +846,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	void shipThree()
@@ -882,6 +886,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 20;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;
@@ -895,6 +900,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	void shipFour()
@@ -934,6 +940,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 24;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;
@@ -947,6 +954,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	void shipFive()
@@ -986,6 +994,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 45;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;
@@ -999,6 +1008,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	void shipSix()
@@ -1051,6 +1061,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 	}
 	void secritShipOne()
 	{
@@ -1064,10 +1075,10 @@ public class fittingScript : MonoBehaviour
 		slotsfake[3] = false;
 		slotsfake[4] = false;
 		slotsfake[5] = false;
-		slotsfake[6] = false;
-		slotsfake[7] = false;
-		slotsfake[8] = false;
-		slotsfake[9] = false;
+		slotsfake[6] = true;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
 		slotsfake[10] = true;
 		slotsfake[11] = true;
 		slotsfake[12] = false;
@@ -1081,15 +1092,16 @@ public class fittingScript : MonoBehaviour
 		}
 		//set bace values
 		bulletSelector = 7;
-		baceMoveSpeed = 8f;
-		baceHealth = 100f;
-		baceSRegen = 2f;
+		baceMoveSpeed = 6f;
+		baceHealth = 1f;
+		baceSRegen = 10f;
 		baceRepair = 0;
-		baceShield = 100;
-		maxPG = 60;
-		maxWG = 65;
+		baceShield = 50;
+		maxPG = 90;
+		maxWG = 40;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;
@@ -1103,6 +1115,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	void secritShipTwo()
@@ -1142,6 +1155,7 @@ public class fittingScript : MonoBehaviour
 		maxWG = 65;
 		if (isStart == false)
 		{
+			MoveSpeed = baceMoveSpeed;
 			power = maxPG;
 			Weight = maxWG;
 			health = baceHealth;

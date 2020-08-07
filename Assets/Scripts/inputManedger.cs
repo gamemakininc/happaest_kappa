@@ -34,14 +34,23 @@ public class inputManedger : MonoBehaviour
         keyBinds["cdown"] = kb[9];
         keyBinds["cright"] = kb[10];
     }
-    public bool GetButtonDown( string buttonName ) 
-    {
+    public bool GetButtonDownH( string buttonName ) 
+    {//used for key hold
         if (keyBinds.ContainsKey(buttonName) == false)
         {
             Debug.LogError("inputManedger::GetButtonDown -- No button named: " + buttonName);
             return false;
         }
         return Input.GetKey(keyBinds[buttonName]);
+    }
+    public bool GetButtonDown(string buttonName)
+    {//used for single fire 
+        if (keyBinds.ContainsKey(buttonName) == false)
+        {
+            Debug.LogError("inputManedger::GetButtonDown -- No button named: " + buttonName);
+            return false;
+        }
+        return Input.GetKeyDown(keyBinds[buttonName]);
     }
     public float getAxis(string axisname) 
     {
@@ -63,28 +72,28 @@ public class inputManedger : MonoBehaviour
     void Update()
     {
         //horizontal calculation
-        if (GetButtonDown("left") == true) { Horizontal = -1; }
-        if (GetButtonDown("right") == true) { Horizontal = 1; }
+        if (GetButtonDownH("left") == true) { Horizontal = -1; }
+        if (GetButtonDownH("right") == true) { Horizontal = 1; }
         //vertical calculation
-        if (GetButtonDown("up") == true ) { Vertical = 1; }
-        if (GetButtonDown("down") == true ) { Vertical = -1; }
+        if (GetButtonDownH("up") == true ) { Vertical = 1; }
+        if (GetButtonDownH("down") == true ) { Vertical = -1; }
         //reset
-        if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal > 0.01) 
+        if (GetButtonDownH("left") == false && GetButtonDownH("right") == false&& Horizontal > 0.01) 
         { 
             Horizontal -= slideAmt*Time.deltaTime;
             if (Horizontal >= -0.01 && Horizontal <= 0.01) { Horizontal = 0; }
         }
-        if (GetButtonDown("left") == false && GetButtonDown("right") == false&& Horizontal < -0.01) 
+        if (GetButtonDownH("left") == false && GetButtonDownH("right") == false&& Horizontal < -0.01) 
         { 
             Horizontal += slideAmt * Time.deltaTime; ;
             if (Horizontal >= -0.01&& Horizontal<=0.01) { Horizontal = 0; }
         }
-        if (GetButtonDown("up")==false && GetButtonDown("down") == false&& Vertical > 0.01) 
+        if (GetButtonDownH("up")==false && GetButtonDownH("down") == false&& Vertical > 0.01) 
         { 
             Vertical -= slideAmt * Time.deltaTime; ;
             if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
         }
-        if (GetButtonDown("up") == false && GetButtonDown("down") == false&& Vertical < -0.01) 
+        if (GetButtonDownH("up") == false && GetButtonDownH("down") == false&& Vertical < -0.01) 
         {
             Vertical += slideAmt * Time.deltaTime; ;
             if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
