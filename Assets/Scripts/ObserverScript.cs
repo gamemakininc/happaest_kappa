@@ -37,6 +37,7 @@ public class ObserverScript : MonoBehaviour
     public int pP0;//whats in missile slot 1
     public int pP1;//ditto
     //misc savegame variables
+    //diff 0=NG+ 1=easy 2=normal 3=hard
     public int diff;//int to carry difficulty level to level
     public int levelsCleared;//stores ##of win conditions collected
     public string playerName;//stores current player name
@@ -51,6 +52,7 @@ public class ObserverScript : MonoBehaviour
     public int mProgressMissile;//hold the current place on missile mission line
     public int mProgressShip;//hold the current place on ship unlock missions.
     public int missionType;//hold the type of mission to start 
+    public int factionId;//not yet implemented
 
     //save preview variables slot1
     public int s1diff;
@@ -74,7 +76,7 @@ public class ObserverScript : MonoBehaviour
     //settings (global save file)
     public float mvol;//hold value of music maximum volume
     public float sfxvol;//hold value for maximum sfx volume
-    public bool mouseAiming;
+    public bool mouseAiming;//hopefully this one is obvious
     /*
      key map
      0  player left

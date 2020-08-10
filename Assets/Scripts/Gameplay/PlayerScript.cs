@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     //idK
-    public inputManedger im;
     Vector2 movement;
     //set health
     public Image hpBar;
@@ -98,8 +97,6 @@ public class PlayerScript : MonoBehaviour
         else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
         this.GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
         this.GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
-        im = FindObjectOfType<inputManedger>();
-
     }
 
     //Update called once per frame
@@ -107,10 +104,10 @@ public class PlayerScript : MonoBehaviour
     {
         //input
         //left right
-        movement.x = im.getAxis("Horizontal");
-        movement.y = im.getAxis("Vertical");
+        movement.x = inputManedger.Instance.getAxis("Horizontal");
+        movement.y = inputManedger.Instance.getAxis("Vertical");
         //fire gun
-        if (im.GetButtonDown("fire1") && Time.time > refireTime)
+        if (inputManedger.Instance.GetButtonDownH("fire1") && Time.time > refireTime)
         {
             Shoot();
             //check bullet selector for what sound to play
@@ -122,12 +119,12 @@ public class PlayerScript : MonoBehaviour
             else if (bulletSelector == 5) { audioSource.PlayOneShot(sounds[4]); }
         }
         //fire missile slot1
-        if (im.GetButtonDown("fire2"))
+        if (inputManedger.Instance.GetButtonDown("fire2"))
         {
             p0shoot();
         }
         //fire missile slot2
-        if (im.GetButtonDown("fire3"))
+        if (inputManedger.Instance.GetButtonDown("fire3"))
         {
             p1shoot();
         }

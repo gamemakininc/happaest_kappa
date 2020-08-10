@@ -1992,7 +1992,8 @@ MonoBehaviour:
   esSwap: 0
   mProgressMissile: 0
   mProgressShip: 0
-  missionType: 
+  missionType: 0
+  factionId: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -2011,7 +2012,7 @@ MonoBehaviour:
   mvol: 0.5
   sfxvol: 0.5
   mouseAiming: 0
-  keybinds: 6100000077000000730000006400000043010000440100004601000014010000110100001201000013010000
+  keybinds: 61000000770000007300000064000000430100004401000046010000140100001101000012010000130100002000000071000000
   ngp: 0
 --- !u!4 &411028813
 Transform:

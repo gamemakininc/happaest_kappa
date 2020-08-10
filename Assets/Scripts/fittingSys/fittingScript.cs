@@ -671,9 +671,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
 		counter++;
-		if (fitSetup[counter] == 1) { payload1Selector = 1; p0ammocount += 20; }
-		else if (fitSetup[counter] == 2) { payload1Selector = 2; p0ammocount += 15; }
-		else if (fitSetup[counter] == 3) { payload1Selector = 3; p0ammocount += 10; }
+		if (fitSetup[counter] == 1) { payload1Selector = 1; p1ammocount += 20; }
+		else if (fitSetup[counter] == 2) { payload1Selector = 2; p1ammocount += 15; }
+		else if (fitSetup[counter] == 3) { payload1Selector = 3; p1ammocount += 10; }
 		else if (fitSetup[counter] == 4) { }
 		else if (fitSetup[counter] == 5) { }
 		else if (fitSetup[counter] == 6) { }
@@ -1169,6 +1169,7 @@ public class fittingScript : MonoBehaviour
 		}
 		//update bullet selector
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		SetOutputs();
 
 	}
 	private void Update()

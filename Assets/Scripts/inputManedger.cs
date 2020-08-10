@@ -1,14 +1,26 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 //this is a component of observer.
 [RequireComponent(typeof(ObserverScript))]
 public class inputManedger : MonoBehaviour
 {
+    public static inputManedger Instance { get; private set; }
     public float Horizontal;
     public float Vertical;
     public float slideAmt;
     public KeyCode[] kb;
+    private void Awake()
+    {//
+        if (Instance == null)
+        {//
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +45,9 @@ public class inputManedger : MonoBehaviour
         keyBinds["cup"] = kb[8];
         keyBinds["cdown"] = kb[9];
         keyBinds["cright"] = kb[10];
+        //utility keys
+        keyBinds["blink"] = kb[11];
+        keyBinds["bomb"] = kb[12];
     }
     public bool GetButtonDownH( string buttonName ) 
     {//used for key hold
@@ -78,25 +93,39 @@ public class inputManedger : MonoBehaviour
         if (GetButtonDownH("up") == true ) { Vertical = 1; }
         if (GetButtonDownH("down") == true ) { Vertical = -1; }
         //reset
-        if (GetButtonDownH("left") == false && GetButtonDownH("right") == false&& Horizontal > 0.01) 
-        { 
-            Horizontal -= slideAmt*Time.deltaTime;
-            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Horizontal = 0; }
-        }
-        if (GetButtonDownH("left") == false && GetButtonDownH("right") == false&& Horizontal < -0.01) 
-        { 
-            Horizontal += slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.01&& Horizontal<=0.01) { Horizontal = 0; }
-        }
-        if (GetButtonDownH("up")==false && GetButtonDownH("down") == false&& Vertical > 0.01) 
-        { 
-            Vertical -= slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
-        }
-        if (GetButtonDownH("up") == false && GetButtonDownH("down") == false&& Vertical < -0.01) 
+        if (ObserverScript.Instance.diff == 3)
         {
-            Vertical += slideAmt * Time.deltaTime; ;
-            if (Horizontal >= -0.01 && Horizontal <= 0.01) { Vertical = 0; }
+            if (GetButtonDownH("left") == false && GetButtonDownH("right") == false && Horizontal > 0.01)
+            {
+                Horizontal -= slideAmt * Time.deltaTime;
+                if (Horizontal >= -0.02 && Horizontal <= 0.02) { Horizontal = 0; }
+            }
+            if (GetButtonDownH("left") == false && GetButtonDownH("right") == false && Horizontal < -0.01)
+            {
+                Horizontal += slideAmt * Time.deltaTime; ;
+                if (Horizontal >= -0.02 && Horizontal <= 0.02) { Horizontal = 0; }
+            }
+            if (GetButtonDownH("up") == false && GetButtonDownH("down") == false && Vertical > 0.01)
+            {
+                Vertical -= slideAmt * Time.deltaTime; ;
+                if (Horizontal >= -0.02 && Horizontal <= 0.02) { Vertical = 0; }
+            }
+            if (GetButtonDownH("up") == false && GetButtonDownH("down") == false && Vertical < -0.01)
+            {
+                Vertical += slideAmt * Time.deltaTime; ;
+                if (Horizontal >= -0.02 && Horizontal <= 0.02) { Vertical = 0; }
+            }
+        }
+        else if (ObserverScript.Instance.diff < 3) 
+        {
+            if (GetButtonDownH("left") == false && GetButtonDownH("right") == false && Horizontal > 0.1|| Horizontal < -0.1)
+            {
+                Horizontal = 0; 
+            }
+            if (GetButtonDownH("up") == false && GetButtonDownH("down") == false && Vertical > 0.1|| Vertical < -0.1)
+            { 
+                Vertical = 0; 
+            }
         }
     }
 }

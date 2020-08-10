@@ -21,8 +21,8 @@ public class settingsMenu : MonoBehaviour
         mVolSli.value = ObserverScript.Instance.mvol;
         sfxVolSli.value = ObserverScript.Instance.sfxvol;
         keyBinds = ObserverScript.Instance.keybinds;
-        
-        rebindsBtn[0].GetComponent<Button>().onClick.AddListener( ()=> { startRebindFor(rebindsBtn[0].name, 0); });
+
+        rebindsBtn[0].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[0].name, 0); });
         rebindsBtn[1].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[1].name, 1); });
         rebindsBtn[2].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[2].name, 2); });
         rebindsBtn[3].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[3].name, 3); });
@@ -33,6 +33,8 @@ public class settingsMenu : MonoBehaviour
         rebindsBtn[8].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[8].name, 8); });
         rebindsBtn[9].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[9].name, 9); });
         rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[10].name, 10); });
+        rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[11].name, 11); });
+        rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[12].name, 12); });
 
     }
     string keyToRebind;
@@ -69,6 +71,8 @@ public class settingsMenu : MonoBehaviour
         keyText[8].text = keyBinds[8].ToString();
         keyText[9].text = keyBinds[9].ToString();
         keyText[10].text = keyBinds[10].ToString();
+        keyText[11].text = keyBinds[11].ToString();
+        keyText[12].text = keyBinds[12].ToString();
 
         if (keyToRebind != null) 
         {
@@ -125,16 +129,18 @@ public class settingsMenu : MonoBehaviour
     {
         //reset keybinds
         keyBinds[0] = KeyCode.A;
-        keyBinds[0] = KeyCode.W;
-        keyBinds[0] = KeyCode.S;
-        keyBinds[0] = KeyCode.F;
-        keyBinds[0] = KeyCode.Mouse0;
-        keyBinds[0] = KeyCode.Mouse1;
-        keyBinds[0] = KeyCode.Mouse2;
-        keyBinds[0] = KeyCode.LeftArrow;
-        keyBinds[0] = KeyCode.UpArrow;
-        keyBinds[0] = KeyCode.DownArrow;
-        keyBinds[0] = KeyCode.RightArrow;
+        keyBinds[1] = KeyCode.W;
+        keyBinds[2] = KeyCode.S;
+        keyBinds[3] = KeyCode.F;
+        keyBinds[4] = KeyCode.Mouse0;
+        keyBinds[5] = KeyCode.Mouse1;
+        keyBinds[6] = KeyCode.Mouse2;
+        keyBinds[7] = KeyCode.LeftArrow;
+        keyBinds[8] = KeyCode.UpArrow;
+        keyBinds[9] = KeyCode.DownArrow;
+        keyBinds[10] = KeyCode.RightArrow;
+        keyBinds[11] = KeyCode.Space;
+        keyBinds[12] = KeyCode.Q;
         ObserverScript.Instance.keybinds = keyBinds;
         im.updateKeys();
         //reset volume
