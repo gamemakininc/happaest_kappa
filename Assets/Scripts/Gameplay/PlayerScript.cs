@@ -17,9 +17,6 @@ public class PlayerScript : MonoBehaviour
     public float maxShield;
     public float shield;
     public float sRegen = .5f;
-    //set death sprite
-    public int deathEffectSelector;
-    public GameObject[] deathEffect;
     //build bullet 
     public int payload0Selector;
     public int payload1Selector;
@@ -41,6 +38,7 @@ public class PlayerScript : MonoBehaviour
     private bool portSwap;
     private bool hasFired = false;
     //timers
+    public float blinkCharger;
     private float hitTimer;
     private float itimer;
     private float fRtimer;
@@ -58,6 +56,12 @@ public class PlayerScript : MonoBehaviour
     public Sprite[] viewmodel;
     public RuntimeAnimatorController[] animationset;
     public int shipselect;
+    //effects
+    public GameObject blinkEffect;
+    //set death sprite
+    public int deathEffectSelector;
+    public GameObject[] deathEffect;
+
     private void Start()
     {
         //set variables from observer
@@ -128,7 +132,10 @@ public class PlayerScript : MonoBehaviour
         {
             p1shoot();
         }
-
+        if (inputManedger.Instance.GetButtonDown("blink")) 
+        {
+            blink(blinkCharger);
+        }
         //animator variables
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Horizontal", movement.x);
@@ -163,8 +170,14 @@ public class PlayerScript : MonoBehaviour
         if (maxShield < 1) { sBar.fillAmount = 0f; }
         else if (maxShield > 1) { sBar.fillAmount = shield/maxShield; }
         hpBar.fillAmount = health/maxHealth;
+        //blink charge 
+        if (blinkCharger < 1) 
+        {
+            blinkCharger += .2f * Time.deltaTime;
+        }
     }
-    //delta time based  
+
+    //physics tick baced  
     private void FixedUpdate()
     {
         //if statement limmits speed in forward direction
@@ -277,6 +290,32 @@ public class PlayerScript : MonoBehaviour
             refireTime = Time.time + 0.1f;
         }
 
+    }
+    void blink(float charge) 
+    {
+        //distance variables
+        float x;
+        float y;
+        float z;
+        //destination
+        Vector3 D;
+
+        
+        x = transform.position.x;
+        y = transform.position.y;
+        z = transform.position.z;
+        D = new Vector3(x, y, z);
+        Instantiate(blinkEffect, D,Quaternion.identity);
+        if (inputManedger.Instance.Vertical>0) { y += charge * 4; }
+        if (inputManedger.Instance.Vertical<0) { y += charge * -4; }
+        if (inputManedger.Instance.Horizontal>0) { x += charge * 4; }
+        if (inputManedger.Instance.Horizontal<0) { x += charge * -4; }
+        
+
+        D = new Vector3(x, y, z);
+        transform.position = D;
+        Instantiate(blinkEffect, D, Quaternion.identity);
+        blinkCharger = 0;
     }
     public void TakeDamage(float damage)
     {

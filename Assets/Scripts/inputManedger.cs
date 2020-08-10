@@ -118,13 +118,18 @@ public class inputManedger : MonoBehaviour
         }
         else if (ObserverScript.Instance.diff < 3) 
         {
-            if (GetButtonDownH("left") == false && GetButtonDownH("right") == false && Horizontal > 0.1|| Horizontal < -0.1)
+            if (Horizontal > 0.1 || Horizontal < -0.1)
             {
-                Horizontal = 0; 
+                if (GetButtonDownH("left") == false && GetButtonDownH("right") == false) 
+                {
+                    Horizontal = 0;
+                }
             }
-            if (GetButtonDownH("up") == false && GetButtonDownH("down") == false && Vertical > 0.1|| Vertical < -0.1)
-            { 
-                Vertical = 0; 
+            if (Vertical > 0.1 || Vertical < -0.1)
+            {
+                if (GetButtonDownH("up") == false && GetButtonDownH("down") == false) 
+                { Vertical = 0; }
+                 
             }
         }
     }
