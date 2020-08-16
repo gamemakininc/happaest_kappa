@@ -6,6 +6,7 @@ public class enemyscript : MonoBehaviour
 {
     
     private Rigidbody2D rb;
+    public Sprite[] enemyViewmodels;
     //timer
     private float timer;
     public bool shootDissabled;
@@ -28,6 +29,7 @@ public class enemyscript : MonoBehaviour
         storedState = currentState;
         //Debug.Log("currentState = " + currentState);
         if (shootDissabled == false) { timer = Random.Range(-2, 0); }
+
     }
 
     //movement pattern

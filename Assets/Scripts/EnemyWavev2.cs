@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class EnemyWavev2 : MonoBehaviour
 {
+    private bool endgame;
     public int waveCount; //Number of waves
     public int eliteWaves; //Elite waves are more difficult
-        private int remainingWaves;
-        private int remainingElites;
-    public GameObject Boss;
+    private int remainingWaves;
+    private int remainingElites;
+    public GameObject[] Boss;
         private GameObject _Boss;
-    private GameObject bossTile;
 
     [Space(10)]
     [Header("Tiles")]
     [HideInInspector]
+    //why are these game objects
     public GameObject currentTile;
     private GameObject previousTile;
+    //??
     public GameObject[] tilePool;
     public GameObject[] elitePool;
         private List<GameObject> _tilePool;
@@ -39,7 +41,15 @@ public class EnemyWavev2 : MonoBehaviour
     {
         remainingWaves = waveCount;
         remainingElites = eliteWaves;
-        _Boss = Boss;
+        if (ObserverScript.Instance.missionType > 0)
+        {
+            //will need rewritten when more than one boss of each type exist
+            _Boss = Boss[ObserverScript.Instance.missionType - 1];
+        }
+        else if (ObserverScript.Instance.missionType == 0) 
+        {
+            _Boss = null;
+        }
         _tilePool = new List<GameObject>(tilePool);
         _elitePool = new List<GameObject>(elitePool);
         //Right border of the camera
@@ -78,6 +88,22 @@ public class EnemyWavev2 : MonoBehaviour
                 {
                     if (remainingWaves == 0 && remainingElites == 0)
                     {
+                        if (_Boss == null)
+                        {
+                            if (endgame == false)
+                            {
+                                //add 2 waves
+                                //set pool to empty tiles only
+                                //could also be cool to reset 'the ones that got away' to all come in at once
+                                //set retrigger prevention
+                                endgame = true;
+                            }
+                            else if (endgame == true) 
+                            {
+                                currentState = states.win;
+                            }
+
+                        }
                         currentState = states.boss;
                         return;
                     }

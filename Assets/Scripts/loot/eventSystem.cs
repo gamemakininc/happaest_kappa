@@ -419,7 +419,7 @@ public class eventSystem : MonoBehaviour
         unlocks = ObserverScript.Instance.unlocks;
         //check for event elegitability
         if (eventAllreadyTriggered == true) {/*start mission*/ }
-        else if (eventTriedInterrupt==true) {/*start mission*/ }
+        else if (eventTriedInterrupt == true) {/*start mission*/ }
         else if (ObserverScript.Instance.levelsCleared <= 15) {/*start mission*/ }
         //reroll check not neccicary because trigger is menu change
         //poll RNG
@@ -457,7 +457,7 @@ public class eventSystem : MonoBehaviour
                         sm.hangar();
                     }
                 }
-                else if (swapint == 2 && unlocks[35] == false || unlocks[34] == false) 
+                else if (swapint == 2 && unlocks[35] == false || unlocks[34] == false)
                 {
                     if (unlocks[34] == false)
                     {
@@ -468,7 +468,7 @@ public class eventSystem : MonoBehaviour
                         //change scene
                         sm.hangar();
                     }
-                    else if (unlocks[35] == false) 
+                    else if (unlocks[35] == false)
                     {
                         //set esSwap to handoff info to 'hangar' scene
                         ObserverScript.Instance.esSwap = 5;
@@ -485,6 +485,10 @@ public class eventSystem : MonoBehaviour
             }
             //??
             btn.GetComponent<Button>().interactable = true;
+        }
+        if (swapBool != true) 
+        {
+            sm.gameplay(); 
         }
         eventTriedInterrupt = true;
         ObserverScript.Instance.bookmark3 = true;
@@ -583,7 +587,7 @@ public class eventSystem : MonoBehaviour
         {
             //if text box filled in skip.
             if (speechBox.text == message[msgselect]) 
-            { break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break; break;}
+            { break;}
             //type a letter
             speechBox.text += letter;
             //wait
@@ -733,6 +737,8 @@ public class eventSystem : MonoBehaviour
         //clear text box
         speechBox.text = " ";
         sm = FindObjectOfType<sceneManager>();
+        //update factionId
+        ObserverScript.Instance.factionChange();
     }
     private void Update()
     {
@@ -741,5 +747,19 @@ public class eventSystem : MonoBehaviour
             //stop movement
             slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
         }
+    }
+    //mission starters
+    public void One()
+    {
+        ObserverScript.Instance.missionType = 1;
+        missionInterruptEvents();
+    }
+    public void two() 
+    {
+        ObserverScript.Instance.missionType = 2;
+    }
+    public void three() 
+    {
+        ObserverScript.Instance.missionType = 3;
     }
 }

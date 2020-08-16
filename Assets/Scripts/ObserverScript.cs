@@ -51,8 +51,11 @@ public class ObserverScript : MonoBehaviour
     public int esSwap;//a swap int used by the event system for mission interupt event
     public int mProgressMissile;//hold the current place on missile mission line
     public int mProgressShip;//hold the current place on ship unlock missions.
-    public int missionType;//hold the type of mission to start 
+    public int missionType;//hold the type of mission to start 0=fighter 1=boss ship 2=static boss
     public int factionId;//not yet implemented
+    public int factionRangeSwap;//how long between faction change
+    public bool defenceMission;//used to change specific mechanics in defence missions
+    //defence mission should never be missionType 2
 
     //save preview variables slot1
     public int s1diff;
@@ -78,20 +81,23 @@ public class ObserverScript : MonoBehaviour
     public float sfxvol;//hold value for maximum sfx volume
     public bool mouseAiming;//hopefully this one is obvious
     /*
-     key map
-     0  player left
-     1  player up
-     2  player down
-     3  player right
+    key map
+    0  player left
+    1  player up
+    2  player down
+    3  player right
 
-     4  fire1
-     5  fire2
-     6  fire3
+    4  fire1
+    5  fire2
+    6  fire3
 
-     7  crosshair left
-     8  crosshair up
-     9 crosshair down
-     10 crosshair right
+    7  crosshair left
+    8  crosshair up
+    9 crosshair down
+    10 crosshair right
+
+    11 blink
+    12 bomb 
      */
     public KeyCode[] keybinds;
     public bool ngp;//unlocks new game plus
@@ -111,6 +117,28 @@ public class ObserverScript : MonoBehaviour
     {
         GetComponent<savescript>().loadSettings();
 
+    }
+    public void factionChange() 
+    {
+        //uncomment when factions implemented
+        /*
+        if (factionId == 0 && factionRangeSwap==levelsCleared) 
+        {
+            factionId++;
+            factionRangeSwap += Random.Range(20,50);
+            
+        }
+        else if (factionId == 1 && factionRangeSwap == levelsCleared) 
+        {
+            factionId++;
+            factionRangeSwap += Random.Range(20, 50);
+        }
+        else if (factionId == 2 && factionRangeSwap == levelsCleared) 
+        {
+            factionId=0;
+            factionRangeSwap += Random.Range(20, 50);
+        }
+        */
     }
 
 

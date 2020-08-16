@@ -5,16 +5,10 @@ public class sceneManager : MonoBehaviour
 {
 	
 	//change scene to 'combat'
-	public void Combat() 
+	public void gameplay()
 	{
 		//set new scene
-		SceneManager.LoadScene("Combat");
-	}
-	public void SampleScene()
-	{
-		//set new scene
-		SceneManager.LoadScene("SampleScene");
-		
+		SceneManager.LoadScene("gameplay");
 	}
 	public void testMenu() 
 	{

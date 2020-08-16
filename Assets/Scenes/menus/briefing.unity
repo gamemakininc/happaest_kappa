@@ -351,9 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'mission2
-
-    (combat)'
+  m_Text: mission2
 --- !u!222 &177629087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -499,8 +497,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: missionInterruptEvents
+        - m_Target: {fileID: 8168952299317144820}
+          m_MethodName: three
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1012,7 +1010,8 @@ MonoBehaviour:
   esSwap: 0
   mProgressMissile: 0
   mProgressShip: 0
-  missionType: 
+  missionType: 0
+  factionId: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -1116,11 +1115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'mission1
-
-    (sample scene)
-
-'
+  m_Text: mission1
 --- !u!222 &1106869729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1480,18 +1475,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1432529610}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1181037396}
-        m_MethodName: Combat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1432529610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1547,7 +1531,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 8168952299317144820}
-          m_MethodName: missionInterruptEvents
+          m_MethodName: two
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1626,9 +1610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'mission3
-
-'
+  m_Text: mission3
 --- !u!222 &1832861957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1719,18 +1701,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1895791603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1181037396}
-        m_MethodName: SampleScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1895791603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1786,7 +1757,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 8168952299317144820}
-          m_MethodName: missionInterruptEvents
+          m_MethodName: One
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

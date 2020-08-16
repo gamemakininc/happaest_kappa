@@ -22,4 +22,6 @@ public class saves
     public string playerName;
     public int score;
     public int levelScore;
+    public int factionId;
+    public int factionRangeSwap;
 }

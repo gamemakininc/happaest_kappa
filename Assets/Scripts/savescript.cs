@@ -46,6 +46,8 @@ public class savescript : MonoBehaviour
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
+            factionId = ObserverScript.Instance.factionId,
+            factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
 
         };
         var binaryFormatter = new BinaryFormatter();
@@ -81,6 +83,8 @@ public class savescript : MonoBehaviour
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
+            factionId = ObserverScript.Instance.factionId,
+            factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -115,7 +119,9 @@ public class savescript : MonoBehaviour
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
-        };
+            factionId = ObserverScript.Instance.factionId,
+            factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
+    };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
         {
@@ -154,7 +160,9 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
-           
+            ObserverScript.Instance.factionId = save.factionId;
+            ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
+
 
             Debug.Log("data loaded slot1");
             // update save info in observer
@@ -199,6 +207,8 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
+            ObserverScript.Instance.factionId = save.factionId;
+            ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
 
             Debug.Log("data loaded slot2");
             // update save info in observer
@@ -241,6 +251,8 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
+            ObserverScript.Instance.factionId = save.factionId;
+            ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
 
             Debug.Log("data loaded slot3");
             // update save info in observer

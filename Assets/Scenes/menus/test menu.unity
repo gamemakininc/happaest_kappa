@@ -1874,160 +1874,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &411028809
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 411028813}
-  - component: {fileID: 411028812}
-  - component: {fileID: 411028811}
-  - component: {fileID: 411028810}
-  m_Layer: 0
-  m_Name: Observer
-  m_TagString: Untagged
-  m_Icon: {fileID: -5765324120231101433, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &411028810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411028809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2f18ba89ef252408dad8c5daf6afbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveSlot: 0
-  swapint: 0
-  swapfloat: 0
-  swapBArray: 
---- !u!114 &411028811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411028809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18b1cc4d1cbe9e409730ecd324aadb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Horizontal: 0
-  Vertical: 0
-  slideAmt: 5
-  kb: 
---- !u!114 &411028812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411028809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlocks: 01010101010101010101010101010101010101010101010101010101010101010101010101
-  efireRate: 0
-  fireRate: 0
-  pBulletSelector: 0
-  pSpeed: 0
-  pHealth: 0
-  pShield: 0
-  pSRegen: 0
-  pRepair: 0
-  mslBonus: 0
-  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  wgBookmarks:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  pgBookmarks:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  pP0: 0
-  pP1: 0
-  diff: 0
-  levelsCleared: 0
-  playerName: Empty
-  score: 0
-  levelScore: 0
-  bookmark0: 0
-  bookmark1: 0
-  bookmark2: 0
-  bookmark3: 0
-  esSwap: 0
-  mProgressMissile: 0
-  mProgressShip: 0
-  missionType: 0
-  factionId: 0
-  s1diff: 0
-  s1Shipselector: 0
-  s1clears: 0
-  s1name: Empty
-  s1unlocks: 0
-  s2diff: 0
-  s2Shipselector: 0
-  s2clears: 0
-  s2name: Empty
-  s2unlocks: 0
-  s3diff: 0
-  s3Shipselector: 0
-  s3clears: 0
-  s3name: Empty
-  s3unlocks: 0
-  mvol: 0.5
-  sfxvol: 0.5
-  mouseAiming: 0
-  keybinds: 61000000770000007300000064000000430100004401000046010000140100001101000012010000130100002000000071000000
-  ngp: 0
---- !u!4 &411028813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411028809}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.48, y: -5.54, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442569808
 GameObject:
   m_ObjectHideFlags: 0
@@ -9182,6 +9028,160 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1603496469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603496473}
+  - component: {fileID: 1603496472}
+  - component: {fileID: 1603496471}
+  - component: {fileID: 1603496470}
+  m_Layer: 0
+  m_Name: Observer
+  m_TagString: Untagged
+  m_Icon: {fileID: -5765324120231101433, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1603496470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603496469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2f18ba89ef252408dad8c5daf6afbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveSlot: 0
+  swapint: 0
+  swapfloat: 0
+  swapBArray: 
+--- !u!114 &1603496471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603496469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18b1cc4d1cbe9e409730ecd324aadb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Horizontal: 0
+  Vertical: 0
+  slideAmt: 5
+  kb: 
+--- !u!114 &1603496472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603496469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlocks: 00000000000000000000000000000000000000000000000000000000000000000000000000
+  efireRate: 0
+  fireRate: 0
+  pBulletSelector: 0
+  pSpeed: 0
+  pHealth: 0
+  pShield: 0
+  pSRegen: 0
+  pRepair: 0
+  mslBonus: 0
+  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  wgBookmarks:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  pgBookmarks:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  pP0: 0
+  pP1: 0
+  diff: 0
+  levelsCleared: 0
+  playerName: Empty
+  score: 0
+  levelScore: 0
+  bookmark0: 0
+  bookmark1: 0
+  bookmark2: 0
+  bookmark3: 0
+  esSwap: 0
+  mProgressMissile: 0
+  mProgressShip: 0
+  missionType: 0
+  factionId: 0
+  s1diff: 0
+  s1Shipselector: 0
+  s1clears: 0
+  s1name: Empty
+  s1unlocks: 0
+  s2diff: 0
+  s2Shipselector: 0
+  s2clears: 0
+  s2name: Empty
+  s2unlocks: 0
+  s3diff: 0
+  s3Shipselector: 0
+  s3clears: 0
+  s3name: Empty
+  s3unlocks: 0
+  mvol: 0.5
+  sfxvol: 0.5
+  mouseAiming: 0
+  keybinds: 61000000770000007300000064000000430100004401000046010000140100001101000012010000130100002000000071000000
+  ngp: 0
+--- !u!4 &1603496473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603496469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.48, y: -5.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633697955
 GameObject:
   m_ObjectHideFlags: 0
