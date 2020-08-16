@@ -15,8 +15,6 @@ public class saves
     public int[] fitSetup;
     public float[] wgBookmarks;
     public float[] pgBookmarks;
-    public int pP0;
-    public int pP1;
     public int diff;
     public int levelsCleared;
     public string playerName;

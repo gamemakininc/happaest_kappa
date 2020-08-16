@@ -39,8 +39,6 @@ public class savescript : MonoBehaviour
             fitSetup = ObserverScript.Instance.fitSetup,
             wgBookmarks = ObserverScript.Instance.wgBookmarks,
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
-            pP0 = ObserverScript.Instance.pP0,
-            pP1 = ObserverScript.Instance.pP1,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
@@ -76,8 +74,6 @@ public class savescript : MonoBehaviour
             fitSetup = ObserverScript.Instance.fitSetup,
             wgBookmarks = ObserverScript.Instance.wgBookmarks,
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
-            pP0 = ObserverScript.Instance.pP0,
-            pP1 = ObserverScript.Instance.pP1,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
@@ -112,8 +108,6 @@ public class savescript : MonoBehaviour
             fitSetup = ObserverScript.Instance.fitSetup,
             wgBookmarks = ObserverScript.Instance.wgBookmarks,
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
-            pP0 = ObserverScript.Instance.pP0,
-            pP1 = ObserverScript.Instance.pP1,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
             playerName = ObserverScript.Instance.playerName,
@@ -153,8 +147,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
-            ObserverScript.Instance.pP0 = save.pP0;
-            ObserverScript.Instance.pP1 = save.pP1;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;
@@ -200,8 +192,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
-            ObserverScript.Instance.pP0 = save.pP0;
-            ObserverScript.Instance.pP1 = save.pP1;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;
@@ -244,8 +234,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.fitSetup = save.fitSetup;
             ObserverScript.Instance.wgBookmarks = save.wgBookmarks;
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
-            ObserverScript.Instance.pP0 = save.pP0;
-            ObserverScript.Instance.pP1 = save.pP1;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
             ObserverScript.Instance.playerName = save.playerName;

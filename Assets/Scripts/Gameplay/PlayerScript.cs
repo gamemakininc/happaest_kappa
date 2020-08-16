@@ -73,8 +73,8 @@ public class PlayerScript : MonoBehaviour
         repair = ObserverScript.Instance.pRepair;
         MoveSpeed = ObserverScript.Instance.pSpeed;
         bulletSelector = ObserverScript.Instance.pBulletSelector - 1;
-        payload0Selector = ObserverScript.Instance.pP0 - 1;
-        payload1Selector = ObserverScript.Instance.pP1 - 1;
+        payload0Selector = ObserverScript.Instance.fitSetup[10] - 1;
+        payload1Selector = ObserverScript.Instance.fitSetup[11] - 1;
         mslBonus = ObserverScript.Instance.mslBonus;
         nextFire = ObserverScript.Instance.fireRate;
         enextFire = ObserverScript.Instance.efireRate;

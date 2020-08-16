@@ -1,5 +1,4 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class crosshairScript : MonoBehaviour
 {
@@ -7,15 +6,22 @@ public class crosshairScript : MonoBehaviour
     private Vector2 _direction;
     private Rigidbody2D rb;
     public float speed = 2.0f;
+    private bool used;
     // Start is called before the first frame update
     void Start()
     {
         //set rb
         rb = GetComponent<Rigidbody2D>();
         //remove if not used for anything
-        if (ObserverScript.Instance.defenceMission == false && ObserverScript.Instance.fitSetup[10] != 2 && ObserverScript.Instance.fitSetup[11] != 2) 
+        if (ObserverScript.Instance.defenceMission == true || ObserverScript.Instance.fitSetup[10] == 2 || ObserverScript.Instance.fitSetup[11] == 2) 
         {
-            Destroy(gameObject);
+            used = true;
+        }
+        if (used == false) 
+        {
+            //dis bitch pointless YEET!
+            Debug.LogWarning("crosshair yote");
+            //Destroy(gameObject);
         }
     }
 

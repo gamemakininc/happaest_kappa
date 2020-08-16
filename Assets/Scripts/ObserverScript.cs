@@ -32,10 +32,6 @@ public class ObserverScript : MonoBehaviour
     public int[] fitSetup;//holds variables for fitting system
     public float[] wgBookmarks;
     public float[] pgBookmarks;
-
-    //save for player payload slot0-1
-    public int pP0;//whats in missile slot 1
-    public int pP1;//ditto
     //misc savegame variables
     //diff 0=NG+ 1=easy 2=normal 3=hard
     public int diff;//int to carry difficulty level to level

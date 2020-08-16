@@ -702,8 +702,6 @@ public class fittingScript : MonoBehaviour
 		ObserverScript.Instance.pSRegen = sRegen;
 		ObserverScript.Instance.pShield = shield;
 		ObserverScript.Instance.pBulletSelector = bulletSelector;
-		ObserverScript.Instance.pP0 = payload0Selector;
-		ObserverScript.Instance.pP1 = payload1Selector;
 		ObserverScript.Instance.mslBonus = mslBonus;
 	}
 	void shildBoost() 

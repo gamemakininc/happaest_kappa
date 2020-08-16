@@ -79,19 +79,22 @@ public class pbulletscript : MonoBehaviour
 
         }
         if (aimed == true)
-        {//change to track a croshair game object to allow mouse aiming toggle
-
+        {
+            GameObject L;
+            L=GameObject.FindGameObjectWithTag("pgbar");
+            Debug.Log(L.name);
             //get mouse location
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 crosshairLoc = L.transform.position;
+            crosshairLoc = Camera.main.ScreenToWorldPoint(crosshairLoc);
             //set angle twards mouse
-            Vector2 direction = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y
-            );
+            Vector2 direction = new Vector2(crosshairLoc.x - transform.position.x,crosshairLoc.y - transform.position.y);
+            
+
             //go forward
             transform.up = direction;
             rb.velocity = transform.up * speed;
+            
+
         }
         if (islasor == true)
         {
