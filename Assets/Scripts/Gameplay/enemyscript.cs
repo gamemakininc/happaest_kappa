@@ -189,7 +189,7 @@ public class enemyscript : MonoBehaviour
         Vector3 direction = playerPos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
-        rb.velocity = targetDirection;
+        rb.velocity = targetDirection * speed;
     }
 
     private void OnBecameVisible()
