@@ -120,13 +120,14 @@ MonoBehaviour:
   rb: {fileID: 8038294346384630305}
   timer: 0
   Damage: 16
-  trackingMouse: 1
+  aimed: 1
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!50 &8038294346384630305
 Rigidbody2D:
   serializedVersion: 4

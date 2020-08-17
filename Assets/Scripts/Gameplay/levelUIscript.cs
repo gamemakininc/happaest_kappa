@@ -13,7 +13,7 @@ public class levelUIscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = ObserverScript.Instance.score;
+        score = ObserverScript.Instance.levelScore;
         scoreTxt.GetComponent<Text>().text = "score: " + score;
     }
 }

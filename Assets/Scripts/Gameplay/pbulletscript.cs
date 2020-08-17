@@ -81,20 +81,14 @@ public class pbulletscript : MonoBehaviour
         if (aimed == true)
         {
             GameObject L;
-            L=GameObject.FindGameObjectWithTag("pgbar");
-            Debug.Log(L.name);
-            //get mouse location
-            Vector3 crosshairLoc = L.transform.position;
-            crosshairLoc = Camera.main.ScreenToWorldPoint(crosshairLoc);
-            //set angle twards mouse
-            Vector2 direction = new Vector2(crosshairLoc.x - transform.position.x,crosshairLoc.y - transform.position.y);
-            
-
-            //go forward
-            transform.up = direction;
+            L=GameObject.FindGameObjectWithTag("wgbar");
+            Debug.Log(L.name);//working
+            //set rotation
+            Vector3 direction = L.transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+            rb.rotation = angle;
+            //move
             rb.velocity = transform.up * speed;
-            
-
         }
         if (islasor == true)
         {
