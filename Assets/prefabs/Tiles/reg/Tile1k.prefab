@@ -282,6 +282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EKamikazi (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: currentState
@@ -291,6 +296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}
@@ -377,6 +387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EKamikazi (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: currentState
@@ -386,6 +401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}
@@ -472,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EKamikazi (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: currentState
@@ -481,6 +506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}
@@ -567,6 +597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EKamikazi (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: currentState
@@ -576,6 +611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}
@@ -662,6 +702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EKamikazi
       objectReference: {fileID: 0}
+    - target: {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: currentState
@@ -671,6 +716,16 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: maxRadians
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}

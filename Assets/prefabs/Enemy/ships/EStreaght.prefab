@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7947521203597918046}
   - component: {fileID: 5297316353855013946}
   - component: {fileID: 3860790498645106851}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EStreaght
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -154,11 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyViewmodels: []
   shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 2278443659457481029}
   currentState: 0
-  speed: 1
+  speed: 4
   waitTime: 3
   currentTab: 0
   currentTab2: 5
@@ -170,6 +171,7 @@ MonoBehaviour:
   moveRight: 0
   maxRadians: 1
   sideVelocity: {x: 0, y: -1.5}
+  storedState: 0
 --- !u!70 &3860790498645106851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2278443659457481029}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mgport
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 258302863093879661}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mgport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8232651687296214390}
   - component: {fileID: 6163418336211000850}
   - component: {fileID: 2999201616519297675}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EWavey
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -184,11 +184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyViewmodels: []
   shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 258302863093879661}
   currentState: 1
-  speed: 1
+  speed: 4
   waitTime: 3
   currentTab: 1
   currentTab2: 5
@@ -200,6 +201,7 @@ MonoBehaviour:
   moveRight: 0
   maxRadians: 1
   sideVelocity: {x: 0, y: -1.5}
+  storedState: 0
 --- !u!70 &2999201616519297675
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

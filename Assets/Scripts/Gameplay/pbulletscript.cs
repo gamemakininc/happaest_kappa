@@ -82,7 +82,7 @@ public class pbulletscript : MonoBehaviour
         {
             GameObject L;
             L=GameObject.FindGameObjectWithTag("wgbar");
-            Debug.Log(L.name);//working
+            //Debug.Log(L.name);
             //set rotation
             Vector3 direction = L.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;

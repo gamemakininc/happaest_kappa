@@ -287,6 +287,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EStreaght (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
 --- !u!4 &4920242750773296482 stripped
@@ -376,6 +386,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EStreaght (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
@@ -467,6 +487,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EStreaght (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
 --- !u!4 &406426915884329907 stripped
@@ -557,6 +587,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EStreaght (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
 --- !u!4 &105700027500090865 stripped
@@ -646,6 +686,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EStreaght
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}

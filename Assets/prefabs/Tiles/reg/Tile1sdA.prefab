@@ -218,6 +218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ESlide (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1200422539281957987, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3107845295412419314, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,6 +287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.10526315
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541814341375113646, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
@@ -378,6 +388,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EStreaght (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
 --- !u!4 &6195851503630382826 stripped
@@ -468,6 +488,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EStreaght (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
 --- !u!4 &6929519766771233687 stripped
@@ -487,6 +517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ESlide (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200422539281957987, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3107845295412419314, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
@@ -553,6 +588,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.10526315
       objectReference: {fileID: 0}
+    - target: {fileID: 3541814341375113646, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
       propertyPath: moveRight
@@ -577,6 +617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ESlide (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200422539281957987, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3107845295412419314, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
@@ -642,6 +687,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.10526315
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541814341375113646, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
         type: 3}
@@ -737,6 +787,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EStreaght (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396104536562709821, guid: 1cd4ac3d80c47824c892bf5696db8d33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}

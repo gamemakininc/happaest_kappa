@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8097106231291603958}
   - component: {fileID: 4544386167899985564}
   - component: {fileID: 9124950200689291941}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ESlide
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyViewmodels: []
   shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 2516554543319344164}
@@ -170,6 +171,7 @@ MonoBehaviour:
   moveRight: 0
   maxRadians: 1
   sideVelocity: {x: 0, y: -1.5}
+  storedState: 0
 --- !u!70 &9124950200689291941
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2516554543319344164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mgport
   m_TagString: Untagged
   m_Icon: {fileID: 0}

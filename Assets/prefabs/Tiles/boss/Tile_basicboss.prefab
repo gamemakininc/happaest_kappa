@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7469666779076826478}
   - component: {fileID: 4982162692907130297}
   - component: {fileID: 4097891858290119422}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: basicassboss_0
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyViewmodels: []
   shootDissabled: 1
   ebullet: {fileID: 0}
   mgport: {fileID: 0}
@@ -267,7 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3598110334056146024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -555,7 +556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307386002665830195}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gun4
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -645,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 200229384055976298}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gun3
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -705,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8845078028535512110}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gun1
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -735,7 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4372992042407777159}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -795,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792393096073157649}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: laser2
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -855,7 +856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2251851876600473939}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: gun2
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}

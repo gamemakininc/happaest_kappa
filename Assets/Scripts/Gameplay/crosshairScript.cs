@@ -21,7 +21,7 @@ public class crosshairScript : MonoBehaviour
         {
             //dis bitch pointless YEET!
             Debug.LogWarning("crosshair yote");
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
