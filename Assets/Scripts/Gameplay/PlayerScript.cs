@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     //swap variables
+    public GameObject es;
     public float dumbdumb;
     private bool portSwap;
     private bool hasFired = false;
@@ -99,8 +100,9 @@ public class PlayerScript : MonoBehaviour
         if (payload1Selector == 0) { payload0Ammo = 20 + mslBonus; }
         else if (payload1Selector == 1) { payload1Ammo = 15 + mslBonus; }
         else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
-        this.GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
-        this.GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
+        GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
+        GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
+        deathEffectSelector = shipselect;
     }
 
     //Update called once per frame
@@ -342,10 +344,12 @@ public class PlayerScript : MonoBehaviour
             //spawn death sprite
             Instantiate(deathEffect[shipselect], transform.position, Quaternion.Euler(0, 0, -90));
         }
+        //notify end screen
+        es.GetComponent<endScreenScript>().win = false;
+        //enable end screen
+        es.SetActive(true);
         //remove self
         Destroy(gameObject);
-        //play sound effect
-        audioSource.PlayOneShot(sounds[3]);
     }
     public void invincibility()
     {

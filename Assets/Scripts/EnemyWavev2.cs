@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyWavev2 : MonoBehaviour
 {
+
+    public GameObject es;
     private bool endgame;
     public int waveCount; //Number of waves
     public int eliteWaves; //Elite waves are more difficult
@@ -27,6 +28,11 @@ public class EnemyWavev2 : MonoBehaviour
     private float cameraBoundX;
     private float tileEdgeX;
     private GameObject _selectedWave;
+    //escaped enemy swaps
+    public int lostS;
+    public int lostW;
+    public int lostD;
+    public int lostK;
 
     public enum states
     {
@@ -92,19 +98,21 @@ public class EnemyWavev2 : MonoBehaviour
                         {
                             if (endgame == false)
                             {
-                                //add 2 waves
+                                //add 3 waves
                                 //set pool to empty tiles only
-                                //could also be cool to reset 'the ones that got away' to all come in at once
                                 //set retrigger prevention
                                 endgame = true;
                             }
-                            else if (endgame == true) 
+                            else if (endgame == true)
                             {
                                 currentState = states.win;
                             }
 
                         }
-                        currentState = states.boss;
+                        else
+                        {
+                            currentState = states.boss;
+                        }
                         return;
                     }
 
@@ -130,7 +138,7 @@ public class EnemyWavev2 : MonoBehaviour
                 }
                 break;
             case states.win:
-               // OnLevelComplete();
+                OnLevelComplete();
                 break;
             default:
                 break;
@@ -170,7 +178,9 @@ public class EnemyWavev2 : MonoBehaviour
         ObserverScript.Instance.bookmark0 = false;
         ObserverScript.Instance.bookmark1 = false;
         ObserverScript.Instance.bookmark2 = false;
-        Camera.main.GetComponent<sceneManager>().briefing();
+        ObserverScript.Instance.bookmark3 = false;
         currentState = states.paused;
+        es.GetComponent<endScreenScript>().win = true;
+        es.SetActive(true);
     }
 }

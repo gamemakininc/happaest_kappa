@@ -7,19 +7,21 @@ public class endScreenScript : MonoBehaviour
     sceneManager sm;
     public GameObject[] igUi;
     public GameObject skipBtn;
-    public bool drain;
-    public int swapint1;
+    bool drain;
+    int swapint1;
     public GameObject[] scoreBoxes;
     public float drainIntervol;
     public GameObject winBtn;
     public GameObject failBtn;
-    bool win;
+    public bool win;
+    private bool lockedState;
     // Start is called before the first frame update
     void Start()
     {
         sm = FindObjectOfType<sceneManager>();
         int I = 0;
-        if (win == true)
+        lockedState = win;
+        if (lockedState == true)
         {
             winBtn.SetActive(true);
             failBtn.SetActive(false);
@@ -45,7 +47,7 @@ public class endScreenScript : MonoBehaviour
             if (ObserverScript.Instance.levelScore >= 32)
             {
                 ObserverScript.Instance.levelScore -= 32;
-                if (win == true)
+                if (lockedState == true)
                 {
                     ObserverScript.Instance.score += 32;
                 }
@@ -54,7 +56,7 @@ public class endScreenScript : MonoBehaviour
             {
                 swapint1 = ObserverScript.Instance.levelScore;
                 ObserverScript.Instance.levelScore=0;
-                if (win == true)
+                if (lockedState == true)
                 {
                     ObserverScript.Instance.score += swapint1;
                 }

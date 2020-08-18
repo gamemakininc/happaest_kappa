@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead8437629342d94fa37bb651c970be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  es: {fileID: 1977395697}
   waveCount: 3
   eliteWaves: 0
   Boss:
@@ -2397,7 +2398,7 @@ GameObject:
   - component: {fileID: 1977395699}
   m_Layer: 5
   m_Name: end screen
-  m_TagString: UI
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2420,14 +2421,13 @@ MonoBehaviour:
   - {fileID: 704986251}
   - {fileID: 144620584}
   skipBtn: {fileID: 1566178844}
-  drain: 0
-  swapint1: 0
   scoreBoxes:
   - {fileID: 1220510656}
   - {fileID: 1219217716}
   drainIntervol: 0.1
   winBtn: {fileID: 1113565874}
   failBtn: {fileID: 1640435580}
+  win: 0
 --- !u!224 &1977395700
 RectTransform:
   m_ObjectHideFlags: 0

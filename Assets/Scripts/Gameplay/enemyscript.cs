@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(enemyhealth))]
@@ -12,6 +13,8 @@ public class enemyscript : MonoBehaviour
     public bool shootDissabled;
     public GameObject ebullet;
     public Transform mgport;
+    //swap
+    private int type;
 
     void Start()
     {
@@ -27,6 +30,17 @@ public class enemyscript : MonoBehaviour
             GetComponent<enemyhealth>().health *= 2;
 
         storedState = currentState;
+
+        if (currentState == states.slide && transform.position.y < 0)
+        {
+            //slide left
+            moveRight = false;
+        }
+        else if (currentState == states.slide && transform.position.y > 0) 
+        {
+            //slide right
+            moveRight = true;
+        }
         //Debug.Log("currentState = " + currentState);
         if (shootDissabled == false) { timer = Random.Range(-2, 0); }
         if (ObserverScript.Instance.factionId == 0) 
@@ -105,9 +119,11 @@ public class enemyscript : MonoBehaviour
         switch (currentState)
         {
             case states.straight:
+                type = 0;
                 rb.velocity = transform.InverseTransformDirection(new Vector2(0, -speed));
                 break;
             case states.wavy:
+                type = 1;
                 if (waitTime > Mathf.Infinity) //doesn't really work with wavy
                 {
                     waitTime -= Time.deltaTime;
@@ -124,6 +140,7 @@ public class enemyscript : MonoBehaviour
                 }
                 break;
             case states.slide:
+                type = 2;
                 if (waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
@@ -146,6 +163,7 @@ public class enemyscript : MonoBehaviour
                 }
                 break;
             case states.kamikaze:
+                type = 3;
                 if (waitTime > 0)
                 {
                     waitTime -= Time.deltaTime;
@@ -227,5 +245,32 @@ public class enemyscript : MonoBehaviour
 
         currentState = states.offcam;
         //enabled = false;
+    }
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        //check if offscrean left
+        if (hitInfo.name == "EdgeL")
+        {
+            //start the kill timer
+            GetComponent<autoclear>().enabled = true;
+            //check ship type
+            if (type == 0)
+            {
+                //tell spawner script what ship got away
+                Camera.main.GetComponent<EnemyWavev2>().lostS++;
+            }
+            else if (type == 1) 
+            {
+                Camera.main.GetComponent<EnemyWavev2>().lostW++;
+            }
+            else if (type == 2) 
+            {
+                Camera.main.GetComponent<EnemyWavev2>().lostD++;
+            }
+            else if (type == 3) 
+            {
+                Camera.main.GetComponent<EnemyWavev2>().lostK++;
+            }
+        }
     }
 }
