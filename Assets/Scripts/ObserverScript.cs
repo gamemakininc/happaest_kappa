@@ -116,25 +116,28 @@ public class ObserverScript : MonoBehaviour
     }
     public void factionChange() 
     {
-        //uncomment when factions implemented
-        /*
-        if (factionId == 0 && factionRangeSwap==levelsCleared) 
+        if (factionId == 0 && factionRangeSwap >= levelsCleared) 
         {
+            //incriment factionID
             factionId++;
+            //add between 20-50 for next faction swap
             factionRangeSwap += Random.Range(20,50);
             
         }
-        else if (factionId == 1 && factionRangeSwap == levelsCleared) 
+        else if (factionId == 1 && factionRangeSwap >= levelsCleared)
         {
+            //incriment factionID
             factionId++;
+            //add between 20-50 for next faction swap
             factionRangeSwap += Random.Range(20, 50);
         }
-        else if (factionId == 2 && factionRangeSwap == levelsCleared) 
+        else if (factionId == 2 && factionRangeSwap >= levelsCleared) 
         {
+            //reset faction 
             factionId=0;
+            //add 20-50 for next faction update tick
             factionRangeSwap += Random.Range(20, 50);
         }
-        */
     }
 
 

@@ -154,7 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyViewmodels: []
+  enemyViewmodels:
+  - {fileID: 21300000, guid: 8169ea8172a0baf459535934d5a589b6, type: 3}
+  - {fileID: 21300000, guid: d31eeb5d73b17b94da7ca74dd6d7e046, type: 3}
+  - {fileID: 21300000, guid: ff39ca714e287344bb02eeb1cace461f, type: 3}
   shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 1434235926353972349}

@@ -29,6 +29,18 @@ public class enemyscript : MonoBehaviour
         storedState = currentState;
         //Debug.Log("currentState = " + currentState);
         if (shootDissabled == false) { timer = Random.Range(-2, 0); }
+        if (ObserverScript.Instance.factionId == 0) 
+        {
+            GetComponent<SpriteRenderer>().sprite = enemyViewmodels[0];
+        }
+        if (ObserverScript.Instance.factionId == 1)
+        {
+            GetComponent<SpriteRenderer>().sprite = enemyViewmodels[1];
+        }
+        if (ObserverScript.Instance.factionId == 2)
+        {
+            GetComponent<SpriteRenderer>().sprite = enemyViewmodels[2];
+        }
 
     }
 

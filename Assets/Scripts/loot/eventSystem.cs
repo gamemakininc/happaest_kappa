@@ -737,8 +737,19 @@ public class eventSystem : MonoBehaviour
         //clear text box
         speechBox.text = " ";
         sm = FindObjectOfType<sceneManager>();
-        //update factionId
-        ObserverScript.Instance.factionChange();
+        //check if faction change is ready to trigger
+        if (ObserverScript.Instance.factionRangeSwap >= ObserverScript.Instance.levelsCleared)
+        {
+            ObserverScript.Instance.defenceMission = true;
+            //dependant on faction id set level type
+            if (ObserverScript.Instance.factionId == 0) { ObserverScript.Instance.missionType = 0; }
+            else if (ObserverScript.Instance.factionId == 1) { ObserverScript.Instance.missionType = 1; }
+            else  { ObserverScript.Instance.missionType = Random.Range(0,1); }
+            //update factionId
+            ObserverScript.Instance.factionChange();
+            //launch mission
+            sm.gameplay();
+        }
     }
     private void Update()
     {

@@ -53,7 +53,7 @@ public class enemyhealth : MonoBehaviour
             GetComponentInChildren<turretScript>().die();
             Debug.Log(this.transform + "sent info to" + GetComponentInChildren<Transform>());
         }
-        ObserverScript.Instance.score += value;
+        ObserverScript.Instance.levelScore += value;
         makeLoot();
         //remove self
         Destroy(gameObject);

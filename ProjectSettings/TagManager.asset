@@ -10,6 +10,7 @@ TagManager:
   - wgbar
   - Background
   - Bullet
+  - UI
   layers:
   - Default
   - TransparentFX

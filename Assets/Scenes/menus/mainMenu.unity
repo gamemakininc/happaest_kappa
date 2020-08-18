@@ -7031,8 +7031,6 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  pP0: 0
-  pP1: 0
   diff: 0
   levelsCleared: 0
   playerName: Empty
@@ -7047,6 +7045,8 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
+  factionRangeSwap: 0
+  defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
