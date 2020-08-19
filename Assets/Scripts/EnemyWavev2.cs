@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyWavev2 : MonoBehaviour
 {
-
+    public GameObject[] enemyShips;
     public GameObject es;
     private bool endgame;
     public int waveCount; //Number of waves
@@ -33,7 +34,9 @@ public class EnemyWavev2 : MonoBehaviour
     public int lostW;
     public int lostD;
     public int lostK;
-
+    public int respawnAmt;
+    public float respawnIntervol;
+    bool swapbool;
     public enum states
     {
         spawning,
@@ -98,10 +101,14 @@ public class EnemyWavev2 : MonoBehaviour
                         {
                             if (endgame == false)
                             {
-                                //add 3 waves
                                 //set pool to empty tiles only
                                 //set retrigger prevention
                                 endgame = true;
+                                //add waves
+                                remainingWaves += 4;
+                                //respawn missed enemys
+                                StartCoroutine(respawnMissed());
+
                             }
                             else if (endgame == true)
                             {
@@ -148,28 +155,132 @@ public class EnemyWavev2 : MonoBehaviour
     //Selects which prefab to spawn
     void SelectWave(out GameObject selectedWave) 
     {
-        //Currently 20% chance of elite wave, 80% chance of normal wave
-        float waveWeight = Random.Range(0.0f, 1.0f);
-        
-        while(waveWeight > .89f && remainingElites <= 0 || waveWeight < .89f && remainingWaves <= 0)
-            waveWeight = Random.Range(0.0f, 1.0f);
-        
-        if (waveWeight > .89f)
+        if (endgame == false)
         {
-            selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
-            while(selectedWave == previousTile)
+            //Currently 20% chance of elite wave, 80% chance of normal wave
+            float waveWeight = Random.Range(0.0f, 1.0f);
+
+            while (waveWeight > .89f && remainingElites <= 0 || waveWeight < .89f && remainingWaves <= 0)
+                waveWeight = Random.Range(0.0f, 1.0f);
+
+            if (waveWeight > .89f)
+            {
                 selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
-            remainingElites--;
-        } else
-        {
-            selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _tilePool.Count - 1))];
-            while (selectedWave == previousTile)
+                while (selectedWave == previousTile)
+                    selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
+                remainingElites--;
+            }
+            else
+            {
                 selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _tilePool.Count - 1))];
-            remainingWaves--;
+                while (selectedWave == previousTile)
+                    selectedWave = _tilePool[Mathf.RoundToInt(Random.Range(0.0f, _tilePool.Count - 1))];
+                remainingWaves--;
+            }
+
+            previousTile = selectedWave;
+            return;
         }
-        
-        previousTile = selectedWave;
-        return;
+        else 
+        {
+            selectedWave = _tilePool[7];
+            return;
+        }
+    }
+    IEnumerator respawnMissed()
+    {
+        //wait
+        yield return 0;
+        yield return new WaitForSeconds(3);
+        //set amt to respawn
+        respawnAmt = lostS + lostW + lostD + lostK;
+        //l00p to drain lvl score into total score
+        while (respawnAmt>0)
+        {
+            int i = Random.Range(0, 3);
+            if (i == 0) 
+            {
+                if (lostS > 0)
+                {
+                    //deincriment lostS && total amt to spawn
+                    lostS--;
+                    respawnAmt--;
+                    //instantiate streaght enemy fixed x random y
+                    Instantiate(enemyShips[i],new Vector3(11, Random.Range(4.6f, -4.6f), 0),Quaternion.Euler(new Vector3(0,0,90)));
+                    //set swapbool
+                    swapbool = true;
+                }
+                else 
+                {
+                    i = Random.Range(1, 3);
+                }
+            }
+            if (i == 1&&swapbool==false)
+            {
+                if (lostW > 0)
+                {
+                    //deincriment lostW && total amt to spawn
+                    lostW--;
+                    respawnAmt--;
+                    //instantiate streaght enemy fixed x random y
+                    Instantiate(enemyShips[i], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+                else
+                {
+                    
+                }
+            }
+            if (i == 2)
+            {
+                if (lostD > 0 && swapbool == false)
+                {
+                    //deincriment lostD && total amt to spawn
+                    lostD--;
+                    respawnAmt--;
+                    //instantiate streaght enemy fixed x random y
+                    Instantiate(enemyShips[i], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+                else
+                {
+                    i = 3;
+                }
+            }
+            if (i == 3)
+            {
+                if (lostK > 0 && swapbool == false)
+                {
+                    //deincriment lostK && total amt to spawn
+                    lostK--;
+                    respawnAmt--;
+                    //instantiate streaght enemy fixed x random y
+                    Instantiate(enemyShips[i], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+                //if nothing spawned this check skip RnG and just spawn something
+                else if (lostS > 0)
+                {
+                    lostS--;
+                    respawnAmt--;
+                    Instantiate(enemyShips[0], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+                else if (lostW > 0)
+                {
+                    lostW--;
+                    respawnAmt--;
+                    Instantiate(enemyShips[1], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+                else if (lostD > 0)
+                {
+                    lostD--;
+                    respawnAmt--;
+                    Instantiate(enemyShips[2], new Vector3(11, Random.Range(4.6f, -4.6f), 0), Quaternion.Euler(new Vector3(0, 0, 90)));
+                }
+            }
+            //wait variable amount
+            yield return 0;
+            yield return new WaitForSeconds(respawnIntervol);
+            //idk
+            swapbool = false;
+        }
     }
 
     void OnLevelComplete() //Runs when currentState = states.win
