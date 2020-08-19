@@ -351,7 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: mission2
+  m_Text: boss mission
 --- !u!222 &177629087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -996,8 +996,6 @@ MonoBehaviour:
   fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   wgBookmarks: []
   pgBookmarks: []
-  pP0: 0
-  pP1: 0
   diff: 0
   levelsCleared: 3
   playerName: Empty
@@ -1012,6 +1010,8 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
+  factionRangeSwap: 0
+  defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -1115,7 +1115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: mission1
+  m_Text: fighter mission
 --- !u!222 &1106869729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1610,7 +1610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: mission3
+  m_Text: static boss mission
 --- !u!222 &1832861957
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -33,8 +33,8 @@ public class settingsMenu : MonoBehaviour
         rebindsBtn[8].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[8].name, 8); });
         rebindsBtn[9].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[9].name, 9); });
         rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[10].name, 10); });
-        rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[11].name, 11); });
-        rebindsBtn[10].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[12].name, 12); });
+        rebindsBtn[11].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[11].name, 11); });
+        rebindsBtn[12].GetComponent<Button>().onClick.AddListener(() => { startRebindFor(rebindsBtn[12].name, 12); });
 
     }
     string keyToRebind;
