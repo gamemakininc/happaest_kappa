@@ -183,7 +183,8 @@ public class EnemyWavev2 : MonoBehaviour
         }
         else 
         {
-            selectedWave = _tilePool[7];
+            selectedWave = _tilePool[7]; 
+            remainingWaves--;
             return;
         }
     }
