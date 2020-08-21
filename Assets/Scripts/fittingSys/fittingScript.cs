@@ -1123,14 +1123,14 @@ public class fittingScript : MonoBehaviour
 
 		slotsfake[0] = false;
 		slotsfake[1] = false;
-		slotsfake[2] = false;
-		slotsfake[3] = false;
-		slotsfake[4] = false;
+		slotsfake[2] = true;
+		slotsfake[3] = true;
+		slotsfake[4] = true;
 		slotsfake[5] = false;
-		slotsfake[6] = false;
-		slotsfake[7] = false;
-		slotsfake[8] = false;
-		slotsfake[9] = false;
+		slotsfake[6] = true;
+		slotsfake[7] = true;
+		slotsfake[8] = true;
+		slotsfake[9] = true;
 		slotsfake[10] = false;
 		slotsfake[11] = false;
 		slotsfake[12] = false;
@@ -1145,12 +1145,12 @@ public class fittingScript : MonoBehaviour
 		//set bace values
 		bulletSelector = 8;
 		baceMoveSpeed = 8f;
-		baceHealth = 100f;
-		baceSRegen = 1f;
+		baceHealth = 1f;
+		baceSRegen = 9f;
 		baceRepair = 0;
-		baceShield = 100;
-		maxPG = 60;
-		maxWG = 65;
+		baceShield = 15;
+		maxPG = 15;
+		maxWG = 10;
 		if (isStart == false)
 		{
 			MoveSpeed = baceMoveSpeed;

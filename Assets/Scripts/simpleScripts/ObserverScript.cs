@@ -34,7 +34,7 @@ public class ObserverScript : MonoBehaviour
     public float[] pgBookmarks;
     //misc savegame variables
     //diff 0=NG+ 1=easy 2=normal 3=hard
-    public int diff;//int to carry difficulty level to level
+    public int diff;//int to carry difficulty 0=NG+ 1=ez 2=med 3=hard
     public int levelsCleared;//stores ##of win conditions collected
     public int type1;//amount of type 1 missions done(fighter)
     public int type2;//amount of type 2 missions done(boss)
@@ -71,6 +71,7 @@ public class ObserverScript : MonoBehaviour
     public int factionRangeSwap;//how long between faction change
     public bool defenceMission;//used to change specific mechanics in defence missions
     //defence mission should never be missionType 2
+    public int shipswap;//swap used by event system to unlock ships every few levels
 
     //save preview variables slot1
     public int s1diff;
