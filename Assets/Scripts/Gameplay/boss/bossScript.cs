@@ -22,6 +22,9 @@ public class bossScript : MonoBehaviour
     private float g2Counter;
     //gun ports 
     public Transform[] gunPorts;//0-2streaght, 3-4 aimed, 5-6 laser
+    //timer
+    float thrustTimer;
+    bool slow;
 
     private void Start()
     {
@@ -34,6 +37,25 @@ public class bossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //before tile stops
+        if (slow == false)
+        {
+            //stop timer
+            thrustTimer += 1 * Time.deltaTime;
+            if (thrustTimer >= 9.5)
+            {
+                FindObjectOfType<TileScript>().speed += 0.2f * Time.deltaTime;
+                if (thrustTimer >= 10.3)
+                {
+                    FindObjectOfType<TileScript>().speed += 0.2f * Time.deltaTime;
+                }
+                if (thrustTimer >= 10.8)
+                {
+                    FindObjectOfType<TileScript>().speed += 0.3f * Time.deltaTime;
+                }
+                if (FindObjectOfType<TileScript>().speed >= 0) { FindObjectOfType<TileScript>().freeze = true; slow = true; }
+            }
+        }
         //run timers
         lCoolDownTimer -= 1 * Time.deltaTime;
         gunCooldownTimer -= 1 * Time.deltaTime;

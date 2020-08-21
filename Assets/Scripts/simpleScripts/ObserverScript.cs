@@ -36,6 +36,9 @@ public class ObserverScript : MonoBehaviour
     //diff 0=NG+ 1=easy 2=normal 3=hard
     public int diff;//int to carry difficulty level to level
     public int levelsCleared;//stores ##of win conditions collected
+    public int type1;//amount of type 1 missions done(fighter)
+    public int type2;//amount of type 2 missions done(boss)
+    public int type3;//amount of type 3 missions done(static boss)
     public string playerName;//stores current player name
     public int score;//total score
     public int levelScore;//score gained in current level

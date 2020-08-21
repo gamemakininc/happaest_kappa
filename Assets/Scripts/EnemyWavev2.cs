@@ -112,7 +112,11 @@ public class EnemyWavev2 : MonoBehaviour
                             }
                             else if (endgame == true)
                             {
-                                currentState = states.win;
+                                if (ObserverScript.Instance.missionType == 0)
+                                {
+                                    ObserverScript.Instance.type1++;
+                                    currentState = states.win;
+                                }
                             }
 
                         }
@@ -135,13 +139,14 @@ public class EnemyWavev2 : MonoBehaviour
             case states.boss:
                 if (_Boss)
                 {
+                    StartCoroutine(respawnMissed());
                     float xDif2 = tileEdgeX - cameraBoundX;
                     Instantiate(_Boss, new Vector2(cameraBoundX + xDif2, 0), Quaternion.Euler(0.0f, 0.0f, 0.0f));
                     _Boss = null;
                 }
                 else
                 {
-                    currentState = states.win;
+                    //currentState = states.win;
                 }
                 break;
             case states.win:
@@ -284,7 +289,7 @@ public class EnemyWavev2 : MonoBehaviour
         }
     }
 
-    void OnLevelComplete() //Runs when currentState = states.win
+    public void OnLevelComplete() //Runs when currentState = states.win
     {
         Debug.Log("Level Complete");
         ObserverScript.Instance.bookmark0 = false;

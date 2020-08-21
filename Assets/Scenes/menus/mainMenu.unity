@@ -2312,7 +2312,6 @@ GameObject:
   - component: {fileID: 311644204}
   - component: {fileID: 311644203}
   - component: {fileID: 311644202}
-  - component: {fileID: 311644201}
   m_Layer: 0
   m_Name: mixMasterflex
   m_TagString: Untagged
@@ -2320,14 +2319,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &311644201
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311644200}
-  m_Enabled: 1
 --- !u!82 &311644202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7045,7 +7036,7 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
-  factionRangeSwap: 0
+  factionRangeSwap: 40
   defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
@@ -7065,8 +7056,8 @@ MonoBehaviour:
   mvol: 0.5
   sfxvol: 0.5
   mouseAiming: 0
-  keybinds: 61000000770000007300000064000000430100004401000046010000140100001101000012010000130100002000000071000000
-  ngp: 0
+  keybinds: 61000000770000007300000064000000430100004401000045010000140100001101000012010000130100002000000071000000
+  ngp: 1
 --- !u!4 &897181526
 Transform:
   m_ObjectHideFlags: 0

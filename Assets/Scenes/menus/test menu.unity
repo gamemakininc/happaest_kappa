@@ -4036,7 +4036,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &843101542
 Transform:
   m_ObjectHideFlags: 0
@@ -5781,8 +5781,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
+  m_RaycastTarget: 0
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5795,7 +5795,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -7757,7 +7757,6 @@ GameObject:
   - component: {fileID: 1377080325}
   - component: {fileID: 1377080324}
   - component: {fileID: 1377080323}
-  - component: {fileID: 1377080327}
   m_Layer: 5
   m_Name: MMbtn
   m_TagString: Untagged
@@ -7893,27 +7892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377080321}
   m_CullTransparentMesh: 0
---- !u!223 &1377080327
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377080321}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_TargetDisplay: 0
 --- !u!1 &1398733731
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,8 +9110,6 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  pP0: 0
-  pP1: 0
   diff: 0
   levelsCleared: 0
   playerName: Empty
@@ -9148,6 +9124,8 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
+  factionRangeSwap: 0
+  defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -9166,7 +9144,7 @@ MonoBehaviour:
   mvol: 0.5
   sfxvol: 0.5
   mouseAiming: 0
-  keybinds: 61000000770000007300000064000000430100004401000046010000140100001101000012010000130100002000000071000000
+  keybinds: 61000000770000007300000064000000430100004401000045010000140100001101000012010000130100002000000071000000
   ngp: 0
 --- !u!4 &1603496473
 Transform:

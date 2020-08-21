@@ -720,8 +720,11 @@ public class eventSystem : MonoBehaviour
         slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 15);
         //start typeing
         StartCoroutine(TypeText());
-        btn1Txt.text = ("");
-        btn2Txt.text = ("");
+        if (hangar == true)
+        {
+            btn1Txt.text = ("");
+            btn2Txt.text = ("");
+        }
     }
     void eventEnd() 
     {
@@ -738,7 +741,7 @@ public class eventSystem : MonoBehaviour
         speechBox.text = " ";
         sm = FindObjectOfType<sceneManager>();
         //check if faction change is ready to trigger
-        if (ObserverScript.Instance.factionRangeSwap >= ObserverScript.Instance.levelsCleared)
+        if (ObserverScript.Instance.factionRangeSwap <= ObserverScript.Instance.levelsCleared)
         {
             ObserverScript.Instance.defenceMission = true;
             //dependant on faction id set level type
@@ -762,15 +765,15 @@ public class eventSystem : MonoBehaviour
     //mission starters
     public void One()
     {
-        ObserverScript.Instance.missionType = 1;
+        ObserverScript.Instance.missionType = 0;
         missionInterruptEvents();
     }
     public void two() 
     {
-        ObserverScript.Instance.missionType = 2;
+        ObserverScript.Instance.missionType = 1;
     }
     public void three() 
     {
-        ObserverScript.Instance.missionType = 3;
+        ObserverScript.Instance.missionType = 2;
     }
 }

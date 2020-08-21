@@ -344,7 +344,7 @@ public class savescript : MonoBehaviour
     }
     public void saveSettings() 
     {
-        savePath = Application.persistentDataPath + "settings.htm";
+        savePath = Application.persistentDataPath + "settings.save";
         var sSettings = new settings()
         {
             mvol = ObserverScript.Instance.mvol,
@@ -363,7 +363,7 @@ public class savescript : MonoBehaviour
     }
     public void loadSettings()
     {
-        savePath = Application.persistentDataPath + "settings.htm";
+        savePath = Application.persistentDataPath + "settings.save";
         if (File.Exists(savePath))
         {
             settings sSettings;
