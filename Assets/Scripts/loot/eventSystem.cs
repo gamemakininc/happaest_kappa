@@ -69,136 +69,334 @@ public class eventSystem : MonoBehaviour
             //loop till something unlocks?    
             while (swapBool == false)
             {
-                //set rng
-                swapint = Random.Range(28, 33);
-                //unlock something (hopefully)
-                if (unlocks[28] == false && swapint == 28) 
-                { 
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[28] = true;
-                    msgselect = 0;
-                    eventLingth = 1;
-                    eventStart();
-                }
-                if (unlocks[29] == false && swapint == 29)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[29] = true;
-                    msgselect = 2;
-                    eventLingth = 3;
-                    eventStart();
-                }
-                if (unlocks[30] == false && swapint == 30)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[30] = true;
-                    msgselect = 4;
-                    eventLingth = 5;
-                    eventStart();
-                }
-                if (unlocks[31] == false && swapint == 31)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[31] = true;
-                    msgselect = 6;
-                    eventLingth = 7;
-                    eventStart();
-                }
-                if (unlocks[32] == false && swapint == 32)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[32] = true;
-                    msgselect = 8;
-                    eventLingth = 9;
-                    eventStart();
-                }
-                if (unlocks[33] == false && swapint == 33)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[33] = true;
-                    msgselect = 10;
-                    eventLingth = 11;
-                    eventStart();
-                }
-                counter++;
-
-                //escape clause incase number dosent come up in reasonable time.
-                if (counter >= 20) {  Debug.Log("attempted to unlock and failed"); break; }
-                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
-            }
-            //check if all ships unlocked
-            if (unlocks[28] == true && unlocks[29] == true && unlocks[30] == true && unlocks[31] == true && unlocks[32] == true && unlocks[33] == true) 
-            {
-                counter = 0;
-                swapBool = false;
-
-                //loop till something unlocks?   
                 while (swapBool == false)
                 {
                     //set rng
-                    swapint = Random.Range(1, 6);
+                    swapint = Random.Range(0, 7);
                     //unlock something (hopefully)
-                    if (unlocks[1] == false && swapint == 1)
+                    if (swapint == 0)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[1] = true;
-                        msgselect = 12;
-                        eventLingth = 13;
-                        eventStart();
+                        if (unlocks[1] == false)
+                        {
+                            //Note 0h 1s 2v appearence of v should be considered a mission NPC
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            //unlock low tier item
+                            ObserverScript.Instance.unlocks[1] = true;
+                            //set event trigger
+                            eventAllreadyTriggered = true;
+                            //set notifacation message
+                            msgselect = 0;
+                            eventLingth = 1;
+                            //display notifacation message
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 1;
+                        }
+                        else if (unlocks[2] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            //unlock mid tier item
+                            ObserverScript.Instance.unlocks[2] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 2;
+                            eventLingth = 3;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 2;
+                        }
+                        else if (unlocks[3] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            //unlock high tier item
+                            ObserverScript.Instance.unlocks[3] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 4;
+                            eventLingth = 5;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 3;
+                        }
                     }
-                    if (unlocks[2] == false && swapint == 2)
+                    else if (swapint == 1)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[2] = true;
-                        msgselect = 14;
-                        eventLingth = 15;
-                        eventStart();
+                        if (unlocks[4] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[4] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 6;
+                            eventLingth = 7;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 4;
+                        }
+                        else if (unlocks[5] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[5] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 8;
+                            eventLingth = 9;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 5;
+                        }
+                        else if (unlocks[6] == false)
+                        {
+
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[6] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 10;
+                            eventLingth = 11;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 6;
+                        }
                     }
-                    if (unlocks[3] == false && swapint == 3)
+                    else if (swapint == 2)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[3] = true;
-                        msgselect = 16;
-                        eventLingth = 17;
-                        eventStart();
+                        if (unlocks[7] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[7] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 12;
+                            eventLingth = 13;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 7;
+                        }
+                        else if (unlocks[8] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[8] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 14;
+                            eventLingth = 15;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 8;
+                        }
+                        else if (unlocks[9] == false)
+                        {
+
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[9] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 16;
+                            eventLingth = 17;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 9;
+                        }
                     }
-                    if (unlocks[4] == false && swapint == 4)
+                    else if (swapint == 3)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[4] = true;
-                        msgselect = 18;
-                        eventLingth = 19;
-                        eventStart();
+                        if (unlocks[10] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[10] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 18;
+                            eventLingth = 19;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 10;
+                        }
+                        else if (unlocks[11] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[11] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 20;
+                            eventLingth = 21;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 11;
+                        }
+                        else if (unlocks[12] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[1];
+                            ObserverScript.Instance.unlocks[12] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 22;
+                            eventLingth = 23;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 12;
+                        }
                     }
-                    if (unlocks[5] == false && swapint == 5)
+                    else if (swapint == 4)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[5] = true;
-                        msgselect = 20;
-                        eventLingth = 21;
-                        eventStart();
+                        if (unlocks[13] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[13] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 24;
+                            eventLingth = 25;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 13;
+                        }
+                        else if (unlocks[14] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[14] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 26;
+                            eventLingth = 27;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 14;
+                        }
+                        else if (unlocks[15] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[15] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 28;
+                            eventLingth = 29;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 15;
+                        }
                     }
-                    if (unlocks[6] == false && swapint == 6)
+                    else if (swapint == 5)
                     {
-                        swapBool = true;
-                        //eventAllreadyTriggered=true;
-                        ObserverScript.Instance.unlocks[6] = true;
-                        msgselect = 22;
-                        eventLingth = 23;
-                        eventStart();
+                        if (unlocks[16] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[16] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 30;
+                            eventLingth = 31;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 16;
+                        }
+                        else if (unlocks[17] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[17] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 32;
+                            eventLingth = 33;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 17;
+                        }
+                        else if (unlocks[18] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[18] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 34;
+                            eventLingth = 35;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 18;
+                        }
+                    }
+                    else if (swapint == 6)
+                    {
+                        if (unlocks[19] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[19] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 36;
+                            eventLingth = 37;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 19;
+                        }
+                        else if (unlocks[20] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[20] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 38;
+                            eventLingth = 39;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 20;
+                        }
+                        else if (unlocks[21] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[21] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 40;
+                            eventLingth = 41;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 21;
+                        }
+                    }
+                    else if (swapint == 7)
+                    {
+                        if (unlocks[22] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[22] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 42;
+                            eventLingth = 43;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 22;
+                        }
+                        else if (unlocks[23] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[23] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 44;
+                            eventLingth = 45;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 23;
+                        }
+                        else if (unlocks[24] == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[0];
+                            ObserverScript.Instance.unlocks[24] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 46;
+                            eventLingth = 47;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 24;
+                        }
                     }
                     counter++;
+
                     //escape clause incase number dosent come up in reasonable time.
                     if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
                     if (swapBool == true) { Debug.Log("unlocked" + swapint); }
@@ -233,170 +431,327 @@ public class eventSystem : MonoBehaviour
             while (swapBool == false)
             {
                 //set rng
-                swapint = Random.Range(7, 24);
+                swapint = Random.Range(0,7);
                 //unlock something (hopefully)
-                if (unlocks[7] == false && swapint == 7)
+                if (swapint == 0) 
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[7] = true;
-                    msgselect = 0;
-                    eventLingth = 1;
-                    eventStart();
+                    if (unlocks[1] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        //unlock low tier item
+                        ObserverScript.Instance.unlocks[1] = true;
+                        //set event trigger
+                        eventAllreadyTriggered = true;
+                        //set notifacation message
+                        msgselect = 0;
+                        eventLingth = 1;
+                        //display notifacation message
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 1;
+                    }
+                    else if (unlocks[2] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        //unlock mid tier item
+                        ObserverScript.Instance.unlocks[2] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 2;
+                        eventLingth = 3;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 2;
+                    }
+                    else if (unlocks[3] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        //unlovk high tier item
+                        ObserverScript.Instance.unlocks[3] = true;
+                        eventAllreadyTriggered = true; 
+                        msgselect = 4;
+                        eventLingth = 5;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 3;
+                    }
                 }
-                if (unlocks[8] == false && swapint == 8)
+                else if (swapint == 1) 
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[8] = true;
-                    msgselect = 2;
-                    eventLingth = 3;
-                    eventStart();
+                    if (unlocks[4] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[4] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 6;
+                        eventLingth = 7;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 4;
+                    }
+                    else if (unlocks[5] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[5] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 8;
+                        eventLingth = 9;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 5;
+                    }
+                    else if (unlocks[6] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[6] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 10;
+                        eventLingth = 11;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 6;
+                    }
                 }
-                if (unlocks[9] == false && swapint == 9)
+                else if (swapint == 2)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[9] = true;
-                    msgselect = 4;
-                    eventLingth = 5;
-                    eventStart();
+                    if (unlocks[7] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[7] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 12;
+                        eventLingth = 13;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 7;
+                    }
+                    else if (unlocks[8] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[8] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 14;
+                        eventLingth = 15;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 8;
+                    }
+                    else if (unlocks[9] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[9] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 16;
+                        eventLingth = 17;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 9;
+                    }
                 }
-                if (unlocks[10] == false && swapint == 10)
+                else if (swapint == 3)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[10] = true;
-                    msgselect = 6;
-                    eventLingth = 7;
-                    eventStart();
+                    if (unlocks[10] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[10] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 18;
+                        eventLingth = 19;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 10;
+                    }
+                    else if (unlocks[11] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[11] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 20;
+                        eventLingth = 21;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 11;
+                    }
+                    else if (unlocks[12] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[1];
+                        ObserverScript.Instance.unlocks[12] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 22;
+                        eventLingth = 23;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 12;
+                    }
                 }
-                if (unlocks[11] == false && swapint == 11)
+                else if (swapint == 4)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[11] = true;
-                    msgselect = 8;
-                    eventLingth = 9;
-                    eventStart();
+                    if (unlocks[13] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[13] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 24;
+                        eventLingth = 25;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 13;
+                    }
+                    else if (unlocks[14] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[14] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 26;
+                        eventLingth = 27;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 14;
+                    }
+                    else if (unlocks[15] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[15] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 28;
+                        eventLingth = 29;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 15;
+                    }
                 }
-                if (unlocks[12] == false && swapint == 12)
+                else if (swapint == 5)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[12] = true;
-                    msgselect = 10;
-                    eventLingth = 11;
-                    eventStart();
+                    if (unlocks[16] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[16] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 30;
+                        eventLingth = 31;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 16;
+                    }
+                    else if (unlocks[17] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[17] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 32;
+                        eventLingth = 33;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 17;
+                    }
+                    else if (unlocks[18] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[18] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 34;
+                        eventLingth = 35;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 18;
+                    }
                 }
-                if (unlocks[13] == false && swapint == 13)
+                else if (swapint == 6)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[13] = true;
-                    msgselect = 12;
-                    eventLingth = 13;
-                    eventStart();
+                    if (unlocks[19] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[19] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 36;
+                        eventLingth = 37;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 19;
+                    }
+                    else if (unlocks[20] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[20] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 38;
+                        eventLingth = 39;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 20;
+                    }
+                    else if (unlocks[21] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[21] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 40;
+                        eventLingth = 41;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 21;
+                    }
                 }
-                if (unlocks[14] == false && swapint == 14)
+                else if (swapint == 7)
                 {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[14] = true;
-                    msgselect = 14;
-                    eventLingth = 15;
-                    eventStart();
+                    if (unlocks[22] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[22] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 42;
+                        eventLingth = 43;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 22;
+                    }
+                    else if (unlocks[23] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[23] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 44;
+                        eventLingth = 45;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 23;
+                    }
+                    else if (unlocks[24] == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[0];
+                        ObserverScript.Instance.unlocks[24] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 46;
+                        eventLingth = 47;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 24;
+                    }
                 }
-                if (unlocks[15] == false && swapint == 15)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[15] = true;
-                    msgselect = 16;
-                    eventLingth = 17;
-                    eventStart();
-                }
-                if (unlocks[16] == false && swapint == 16)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[16] = true;
-                    msgselect = 18;
-                    eventLingth = 19;
-                    eventStart();
-                }
-                if (unlocks[17] == false && swapint == 17)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[17] = true;
-                    msgselect = 20;
-                    eventLingth = 21;
-                    eventStart();
-                }
-                if (unlocks[18] == false && swapint == 18)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[18] = true;
-                    msgselect = 22;
-                    eventLingth = 23;
-                    eventStart();
-                }
-                if (unlocks[19] == false && swapint == 19)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[19] = true;
-                    msgselect = 24;
-                    eventLingth = 25;
-                    eventStart();
-                }
-                if (unlocks[20] == false && swapint == 20)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[20] = true;
-                    msgselect = 26;
-                    eventLingth = 27;
-                    eventStart();
-                }
-                if (unlocks[21] == false && swapint == 21)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[21] = true;
-                    msgselect = 28;
-                    eventLingth = 29;
-                    eventStart();
-                }
-                if (unlocks[22] == false && swapint == 22)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[22] = true;
-                    msgselect = 30;
-                    eventLingth = 31;
-                    eventStart();
-                }
-                if (unlocks[23] == false && swapint == 23)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[23] = true;
-                    msgselect = 32;
-                    eventLingth = 33;
-                    eventStart();
-                }
-                if (unlocks[24] == false && swapint == 24)
-                {
-                    swapBool = true;
-                    //eventAllreadyTriggered=true;
-                    ObserverScript.Instance.unlocks[24] = true;
-                    msgselect = 34;
-                    eventLingth = 35;
-                    eventStart();
-                }
+
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
                 if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
@@ -418,73 +773,82 @@ public class eventSystem : MonoBehaviour
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
         //check for event elegitability
-        if (eventAllreadyTriggered == true) {/*start mission*/ }
-        else if (eventTriedInterrupt == true) {/*start mission*/ }
-        else if (ObserverScript.Instance.levelsCleared <= 15) {/*start mission*/ }
+        if (eventTriedInterrupt == true) {/*start mission*/ }
+        else if (ObserverScript.Instance.levelsCleared > 15) {/*start mission*/ }
         //reroll check not neccicary because trigger is menu change
         //poll RNG
         else if (swapint <= 20)
         {
             ObserverScript.Instance.bookmark0 = true;
-            counter = 0;
-            while (swapBool == false)
+            if (unlocks[25] == false || unlocks[26] == false || unlocks[27] == false)
             {
-                //set RNG
-                swapint = Random.Range(1, 3);
-                //if 1 check missiles
-                if (swapint == 1 && unlocks[25] == false || unlocks[26] == false || unlocks[27] == false)
+                if (unlocks[25] == false && ObserverScript.Instance.mProgressMissile < 1)
                 {
-                    //check next missile to unlock
-                    if (unlocks[25] == false)
-                    {
-                        //set esSwap to handoff info to 'hangar' scene
-                        ObserverScript.Instance.esSwap = 1;
-                        //tell loop it is done incase script still runs after ecene change somehow
-                        swapBool = true;
-                        //change scene to hangar
-                        sm.hangar();
-                    }
-                    else if (unlocks[26] == false)
-                    {
-                        ObserverScript.Instance.esSwap = 2;
-                        swapBool = true;
-                        sm.hangar();
-                    }
-                    else if (unlocks[27] == false)
-                    {
-                        ObserverScript.Instance.esSwap = 3;
-                        swapBool = true;
-                        sm.hangar();
-                    }
+                    //set observer script var to tell hangar to start missile 1 mission
+                    ObserverScript.Instance.esSwap = 1;
+                    //set swapint (for debug)
+                    swapint = 25;
                 }
-                else if (swapint == 2 && unlocks[35] == false || unlocks[34] == false)
+                else if (unlocks[26] == false && ObserverScript.Instance.mProgressMissile < 4)
                 {
-                    if (unlocks[34] == false)
-                    {
-                        //set esSwap to handoff info to 'hangar' scene
-                        ObserverScript.Instance.esSwap = 4;
-                        //tell loop it is done incase script still runs after ecene change somehow
-                        swapBool = true;
-                        //change scene
-                        sm.hangar();
-                    }
-                    else if (unlocks[35] == false)
-                    {
-                        //set esSwap to handoff info to 'hangar' scene
-                        ObserverScript.Instance.esSwap = 5;
-                        //tell loop it is done incase script still runs after ecene change somehow
-                        swapBool = true;
-                        //change scene
-                        sm.hangar();
-                    }
+                    //set observer script var to tell hangar to start missile 2 mission
+                    ObserverScript.Instance.esSwap = 3;
+                    //set swapint (for debug)
+                    swapint = 26;
+
                 }
-                counter++;
-                //escape clause incase number dosent come up in reasonable time.
-                if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
-                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
+                else if (unlocks[27] == false && ObserverScript.Instance.mProgressMissile < 6)
+                {
+                    //set observer script var to tell hangar to start missile 3 mission
+                    ObserverScript.Instance.esSwap = 4;
+                    //set swapint (for debug)
+                    swapint = 27;
+
+                }
             }
-            //??
-            btn.GetComponent<Button>().interactable = true;
+            else
+            {
+                //reset counters
+                counter = 0;
+                swapint = 0;
+                //loop to check state of unlocks
+                while (counter < 37)
+                {
+                    if (unlocks[counter] == true)
+                    {
+                        swapint++;
+                    }
+                    //increment counter
+                    counter++;
+                }
+                //check avalibility 
+                if (swapint > 18)
+                {
+                    //reset RNG
+                    swapint = Random.Range(1, 100);
+                    //poll RNG
+                    if (swapint <= 20 && ObserverScript.Instance.mProgressShip == 0)
+                    {
+                        //set observer script var to tell hangar to start ship1 mission
+                        ObserverScript.Instance.esSwap = 5;
+                        //Note reserve 6,7,8,9 for callbacks from end mission
+                    }
+                    else if (swapint <= 10 && ObserverScript.Instance.mProgressShip == 6) 
+                    {
+                        //set observer script var to tell hangar to start ship1 mission
+                        ObserverScript.Instance.esSwap = 10;
+                        //Note 11,12,13,14,15 are used for mission steps
+                    }
+                }
+                
+
+            }
+                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
+            
+        }
+        if (swapBool == false)
+        {
+            
         }
         if (swapBool != true) 
         {
@@ -496,11 +860,11 @@ public class eventSystem : MonoBehaviour
     public void hangarEvents()
     {
         if (swapint == 0) { sm.briefing(); Debug.Log("error: no value sent to hangar"); }
-        else if (swapint == 1) { msgselect = 0; eventLingth = 6; eventStart(); }
-        else if (swapint == 2) { msgselect = 7; eventLingth = 13; eventStart(); }
-        else if (swapint == 3) { msgselect = 14; eventLingth = 20; eventStart(); }
-        else if (swapint == 3) { msgselect = 21; eventLingth = 27; eventStart(); }
-        else if (swapint == 3) { msgselect = 28; eventLingth = 34; eventStart(); }
+        else if (swapint == 1) { cSpeaker.sprite = speakers[2]; msgselect = 0; eventLingth = 6; eventStart(); }
+        else if (swapint == 2) { cSpeaker.sprite = speakers[2]; msgselect = 7; eventLingth = 3; eventStart(); }
+        else if (swapint == 3) { cSpeaker.sprite = speakers[2]; msgselect = 14; eventLingth = 20; eventStart(); }
+        else if (swapint == 4) { cSpeaker.sprite = speakers[2]; msgselect = 21; eventLingth = 27; eventStart(); }
+        else if (swapint == 3) { cSpeaker.sprite = speakers[2]; msgselect = 28; eventLingth = 34; eventStart(); }
     }
     //corrently just for refrence---------------
     public void missileUnlock1()
@@ -513,71 +877,42 @@ public class eventSystem : MonoBehaviour
         if (msgselect == 5) { }//thanks (end event and incroment event)
         if (msgselect == 6) { }//thanks... for nothing(end event no incroment)
     }
+    public void m1unlockfailed() 
+    {
+        if (msgselect == 7) { }//request
+        //if (msgselect == 8) { } responce 1 (should never be true) "yes"
+        //if (msgselect == 9) { } responce 2 (should never be true) "no"
+        if (msgselect == 10) { }//there was an explosion.(mission progress reset)
+    }
     public void missileUnlock2()
     {
-        if (msgselect == 7) { }
-        //if (msgselect == 8) { }
-        //if (msgselect == 9) { }
-        //if (msgselect == 10) { }
         if (msgselect == 11) { }
-        if (msgselect == 12) { }
-        if (msgselect == 13) { }
+        //if (msgselect == 12) { }
+        //if (msgselect == 13) { }
+        //if (msgselect == 14) { }
+        if (msgselect == 15) { }
+        if (msgselect == 16) { }
+        if (msgselect == 17) { }
     }
     public void missileUnlock3()
     {
-        if (msgselect == 14) { }
-        //if (msgselect == 15) { }
-        //if (msgselect == 16) { }
-        //if (msgselect == 17) { }
         if (msgselect == 18) { }
-        if (msgselect == 19) { }
-        if (msgselect == 20) { }
-    }
-    public void shipUnlock1Part1()
-    {
-        if (msgselect == 21) { }
-        //if (msgselect == 22) { }
-        //if (msgselect == 23) { }
-        //if (msgselect == 24) { }
-        if (msgselect == 25) { }
-        if (msgselect == 26) { }
-        if (msgselect == 27) { }
-    }
-    public void shipUnlock1Part2()
-    {
-        if (msgselect == 0) { }
-        //if (msgselect == 1) { }
-        //if (msgselect == 2) { }
-        //if (msgselect == 3) { }
-        if (msgselect == 4) { }
-        if (msgselect == 5) { }
-        if (msgselect == 6) { }
-    }
-    public void shipUnlock2Part1()
-    {
-        if (msgselect == 28) { }
-        //if (msgselect == 29) { }
-        //if (msgselect == 30) { }
-        //if (msgselect == 31) { }
-        if (msgselect == 32) { }
-        if (msgselect == 33) { }
-        if (msgselect == 34) { }
-    }
-    public void shipUnlock2Part2()
-    {
-        if (msgselect == 7) { }
-        //if (msgselect == 8) { }
-        //if (msgselect == 9) { }
-        //if (msgselect == 10) { }
-        if (msgselect == 11) { }
-        if (msgselect == 12) { }
-        if (msgselect == 13) { }
+        //if (msgselect == 19) { }
+        //if (msgselect == 20) { }
+        //if (msgselect == 21) { }
+        if (msgselect == 22) { }
+        if (msgselect == 23) { }
+        if (msgselect == 24) { }
     }
     //--------------end refrence
     IEnumerator TypeText()
     {
         //make skip btn interactable 
-        if (hangar == true) { btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+        if (hangar == true) 
+        { 
+            btn.GetComponent<CanvasGroup>().interactable = true; 
+            btn.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        }
         //tell button loop is running
         typeing = true;
         //clear text box
@@ -631,20 +966,20 @@ public class eventSystem : MonoBehaviour
         else if (typeing == false) 
         {
             //missile1
-            if (msgselect == 0) { msgselect = 5; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
-            else if (msgselect==3) { msgselect = 5; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            if (msgselect == 0) { msgselect = 5; StartCoroutine(TypeText()); }
+            else if (msgselect==3) { msgselect = 5; StartCoroutine(TypeText()); }
             //missile2
-            else if (msgselect == 7) { msgselect = 12; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
-            else if (msgselect == 11) { msgselect = 12; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 7) { msgselect = 12; StartCoroutine(TypeText()); }
+            else if (msgselect == 11) { msgselect = 12; StartCoroutine(TypeText()); }
             //missile3
-            else if (msgselect == 14) { msgselect = 19; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
-            else if (msgselect == 18) { msgselect = 19; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 14) { msgselect = 19; StartCoroutine(TypeText()); }
+            else if (msgselect == 18) { msgselect = 19; StartCoroutine(TypeText()); }
             //ship1
-            else if (msgselect == 21) { msgselect = 26; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
-            else if (msgselect == 25) { msgselect = 26; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 21) { msgselect = 26; StartCoroutine(TypeText()); }
+            else if (msgselect == 25) { msgselect = 26; StartCoroutine(TypeText()); }
             //ship2
-            else if (msgselect == 28) { msgselect = 33; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
-            else if (msgselect == 34) { msgselect = 33; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 28) { msgselect = 33; StartCoroutine(TypeText()); }
+            else if (msgselect == 34) { msgselect = 33; StartCoroutine(TypeText()); }
             btn1Txt.text = ("");
             btn2Txt.text = ("");
         }
@@ -660,19 +995,19 @@ public class eventSystem : MonoBehaviour
         {
             //missile1
             if (msgselect == 0) { msgselect = 4; StartCoroutine(TypeText()); }
-            else if (msgselect == 3) { msgselect = 6; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 3) { msgselect = 6; StartCoroutine(TypeText()); }
             //missile2
             else if (msgselect == 7) { msgselect = 11; StartCoroutine(TypeText()); }
-            else if (msgselect == 11) { msgselect = 13; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 11) { msgselect = 13; StartCoroutine(TypeText()); }
             //missile3
             else if (msgselect == 14) { msgselect = 18; StartCoroutine(TypeText()); }
-            else if (msgselect == 18) { msgselect = 20; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 18) { msgselect = 20; StartCoroutine(TypeText()); }
             //ship1
             else if (msgselect == 21) { msgselect = 25; StartCoroutine(TypeText()); }
-            else if (msgselect == 25) { msgselect = 27; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 25) { msgselect = 27; StartCoroutine(TypeText()); }
             //ship2
             else if (msgselect == 28) { msgselect = 32; StartCoroutine(TypeText()); }
-            else if (msgselect == 32) { msgselect = 34; StartCoroutine(TypeText()); btn.GetComponent<CanvasGroup>().interactable = true; btn.GetComponent<CanvasGroup>().blocksRaycasts = true; }
+            else if (msgselect == 32) { msgselect = 34; StartCoroutine(TypeText()); }
         }
 
         btn1Txt.text = ("");
@@ -689,10 +1024,39 @@ public class eventSystem : MonoBehaviour
             }
             if (typeing == false) 
             {
-                if (msgselect == 5 || msgselect == 6 || msgselect == 12 || msgselect == 13 || msgselect == 19 || msgselect == 20 || msgselect == 26 || msgselect == 27 || msgselect == 33 || msgselect == 34)
+                //check 'fail' states
+                if (msgselect == 6 || msgselect == 13 || msgselect == 20)
                 {
-                    //sm.startMission();
-                    Debug.Log("attempted to leave");
+                    //kick to level
+                    sm.gameplay();
+                }
+                //check 'win' states
+                else if (msgselect == 5 || msgselect == 12 || msgselect == 19)
+                {
+                    //witch one triggered?
+                    if (ObserverScript.Instance.esSwap == 1)
+                    {
+                        //advance story
+                        ObserverScript.Instance.mProgressMissile = 1;
+                        //go back to mission
+                        sm.gameplay();
+                    }
+                    else if (ObserverScript.Instance.esSwap==2) 
+                    {
+                        //advance story
+                        ObserverScript.Instance.mProgressMissile = 3;
+                        //go back to mission
+                        sm.gameplay();
+                    }
+                    else if (ObserverScript.Instance.esSwap == 3)
+                    {
+                        //advance story
+                        ObserverScript.Instance.mProgressMissile = 5;
+                        //go back to mission
+                        sm.gameplay();
+                    }
+
+
                 }
             }
         }
@@ -771,9 +1135,11 @@ public class eventSystem : MonoBehaviour
     public void two() 
     {
         ObserverScript.Instance.missionType = 1;
+        missionInterruptEvents();
     }
     public void three() 
     {
         ObserverScript.Instance.missionType = 2;
+        missionInterruptEvents();
     }
 }

@@ -4036,7 +4036,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &843101542
 Transform:
   m_ObjectHideFlags: 0
@@ -4101,30 +4101,54 @@ MonoBehaviour:
   typeing: 0
   letterPause: 0
   message:
-  - hello1s.
-  - ship1 unlocked
-  - hello2s.
-  - ship2 unlocked
-  - hello3s.
-  - ship3 unlocked
-  - hello4s.
-  - ship4 unlocked
-  - hello5s.
-  - ship5 unlocked
-  - hello6s.
-  - ship6 unlocked
-  - hello1m.
-  - hp upgrade1 unlocked
-  - hello2m.
-  - hp upgrade 2 unlocked
-  - hello3m.
-  - hp upgrade3 unlocked
-  - hello4m.
-  - shield 1 unlocked
-  - hello5m.
-  - shield 2 unlocked
-  - hello6m.
-  - shield 3 unlocked
+  - hello1
+  - something basic unlocked
+  - hello2
+  - something standard unlocked
+  - hello3
+  - something advanced unlocked
+  - hello4
+  - something basic unlocked
+  - hello5
+  - something standard unlocked
+  - hello6
+  - something advanced unlocked
+  - hello7
+  - something basic unlocked
+  - hello8
+  - something standard unlocked
+  - hello9
+  - something advanced unlocked
+  - hello10
+  - something basic unlocked
+  - hello11
+  - something standard unlocked
+  - hello12
+  - something advanced unlocked
+  - hello13
+  - something basic unlocked
+  - hello14
+  - something standard unlocked
+  - hello15
+  - something advanced unlocked
+  - hello16
+  - something basic unlocked
+  - hello17
+  - something standard unlocked
+  - hello18
+  - something advanced unlocked
+  - hello19
+  - something basic unlocked
+  - hello20
+  - something standard unlocked
+  - hello21
+  - something advanced unlocked
+  - hello22
+  - something basic unlocked
+  - hello23
+  - something standard unlocked
+  - hello24
+  - something advanced unlocked
   speechBox: {fileID: 1310619297}
   msgselect: 0
   btn: {fileID: 0}
@@ -7649,8 +7673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
+  m_RaycastTarget: 0
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9069,7 +9093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 00000000000000000000000000000000000000000000000000000000000000000000000000
+  unlocks: 01010100000000010101000000000000010001010000000000000000000000000000000000
   efireRate: 0
   fireRate: 0
   pBulletSelector: 0
@@ -9112,6 +9136,9 @@ MonoBehaviour:
   - 0
   diff: 0
   levelsCleared: 0
+  type1: 0
+  type2: 0
+  type3: 0
   playerName: Empty
   score: 0
   levelScore: 0
@@ -9124,7 +9151,7 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
-  factionRangeSwap: 0
+  factionRangeSwap: 89
   defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
