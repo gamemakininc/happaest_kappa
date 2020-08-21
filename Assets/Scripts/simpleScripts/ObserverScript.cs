@@ -48,8 +48,24 @@ public class ObserverScript : MonoBehaviour
     public bool bookmark2;//event system briefing room event triggered
     public bool bookmark3;//event system mission interupt event triggered
     public int esSwap;//a swap int used by the event system for mission interupt event
-    public int mProgressMissile;//hold the current place on missile mission line
+    public int mProgressMissile;//missile mission 
+    /*
+     * 0 not started
+     * 1 first in progress
+     * 2 first complete
+     * 3 second started
+     * ect..
+     */
     public int mProgressShip;//hold the current place on ship unlock missions.
+    /*
+     * 0 not started
+     * 1 phase1 
+     * 2
+     * 3
+     * 4
+     * 5 secrit ship 1 unlocked
+     * ect...
+     */
     public int missionType;//hold the type of mission to start 0=fighter 1=boss ship 2=static boss
     public int factionId;//not yet implemented
     public int factionRangeSwap;//how long between faction change

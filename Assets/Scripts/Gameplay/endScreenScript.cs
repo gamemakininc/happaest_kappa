@@ -33,6 +33,7 @@ public class endScreenScript : MonoBehaviour
         }
         StartCoroutine(drainScore());
         while (I > igUi.Length ) { igUi[I].SetActive(false); I++; }
+
     }
     IEnumerator drainScore()
     {
@@ -84,6 +85,7 @@ public class endScreenScript : MonoBehaviour
     }
     public void winState() 
     {
+
         //count level cleared
         ObserverScript.Instance.levelsCleared++;
         //reset bookmarks
@@ -91,6 +93,20 @@ public class endScreenScript : MonoBehaviour
         ObserverScript.Instance.bookmark1 = false;
         ObserverScript.Instance.bookmark2 = false;
         ObserverScript.Instance.bookmark3 = false;
+        //misson progress check
+        if (ObserverScript.Instance.mProgressMissile == 1) 
+        {
+            int i = Random.Range(1, 100);
+            if (i > 30)
+            {
+                ObserverScript.Instance.unlocks[25] = true;
+            }
+            else if (i <= 30) 
+            {
+                ObserverScript.Instance.esSwap = 2;
+                sm.hangar();
+            }
+        }
         //change scene
         sm.briefing();
     }

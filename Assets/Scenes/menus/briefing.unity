@@ -497,7 +497,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8168952299317144820}
+        - m_Target: {fileID: 0}
           m_MethodName: three
           m_Mode: 1
           m_Arguments:
@@ -998,6 +998,9 @@ MonoBehaviour:
   pgBookmarks: []
   diff: 0
   levelsCleared: 3
+  type1: 0
+  type2: 0
+  type3: 0
   playerName: Empty
   score: 0
   levelScore: 0
@@ -1530,7 +1533,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8168952299317144820}
+        - m_Target: {fileID: 0}
           m_MethodName: two
           m_Mode: 1
           m_Arguments:
@@ -1756,7 +1759,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8168952299317144820}
+        - m_Target: {fileID: 0}
           m_MethodName: One
           m_Mode: 1
           m_Arguments:
@@ -1848,8 +1851,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
+  m_RaycastTarget: 0
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2176,7 +2179,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8168952299317144820}
+        - m_Target: {fileID: 0}
           m_MethodName: btnpressed
           m_Mode: 1
           m_Arguments:
@@ -2187,78 +2190,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &8168952299317144820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168952299317144825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cSpeaker: {fileID: 8168952298862024471}
-  btn1Txt: {fileID: 0}
-  btn2Txt: {fileID: 0}
-  speakers:
-  - {fileID: 6278486218923484563, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
-  - {fileID: -1086991788418008460, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
-  - {fileID: -360123686633694459, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
-  endPoint: {fileID: 7427085370445493425}
-  slider: {fileID: 8168952299317144825}
-  eventLingth: 0
-  typeing: 0
-  letterPause: 0.1
-  message:
-  - hello1.
-  - something unlocked
-  - hello2.
-  - something unlocked
-  - hello3.
-  - something unlocked
-  - hello4.
-  - something unlocked
-  - hello5.
-  - something unlocked
-  - hello6.
-  - something unlocked
-  - hello7
-  - something unlocked
-  - hello8
-  - something unlocked
-  - hello9.
-  - something unlocked
-  - hello10.
-  - something unlocked
-  - hello11.
-  - something unlocked
-  - hello12.
-  - something unlocked
-  - hello13
-  - something unlocked
-  - hello14
-  - something unlocked
-  - hello15
-  - something unlocked
-  - hello16
-  - something unlocked
-  - hello17
-  - something unlocked
-  - hello18
-  - something unlocked
-  speechBox: {fileID: 8168952298709872445}
-  msgselect: 0
-  btn: {fileID: 8168952299045084065}
-  eventAllreadyTriggered: 0
-  eventTriedFitting: 0
-  eventTriedBriefing: 0
-  eventTriedInterrupt: 0
-  unlocks: 
-  hangar: 0
-  fitting: 0
-  briefing: 1
 --- !u!1 &8168952299317144825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8168952299317144826}
   - component: {fileID: 8168952299317144827}
-  - component: {fileID: 8168952299317144820}
+  - component: {fileID: 8168952299317144828}
   m_Layer: 0
   m_Name: eventslider
   m_TagString: Untagged
@@ -2316,3 +2247,87 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8168952299317144828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168952299317144825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cSpeaker: {fileID: 8168952298862024471}
+  btn1Txt: {fileID: 0}
+  btn2Txt: {fileID: 0}
+  speakers:
+  - {fileID: 6278486218923484563, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  - {fileID: -1086991788418008460, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  - {fileID: -360123686633694459, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
+  endPoint: {fileID: 0}
+  slider: {fileID: 0}
+  eventLingth: 0
+  typeing: 0
+  letterPause: 0
+  message:
+  - hello1
+  - something basic unlocked
+  - hello2
+  - something standard unlocked
+  - hello3
+  - something advanced unlocked
+  - hello4
+  - something basic unlocked
+  - hello5
+  - something standard unlocked
+  - hello6
+  - something advanced unlocked
+  - hello7
+  - something basic unlocked
+  - hello8
+  - something standard unlocked
+  - hello9
+  - something advanced unlocked
+  - hello10
+  - something basic unlocked
+  - hello11
+  - something standard unlocked
+  - hello12
+  - something advanced unlocked
+  - hello13
+  - something basic unlocked
+  - hello14
+  - something standard unlocked
+  - hello15
+  - something advanced unlocked
+  - hello16
+  - something basic unlocked
+  - hello17
+  - something standard unlocked
+  - hello18
+  - something advanced unlocked
+  - hello19
+  - something basic unlocked
+  - hello20
+  - something standard unlocked
+  - hello21
+  - something advanced unlocked
+  - hello22
+  - something basic unlocked
+  - hello23
+  - something standard unlocked
+  - hello24
+  - something advanced unlocked
+  speechBox: {fileID: 8168952298709872445}
+  msgselect: 0
+  btn: {fileID: 8168952299045084065}
+  eventAllreadyTriggered: 0
+  eventTriedFitting: 0
+  eventTriedBriefing: 0
+  eventTriedInterrupt: 0
+  unlocks: 
+  hangar: 0
+  fitting: 1
+  briefing: 0

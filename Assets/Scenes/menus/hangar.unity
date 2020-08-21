@@ -340,7 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f18ba89ef252408dad8c5daf6afbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 0
   saveSlot: 0
   swapint: 0
   swapfloat: 0
@@ -368,14 +367,16 @@ MonoBehaviour:
   pRepair: 0
   mslBonus: 0
   fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  pgBookmark: 0
-  wgBookmark: 0
-  pP0: 0
-  pP1: 0
+  wgBookmarks: []
+  pgBookmarks: []
   diff: 0
   levelsCleared: 3
+  type1: 0
+  type2: 0
+  type3: 0
   playerName: Empty
   score: 0
+  levelScore: 0
   bookmark0: 0
   bookmark1: 0
   bookmark2: 0
@@ -383,7 +384,10 @@ MonoBehaviour:
   esSwap: 1
   mProgressMissile: 0
   mProgressShip: 0
-  missionType: 
+  missionType: 0
+  factionId: 0
+  factionRangeSwap: 0
+  defenceMission: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -399,6 +403,11 @@ MonoBehaviour:
   s3clears: 0
   s3name: Empty
   s3unlocks: 0.1
+  mvol: 0
+  sfxvol: 0
+  mouseAiming: 0
+  keybinds: 
+  ngp: 0
 --- !u!4 &654344783
 Transform:
   m_ObjectHideFlags: 0
@@ -1667,7 +1676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585358749266629481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -544, z: 0}
+  m_LocalPosition: {x: 0, y: -224.2, z: 0}
   m_LocalScale: {x: 100.5, y: 100.5, z: 50.25}
   m_Children:
   - {fileID: 4585358747574733903}
