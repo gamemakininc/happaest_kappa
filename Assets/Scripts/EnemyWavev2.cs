@@ -49,11 +49,28 @@ public class EnemyWavev2 : MonoBehaviour
     void Start()
     {
         int levelCount;
+        //finds current mission, and gets number of mission type clears
         if (GameObject.Find("Observer") != null)
+        {
+            switch (GameObject.Find("Observer").GetComponent<ObserverScript>().missionType)
+            {
+                case 0:
+                    levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type1;
+                    break;
+                case 1:
+                    levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type2;
+                    break;
+                case 2:
+                    levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type3;
+                    break;
+            }
             levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().levelsCleared;
+        }
         else
             levelCount = 0;
 
+        //Inverse exponential scaling
+        //If levels cleared is 0, then scale is 1, else sqrt(levelcount + 1)
         remainingWaves = levelCount > 0 ? Mathf.RoundToInt(waveCount * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(waveCount * 1);
         remainingElites = levelCount > 0 ? Mathf.RoundToInt(eliteWaves * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(eliteWaves * 1);
         if (ObserverScript.Instance.missionType > 0)
