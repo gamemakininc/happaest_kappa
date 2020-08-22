@@ -764,7 +764,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 999%
 --- !u!222 &115842794
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1131,8 +1131,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 897181527}
-        m_MethodName: loadS1
+      - m_Target: {fileID: 1666887730}
+        m_MethodName: load1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1142,8 +1142,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: briefing
+      - m_Target: {fileID: 1590230547}
+        m_MethodName: continueStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1223,14 +1223,15 @@ MonoBehaviour:
   spritebox: {fileID: 113480247}
   unlocksbox: {fileID: 1429070717}
   ships:
-  - {fileID: 21300014, guid: 13b221c7c41508a4a8ba8c740d759178, type: 3}
+  - {fileID: 21300000, guid: e4c0b0a9d70bc1d4f80051a9e7ad78c7, type: 3}
   - {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
-  - {fileID: 21300016, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300000, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
-  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300004, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: -7390935319692257814, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
+  - {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
 --- !u!1 &173354513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,8 +3534,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 897181527}
-        m_MethodName: loadS2
+      - m_Target: {fileID: 1666887730}
+        m_MethodName: load2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3544,8 +3545,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: briefing
+      - m_Target: {fileID: 1590230547}
+        m_MethodName: continueStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3604,7 +3605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f974c50fbf6de24e960494ac5feb902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 1
+  slot: 0
   s1diff: 0
   s1unlocks: 0
   s1Shipselector: 0
@@ -3625,14 +3626,15 @@ MonoBehaviour:
   spritebox: {fileID: 1861878059}
   unlocksbox: {fileID: 877213648}
   ships:
-  - {fileID: 21300014, guid: 13b221c7c41508a4a8ba8c740d759178, type: 3}
+  - {fileID: 21300000, guid: e4c0b0a9d70bc1d4f80051a9e7ad78c7, type: 3}
   - {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
-  - {fileID: 21300016, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300000, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
-  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300004, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: -7390935319692257814, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
+  - {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
 --- !u!1 &504990813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,8 +4184,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -67}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -65}
+  m_SizeDelta: {x: 0, y: -479.6783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556048177
 MonoBehaviour:
@@ -6941,7 +6943,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 999%
 --- !u!222 &877213651
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7024,6 +7026,9 @@ MonoBehaviour:
   - 0
   diff: 0
   levelsCleared: 0
+  type1: 0
+  type2: 0
+  type3: 0
   playerName: Empty
   score: 0
   levelScore: 0
@@ -9095,8 +9100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -67}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -64}
+  m_SizeDelta: {x: 0, y: -482.41168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093353621
 MonoBehaviour:
@@ -11929,7 +11934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 999%
 --- !u!222 &1429070720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12460,8 +12465,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 897181527}
-        m_MethodName: loadS3
+      - m_Target: {fileID: 1666887730}
+        m_MethodName: load3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12471,8 +12476,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: briefing
+      - m_Target: {fileID: 1590230547}
+        m_MethodName: continueStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12531,7 +12536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f974c50fbf6de24e960494ac5feb902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 2
+  slot: 0
   s1diff: 0
   s1unlocks: 0
   s1Shipselector: 0
@@ -12552,14 +12557,15 @@ MonoBehaviour:
   spritebox: {fileID: 1313375903}
   unlocksbox: {fileID: 115842791}
   ships:
-  - {fileID: 21300014, guid: 13b221c7c41508a4a8ba8c740d759178, type: 3}
+  - {fileID: 21300000, guid: e4c0b0a9d70bc1d4f80051a9e7ad78c7, type: 3}
   - {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
-  - {fileID: 21300016, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300000, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: -1414468336072662494, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
-  - {fileID: -2248273014285675650, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
-  - {fileID: 21300004, guid: 43d2738d3b7420642b997d7bcfa2ac4f, type: 3}
+  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: -7390935319692257814, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
+  - {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
 --- !u!1 &1502925812
 GameObject:
   m_ObjectHideFlags: 0
@@ -12862,7 +12868,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 25
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -13217,8 +13223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -67}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -65}
+  m_SizeDelta: {x: 0, y: -480.63895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570923060
 MonoBehaviour:
@@ -14164,6 +14170,7 @@ GameObject:
   - component: {fileID: 1666887727}
   - component: {fileID: 1666887729}
   - component: {fileID: 1666887728}
+  - component: {fileID: 1666887730}
   m_Layer: 5
   m_Name: title
   m_TagString: Untagged
@@ -14231,6 +14238,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666887726}
   m_CullTransparentMesh: 0
+--- !u!114 &1666887730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666887726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b25a1f78187f144b375bbacdc11691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681979583
 GameObject:
   m_ObjectHideFlags: 0

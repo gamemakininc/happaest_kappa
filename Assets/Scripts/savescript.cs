@@ -41,12 +41,15 @@ public class savescript : MonoBehaviour
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
+            type1 = ObserverScript.Instance.type1,
+            type2 = ObserverScript.Instance.type2,
+            type3 = ObserverScript.Instance.type3,
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
             factionId = ObserverScript.Instance.factionId,
             factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
-
+            shipswap = ObserverScript.Instance.shipswap,
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -76,11 +79,15 @@ public class savescript : MonoBehaviour
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
+            type1 = ObserverScript.Instance.type1,
+            type2 = ObserverScript.Instance.type2,
+            type3 = ObserverScript.Instance.type3,
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
             factionId = ObserverScript.Instance.factionId,
             factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
+            shipswap = ObserverScript.Instance.shipswap,
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
@@ -110,12 +117,16 @@ public class savescript : MonoBehaviour
             pgBookmarks = ObserverScript.Instance.pgBookmarks,
             diff = ObserverScript.Instance.diff,
             levelsCleared = ObserverScript.Instance.levelsCleared,
+            type1 = ObserverScript.Instance.type1,
+            type2 = ObserverScript.Instance.type2,
+            type3 = ObserverScript.Instance.type3,
             playerName = ObserverScript.Instance.playerName,
             score = ObserverScript.Instance.score,
             levelScore = ObserverScript.Instance.levelScore,
             factionId = ObserverScript.Instance.factionId,
             factionRangeSwap = ObserverScript.Instance.factionRangeSwap,
-    };
+            shipswap = ObserverScript.Instance.shipswap,
+        };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
         {
@@ -149,11 +160,15 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
+            ObserverScript.Instance.type1 = save.type1;
+            ObserverScript.Instance.type2 = save.type2;
+            ObserverScript.Instance.type3 = save.type3;
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
             ObserverScript.Instance.factionId = save.factionId;
             ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
+            ObserverScript.Instance.shipswap = save.shipswap;
 
 
             Debug.Log("data loaded slot1");
@@ -194,11 +209,15 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
+            ObserverScript.Instance.type1 = save.type1;
+            ObserverScript.Instance.type2 = save.type2;
+            ObserverScript.Instance.type3 = save.type3;
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
             ObserverScript.Instance.factionId = save.factionId;
             ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
+            ObserverScript.Instance.shipswap = save.shipswap;
 
             Debug.Log("data loaded slot2");
             // update save info in observer
@@ -236,11 +255,15 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.pgBookmarks = save.pgBookmarks;
             ObserverScript.Instance.diff = save.diff;
             ObserverScript.Instance.levelsCleared = save.levelsCleared;
+            ObserverScript.Instance.type1 = save.type1;
+            ObserverScript.Instance.type2 = save.type2;
+            ObserverScript.Instance.type3 = save.type3;
             ObserverScript.Instance.playerName = save.playerName;
             ObserverScript.Instance.score = save.score;
             ObserverScript.Instance.levelScore = save.levelScore;
             ObserverScript.Instance.factionId = save.factionId;
             ObserverScript.Instance.factionRangeSwap = save.factionRangeSwap;
+            ObserverScript.Instance.shipswap = save.shipswap;
 
             Debug.Log("data loaded slot3");
             // update save info in observer

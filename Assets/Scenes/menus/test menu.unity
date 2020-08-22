@@ -533,8 +533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286.8, y: 182.3}
-  m_SizeDelta: {x: 336.50403, y: 58.5}
+  m_AnchoredPosition: {x: -282.6, y: 176.7}
+  m_SizeDelta: {x: 362.3396, y: 78.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &166090662
 GameObject:
@@ -8132,8 +8132,8 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: hidden ship2
-  itemDescription: ss2 info
+  itemName: xel'naga... fighter
+  itemDescription: you say the only defence is a good offence
   typeOfItem: 4
   itemIdentifyer: 34
   itemID: 8
@@ -8204,7 +8204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0,
+  m_Sprite: {fileID: -5006950574146772211, guid: b012a7572d23223459874710b3d7e55b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9093,7 +9093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: 01010100000000010101000000000000010001010000000000000000000000000000000000
+  unlocks: 01010100000000010101000000000000010001010000000000000000000000000000010101
   efireRate: 0
   fireRate: 0
   pBulletSelector: 0
@@ -9153,6 +9153,7 @@ MonoBehaviour:
   factionId: 0
   factionRangeSwap: 89
   defenceMission: 0
+  shipswap: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -11048,7 +11049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -289, y: 159.1}
+  m_AnchoredPosition: {x: -287.3, y: 154}
   m_SizeDelta: {x: 332.19305, y: 16.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998119715

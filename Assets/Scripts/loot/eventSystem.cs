@@ -52,6 +52,23 @@ public class eventSystem : MonoBehaviour
         eventTriedFitting = ObserverScript.Instance.bookmark1;
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
+        //unlock ship
+        if (eventTriedFitting == true) {/*do nothing*/ }
+        else if (ObserverScript.Instance.shipswap>=ObserverScript.Instance.levelsCleared) 
+        {
+            //add to next ship unlock timer
+            if (ObserverScript.Instance.diff == 0) {ObserverScript.Instance.shipswap += 5; }
+            else if (ObserverScript.Instance.diff == 1) { ObserverScript.Instance.shipswap += 5; }
+            else if (ObserverScript.Instance.diff == 2) { ObserverScript.Instance.shipswap += 10; }
+            else if (ObserverScript.Instance.diff == 3) { ObserverScript.Instance.shipswap += Random.Range(20,30); }
+            //unlock a ship
+            if (unlocks[28] == false) {ObserverScript.Instance.unlocks[28] = true;}
+            else if (unlocks[29] == false) {ObserverScript.Instance.unlocks[29] = true;}
+            else if (unlocks[30] == false) {ObserverScript.Instance.unlocks[30] = true;}
+            else if (unlocks[31] == false) {ObserverScript.Instance.unlocks[31] = true;}
+            else if (unlocks[32] == false) {ObserverScript.Instance.unlocks[32] = true;}
+            else if (unlocks[33] == false) {ObserverScript.Instance.unlocks[33] = true;}
+        }
         //reset swapbool
         swapBool = false;
         //check for event elegitability
@@ -78,7 +95,7 @@ public class eventSystem : MonoBehaviour
                     {
                         if (unlocks[1] == false)
                         {
-                            //Note 0h 1s 2v appearence of v should be considered a mission NPC
+                            //note 0h 1s 2v appearence of v should be considered a mission NPC
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
                             //unlock low tier item

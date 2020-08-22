@@ -97,15 +97,23 @@ public class endScreenScript : MonoBehaviour
         if (ObserverScript.Instance.mProgressMissile == 1) 
         {
             int i = Random.Range(1, 100);
-            if (i > 30)
+            if (i < 30)
             {
                 ObserverScript.Instance.unlocks[25] = true;
             }
-            else if (i <= 30) 
+            else if (i >= 30) 
             {
                 ObserverScript.Instance.esSwap = 2;
                 sm.hangar();
             }
+        }
+        if (ObserverScript.Instance.mProgressMissile == 3) 
+        {
+            ObserverScript.Instance.unlocks[26] = true;
+        }
+        if (ObserverScript.Instance.mProgressMissile == 5)
+        {
+            ObserverScript.Instance.unlocks[27] = true;
         }
         //change scene
         sm.briefing();
@@ -117,6 +125,21 @@ public class endScreenScript : MonoBehaviour
         ObserverScript.Instance.bookmark1 = false;
         ObserverScript.Instance.bookmark2 = false;
         ObserverScript.Instance.bookmark3 = false;
+        //misson progress check
+        if (ObserverScript.Instance.mProgressMissile == 1)
+        {
+            //other missions will not have a fail state check
+            int i = Random.Range(1, 100);
+            if (i > 30)
+            {
+                ObserverScript.Instance.unlocks[25] = true;
+            }
+            else if (i <= 30)
+            {
+                ObserverScript.Instance.esSwap = 2;
+                sm.hangar();
+            }
+        }
         //change scene
         sm.briefing();
     }
