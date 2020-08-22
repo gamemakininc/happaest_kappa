@@ -48,8 +48,14 @@ public class EnemyWavev2 : MonoBehaviour
 
     void Start()
     {
-        remainingWaves = waveCount;
-        remainingElites = eliteWaves;
+        int levelCount;
+        if (GameObject.Find("Observer") != null)
+            levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().levelsCleared;
+        else
+            levelCount = 0;
+
+        remainingWaves = levelCount > 0 ? Mathf.RoundToInt(waveCount * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(waveCount * 1);
+        remainingElites = levelCount > 0 ? Mathf.RoundToInt(eliteWaves * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(eliteWaves * 1);
         if (ObserverScript.Instance.missionType > 0)
         {
             //will need rewritten when more than one boss of each type exist
