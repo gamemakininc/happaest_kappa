@@ -497,7 +497,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8168952299317144828}
           m_MethodName: three
           m_Mode: 1
           m_Arguments:
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   factionId: 0
   factionRangeSwap: 0
   defenceMission: 0
+  shipswap: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -1533,7 +1534,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8168952299317144828}
           m_MethodName: two
           m_Mode: 1
           m_Arguments:
@@ -1759,7 +1760,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8168952299317144828}
           m_MethodName: One
           m_Mode: 1
           m_Arguments:
@@ -2266,8 +2267,8 @@ MonoBehaviour:
   - {fileID: 6278486218923484563, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
   - {fileID: -1086991788418008460, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
   - {fileID: -360123686633694459, guid: 1687d76de7611414ab7290a51d3bbdfe, type: 3}
-  endPoint: {fileID: 0}
-  slider: {fileID: 0}
+  endPoint: {fileID: 7427085370445493425}
+  slider: {fileID: 8168952299317144825}
   eventLingth: 0
   typeing: 0
   letterPause: 0

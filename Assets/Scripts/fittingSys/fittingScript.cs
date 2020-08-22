@@ -730,15 +730,15 @@ public class fittingScript : MonoBehaviour
 	}
 	void afterburner() 
 	{
-		if (fitSetup[counter] == 7) { MoveSpeed = 1 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
-		else if (fitSetup[counter] == 8) { MoveSpeed = 2 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
-		else if (fitSetup[counter] == 9) { MoveSpeed = 3 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		if (fitSetup[counter] == 7) { MoveSpeed += 1 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		else if (fitSetup[counter] == 8) { MoveSpeed += 2 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		else if (fitSetup[counter] == 9) { MoveSpeed += 3 * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
 	}
 	void fuel() 
 	{
-		if (fitSetup[counter] == 7) { MoveSpeed = 0.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
-		else if (fitSetup[counter] == 8) { MoveSpeed = 1.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
-		else if (fitSetup[counter] == 9) { MoveSpeed = 2.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		if (fitSetup[counter] == 7) { MoveSpeed += 0.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		else if (fitSetup[counter] == 8) { MoveSpeed += 1.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
+		else if (fitSetup[counter] == 9) { MoveSpeed += 2.5f * sDebuffSpeed; sDebuffSpeed -= 0.15f; }
 	}
 	void shipOne() 
 	{

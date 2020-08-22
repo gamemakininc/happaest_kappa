@@ -321,7 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6385b549e5679b84b90176da8bba250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  im: {fileID: 0}
   hpBar: {fileID: 6423580168970541566}
   maxHealth: 100
   health: 100
@@ -330,16 +329,6 @@ MonoBehaviour:
   maxShield: 50
   shield: 50
   sRegen: 0.5
-  deathEffectSelector: 0
-  deathEffect:
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 7052740348494417466, guid: 28a5e9f774cc27a43915aa63ca546530, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 6052574519058911341, guid: 334987f427beaa842a234501869696c1, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   payload0Selector: 0
   payload1Selector: 0
   payload0Ammo: 0
@@ -366,7 +355,9 @@ MonoBehaviour:
   forwardSpeed: 0.7
   rb: {fileID: 6503074624666142574}
   animator: {fileID: 0}
+  es: {fileID: 0}
   dumbdumb: 0
+  blinkCharger: 0
   sounds:
   - {fileID: 8300000, guid: 8d1f1ca1a73cb374eb751bef97be1abf, type: 3}
   - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
@@ -384,7 +375,7 @@ MonoBehaviour:
   - {fileID: 1373859652910129586, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
   - {fileID: 7412717729738197967, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
   - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
-  - {fileID: 958393111218982286, guid: 7b6fdf2102248d748b4dc21326044397, type: 3}
+  - {fileID: 4379994170166470358, guid: b012a7572d23223459874710b3d7e55b, type: 3}
   animationset:
   - {fileID: 0}
   - {fileID: 0}
@@ -393,8 +384,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 9100000, guid: 0a37d157b40f94645b020e0c25e236d8, type: 2}
   - {fileID: 9100000, guid: 028bac33e93a1d34aa15c1a8a57a3da6, type: 2}
-  - {fileID: 0}
+  - {fileID: 9100000, guid: b8346d70e8273d94e9bf7a63d5cd6eaf, type: 2}
   shipselect: 0
+  blinkEffect: {fileID: 0}
+  deathEffectSelector: 0
+  deathEffect:
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 7052740348494417466, guid: 28a5e9f774cc27a43915aa63ca546530, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 6052574519058911341, guid: 334987f427beaa842a234501869696c1, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
 --- !u!82 &2479004553997606591
 AudioSource:
   m_ObjectHideFlags: 0
