@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(enemyscript))]
 [CanEditMultipleObjects]
 public class enemyScriptEditor : Editor
@@ -50,7 +51,7 @@ public class enemyScriptEditor : Editor
         soTarget.Update();
         EditorGUI.BeginChangeCheck();
 
-        #region Render Properties
+    #region Render Properties
         //EditorGUILayout.PropertyField(health);
         //EditorGUILayout.PropertyField(deathEffect);
         EditorGUILayout.PropertyField(speed);
@@ -137,5 +138,6 @@ public class enemyScriptEditor : Editor
             soTarget.ApplyModifiedProperties();
         }
     }
-    #endregion
+#endregion
 }
+#endif

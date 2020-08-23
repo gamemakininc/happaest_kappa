@@ -32,6 +32,7 @@ public class StarAnimator : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 //The Custom Editor
 [CustomEditor(typeof(StarAnimator))]
 [CanEditMultipleObjects]
@@ -62,7 +63,7 @@ public class StarAnimatorEditor : Editor
         soTarget.Update();
         EditorGUI.BeginChangeCheck();
 
-        #region Render Properties
+#region Render Properties
         Undo.RecordObject(target, "Changes made");
 
         if (EditorGUI.EndChangeCheck())
@@ -83,6 +84,7 @@ public class StarAnimatorEditor : Editor
 
         if (EditorGUI.EndChangeCheck())
             soTarget.ApplyModifiedProperties();
-        #endregion
+#endregion
     }
 }
+#endif
