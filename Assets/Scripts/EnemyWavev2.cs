@@ -49,30 +49,6 @@ public class EnemyWavev2 : MonoBehaviour
     void Start()
     {
         int levelCount;
-<<<<<<< HEAD
-        //if fighter mission
-        if (ObserverScript.Instance.missionType == 0)
-        {
-            //set level count to appropreate lvl type
-            levelCount = ObserverScript.Instance.type1;
-        }
-        //if boss mission
-        else if (ObserverScript.Instance.missionType == 1)
-        {
-            //set level count to appropreate lvl type
-            levelCount = ObserverScript.Instance.type2;
-        }
-        //is sboss mission
-        else if (ObserverScript.Instance.missionType == 2)
-        {
-            //set level count to appropreate lvl type
-            levelCount = ObserverScript.Instance.type3;
-        }
-        else 
-        {
-            levelCount = 0; 
-        }
-=======
         //finds current mission, and gets number of mission type clears
         if (GameObject.Find("Observer") != null)
         {
@@ -91,8 +67,7 @@ public class EnemyWavev2 : MonoBehaviour
             levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().levelsCleared;
         }
         else
-            levelCount = 0;
->>>>>>> 8b8e50001a991150a40542d460ec4419bdfc49cd
+            levelCount = 0; 
 
         //Inverse exponential scaling
         //If levels cleared is 0, then scale is 1, else sqrt(levelcount + 1)
