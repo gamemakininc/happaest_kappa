@@ -240,9 +240,10 @@ public class enemyscript : MonoBehaviour
 
         if (currentState == states.sidescroll)
             return;
-        if (currentState != states.offcam)
-            storedState = currentState;
+        if (currentState == states.offcam)
+            return;
 
+        storedState = currentState;
         currentState = states.offcam;
         //enabled = false;
     }
