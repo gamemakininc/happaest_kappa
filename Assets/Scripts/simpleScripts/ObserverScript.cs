@@ -52,19 +52,21 @@ public class ObserverScript : MonoBehaviour
     /*
      * 0 not started
      * 1 first in progress
-     * 2 first complete
-     * 3 second started
+     * 2 first failed
+     * 3 first complete
+     * 4 second started
+     * 5 second complete
      * ect..
      */
     public int mProgressShip;//hold the current place on ship unlock missions.
     /*
      * 0 not started
-     * 1 phase1 
-     * 2
-     * 3
-     * 4
-     * 5 secrit ship 1 unlocked
-     * ect...
+     * 1 phase1 (start)
+     * 2 phase1 (done)
+     * 3 phase2 (start)
+     * 4 phase2 (done)
+     * 5 ship2 phase1(start)
+     * 6 ship2 phase1(done)ect...
      */
     public int missionType;//hold the type of mission to start 0=fighter 1=boss ship 2=static boss
     public int factionId;//not yet implemented
@@ -96,6 +98,7 @@ public class ObserverScript : MonoBehaviour
     public float mvol;//hold value of music maximum volume
     public float sfxvol;//hold value for maximum sfx volume
     public bool mouseAiming;//hopefully this one is obvious
+    public bool fs;//fullscreen toggle
     /*
     key map
     0  player left

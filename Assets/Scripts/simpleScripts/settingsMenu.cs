@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 
 public class settingsMenu : MonoBehaviour
 {
     public Slider mVolSli;
     public Slider sfxVolSli;
+    public Toggle fsToggle;
     public Toggle mouseAim;
     public Button[] rebindsBtn;
     public Text[] keyText;
@@ -13,6 +15,12 @@ public class settingsMenu : MonoBehaviour
     public KeyCode[] keyBinds;
     public int intkey;
 
+    public GameObject confDialogue;
+    public Button btnConfirm;
+    public Button btnRevert;
+    public Text txtResetTimer;
+    bool confOpen;
+    int T;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +46,6 @@ public class settingsMenu : MonoBehaviour
 
     }
     string keyToRebind;
-    int keyLoc;
     void startRebindFor(string keyName, int keyloc) 
     {
         Debug.Log("start rebind for: " + keyName +" id: "+keyloc);
@@ -114,8 +121,14 @@ public class settingsMenu : MonoBehaviour
             rebindsBtn[10].interactable = true;
         }
     }
-    public void applybtn() 
+    public void applybtn()
     {
+        //uses toggle to swap between full screen and windowed.
+        if (fsToggle != ObserverScript.Instance.fs)
+        {
+            Screen.fullScreen = fsToggle.isOn;
+            StartCoroutine(confermWait());
+        }
         //set vars in observer script from sliders
         ObserverScript.Instance.mvol = mVolSli.value;
         ObserverScript.Instance.sfxvol = sfxVolSli.value;
@@ -160,4 +173,56 @@ public class settingsMenu : MonoBehaviour
         mouseAim.isOn = true;
         ObserverScript.Instance.mouseAiming = mouseAim.isOn;
     }
+    IEnumerator confermWait() 
+    {
+        //make shure T is reset
+        T = 0;
+        //enable confermation dialogue
+        confDialogue.SetActive(true);
+        //set code side tracker for dialogue opem
+        confOpen = true;
+
+        //timer to auto close and video changes
+        while (T < 5) 
+        {
+            if (T == 0) { txtResetTimer.text = ("(5)"); }
+            if (T == 1) { txtResetTimer.text = ("(4)"); }
+            if (T == 2) { txtResetTimer.text = ("(3)"); }
+            if (T == 3) { txtResetTimer.text = ("(2)"); }
+            if (T == 4) { txtResetTimer.text = ("(1)"); }
+            if (T == 5) { txtResetTimer.text = ("(0)"); }
+            yield return 0;
+            yield return new WaitForSeconds(1);
+        }
+        //after timer ends check if accept pressed
+        if (onePressed == true)
+        {
+            ObserverScript.Instance.fs = fsToggle.isOn;
+        }
+        //if not reset to saved setting
+        else 
+        {
+            fsToggle.isOn = ObserverScript.Instance.fs;
+            Screen.fullScreen = ObserverScript.Instance.fs;
+        }
+
+        //set code side tracker for dialogue opem
+        confOpen = false;
+        //dissable confermation dialogue
+        confDialogue.SetActive(false);
+    }
+    bool onePressed;
+    public void one()
+    {
+        //set variable to say accept pressed
+        onePressed = true;
+        //end the timer early
+        if (confOpen == true) { T = 6; }
+    }
+    public void two()
+    {
+        //end the timer early
+        if (confOpen == true) { T = 6; }
+    }
+
 }

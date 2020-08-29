@@ -93,6 +93,11 @@ public class mainMenu : MonoBehaviour
             }
         }
     }
+    public void exitGame() 
+    {
+        Debug.Log("exit pressed");
+        Application.Quit();
+    }
     public void continueStatus()
     {
         //check if any ships unlocked

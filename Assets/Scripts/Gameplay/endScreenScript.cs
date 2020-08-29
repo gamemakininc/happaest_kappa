@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class endScreenScript : MonoBehaviour
 {
+    int scoreholder;
     sceneManager sm;
     public GameObject[] igUi;
     public GameObject skipBtn;
@@ -37,6 +38,7 @@ public class endScreenScript : MonoBehaviour
     }
     IEnumerator drainScore()
     {
+        scoreholder = ObserverScript.Instance.levelScore;
         drain = true;
         //l00p to drain lvl score into total score
         while (ObserverScript.Instance.levelScore>0)
@@ -106,16 +108,32 @@ public class endScreenScript : MonoBehaviour
                 ObserverScript.Instance.esSwap = 2;
                 sm.hangar();
             }
-        }
+        }//misson progress check (M1)
         if (ObserverScript.Instance.mProgressMissile == 3) 
         {
             ObserverScript.Instance.unlocks[26] = true;
-        }
+        }//misson progress check (M2)
         if (ObserverScript.Instance.mProgressMissile == 5)
         {
             ObserverScript.Instance.unlocks[27] = true;
-        }
-        //change scene
+        }//misson progress check (M3)
+
+        if (ObserverScript.Instance.mProgressShip==1&& ObserverScript.Instance.missionType==1) { ObserverScript.Instance.mProgressShip++; }
+        if (ObserverScript.Instance.mProgressShip == 3&&scoreholder>1000+ ObserverScript.Instance.levelsCleared*2.5f) 
+        {
+            ObserverScript.Instance.mProgressShip++;
+            ObserverScript.Instance.unlocks[34] = true;
+        }//incroment ship mission and unlock first hidden ship
+
+        if (ObserverScript.Instance.mProgressShip == 5&& ObserverScript.Instance.missionType == 1) { ObserverScript.Instance.mProgressShip++; }
+        if (ObserverScript.Instance.mProgressShip == 7 && scoreholder > 5000 + ObserverScript.Instance.levelsCleared * 4) { ObserverScript.Instance.mProgressShip++; }
+        if (ObserverScript.Instance.mProgressShip == 9 && ObserverScript.Instance.missionType == 2) { ObserverScript.Instance.mProgressShip++; }
+        if (ObserverScript.Instance.mProgressShip == 11 && scoreholder > 7000 && ObserverScript.Instance.missionType == 0) 
+        {
+            ObserverScript.Instance.unlocks[35] = true;
+            ObserverScript.Instance.mProgressShip++;
+        }//incroment ship mission and unlock second hidden ship
+         //change scene
         sm.briefing();
     }
     public void failState() 

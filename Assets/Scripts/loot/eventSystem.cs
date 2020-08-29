@@ -782,7 +782,7 @@ public class eventSystem : MonoBehaviour
         ObserverScript.Instance.bookmark0 = eventAllreadyTriggered;
     }
     public void missionInterruptEvents()
-    //unlock secret ships later to be moved to 'questlines' and replaced with missiles(with retuned drop rates)
+    //unlock missiles than questline ships
     {
 
         eventTriedInterrupt = ObserverScript.Instance.bookmark3;
@@ -792,30 +792,37 @@ public class eventSystem : MonoBehaviour
         //check for event elegitability
         if (eventTriedInterrupt == true) {/*start mission*/ }
         else if (ObserverScript.Instance.levelsCleared > 15) {/*start mission*/ }
-        //reroll check not neccicary because trigger is menu change
         //poll RNG
         else if (swapint <= 20)
         {
+            //this should not be neccicary
             ObserverScript.Instance.bookmark0 = true;
+            //check if any missiles can unlock
             if (unlocks[25] == false || unlocks[26] == false || unlocks[27] == false)
             {
+                //check lowest grade
                 if (unlocks[25] == false && ObserverScript.Instance.mProgressMissile < 1)
                 {
+                    swapBool = true;
                     //set observer script var to tell hangar to start missile 1 mission
                     ObserverScript.Instance.esSwap = 1;
                     //set swapint (for debug)
                     swapint = 25;
                 }
-                else if (unlocks[26] == false && ObserverScript.Instance.mProgressMissile < 4)
+                //if allready unlocked check med grade 
+                else if (unlocks[26] == false && ObserverScript.Instance.mProgressMissile == 3)
                 {
+                    swapBool = true;
                     //set observer script var to tell hangar to start missile 2 mission
                     ObserverScript.Instance.esSwap = 3;
                     //set swapint (for debug)
                     swapint = 26;
 
                 }
-                else if (unlocks[27] == false && ObserverScript.Instance.mProgressMissile < 6)
+                //if prievious 2 unlocked try high grade
+                else if (unlocks[27] == false && ObserverScript.Instance.mProgressMissile == 5)
                 {
+                    swapBool = true;
                     //set observer script var to tell hangar to start missile 3 mission
                     ObserverScript.Instance.esSwap = 4;
                     //set swapint (for debug)
@@ -823,6 +830,7 @@ public class eventSystem : MonoBehaviour
 
                 }
             }
+            //if all missiles unlocked reroll RNG for secrit ships
             else
             {
                 //reset counters
@@ -833,25 +841,28 @@ public class eventSystem : MonoBehaviour
                 {
                     if (unlocks[counter] == true)
                     {
+                        //every unlocked item incriment swap
                         swapint++;
                     }
                     //increment counter
                     counter++;
                 }
-                //check avalibility 
-                if (swapint > 18)
+                //check avalibility (if 20 total unlocks aquired)
+                if (swapint > 20)
                 {
                     //reset RNG
                     swapint = Random.Range(1, 100);
                     //poll RNG
                     if (swapint <= 20 && ObserverScript.Instance.mProgressShip == 0)
                     {
+                        swapBool = true;
                         //set observer script var to tell hangar to start ship1 mission
                         ObserverScript.Instance.esSwap = 5;
-                        //Note reserve 6,7,8,9 for callbacks from end mission
+                        //Note reserve 6 for callback from end mission
                     }
-                    else if (swapint <= 10 && ObserverScript.Instance.mProgressShip == 6) 
+                    else if (swapint <= 10 && ObserverScript.Instance.mProgressShip == 5) 
                     {
+                        swapBool = true;
                         //set observer script var to tell hangar to start ship1 mission
                         ObserverScript.Instance.esSwap = 10;
                         //Note 11,12,13,14,15 are used for mission steps
@@ -860,68 +871,318 @@ public class eventSystem : MonoBehaviour
                 
 
             }
-                if (swapBool == true) { Debug.Log("unlocked" + swapint); }
+            if (swapBool == true) { Debug.Log("unlocked" + swapint); }
             
         }
-        if (swapBool == false)
-        {
-            
+        if (swapBool == true)
+        {//if something triggered go to hangar interrupt scene
+            sm.hangar();
         }
-        if (swapBool != true) 
-        {
+        else 
+        {//if nothing triggered go to mission
             sm.gameplay(); 
         }
+        //idk why i am doing this but i am...
         eventTriedInterrupt = true;
         ObserverScript.Instance.bookmark3 = true;
     }
     public void hangarEvents()
     {
         if (swapint == 0) { sm.briefing(); Debug.Log("error: no value sent to hangar"); }
-        else if (swapint == 1) { cSpeaker.sprite = speakers[2]; msgselect = 0; eventLingth = 6; eventStart(); }
-        else if (swapint == 2) { cSpeaker.sprite = speakers[2]; msgselect = 7; eventLingth = 3; eventStart(); }
-        else if (swapint == 3) { cSpeaker.sprite = speakers[2]; msgselect = 14; eventLingth = 20; eventStart(); }
-        else if (swapint == 4) { cSpeaker.sprite = speakers[2]; msgselect = 21; eventLingth = 27; eventStart(); }
-        else if (swapint == 3) { cSpeaker.sprite = speakers[2]; msgselect = 28; eventLingth = 34; eventStart(); }
+        else if (swapint == 1)
+        {
+            //set starting msg
+            msgselect = 0;
+            //send to appropriate function
+            missileUnlock1();
+        }//missile1
+        else if (swapint == 2)
+        {
+            //set starting msg
+            msgselect = 7;
+            //send to appropriate function
+            m1unlockfailed();
+        }//missile-1-fail
+        else if (swapint == 3)
+        {
+            //set starting msg
+            msgselect = 11;
+            //send to appropriate function
+            missileUnlock2();
+        }//missile2
+        else if (swapint == 4)
+        {
+            //set starting msg
+            msgselect = 18;
+            //send to appropriate function
+            missileUnlock3();
+
+        }//missile3
+        else if (swapint == 5)
+        {
+            //set starting msg
+            msgselect = 25;
+            //send to appropriate function
+            s1Phase1();
+        }//ship1p1
+        else if (swapint == 6)
+        {
+            //set starting msg
+            msgselect = 32;
+            //send to appropriate function
+            s1Phase2();
+        }//ship1p2
+        else if (swapint == 7)
+        {
+            //set starting msg
+            msgselect = 39;
+            //send to appropriate function
+            s2Phase1();
+        }//ship2p1
+        else if (swapint == 8)
+        {
+            //set starting msg
+            msgselect = 46;
+            //send to appropriate function
+            s2Phase2();
+        }//ship2p2
+        else if (swapint == 9)
+        {
+            //set starting msg
+            msgselect = 53;
+            //send to appropriate function
+            s2Phase3();
+        }//ship2p3
+        else if (swapint == 10)
+        {
+            //set starting msg
+            msgselect = 60;
+            //send to appropriate function
+            s2Phase4();
+        }//ship2p4
+
     }
-    //corrently just for refrence---------------
     public void missileUnlock1()
     {
-        if (msgselect == 0) { }//request
-        //if (msgselect == 1) { } responce 1 (should never be true) "yes"
-        //if (msgselect == 2) { } responce 2 (should never be true) "no"
-        //if (msgselect == 3) { } additional "no" (for an are you shure)
-        if (msgselect == 4) { }//are you shure?
-        if (msgselect == 5) { }//thanks (end event and incroment event)
-        if (msgselect == 6) { }//thanks... for nothing(end event no incroment)
+        if (msgselect == 0) 
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 6;
+            //start typeing
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 1) { msgselect = 5; } //redirect you said 'yes'
+        else if (msgselect == 2) { msgselect = 4; } //redirect you said 'no'
+        else if (msgselect == 3) { msgselect = 6; } //redirect said 'no' again
+        if (msgselect == 4) { StartCoroutine(TypeText()); } //are you shure?(responce to first no)
+        else if (msgselect == 5)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        } //thanks (end event and incroment event tracker)
+        else if (msgselect == 6) { StartCoroutine(TypeText()); } //thanks... for nothing (end event no incroment)
     }
-    public void m1unlockfailed() 
+    public void m1unlockfailed()
     {
-        if (msgselect == 7) { }//request
-        //if (msgselect == 8) { } responce 1 (should never be true) "yes"
-        //if (msgselect == 9) { } responce 2 (should never be true) "no"
-        if (msgselect == 10) { }//there was an explosion.(mission progress reset)
+        
+        if (msgselect == 7)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 10;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 8) { msgselect = 10; }// responce 1 "yes"
+        else if (msgselect == 9) { msgselect = 10; }// responce 2 "no" 
+        if (msgselect == 10)
+        {
+            ObserverScript.Instance.mProgressMissile=0;
+            StartCoroutine(TypeText()); }//there was an explosion.(mission progress reset)
     }
     public void missileUnlock2()
     {
-        if (msgselect == 11) { }
-        //if (msgselect == 12) { }
-        //if (msgselect == 13) { }
-        //if (msgselect == 14) { }
-        if (msgselect == 15) { }
-        if (msgselect == 16) { }
-        if (msgselect == 17) { }
+        if (msgselect == 11)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 17;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 12) { msgselect = 16; }//redirect you said 'yes'
+        else if (msgselect == 13) { msgselect = 15; }//redirect you said 'no'
+        else if (msgselect == 14) { msgselect = 17; }//redirect said 'no' again
+        if (msgselect == 15) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 16)
+        {
+            ObserverScript.Instance.mProgressMissile++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 17) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
     public void missileUnlock3()
     {
-        if (msgselect == 18) { }
-        //if (msgselect == 19) { }
-        //if (msgselect == 20) { }
-        //if (msgselect == 21) { }
-        if (msgselect == 22) { }
-        if (msgselect == 23) { }
-        if (msgselect == 24) { }
+        if (msgselect == 18)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 24;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 19) { msgselect = 23; }//redirect you said 'yes'
+        else if (msgselect == 20) { msgselect = 22; }//redirect you said 'no'
+        else if (msgselect == 21) { msgselect = 27; }//redirect said 'no' again
+        if (msgselect == 22) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 23)
+        {
+            ObserverScript.Instance.mProgressMissile++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 24) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    //--------------end refrence
+    public void s1Phase1()
+    {
+        if (msgselect == 25)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 31;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 26) { msgselect = 30; }//redirect you said 'yes'
+        else if (msgselect == 27) { msgselect = 29; }//redirect you said 'no'
+        else if (msgselect == 28) { msgselect = 31; }//redirect said 'no' again
+        if (msgselect == 29) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 30)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 31) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+    }
+    public void s1Phase2()
+    {
+        if (msgselect == 32)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 38;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 33) { msgselect = 37; }//redirect you said 'yes'
+        else if (msgselect == 34) { msgselect = 36; }//redirect you said 'no'
+        else if (msgselect == 35) { msgselect = 38; }//redirect said 'no' again
+        if (msgselect == 36) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 37)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 38) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+    }
+    public void s2Phase1()
+    {
+        if (msgselect == 39)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 45;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 40) { msgselect = 44; }//redirect you said 'yes'
+        else if (msgselect == 41) { msgselect = 43; }//redirect you said 'no'
+        else if (msgselect == 42) { msgselect = 45; }//redirect said 'no' again
+        if (msgselect == 43) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 44)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 45) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+    }
+    public void s2Phase2()
+    {
+        if (msgselect == 46)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 52;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 47) { msgselect = 51; }//redirect you said 'yes'
+        else if (msgselect == 48) { msgselect = 50; }//redirect you said 'no'
+        else if (msgselect == 49) { msgselect = 52; }//redirect said 'no' again
+        if (msgselect == 50) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 51)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 52) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+    }
+    public void s2Phase3()
+    {
+        if (msgselect == 53)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 59;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 54) { msgselect = 58; }//redirect you said 'yes'
+        else if (msgselect == 55) { msgselect = 57; }//redirect you said 'no'
+        else if (msgselect == 56) { msgselect = 59; }//redirect said 'no' again
+        if (msgselect == 57) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 58)
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 59) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+    }
+    public void s2Phase4()
+    {
+        if (msgselect == 60)
+        {
+            //set speaker sprite
+            cSpeaker.sprite = speakers[2];
+            //set ending msg
+            eventLingth = 66;
+            //start event
+            eventStart();
+        }//print message 'request'
+        else if (msgselect == 61) { msgselect = 65; }//redirect you said 'yes'
+        else if (msgselect == 62) { msgselect = 64; }//redirect you said 'no'
+        else if (msgselect == 63) { msgselect = 66; }//redirect said 'no' again
+        if (msgselect == 64) { StartCoroutine(TypeText()); }//are you shure?(responce to first no)
+        else if (msgselect == 65) 
+        {
+            ObserverScript.Instance.mProgressShip++;
+            StartCoroutine(TypeText()); 
+        }//thanks (end event and incroment event tracker)
+        else if (msgselect == 66) 
+        {
+
+            StartCoroutine(TypeText()); 
+        }//thanks... for nothing (end event no incroment)
+    }
     IEnumerator TypeText()
     {
         //make skip btn interactable 
@@ -948,23 +1209,38 @@ public class eventSystem : MonoBehaviour
         }
         //set responce btns
         if (hangar == true) 
-        {
+        {//where are we
+            //m1
             if (msgselect == 0) { btn1Txt.text = message[1]; btn2Txt.text = message[2]; }
-            else if (msgselect == 3) { btn1Txt.text = message[1]; btn2Txt.text = message[3]; }
-
+            else if (msgselect == 4) { btn1Txt.text = message[1]; btn2Txt.text = message[3]; }
+            //m1 fail
             else if (msgselect == 7) { btn1Txt.text = message[8]; btn2Txt.text = message[9]; }
-            else if (msgselect == 11) { btn1Txt.text = message[8]; btn2Txt.text = message[10]; }
-
-            else if (msgselect == 14) { btn1Txt.text = message[15]; btn2Txt.text = message[16]; }
-            else if (msgselect == 18) { btn1Txt.text = message[15]; btn2Txt.text = message[17]; }
-
-            else if (msgselect == 21) { btn1Txt.text = message[22]; btn2Txt.text = message[23]; }
-            else if (msgselect == 25) { btn1Txt.text = message[22]; btn2Txt.text = message[24]; }
-
-            else if (msgselect == 28) { btn1Txt.text = message[29]; btn2Txt.text = message[30]; }
-            else if (msgselect == 34) { btn1Txt.text = message[29]; btn2Txt.text = message[31]; }
+            //m2
+            else if (msgselect == 11) { btn1Txt.text = message[12]; btn2Txt.text = message[13]; }
+            else if (msgselect == 15) { btn1Txt.text = message[12]; btn2Txt.text = message[14]; }
+            //m3
+            else if (msgselect == 18) { btn1Txt.text = message[19]; btn2Txt.text = message[20]; }
+            else if (msgselect == 22) { btn1Txt.text = message[19]; btn2Txt.text = message[21]; }
+            //ss1p1
+            else if (msgselect == 25) { btn1Txt.text = message[26]; btn2Txt.text = message[27]; }
+            else if (msgselect == 29) { btn1Txt.text = message[26]; btn2Txt.text = message[28]; }
+            //ss1p2
+            else if (msgselect == 32) { btn1Txt.text = message[33]; btn2Txt.text = message[34]; }
+            else if (msgselect == 36) { btn1Txt.text = message[33]; btn2Txt.text = message[35]; }
+            //ss2p1
+            else if (msgselect == 39) { btn1Txt.text = message[40]; btn2Txt.text = message[41]; }
+            else if (msgselect == 43) { btn1Txt.text = message[40]; btn2Txt.text = message[42]; }
+            //ss2p2
+            else if (msgselect == 46) { btn1Txt.text = message[47]; btn2Txt.text = message[48]; }
+            else if (msgselect == 50) { btn1Txt.text = message[47]; btn2Txt.text = message[49]; }
+            //ss2p3
+            else if (msgselect == 53) { btn1Txt.text = message[54]; btn2Txt.text = message[55]; }
+            else if (msgselect == 57) { btn1Txt.text = message[54]; btn2Txt.text = message[56]; }
+            //ss2p4
+            else if (msgselect == 60) { btn1Txt.text = message[61]; btn2Txt.text = message[62]; }
+            else if (msgselect == 64) { btn1Txt.text = message[61]; btn2Txt.text = message[63]; }
             //clear skip btn from being interactable
-            if (msgselect != 5 || msgselect != 6 || msgselect != 12 || msgselect != 13 || msgselect != 19 || msgselect != 20 || msgselect != 26 || msgselect != 27 || msgselect != 33 || msgselect != 34)
+            if (msgselect != 5 && msgselect != 6 && msgselect != 10 && msgselect != 16 && msgselect != 17 && msgselect != 23 && msgselect != 24 && msgselect != 30 && msgselect != 31 && msgselect != 37 && msgselect != 38 && msgselect != 44 && msgselect != 45 && msgselect != 51 && msgselect != 52 && msgselect != 58 && msgselect != 59 && msgselect != 65 && msgselect != 66)
             {
                 btn.GetComponent<CanvasGroup>().interactable = false;
                 btn.GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -982,21 +1258,36 @@ public class eventSystem : MonoBehaviour
         }
         else if (typeing == false) 
         {
-            //missile1
-            if (msgselect == 0) { msgselect = 5; StartCoroutine(TypeText()); }
-            else if (msgselect==3) { msgselect = 5; StartCoroutine(TypeText()); }
-            //missile2
-            else if (msgselect == 7) { msgselect = 12; StartCoroutine(TypeText()); }
-            else if (msgselect == 11) { msgselect = 12; StartCoroutine(TypeText()); }
-            //missile3
-            else if (msgselect == 14) { msgselect = 19; StartCoroutine(TypeText()); }
-            else if (msgselect == 18) { msgselect = 19; StartCoroutine(TypeText()); }
-            //ship1
-            else if (msgselect == 21) { msgselect = 26; StartCoroutine(TypeText()); }
-            else if (msgselect == 25) { msgselect = 26; StartCoroutine(TypeText()); }
-            //ship2
-            else if (msgselect == 28) { msgselect = 33; StartCoroutine(TypeText()); }
-            else if (msgselect == 34) { msgselect = 33; StartCoroutine(TypeText()); }
+            //m1
+            if (msgselect == 0) { msgselect = 5; missileUnlock1(); }
+            else if (msgselect == 4) { msgselect = 5; missileUnlock1(); }
+            //m1fail
+            else if (msgselect == 4) { msgselect = 5; m1unlockfailed(); }
+            //m2
+            if (msgselect == 11) { msgselect = 16; missileUnlock2(); }
+            else if (msgselect == 15) { msgselect = 16; missileUnlock2(); }
+            //m3
+            if (msgselect == 18) { msgselect = 23; missileUnlock3(); }
+            else if (msgselect == 22) { msgselect = 23; missileUnlock3(); }
+            //ss1p1
+            if (msgselect == 25) { msgselect = 30; s1Phase1(); }
+            else if (msgselect == 29) { msgselect = 30; s1Phase1(); }
+            //ss1p2
+            if (msgselect == 32) { msgselect = 37; s1Phase2(); }
+            else if (msgselect == 36) { msgselect = 37; s1Phase2(); }
+            //ss2p1
+            if (msgselect == 39) { msgselect = 44; s2Phase2(); }
+            else if (msgselect == 43) { msgselect = 44; s2Phase2(); }
+            //ss2p2
+            if (msgselect == 46) { msgselect = 51; s2Phase2(); }
+            else if (msgselect == 50) { msgselect = 51; s2Phase2(); }
+            //ss2p3
+            if (msgselect == 53) { msgselect = 58; s2Phase3(); }
+            else if (msgselect == 57) { msgselect = 58; s2Phase3(); }
+            //ss2p4
+            if (msgselect == 60) { msgselect = 65; s2Phase4(); }
+            else if (msgselect == 64) { msgselect = 65; s2Phase4(); }
+
             btn1Txt.text = ("");
             btn2Txt.text = ("");
         }
@@ -1010,21 +1301,35 @@ public class eventSystem : MonoBehaviour
         }
         else if (typeing == false)
         {
-            //missile1
-            if (msgselect == 0) { msgselect = 4; StartCoroutine(TypeText()); }
-            else if (msgselect == 3) { msgselect = 6; StartCoroutine(TypeText()); }
-            //missile2
-            else if (msgselect == 7) { msgselect = 11; StartCoroutine(TypeText()); }
-            else if (msgselect == 11) { msgselect = 13; StartCoroutine(TypeText()); }
-            //missile3
-            else if (msgselect == 14) { msgselect = 18; StartCoroutine(TypeText()); }
-            else if (msgselect == 18) { msgselect = 20; StartCoroutine(TypeText()); }
-            //ship1
-            else if (msgselect == 21) { msgselect = 25; StartCoroutine(TypeText()); }
-            else if (msgselect == 25) { msgselect = 27; StartCoroutine(TypeText()); }
-            //ship2
-            else if (msgselect == 28) { msgselect = 32; StartCoroutine(TypeText()); }
-            else if (msgselect == 32) { msgselect = 34; StartCoroutine(TypeText()); }
+            //m1
+            if (msgselect == 0) { msgselect = 4; missileUnlock1(); }
+            else if (msgselect == 4) { msgselect = 6; missileUnlock1(); }
+            //m1fail
+            else if (msgselect == 4) { msgselect = 10; m1unlockfailed(); }
+            //m2
+            if (msgselect == 11) { msgselect = 15; missileUnlock2(); }
+            else if (msgselect == 15) { msgselect = 17; missileUnlock2(); }
+            //m3
+            if (msgselect == 18) { msgselect = 22; missileUnlock3(); }
+            else if (msgselect == 22) { msgselect = 24; missileUnlock3(); }
+            //ss1p1
+            if (msgselect == 25) { msgselect = 29; s1Phase1(); }
+            else if (msgselect == 29) { msgselect = 31; s1Phase1(); }
+            //ss1p2
+            if (msgselect == 32) { msgselect = 36; s1Phase2(); }
+            else if (msgselect == 36) { msgselect = 38; s1Phase2(); }
+            //ss2p1
+            if (msgselect == 39) { msgselect = 43; s2Phase1(); }
+            else if (msgselect == 43) { msgselect = 45; s2Phase1(); }
+            //ss2p2
+            if (msgselect == 46) { msgselect = 50; s2Phase2(); }
+            else if (msgselect == 50) { msgselect = 52; s2Phase2(); }
+            //ss2p3
+            if (msgselect == 53) { msgselect = 57; s2Phase3(); }
+            else if (msgselect == 57) { msgselect = 59; s2Phase3(); }
+            //ss2p4
+            if (msgselect == 60) { msgselect = 64; s2Phase4(); }
+            else if (msgselect == 64) { msgselect = 66; s2Phase4(); }
         }
 
         btn1Txt.text = ("");
@@ -1041,40 +1346,10 @@ public class eventSystem : MonoBehaviour
             }
             if (typeing == false) 
             {
-                //check 'fail' states
-                if (msgselect == 6 || msgselect == 13 || msgselect == 20)
-                {
-                    //kick to level
-                    sm.gameplay();
-                }
-                //check 'win' states
-                else if (msgselect == 5 || msgselect == 12 || msgselect == 19)
-                {
-                    //witch one triggered?
-                    if (ObserverScript.Instance.esSwap == 1)
-                    {
-                        //advance story
-                        ObserverScript.Instance.mProgressMissile = 1;
-                        //go back to mission
-                        sm.gameplay();
-                    }
-                    else if (ObserverScript.Instance.esSwap==2) 
-                    {
-                        //advance story
-                        ObserverScript.Instance.mProgressMissile = 3;
-                        //go back to mission
-                        sm.gameplay();
-                    }
-                    else if (ObserverScript.Instance.esSwap == 3)
-                    {
-                        //advance story
-                        ObserverScript.Instance.mProgressMissile = 5;
-                        //go back to mission
-                        sm.gameplay();
-                    }
-
-
-                }
+                //reset variable that this scene uses
+                ObserverScript.Instance.esSwap = 0;
+                //start mission(this should only be accessable after dialogue ends)
+                sm.gameplay();
             }
         }
         else {
@@ -1117,7 +1392,12 @@ public class eventSystem : MonoBehaviour
         //check location variables
         if (briefing == true) { briefingLoadEvents(); }
         else if (fitting == true) { fittingLoadEvents(); }
-        else if (hangar == true) {btn1Txt.text=(" "); btn2Txt.text = (" "); swapint = ObserverScript.Instance.esSwap; hangarEvents(); }
+        else if (hangar == true) 
+        {
+            btn1Txt.text=(" "); btn2Txt.text = (" "); 
+            swapint = ObserverScript.Instance.esSwap;
+            hangarEvents(); 
+        }
         //clear text box
         speechBox.text = " ";
         sm = FindObjectOfType<sceneManager>();
@@ -1145,17 +1425,17 @@ public class eventSystem : MonoBehaviour
     }
     //mission starters
     public void One()
-    {
+    {//set mission to fighter and calculate if mission interrupt should trigger
         ObserverScript.Instance.missionType = 0;
         missionInterruptEvents();
     }
     public void two() 
-    {
+    {//set mission to boss and check if mission interupt should trigger
         ObserverScript.Instance.missionType = 1;
         missionInterruptEvents();
     }
     public void three() 
-    {
+    {//set mission to static boss and check if mission interupt should trigger
         ObserverScript.Instance.missionType = 2;
         missionInterruptEvents();
     }
