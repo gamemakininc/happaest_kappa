@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class eventSystem : MonoBehaviour
 {
+    public GameObject wrningScreen;
     public SpriteRenderer cSpeaker;
     public Text btn1Txt;
     public Text btn2Txt;
@@ -109,6 +110,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 1;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[2] == false)
                         {
@@ -122,6 +125,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 2;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[3] == false)
                         {
@@ -135,6 +140,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 3;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 1)
@@ -150,6 +157,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 4;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[5] == false)
                         {
@@ -162,6 +171,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 5;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[6] == false)
                         {
@@ -175,6 +186,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 6;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 2)
@@ -190,6 +203,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 7;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[8] == false)
                         {
@@ -202,6 +217,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 8;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[9] == false)
                         {
@@ -215,6 +232,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 9;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 3)
@@ -230,6 +249,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 10;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[11] == false)
                         {
@@ -242,6 +263,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 11;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[12] == false)
                         {
@@ -254,6 +277,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 12;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 4)
@@ -269,6 +294,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 13;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[14] == false)
                         {
@@ -281,6 +308,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 14;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[15] == false)
                         {
@@ -293,6 +322,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 15;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 5)
@@ -308,6 +339,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 16;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[17] == false)
                         {
@@ -320,6 +353,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 17;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[18] == false)
                         {
@@ -332,6 +367,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 18;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 6)
@@ -347,6 +384,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 19;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[20] == false)
                         {
@@ -359,6 +398,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 20;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[21] == false)
                         {
@@ -371,6 +412,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 21;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     else if (swapint == 7)
@@ -386,6 +429,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 22;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[23] == false)
                         {
@@ -398,6 +443,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 23;
+                            //stop the loop
+                            swapBool = true;
                         }
                         else if (unlocks[24] == false)
                         {
@@ -410,6 +457,8 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 24;
+                            //stop the loop
+                            swapBool = true;
                         }
                     }
                     counter++;
@@ -467,6 +516,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 1;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[2] == false)
                     {
@@ -480,6 +531,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 2;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[3] == false)
                     {
@@ -493,6 +546,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 3;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 1) 
@@ -508,6 +563,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 4;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[5] == false)
                     {
@@ -532,6 +589,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 6;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 2)
@@ -547,6 +606,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 7;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[8] == false)
                     {
@@ -559,6 +620,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 8;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[9] == false)
                     {
@@ -571,6 +634,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 9;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 3)
@@ -586,6 +651,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 10;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[11] == false)
                     {
@@ -598,6 +665,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 11;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[12] == false)
                     {
@@ -625,6 +694,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 13;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[14] == false)
                     {
@@ -637,6 +708,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 14;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[15] == false)
                     {
@@ -649,6 +722,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 15;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 5)
@@ -664,6 +739,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 16;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[17] == false)
                     {
@@ -688,6 +765,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 18;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 6)
@@ -703,6 +782,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 19;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[20] == false)
                     {
@@ -727,6 +808,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 21;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 7)
@@ -742,6 +825,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 22;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[23] == false)
                     {
@@ -754,6 +839,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 23;
+                        //stop the loop
+                        swapBool = true;
                     }
                     else if (unlocks[24] == false)
                     {
@@ -766,6 +853,8 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 24;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
 
@@ -962,7 +1051,7 @@ public class eventSystem : MonoBehaviour
         }//ship2p4
 
     }
-    public void missileUnlock1()
+    void missileUnlock1()
     {
         if (msgselect == 0) 
         {
@@ -984,7 +1073,7 @@ public class eventSystem : MonoBehaviour
         } //thanks (end event and incroment event tracker)
         else if (msgselect == 6) { StartCoroutine(TypeText()); } //thanks... for nothing (end event no incroment)
     }
-    public void m1unlockfailed()
+    void m1unlockfailed()
     {
         
         if (msgselect == 7)
@@ -1003,7 +1092,7 @@ public class eventSystem : MonoBehaviour
             ObserverScript.Instance.mProgressMissile=0;
             StartCoroutine(TypeText()); }//there was an explosion.(mission progress reset)
     }
-    public void missileUnlock2()
+    void missileUnlock2()
     {
         if (msgselect == 11)
         {
@@ -1025,7 +1114,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 17) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void missileUnlock3()
+    void missileUnlock3()
     {
         if (msgselect == 18)
         {
@@ -1047,7 +1136,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 24) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s1Phase1()
+    void s1Phase1()
     {
         if (msgselect == 25)
         {
@@ -1069,7 +1158,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 31) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s1Phase2()
+    void s1Phase2()
     {
         if (msgselect == 32)
         {
@@ -1091,7 +1180,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 38) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s2Phase1()
+    void s2Phase1()
     {
         if (msgselect == 39)
         {
@@ -1113,7 +1202,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 45) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s2Phase2()
+    void s2Phase2()
     {
         if (msgselect == 46)
         {
@@ -1135,7 +1224,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 52) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s2Phase3()
+    void s2Phase3()
     {
         if (msgselect == 53)
         {
@@ -1157,7 +1246,7 @@ public class eventSystem : MonoBehaviour
         }//thanks (end event and incroment event tracker)
         else if (msgselect == 59) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
-    public void s2Phase4()
+    void s2Phase4()
     {
         if (msgselect == 60)
         {
@@ -1415,28 +1504,67 @@ public class eventSystem : MonoBehaviour
             sm.gameplay();
         }
     }
+    bool fade;
+    float F = 0;
     private void Update()
     {
+        
         if (slider.transform.position.y>=endPoint.transform.position.y)
         {
             //stop movement
             slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 0);
         }
+        if (fade == true&&F<0.7f) 
+        {
+            F += 0.8f * Time.deltaTime;
+            Color C = wrningScreen.GetComponent<SpriteRenderer>().color;
+            C.a = F;
+            wrningScreen.GetComponent<SpriteRenderer>().color = C;
+        }
     }
     //mission starters
     public void One()
-    {//set mission to fighter and calculate if mission interrupt should trigger
-        ObserverScript.Instance.missionType = 0;
-        missionInterruptEvents();
+    {
+        if (ObserverScript.Instance.fitSetup[12] == 0 || ObserverScript.Instance.fitSetup[13] == 0)
+        {
+            fade = true;
+            wrningScreen.SetActive(true);
+        }
+        else
+        {
+            //set mission to fighter and calculate if mission interrupt should trigger
+            ObserverScript.Instance.missionType = 0;
+            missionInterruptEvents();
+        }
     }
     public void two() 
-    {//set mission to boss and check if mission interupt should trigger
-        ObserverScript.Instance.missionType = 1;
-        missionInterruptEvents();
+    {
+
+        if (ObserverScript.Instance.fitSetup[12] == 0 || ObserverScript.Instance.fitSetup[13] == 0)
+        {
+            fade = true;
+            wrningScreen.SetActive(true);
+        }
+        else
+        {
+            //set mission to boss and check if mission interupt should trigger
+            ObserverScript.Instance.missionType = 1;
+            missionInterruptEvents();
+        }
     }
     public void three() 
-    {//set mission to static boss and check if mission interupt should trigger
-        ObserverScript.Instance.missionType = 2;
-        missionInterruptEvents();
+    {
+
+        if (ObserverScript.Instance.fitSetup[12] == 0 || ObserverScript.Instance.fitSetup[13] == 0)
+        {
+            fade = true;
+            wrningScreen.SetActive(true);
+        }
+        else
+        {
+            //set mission to static boss and check if mission interupt should trigger
+            ObserverScript.Instance.missionType = 2;
+            missionInterruptEvents();
+        }
     }
 }

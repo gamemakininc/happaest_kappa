@@ -124,7 +124,7 @@ public class settingsMenu : MonoBehaviour
     public void applybtn()
     {
         //uses toggle to swap between full screen and windowed.
-        if (fsToggle != ObserverScript.Instance.fs)
+        if (fsToggle.isOn != ObserverScript.Instance.fs)
         {
             Screen.fullScreen = fsToggle.isOn;
             StartCoroutine(confermWait());
@@ -197,13 +197,13 @@ public class settingsMenu : MonoBehaviour
         //after timer ends check if accept pressed
         if (onePressed == true)
         {
-            ObserverScript.Instance.fs = fsToggle.isOn;
+            if (fsToggle.isOn == true) { }
+            else { }
         }
         //if not reset to saved setting
-        else 
+        else
         {
             fsToggle.isOn = ObserverScript.Instance.fs;
-            Screen.fullScreen = ObserverScript.Instance.fs;
         }
 
         //set code side tracker for dialogue opem
