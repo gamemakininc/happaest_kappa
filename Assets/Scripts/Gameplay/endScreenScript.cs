@@ -119,7 +119,7 @@ public class endScreenScript : MonoBehaviour
         }//misson progress check (M3)
 
         if (ObserverScript.Instance.mProgressShip==1&& ObserverScript.Instance.missionType==1) { ObserverScript.Instance.mProgressShip++; }
-        if (ObserverScript.Instance.mProgressShip == 3&&scoreholder>1000+ ObserverScript.Instance.levelsCleared*2.5f) 
+        if (ObserverScript.Instance.mProgressShip == 3&&scoreholder>1000) 
         {
             ObserverScript.Instance.mProgressShip++;
             ObserverScript.Instance.unlocks[34] = true;

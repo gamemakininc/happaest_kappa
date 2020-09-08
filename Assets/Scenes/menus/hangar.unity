@@ -388,6 +388,7 @@ MonoBehaviour:
   factionId: 0
   factionRangeSwap: 0
   defenceMission: 0
+  shipswap: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   mvol: 0
   sfxvol: 0
   mouseAiming: 0
+  fs: 0
   keybinds: 
   ngp: 0
 --- !u!4 &654344783
@@ -1625,6 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrningScreen: {fileID: 0}
   cSpeaker: {fileID: 4585358747540711559}
   btn1Txt: {fileID: 835470269}
   btn2Txt: {fileID: 786481597}
@@ -1638,7 +1641,87 @@ MonoBehaviour:
   typeing: 0
   letterPause: 0.12
   message:
-  - hello
+  - (during preflight checks a vulpie shows up) hey, you mind signing off on this
+    work order
+  - fine.
+  - ignore the vulpie
+  - STAND CLEAR (close the canopy)
+  - as you complete preflight checks the vulpie askes again
+  - the vulpie thanks you and walks away...
+  - the vulpie jumps back as the cockpit snaps closed. just before launch you glance
+    back over and see a face that makes any warzone look safe...
+  - hay, did you sign off on a work order for the explosives replicator
+  - ...yea
+  - ... no
+  - there was an explosion. you are verry luckey no one was seriously hurt.
+  - hello again, would you mind signing me out a couple missiles, i want to try to
+    jam a guidence system on one.
+  - dont make me regret this
+  - ignore the vulpie
+  - point to the close canopy butten
+  - 'of corse when they are done you will have the scematic. '
+  - nice. they should be ready for printing when we swing back around for pickup
+  - the vulpie grawled "Fine i'm going!"
+  - hey i got in some hign end thermal sencors. you mind signing me out some more
+    missiles?
+  - shure
+  - why come to me.
+  - you should find someone else
+  - eh. well lets just say i'm a much better reactor tech than flight crew.
+  - hmm. i hope there will be enough room to put some explosive back in
+  - i'll ask around but most of the other flight crews know about me.
+  - hey i got something strange to ask... i want a corvette reactor.
+  - ok.
+  - what for?
+  - thats.... crazy.. no
+  - well i had an idea for a ship but no one would guive me a chance to try it.
+  - ill get your ship fitted with something to stablise the core so long as you dont
+    hit it too hard.
+  - the vulpie rubs their eyes "i really hoped you would be different, think about
+    it ill be back"
+  - reactors got a few more holes than id like, but now i just need some heavy cambat
+    data.
+  - sounds fun
+  - how heavy is "heavy"
+  - nope. nope.
+  - not too much around 1000 points should do
+  - 'ok soon as i get that data i should have the thing built '
+  - i know you have run harder missions in the past. i cant realy start work without
+    that data.
+  - mind running a few more errends for me? i need another reactor
+  - shure
+  - why?
+  - i dont need the ship or the risk
+  - well i have been playing with another design and i would like to build it
+  - cool, well you know the drill. try not to shoot it up as bad as the last one
+  - i.. had started thinking of us as friends..i'll guive you time to think and come
+    back
+  - allright now we bolth have work to do, i need a bit more than last time though,
+  - oh boy, i should get started
+  - how much more?
+  - i.. eeh.. no
+  - this time... a little over 5000 points. and its gunna get a little harder from
+    here
+  - okay, well lets get to work
+  - i. understand  i am asking a lot i'll guive you some time to think
+  - so this time i cant salvedge the parts for the fusion beam. could you get some
+  - sounds reasonable
+  - where do i get it from?
+  - w.. no,no
+  - well most of the pirate battlecruisers have plenty of spares, they tend not to
+    be willing to share tho
+  - ill let you know whats next when we get it
+  - i KNOW you have done harder jobs.. the vulpie grawls a little before walking
+    off.
+  - this. is propabally the last youll se me so. all thats left to do is a little
+    over 7000 points of data.
+  - ok
+  - what where?
+  - i dont' think i can..
+  - yea an old transfer request went through. your crew knows how to finish it.
+  - ok well i guess this is goodbye, sorry i want be able to see the thing done..
+  - well i guess it will never fly, thats too bad, espeshally after all the work
+    we put in.
   speechBox: {fileID: 4585358747317735597}
   msgselect: 0
   btn: {fileID: 1879913066}

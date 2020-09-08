@@ -977,78 +977,72 @@ public class eventSystem : MonoBehaviour
     }
     public void hangarEvents()
     {
-        if (swapint == 0) { sm.briefing(); Debug.Log("error: no value sent to hangar"); }
-        else if (swapint == 1)
+        switch (swapint)
         {
-            //set starting msg
-            msgselect = 0;
-            //send to appropriate function
-            missileUnlock1();
-        }//missile1
-        else if (swapint == 2)
-        {
-            //set starting msg
-            msgselect = 7;
-            //send to appropriate function
-            m1unlockfailed();
-        }//missile-1-fail
-        else if (swapint == 3)
-        {
-            //set starting msg
-            msgselect = 11;
-            //send to appropriate function
-            missileUnlock2();
-        }//missile2
-        else if (swapint == 4)
-        {
-            //set starting msg
-            msgselect = 18;
-            //send to appropriate function
-            missileUnlock3();
-
-        }//missile3
-        else if (swapint == 5)
-        {
-            //set starting msg
-            msgselect = 25;
-            //send to appropriate function
-            s1Phase1();
-        }//ship1p1
-        else if (swapint == 6)
-        {
-            //set starting msg
-            msgselect = 32;
-            //send to appropriate function
-            s1Phase2();
-        }//ship1p2
-        else if (swapint == 7)
-        {
-            //set starting msg
-            msgselect = 39;
-            //send to appropriate function
-            s2Phase1();
-        }//ship2p1
-        else if (swapint == 8)
-        {
-            //set starting msg
-            msgselect = 46;
-            //send to appropriate function
-            s2Phase2();
-        }//ship2p2
-        else if (swapint == 9)
-        {
-            //set starting msg
-            msgselect = 53;
-            //send to appropriate function
-            s2Phase3();
-        }//ship2p3
-        else if (swapint == 10)
-        {
-            //set starting msg
-            msgselect = 60;
-            //send to appropriate function
-            s2Phase4();
-        }//ship2p4
+            case 0://nothing sent
+                sm.briefing(); Debug.Log("error: no value sent to hangar");
+                break;
+            case 1://missile1
+                //set starting msg
+                msgselect = 0;
+                //send to appropriate function
+                missileUnlock1();
+                break;
+            case 2://missile2
+                //set starting msg
+                msgselect = 7;
+                //send to appropriate function
+                m1unlockfailed();
+                break;
+            case 3://missile3
+                //set starting msg
+                msgselect = 11;
+                //send to appropriate function
+                missileUnlock2();
+                break;
+            case 4://ship1p1
+                //set starting msg
+                msgselect = 18;
+                //send to appropriate function
+                missileUnlock3();
+                break;
+            case 5://ship1p2
+                //set starting msg
+                msgselect = 25;
+                //send to appropriate function
+                s1Phase1();
+                break;
+            case 6:
+                //set starting msg
+                msgselect = 32;
+                //send to appropriate function
+                s1Phase2();
+                break;
+            case 7:
+                //set starting msg
+                msgselect = 39;
+                //send to appropriate function
+                s2Phase1();
+                break;
+            case 8:
+                //set starting msg
+                msgselect = 46;
+                //send to appropriate function
+                s2Phase2();
+                break;
+            case 9:
+                //set starting msg
+                msgselect = 53;
+                //send to appropriate function
+                s2Phase3();
+                break;
+            case 10:
+                //set starting msg
+                msgselect = 60;
+                //send to appropriate function
+                s2Phase4();
+                break;
+        }
 
     }
     void missileUnlock1()
@@ -1090,7 +1084,8 @@ public class eventSystem : MonoBehaviour
         if (msgselect == 10)
         {
             ObserverScript.Instance.mProgressMissile=0;
-            StartCoroutine(TypeText()); }//there was an explosion.(mission progress reset)
+            StartCoroutine(TypeText()); 
+        }//there was an explosion.(mission progress reset)
     }
     void missileUnlock2()
     {
@@ -1112,7 +1107,8 @@ public class eventSystem : MonoBehaviour
             ObserverScript.Instance.mProgressMissile++;
             StartCoroutine(TypeText()); 
         }//thanks (end event and incroment event tracker)
-        else if (msgselect == 17) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+        else if (msgselect == 17) { StartCoroutine(TypeText()); 
+        }//thanks... for nothing (end event no incroment)
     }
     void missileUnlock3()
     {
@@ -1134,7 +1130,7 @@ public class eventSystem : MonoBehaviour
             ObserverScript.Instance.mProgressMissile++;
             StartCoroutine(TypeText()); 
         }//thanks (end event and incroment event tracker)
-        else if (msgselect == 24) { StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
+        else if (msgselect == 24) { StartCoroutine(TypeText());}//thanks... for nothing (end event no incroment)
     }
     void s1Phase1()
     {
@@ -1266,11 +1262,7 @@ public class eventSystem : MonoBehaviour
             ObserverScript.Instance.mProgressShip++;
             StartCoroutine(TypeText()); 
         }//thanks (end event and incroment event tracker)
-        else if (msgselect == 66) 
-        {
-
-            StartCoroutine(TypeText()); 
-        }//thanks... for nothing (end event no incroment)
+        else if (msgselect == 66) {StartCoroutine(TypeText()); }//thanks... for nothing (end event no incroment)
     }
     IEnumerator TypeText()
     {
