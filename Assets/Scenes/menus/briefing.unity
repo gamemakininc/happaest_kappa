@@ -2560,55 +2560,55 @@ MonoBehaviour:
   slider: {fileID: 8168952299317144825}
   eventLingth: 0
   typeing: 0
-  letterPause: 0
+  letterPause: 0.05
   message:
-  - hello1
+  - ' hello1'
   - something basic unlocked
-  - hello2
+  - ' hello2'
   - something standard unlocked
-  - hello3
+  - ' hello3'
   - something advanced unlocked
-  - hello4
+  - ' hello4'
   - something basic unlocked
-  - hello5
+  - ' hello5'
   - something standard unlocked
-  - hello6
+  - ' hello6'
   - something advanced unlocked
-  - hello7
+  - ' hello7'
   - something basic unlocked
-  - hello8
+  - ' hello8'
   - something standard unlocked
-  - hello9
+  - ' hello9'
   - something advanced unlocked
-  - hello10
+  - ' hello10'
   - something basic unlocked
-  - hello11
+  - ' hello11'
   - something standard unlocked
-  - hello12
+  - ' hello12'
   - something advanced unlocked
-  - hello13
+  - ' hello13'
   - something basic unlocked
-  - hello14
+  - ' hello14'
   - something standard unlocked
-  - hello15
+  - ' hello15'
   - something advanced unlocked
-  - hello16
+  - ' hello16'
   - something basic unlocked
-  - hello17
+  - ' hello17'
   - something standard unlocked
-  - hello18
+  - ' hello18'
   - something advanced unlocked
-  - hello19
+  - ' hello19'
   - something basic unlocked
-  - hello20
+  - ' hello20'
   - something standard unlocked
-  - hello21
+  - ' hello21'
   - something advanced unlocked
-  - hello22
+  - ' hello22'
   - something basic unlocked
-  - hello23
+  - ' hello23'
   - something standard unlocked
-  - hello24
+  - ' hello24'
   - something advanced unlocked
   speechBox: {fileID: 8168952298709872445}
   msgselect: 0

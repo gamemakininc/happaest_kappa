@@ -386,7 +386,7 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
-  factionRangeSwap: 0
+  factionRangeSwap: 20
   defenceMission: 0
   shipswap: 0
   s1diff: 0
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265074208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -924,7 +924,6 @@ GameObject:
   - component: {fileID: 1879913072}
   - component: {fileID: 1879913071}
   - component: {fileID: 1879913070}
-  - component: {fileID: 1879913069}
   - component: {fileID: 1879913068}
   - component: {fileID: 1879913074}
   m_Layer: 0
@@ -965,27 +964,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!223 &1879913069
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879913066}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1499807265
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!114 &1879913070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1042,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879913066}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1259,8 +1237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5441, y: 1.031}
-  m_SizeDelta: {x: 566.9877, y: 86}
+  m_AnchoredPosition: {x: -0.5441, y: 0.81}
+  m_SizeDelta: {x: 566.9877, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4585358747317735597
 MonoBehaviour:
@@ -1276,8 +1254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
+  m_RaycastTarget: 0
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1288,14 +1266,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: text sample text and maby some more sample text so we know the bounds this
-    is sample text to guive an idea of limmits
+  m_Text: this. is propabally the last youll se me so. all thats left to do is a
+    little over 7000 points of data against fighters.
 --- !u!222 &4585358747317735598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1557,7 +1535,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585358748995658801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1639,10 +1617,10 @@ MonoBehaviour:
   slider: {fileID: 4585358749266629481}
   eventLingth: 0
   typeing: 0
-  letterPause: 0.12
+  letterPause: 0.05
   message:
   - (during preflight checks a vulpie shows up) hey, you mind signing off on this
-    work order
+    work order?
   - fine.
   - ignore the vulpie
   - STAND CLEAR (close the canopy)
@@ -1714,7 +1692,7 @@ MonoBehaviour:
   - i KNOW you have done harder jobs.. the vulpie grawls a little before walking
     off.
   - this. is propabally the last youll se me so. all thats left to do is a little
-    over 7000 points of data.
+    over 7000 points of data against fighters.
   - ok
   - what where?
   - i dont' think i can..
@@ -1759,7 +1737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585358749266629481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -224.2, z: 0}
+  m_LocalPosition: {x: 0, y: -265, z: 0}
   m_LocalScale: {x: 100.5, y: 100.5, z: 50.25}
   m_Children:
   - {fileID: 4585358747574733903}

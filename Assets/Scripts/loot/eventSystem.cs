@@ -10,6 +10,7 @@ public class eventSystem : MonoBehaviour
     public Text btn1Txt;
     public Text btn2Txt;
     public Sprite[] speakers;
+    // 0=h 1=s 2=v
     public Transform endPoint;
     public GameObject slider;
     public int eventLingth;
@@ -1073,7 +1074,7 @@ public class eventSystem : MonoBehaviour
         if (msgselect == 7)
         {
             //set speaker sprite
-            cSpeaker.sprite = speakers[2];
+            cSpeaker.sprite = speakers[0];
             //set ending msg
             eventLingth = 10;
             //start event
@@ -1321,8 +1322,13 @@ public class eventSystem : MonoBehaviour
             else if (msgselect == 60) { btn1Txt.text = message[61]; btn2Txt.text = message[62]; }
             else if (msgselect == 64) { btn1Txt.text = message[61]; btn2Txt.text = message[63]; }
             //clear skip btn from being interactable
-            if (msgselect != 5 && msgselect != 6 && msgselect != 10 && msgselect != 16 && msgselect != 17 && msgselect != 23 && msgselect != 24 && msgselect != 30 && msgselect != 31 && msgselect != 37 && msgselect != 38 && msgselect != 44 && msgselect != 45 && msgselect != 51 && msgselect != 52 && msgselect != 58 && msgselect != 59 && msgselect != 65 && msgselect != 66)
+            if (msgselect == 5|| msgselect == 6 || msgselect ==10 || msgselect == 16 || msgselect == 17 || msgselect == 23 || msgselect == 24 || msgselect == 30 || msgselect == 31 || msgselect == 37 || msgselect == 38 || msgselect == 44 || msgselect == 45 || msgselect == 51 || msgselect == 52 || msgselect == 58 || msgselect == 59 || msgselect == 65 || msgselect == 66)
             {
+                //if in end state do not dissable btn
+            }
+            else
+            {
+                //dissable btn
                 btn.GetComponent<CanvasGroup>().interactable = false;
                 btn.GetComponent<CanvasGroup>().blocksRaycasts = false;
             }
@@ -1455,13 +1461,14 @@ public class eventSystem : MonoBehaviour
     {
         //chat menu into frame
         slider.GetComponent<Rigidbody2D>().velocity = new Vector2(slider.GetComponent<Rigidbody2D>().velocity.x, 15);
-        //start typeing
-        StartCoroutine(TypeText());
         if (hangar == true)
         {
             btn1Txt.text = ("");
             btn2Txt.text = ("");
+            speechBox.text = ("");
         }
+        //start typeing
+        StartCoroutine(TypeText());
     }
     void eventEnd() 
     {
