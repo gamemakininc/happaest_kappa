@@ -51,22 +51,22 @@ public class ObserverScript : MonoBehaviour
     public int mProgressMissile;//missile mission 
     /*
      * 0 not started
-     * 1 first in progress
-     * 2 first failed
+     * 1 first in progress (esSwap1)
+     * 2 first failed      (esSwap2)
      * 3 first complete
-     * 4 second started
+     * 4 second started    (esSwap3)
      * 5 second complete
-     * ect..
+     * 6 third started     (esSwap4)
      */
     public int mProgressShip;//hold the current place on ship unlock missions.
     /*
      * 0 not started
-     * 1 phase1 (start)
+     * 1 phase1 (start)        (esSwap5)
      * 2 phase1 (done)
-     * 3 phase2 (start)
+     * 3 phase2 (start)        (esSwap6)
      * 4 phase2 (done)
-     * 5 ship2 phase1(start)
-     * 6 ship2 phase1(done)ect...
+     * 5 ship2 phase1(start)   (esSwap7)
+     * 6 ship2 phase1(done)ect... (8,9,10)
      */
     public int missionType;//hold the type of mission to start 0=fighter 1=boss ship 2=static boss
     public int factionId;//not yet implemented

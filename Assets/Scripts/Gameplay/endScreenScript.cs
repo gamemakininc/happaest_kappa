@@ -101,21 +101,30 @@ public class endScreenScript : MonoBehaviour
             int i = Random.Range(1, 100);
             if (i < 30)
             {
+                //success unlock missile
                 ObserverScript.Instance.unlocks[25] = true;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile++;
             }
             else if (i >= 30) 
             {
+                //set eswap to 'm1 failed
                 ObserverScript.Instance.esSwap = 2;
+                //start event
                 sm.hangar();
             }
         }//misson progress check (M1)
         if (ObserverScript.Instance.mProgressMissile == 3) 
         {
             ObserverScript.Instance.unlocks[26] = true;
+            //incromint mission progress tracker
+            ObserverScript.Instance.mProgressMissile++;
         }//misson progress check (M2)
         if (ObserverScript.Instance.mProgressMissile == 5)
         {
             ObserverScript.Instance.unlocks[27] = true;
+            //incromint mission progress tracker
+            ObserverScript.Instance.mProgressMissile++;
         }//misson progress check (M3)
 
         if (ObserverScript.Instance.mProgressShip==1&& ObserverScript.Instance.missionType==1) { ObserverScript.Instance.mProgressShip++; }
@@ -158,6 +167,63 @@ public class endScreenScript : MonoBehaviour
                 sm.hangar();
             }
         }
+        //lock active ship
+        switch (ObserverScript.Instance.fitSetup[13])
+        {
+            //what ship
+            case 1:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[28] = false;
+                    //end switch
+                    break;
+                }
+            case 2:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[29] = false;
+                    break;
+                }
+            case 3:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[30] = false;
+                    break;
+                }
+            case 4:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[31] = false;
+                    break;
+                }
+            case 5:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[32] = false;
+                    break;
+                }
+            case 6:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[33] = false;
+                    break;
+                }
+            case 7:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[34] = false;
+                    break;
+                }
+            case 8:
+                {
+                    //lock ship
+                    ObserverScript.Instance.unlocks[35] = false;
+                    break;
+                }
+        }
+        //clear active gun than ship
+        ObserverScript.Instance.fitSetup[12] = 0;
+        ObserverScript.Instance.fitSetup[13] = 0;
         //change scene
         sm.briefing();
     }

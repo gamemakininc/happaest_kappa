@@ -879,8 +879,13 @@ public class eventSystem : MonoBehaviour
         eventAllreadyTriggered = ObserverScript.Instance.bookmark0;
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
+        //bypass checks if questline ready to progress
+        if (ObserverScript.Instance.mProgressShip == 6 || ObserverScript.Instance.mProgressShip == 8 || ObserverScript.Instance.mProgressShip == 10)
+        {
+            
+        }
         //check for event elegitability
-        if (eventTriedInterrupt == true) {/*start mission*/ }
+        else if (eventTriedInterrupt == true) {/*start mission*/ }
         else if (ObserverScript.Instance.levelsCleared > 15) {/*start mission*/ }
         //poll RNG
         else if (swapint <= 20)
@@ -950,19 +955,19 @@ public class eventSystem : MonoBehaviour
                         ObserverScript.Instance.esSwap = 5;
                         //Note reserve 6 for callback from end mission
                     }
-                    else if (swapint <= 10 && ObserverScript.Instance.mProgressShip == 5) 
+                    else if (swapint <= 10 && ObserverScript.Instance.mProgressShip == 5)
                     {
                         swapBool = true;
                         //set observer script var to tell hangar to start ship1 mission
-                        ObserverScript.Instance.esSwap = 10;
-                        //Note 11,12,13,14,15 are used for mission steps
+                        ObserverScript.Instance.esSwap = 7;
+                        //Note 8,9,10 are used for mission steps
                     }
                 }
-                
+
 
             }
             if (swapBool == true) { Debug.Log("unlocked" + swapint); }
-            
+
         }
         if (swapBool == true)
         {//if something triggered go to hangar interrupt scene
