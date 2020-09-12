@@ -880,9 +880,38 @@ public class eventSystem : MonoBehaviour
         swapint = Random.Range(1, 100);
         unlocks = ObserverScript.Instance.unlocks;
         //bypass checks if questline ready to progress
-        if (ObserverScript.Instance.mProgressShip == 6 || ObserverScript.Instance.mProgressShip == 8 || ObserverScript.Instance.mProgressShip == 10)
+        if (ObserverScript.Instance.mProgressShip == 2 || ObserverScript.Instance.mProgressShip == 6 || ObserverScript.Instance.mProgressShip == 8 || ObserverScript.Instance.mProgressShip == 10)
         {
-            
+            //witch inbetween state is it
+            if (ObserverScript.Instance.mProgressShip == 2)
+            {//s1p2 ready to trigger
+                //set constant swap var
+                ObserverScript.Instance.esSwap = 6;
+                //change scene
+                sm.hangar();
+            }
+            else if (ObserverScript.Instance.mProgressShip == 6)
+            {//s2p2 ready to trigger
+                //set constant swap var
+                ObserverScript.Instance.esSwap = 8;
+                //change scene
+                sm.hangar();
+            }
+            else if (ObserverScript.Instance.mProgressShip == 8)
+            {//s2p3 ready to trigger
+                //set constant swap var
+                ObserverScript.Instance.esSwap = 9;
+                //change scene
+                sm.hangar();
+            }
+            else if (ObserverScript.Instance.mProgressShip == 10)
+            {//s2p4 ready to trigger
+                //set constant swap var
+                ObserverScript.Instance.esSwap = 10;
+                //change scene
+                sm.hangar();
+            }
+
         }
         //check for event elegitability
         else if (eventTriedInterrupt == true) {/*start mission*/ }
