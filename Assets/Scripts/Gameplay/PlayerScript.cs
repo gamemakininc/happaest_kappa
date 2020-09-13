@@ -321,6 +321,7 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        GameObject.Find("PostProcessing Volume").GetComponent<GlitchShaderVariables>()._AddGlitch(0.3f, 0.5f, 0.0f, 0.1f);
         hitTimer = 0;
         if (involActive == false)
         {
