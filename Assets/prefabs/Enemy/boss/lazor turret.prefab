@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3391642861617439897}
   - component: {fileID: 3391642861617439902}
   - component: {fileID: 3391642861617439903}
-  - component: {fileID: 3391642861617439900}
+  - component: {fileID: -404059425629800136}
   m_Layer: 11
   m_Name: lazor turret
   m_TagString: Untagged
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3391642861617439900
+--- !u!114 &-404059425629800136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,28 +142,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3391642861617439901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f446fa450a710294b9397791e14a3797, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   deathEffect: {fileID: 0}
+  health: 20
+  isSBoss: 1
+  isBoss: 1
   thisPowerup: {fileID: 0}
-  shootDissabled: 0
-  ebullet: {fileID: 0}
-  mgport: {fileID: 0}
-  currentState: 6
-  speed: 1
-  waitTime: 3
-  currentTab: 5
-  currentTab2: 1
-  currentField: Paused
-  amplitude: 1
-  period: 0.3
-  yChange: 0.1
-  slideTime: 2
-  moveRight: 0
-  maxRadians: 1
-  sideVelocity: {x: 0, y: -1.5}
+  value: 0
 --- !u!1 &3391642861680242184
 GameObject:
   m_ObjectHideFlags: 0

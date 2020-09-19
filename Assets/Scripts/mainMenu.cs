@@ -31,6 +31,7 @@ public class mainMenu : MonoBehaviour
     public bool gameInProgress = false;
     public GameObject continuebtn;
     public bool[] unlocks;
+    public Button[] soptions;
 
     // Start is called before the first frame update
     void Start()
@@ -126,7 +127,12 @@ public class mainMenu : MonoBehaviour
         //load game
         else if (menucurrent[2] == true) { swapint2 = 2; outpoint = true; rbswap2 = menuParents[2].GetComponent<Rigidbody2D>(); }
         //settings
-        else if (menucurrent[3] == true) { swapint2 = 3; outpoint = true; rbswap2 = menuParents[3].GetComponent<Rigidbody2D>(); }
+        else if (menucurrent[3] == true) 
+        { 
+            swapint2 = 3;
+            outpoint = true; 
+            rbswap2 = menuParents[3].GetComponent<Rigidbody2D>();
+        }
         //info
         else if (menucurrent[4] == true) { swapint2 = 4; outpoint = true; rbswap2 = menuParents[4].GetComponent<Rigidbody2D>(); }
 
@@ -224,7 +230,12 @@ public class mainMenu : MonoBehaviour
         //load game
         if (menucurrent[2] == true) { swapint2 = 2; outpoint = true; rbswap2 = menuParents[2].GetComponent<Rigidbody2D>(); }
         //settings
-        if (menucurrent[3] == true) { swapint2 = 3; outpoint = true; rbswap2 = menuParents[3].GetComponent<Rigidbody2D>(); }
+        if (menucurrent[3] == true) 
+        {
+            swapint2 = 3;
+            outpoint = true;
+            rbswap2 = menuParents[3].GetComponent<Rigidbody2D>();
+        }
         //info
         if (menucurrent[4] == true) { swapint2 = 4; outpoint = true; rbswap2 = menuParents[4].GetComponent<Rigidbody2D>(); }
     }

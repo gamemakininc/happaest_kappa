@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 
 public class settingsMenu : MonoBehaviour
 {
+    public Dropdown resolutions;
     public Slider mVolSli;
     public Slider sfxVolSli;
     public Toggle fsToggle;
@@ -126,9 +128,40 @@ public class settingsMenu : MonoBehaviour
         bool B;
         B = fsToggle.isOn;
         //uses toggle to swap between full screen and windowed.
-        if (B != ObserverScript.Instance.fs)
+        if (B != ObserverScript.Instance.fs|| resolutions.value != ObserverScript.Instance.resoSelect)
         {
-            Screen.fullScreen = B;
+            switch (resolutions.value) 
+            {
+                case 0:
+                    Screen.SetResolution(1280,720, B);
+                    break;
+                case 1:
+                    Screen.SetResolution(1366, 768, B);
+
+                    break;
+                case 2:
+                    Screen.SetResolution(1600, 900, B);
+
+                    break;
+                case 3:
+                    Screen.SetResolution(1920, 1080, B);
+
+                    break;
+                case 4:
+                    Screen.SetResolution(2048, 1152, B);
+
+                    break;
+                case 5:
+                    Screen.SetResolution(2560, 1440, B);
+
+                    break;
+                case 6:
+                    Screen.SetResolution(2880, 1620, B);
+
+                    break;
+
+            }
+
             StartCoroutine(confermWait());
         }
         //set vars in observer script from sliders
@@ -174,6 +207,9 @@ public class settingsMenu : MonoBehaviour
         //set mouse aim
         mouseAim.isOn = true;
         ObserverScript.Instance.mouseAiming = mouseAim.isOn;
+        ObserverScript.Instance.fs = true;
+        Screen.SetResolution(1920, 1080, true);
+
     }
     IEnumerator confermWait() 
     {
@@ -185,8 +221,9 @@ public class settingsMenu : MonoBehaviour
         confOpen = true;
 
         //timer to auto close and video changes
-        while (T < 5) 
+        while (T <= 5) 
         {
+            Debug.Log("T=" + T);
             if (T == 0) { txtResetTimer.text = ("(5)"); }
             if (T == 1) { txtResetTimer.text = ("(4)"); }
             if (T == 2) { txtResetTimer.text = ("(3)"); }
@@ -195,18 +232,55 @@ public class settingsMenu : MonoBehaviour
             if (T == 5) { txtResetTimer.text = ("(0)"); }
             yield return 0;
             yield return new WaitForSeconds(1);
+            T++;
         }
         //after timer ends check if accept pressed
         if (onePressed == true)
         {
             if (fsToggle.isOn == true) 
-            { }
-            else { }
+            { ObserverScript.Instance.fs = true; }
+            else { ObserverScript.Instance.fs = false; }
+            ObserverScript.Instance.resoSelect = resolutions.value;
         }
         //if not reset to saved setting
         else
         {
             fsToggle.isOn = ObserverScript.Instance.fs;
+            resolutions.value = ObserverScript.Instance.resoSelect;
+            switch (resolutions.value)
+            {
+                case 0:
+                    Screen.SetResolution(1280, 720, fsToggle.isOn);
+                    break;
+                case 1:
+                    Screen.SetResolution(1366, 768, fsToggle.isOn);
+
+                    break;
+                case 2:
+                    Screen.SetResolution(1600, 900, fsToggle.isOn);
+
+                    break;
+                case 3:
+                    Screen.SetResolution(1920, 1080, fsToggle.isOn);
+
+                    break;
+                case 4:
+                    Screen.SetResolution(2048, 1152, fsToggle.isOn);
+
+                    break;
+                case 5:
+                    Screen.SetResolution(2560, 1440, fsToggle.isOn);
+
+                    break;
+                case 6:
+                    Screen.SetResolution(2880, 1620, fsToggle.isOn);
+
+                    break;
+
+            }
+
+            //reload active scene   
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         //set code side tracker for dialogue opem

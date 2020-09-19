@@ -29,7 +29,6 @@ public class savescript : MonoBehaviour
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
             pSpeed = ObserverScript.Instance.pSpeed,
             pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
@@ -67,7 +66,6 @@ public class savescript : MonoBehaviour
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
             pSpeed = ObserverScript.Instance.pSpeed,
             pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
@@ -105,7 +103,6 @@ public class savescript : MonoBehaviour
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
-            pBulletSelector = ObserverScript.Instance.pBulletSelector,
             pSpeed = ObserverScript.Instance.pSpeed,
             pHealth = ObserverScript.Instance.pHealth,
             pShield = ObserverScript.Instance.pShield,
@@ -148,7 +145,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
             ObserverScript.Instance.pSpeed = save.pSpeed;
             ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;
@@ -197,7 +193,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
             ObserverScript.Instance.pSpeed = save.pSpeed;
             ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;
@@ -243,7 +238,6 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
-            ObserverScript.Instance.pBulletSelector = save.pBulletSelector;
             ObserverScript.Instance.pSpeed = save.pSpeed;
             ObserverScript.Instance.pHealth = save.pHealth;
             ObserverScript.Instance.pShield = save.pShield;

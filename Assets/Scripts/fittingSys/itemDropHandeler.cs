@@ -79,6 +79,7 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
     void Start()
     {
         slotNeedUpdate = false;
+
     }
 
     // Update is called once per frame

@@ -16,12 +16,12 @@ public class sbosstracker : MonoBehaviour
     public GameObject[] missileObj;
     //used for health calculation
     private int turretsMax;
-    private int turretsCurrent;
+    public int turretsCurrent;
     private int tuCounter;
     //swaps
     public int gInputInt;//handel for turret script
     public int tInputInt;//handel for thruster script
-    private int swapint;
+    public int swapint;
     private int counter;
     private bool t1Fired;
     private bool t2Fired;
@@ -99,6 +99,7 @@ public class sbosstracker : MonoBehaviour
             ObserverScript.Instance.type3++;
 
         }
+        Debug.Log("turrets detected: "+ turretsCurrent);
     }
     // Update is called once per frame
     void Update()
@@ -108,7 +109,7 @@ public class sbosstracker : MonoBehaviour
         //before tile stops
         if (slow == false)
         {
-            if (thrustTimer >= 9.5)
+            if (thrustTimer >= 5.7)
             {
                 //fire thrusters
                 thrusterObj[0].GetComponent<thrusterScript>().turnOn();
@@ -118,17 +119,17 @@ public class sbosstracker : MonoBehaviour
                 thrusterObj[4].GetComponent<thrusterScript>().turnOn();
                 thrusterObj[5].GetComponent<thrusterScript>().turnOn();
                 //slow tile
-                GetComponent<TileScript>().speed += 0.2f * Time.deltaTime;
+                GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
                 //slow faster
-                if (thrustTimer >= 10.3)
+                if (thrustTimer >= 6.5)
                 {
-                    GetComponent<TileScript>().speed += 0.2f * Time.deltaTime;
+                    GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
                 }
                 //slow faster
-                if (thrustTimer >= 10.8)
+                if (thrustTimer >= 7)
                 {
 
-                    GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
+                    GetComponent<TileScript>().speed += 0.4f * Time.deltaTime;
                 }
                 //once stoped
                 if (GetComponent<TileScript>().speed >= 0) 

@@ -52,7 +52,7 @@ public class GameStateManager : MonoBehaviour
             background.GetComponent<Rigidbody2D>().velocity = bVelocity; ///Apply changes
             backgroundSpeed = Mathf.SmoothDamp(bVelocity.x, 1.0f, ref velocity, 1.5f);
             Camera.main.GetComponent<BackgroundSpawner>().speedMultiplier = -backgroundSpeed;
-            print(Camera.main.GetComponent<BackgroundSpawner>().speedMultiplier);
+            //print(Camera.main.GetComponent<BackgroundSpawner>().speedMultiplier);
 
             if (Mathf.Pow(Vector2.Distance(bVelocity, targetVelocity), 2)  <= 0.1f) ///Unfreezes everything at end of intro animation
             {

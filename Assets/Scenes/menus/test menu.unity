@@ -4088,6 +4088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d18ca63f36c6fb4e8e8be1402438250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrningScreen: {fileID: 0}
   cSpeaker: {fileID: 1499467403}
   btn1Txt: {fileID: 0}
   btn2Txt: {fileID: 0}
@@ -9172,8 +9173,10 @@ MonoBehaviour:
   mvol: 0.5
   sfxvol: 0.5
   mouseAiming: 0
+  fs: 0
   keybinds: 61000000770000007300000064000000430100004401000045010000140100001101000012010000130100002000000071000000
   ngp: 0
+  resoSelect: 0
 --- !u!4 &1603496473
 Transform:
   m_ObjectHideFlags: 0
@@ -10107,8 +10110,8 @@ MonoBehaviour:
   - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
   - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
   - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
-  - {fileID: 8484439125898418650, guid: 7b6fdf2102248d748b4dc21326044397, type: 3}
-  - {fileID: -8119885340119290590, guid: ee8386f81f5a0c24088e24f7ddde91d0, type: 3}
+  - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
+  - {fileID: -5006950574146772211, guid: b012a7572d23223459874710b3d7e55b, type: 3}
   otherSprite: {fileID: 0}
   itemId: 0
   typeOfItem: 4

@@ -701,7 +701,7 @@ public class fittingScript : MonoBehaviour
 		ObserverScript.Instance.pHealth = health;
 		ObserverScript.Instance.pSRegen = sRegen;
 		ObserverScript.Instance.pShield = shield;
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
 		ObserverScript.Instance.mslBonus = mslBonus;
 	}
 	void shildBoost() 
@@ -790,7 +790,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 	}
 	void shipTwo()
@@ -843,7 +845,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}
@@ -897,7 +901,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}
@@ -951,7 +957,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}
@@ -1005,7 +1013,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}
@@ -1058,7 +1068,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 	}
 	void secritShipOne()
@@ -1112,7 +1124,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId = ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}
@@ -1166,7 +1180,9 @@ public class fittingScript : MonoBehaviour
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
 		}
 		//update bullet selector
-		ObserverScript.Instance.pBulletSelector = bulletSelector;
+		ObserverScript.Instance.fitSetup[12] = bulletSelector;
+		slotsLoc[13].GetComponent<itemDropHandeler>().itemId=ObserverScript.Instance.fitSetup[13];
+		slotsLoc[13].GetComponent<itemDropHandeler>().updateSprite();
 		SetOutputs();
 
 	}

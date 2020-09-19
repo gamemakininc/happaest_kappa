@@ -24,7 +24,7 @@ public class enemyhealth : MonoBehaviour
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
-            
+            ObserverScript.Instance.levelScore += value / 2;
             //damage player
             player.TakeDamage(health);
             //remove enemy
@@ -80,9 +80,9 @@ public class enemyhealth : MonoBehaviour
                 EnemyWavev2 waveSpner = FindObjectOfType<EnemyWavev2>();
                 //end level win state
                 waveSpner.OnLevelComplete();
-                //remove self
-                Destroy(gameObject);
             }
+            //remove self
+            Destroy(gameObject);
 
         }
     }

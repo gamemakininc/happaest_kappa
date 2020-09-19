@@ -43,6 +43,7 @@ public class PlayerScript : MonoBehaviour
     private float hitTimer;
     private float itimer;
     private float fRtimer;
+    private float baceRefireRatee;
     private float baceRefireRate;
     private float refireTime;
     private float enextFire;
@@ -62,6 +63,8 @@ public class PlayerScript : MonoBehaviour
     //set death sprite
     public int deathEffectSelector;
     public GameObject[] deathEffect;
+    //bombs avalible
+    public int bomb;
 
     private void Start()
     {
@@ -73,7 +76,7 @@ public class PlayerScript : MonoBehaviour
         health = maxHealth;
         repair = ObserverScript.Instance.pRepair;
         MoveSpeed = ObserverScript.Instance.pSpeed;
-        bulletSelector = ObserverScript.Instance.pBulletSelector - 1;
+        bulletSelector = ObserverScript.Instance.fitSetup[12] - 1;
         payload0Selector = ObserverScript.Instance.fitSetup[10] - 1;
         payload1Selector = ObserverScript.Instance.fitSetup[11] - 1;
         mslBonus = ObserverScript.Instance.mslBonus;
@@ -103,6 +106,7 @@ public class PlayerScript : MonoBehaviour
         GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
         GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
         deathEffectSelector = shipselect;
+        audioSource.volume = ObserverScript.Instance.sfxvol;
     }
 
     //Update called once per frame
@@ -163,8 +167,9 @@ public class PlayerScript : MonoBehaviour
             //after some time dissable
             if (fRtimer >= 7) 
             {   fireBuffActive = false;
-                //reset fire rate
+                //reset fire rates
                 nextFire = baceRefireRate;
+                enextFire = baceRefireRatee;
             }
         }
         //incroment timer (used for shield regen delay)
@@ -366,8 +371,11 @@ public class PlayerScript : MonoBehaviour
         fireBuffActive = true;
         //get bace fire rate in swapfile
         baceRefireRate = nextFire;
+        //get bace fire rate in swapfile
+        baceRefireRatee = enextFire;
         //set fire delay to 0
         nextFire = 0;
+        enextFire = 0;
     }
     public void addMissiles() 
     {

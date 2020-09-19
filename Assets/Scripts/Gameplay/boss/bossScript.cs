@@ -2,6 +2,7 @@
 
 public class bossScript : MonoBehaviour
 {
+    public GameObject tile;
     //patrol variables
     public Transform[] movepoints;
     public int tracker;//set to # of movepoints
@@ -42,18 +43,18 @@ public class bossScript : MonoBehaviour
         {
             //stop timer
             thrustTimer += 1 * Time.deltaTime;
-            if (thrustTimer >= 9.5)
+            if (thrustTimer >= 5.7)
             {
-                FindObjectOfType<TileScript>().speed += 0.2f * Time.deltaTime;
-                if (thrustTimer >= 10.3)
+                tile.GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
+                if (thrustTimer >= 6.5)
                 {
-                    FindObjectOfType<TileScript>().speed += 0.2f * Time.deltaTime;
+                    tile.GetComponent<TileScript>().speed += 0.3f * Time.deltaTime;
                 }
-                if (thrustTimer >= 10.8)
+                if (thrustTimer >= 7)
                 {
-                    FindObjectOfType<TileScript>().speed += 0.3f * Time.deltaTime;
+                    tile.GetComponent<TileScript>().speed += 0.4f * Time.deltaTime;
                 }
-                if (FindObjectOfType<TileScript>().speed >= 0) { FindObjectOfType<TileScript>().freeze = true; slow = true; }
+                if (tile.GetComponent<TileScript>().speed >= 0) { tile.GetComponent<TileScript>().freeze = true; slow = true; }
             }
         }
         //run timers

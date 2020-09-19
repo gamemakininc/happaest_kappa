@@ -20,7 +20,6 @@ public class ObserverScript : MonoBehaviour
     //player output from fitting system
     public float efireRate;//fire rate for blasma weapons
     public float fireRate;//fire rate for cannons
-    public int pBulletSelector;//could be reworked
     public float pSpeed;//minovering speed
     public float pHealth;//health
     public float pShield;//another health bar to go over your health so you can heal while you heal
@@ -120,6 +119,8 @@ public class ObserverScript : MonoBehaviour
      */
     public KeyCode[] keybinds;
     public bool ngp;//unlocks new game plus
+    public int resoSelect;//store set resolution
+
     private void Awake()
     {//
         if (Instance == null)

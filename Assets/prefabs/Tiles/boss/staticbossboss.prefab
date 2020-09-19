@@ -581,10 +581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 6735791284287347136}
-  value: 10
+  value: 20
 --- !u!114 &6735791284287347136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,10 +959,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 91574569339478199}
-  value: 15
+  value: 20
 --- !u!114 &91574569339478199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 6058019258779615882}
   value: 20
@@ -1350,10 +1350,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 5765078121835222190}
-  value: 10
+  value: 20
 --- !u!114 &5765078121835222190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 1886391023935745912}
   value: 20
@@ -2396,7 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 4107693065553096506}
   value: 20
@@ -3280,10 +3280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 2387106573563503353}
-  value: 15
+  value: 20
 --- !u!114 &2387106573563503353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3705,10 +3705,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 2168020552279365164}
-  value: 15
+  value: 20
 --- !u!114 &2168020552279365164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4018,10 +4018,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 461171040715675312}
-  value: 10
+  value: 20
 --- !u!114 &461171040715675312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4196,10 +4196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 3016389107359443892}
-  value: 10
+  value: 20
 --- !u!114 &3016389107359443892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4509,10 +4509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 1011781317365934444}
-  value: 15
+  value: 20
 --- !u!114 &1011781317365934444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 5950413683296626253}
   value: 20
@@ -5217,7 +5217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 3145763679855976177}
   value: 20
@@ -5496,7 +5496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
   health: 20
-  isSBoss: 0
+  isSBoss: 1
   isBoss: 1
   thisPowerup: {fileID: 3364005266572331689}
   value: 20
@@ -5752,7 +5752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3649292634861893057}
   bossTracker: {fileID: 6876359748589673298}
-  parentScript: {fileID: 0}
+  parentScript: {fileID: 4358909429440270681}
   location: 0
   laser: 1
   missle: 0
@@ -6146,18 +6146,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusters: 010101010101
   thrusterObj:
-  - {fileID: 3983529982240718354}
-  - {fileID: 4652780925983460035}
-  - {fileID: 8447407891006782083}
-  - {fileID: 3848738453088425369}
-  - {fileID: 4245124446610559766}
-  - {fileID: 4427152329407952382}
+  - {fileID: 9163109908159231009}
+  - {fileID: 442140254229023481}
+  - {fileID: 4872287840811511977}
+  - {fileID: 1533055784930217612}
+  - {fileID: 3487569433802998768}
+  - {fileID: 2386561860387655357}
   turrets: 0101010101010101010101010101
   laserObj:
-  - {fileID: 5575460445643723701}
-  - {fileID: 6418995523098314080}
-  - {fileID: 1803659406656897759}
-  - {fileID: 5328974720452012736}
+  - {fileID: 8601279466661682225}
+  - {fileID: 6409760352615172661}
+  - {fileID: 5762985314367300916}
+  - {fileID: 425667954665582770}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6165,10 +6165,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cannonObj:
-  - {fileID: 2412257800941641653}
-  - {fileID: 1228664479118436990}
-  - {fileID: 5959939774787253945}
-  - {fileID: 6389021602062291645}
+  - {fileID: 4560320174791201285}
+  - {fileID: 6779228142619066459}
+  - {fileID: 3385463245411280037}
+  - {fileID: 811940394647433868}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6176,18 +6176,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   missileObj:
-  - {fileID: 6539078909443851483}
-  - {fileID: 2544264928756512292}
-  - {fileID: 2117437233594960420}
-  - {fileID: 7585197177978469364}
-  - {fileID: 3852927090900941946}
-  - {fileID: 8132019573728537768}
+  - {fileID: 8622346390532981101}
+  - {fileID: 9060286975586812670}
+  - {fileID: 3505678859119893270}
+  - {fileID: 5454242314718495456}
+  - {fileID: 1343445331376887631}
+  - {fileID: 6480112901961907397}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  turretsCurrent: 0
   gInputInt: 0
   tInputInt: 0
+  swapint: 0
   thrustTimer: 0
   laserTimer: 0
   cannonTimer: 0
