@@ -18,19 +18,19 @@ MonoBehaviour:
     value: 1
   drift:
     overrideState: 1
-    value: 0
+    value: 0.12
   jitter:
     overrideState: 1
-    value: 0
+    value: 0.54
   cutoff:
     overrideState: 1
-    value: 0
+    value: 0.61
   jump:
     overrideState: 1
-    value: 0
+    value: 0.15
   displacement:
     overrideState: 1
-    value: 0
+    value: 0.09
   trashTex:
     overrideState: 1
     value: {fileID: 2800000, guid: 7afe01b3a3c51eb488d90b5fd0adb478, type: 3}
@@ -280,7 +280,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.96
+    value: 0.35
   threshold:
     overrideState: 1
     value: 0.6

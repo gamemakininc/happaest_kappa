@@ -60,6 +60,10 @@ public class GlitchShaderVariables : MonoBehaviour
     }
 
     //Adds a burst of glitch that dies down, call to add glitch
+    public void _AddGlitch(float _drift, float _jitter, float _cutoff, float _jump)
+    {
+        StartCoroutine(AddGlitch(new FloatParameter { value = _drift }, new FloatParameter { value = _jitter }, new FloatParameter { value = _cutoff }, new FloatParameter { value = _jump }));
+    }
     IEnumerator AddGlitch(FloatParameter _drift, FloatParameter _jitter, FloatParameter _cutoff, FloatParameter _jump)
     {
         addDrift = _drift;
@@ -72,7 +76,7 @@ public class GlitchShaderVariables : MonoBehaviour
         float _addJump = addJump;
 
         float elapsedTime = 0;
-        float timer = 1.5f;
+        float timer = 0.8f;
 
         margin = new FloatParameter { value = 0.15f };
 
