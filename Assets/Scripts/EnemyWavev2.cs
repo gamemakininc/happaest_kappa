@@ -48,6 +48,9 @@ public class EnemyWavev2 : MonoBehaviour
 
     void Start()
     {
+        int mult = ObserverScript.Instance.diff;
+        if (mult == 0) { mult = 5; }//if NG+ inflate the number
+        else if (mult > 3) { mult = 3; }//if out of range set to hard
         int levelCount;
         //finds current mission, and gets number of mission type clears
         if (GameObject.Find("Observer") != null)
@@ -56,12 +59,16 @@ public class EnemyWavev2 : MonoBehaviour
             {
                 case 0:
                     levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type1;
+                    //possibly game breaking code GO!
+                    levelCount = levelCount * mult;
                     break;
                 case 1:
                     levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type2;
+                    levelCount = levelCount * mult;
                     break;
                 case 2:
                     levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().type3;
+                    levelCount = levelCount * mult;
                     break;
             }
             levelCount = GameObject.Find("Observer").GetComponent<ObserverScript>().levelsCleared;
@@ -170,6 +177,7 @@ public class EnemyWavev2 : MonoBehaviour
                 else
                 {
                     //currentState = states.win;
+                    //moved to sbosstracker.cs and enemyHealth.cs
                 }
                 break;
             case states.win:
@@ -183,15 +191,40 @@ public class EnemyWavev2 : MonoBehaviour
     //Selects which prefab to spawn
     void SelectWave(out GameObject selectedWave) 
     {
+        float D;//threashold for eliete wave spawn (higher is less likely)
+        //alter wave weaghts baced on difficulty
+        if (ObserverScript.Instance.diff==0)
+        {//NG+ 
+            D = 0.2f;
+        }
+        else if (ObserverScript.Instance.diff == 1)
+        {//easy
+            D = 0.9F;
+        }
+        else if (ObserverScript.Instance.diff == 1)
+        {//medium
+            D = 0.7F;
+        }
+        else if (ObserverScript.Instance.diff == 1)
+        {//hard
+            D = 0.5F;
+        }
+        else //set a bace value
+        {//out of range exception
+            Debug.Log("difficulty out of range exception");
+            D = 0.89f;
+        }
+
         if (endgame == false)
         {
+
             //Currently 20% chance of elite wave, 80% chance of normal wave
             float waveWeight = Random.Range(0.0f, 1.0f);
 
-            while (waveWeight > .89f && remainingElites <= 0 || waveWeight < .89f && remainingWaves <= 0)
+            while (waveWeight > D && remainingElites <= 0 || waveWeight < D && remainingWaves <= 0)
                 waveWeight = Random.Range(0.0f, 1.0f);
 
-            if (waveWeight > .89f)
+            if (waveWeight > D)
             {
                 selectedWave = _elitePool[Mathf.RoundToInt(Random.Range(0.0f, _elitePool.Count - 1))];
                 while (selectedWave == previousTile)

@@ -15,6 +15,21 @@ public class enemyhealth : MonoBehaviour
 
     void Start()
     {
+        float H=-5;
+        switch (ObserverScript.Instance.diff) 
+        {
+            case 0://NG+
+                H = health * 1.6f;
+                break;
+            case 1://easy
+                H = health * 0.8f;
+                break;
+            case 3://hard
+                H = health * 1.2f;
+                break;
+        }
+        if (H == -5) {/*do nothing*/}
+        else { health = H; }
         thisPowerup = GetComponent<powerupHandeler>();
     }
 
