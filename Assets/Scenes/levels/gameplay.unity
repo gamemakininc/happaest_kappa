@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &3654995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -319,6 +321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &6091662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -450,6 +454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &7290432
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -581,6 +587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &15802440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -712,6 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &16599477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -843,6 +853,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &22166823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -974,6 +986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &24262470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1105,6 +1119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &24650524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1236,6 +1252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &26211397
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1367,6 +1385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &28698710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1498,6 +1518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &31397387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1629,6 +1651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &34924044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1760,6 +1784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &36105214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1891,6 +1917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &38360669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2022,6 +2050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &40021270
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2153,6 +2183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &44195508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2392,6 +2424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &51181483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2523,6 +2557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &56860377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2654,6 +2690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &70186428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2785,6 +2823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &71831899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2916,6 +2956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &74579525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3047,6 +3089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &77462389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3178,6 +3222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &89748382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3309,6 +3355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &96347166
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3440,6 +3488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &97706063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3571,6 +3621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &99645431
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3702,6 +3754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &101846962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3833,6 +3887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &104641095
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3994,6 +4050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &116237339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4125,6 +4183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &116958244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4256,6 +4316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &125028221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4387,6 +4449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &130345820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4524,6 +4588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &134003333
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4655,6 +4721,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &136443848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4786,6 +4854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &141136607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4917,6 +4987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &141757134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5165,6 +5237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &156099595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5296,6 +5370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &156227323
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5427,6 +5503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &166934722
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5601,6 +5679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &185092320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5732,6 +5812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &187012313
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5863,6 +5945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &192725237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5994,6 +6078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &193492473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6125,6 +6211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &197009354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6256,6 +6344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &197485131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6387,6 +6477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &197938393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6518,6 +6610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &199683050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6649,6 +6743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &201056649
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6780,6 +6876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &202470794
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6911,6 +7009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &205064318
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6992,6 +7092,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6423580167932119001, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6423580167932119002, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -7006,6 +7111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423580168970541564, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6423580168970541565, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
@@ -7097,6 +7207,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6523498303310306290, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523505710212820384, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524025238546323808, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524170472612024220, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6565079270840344892, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: im
@@ -7187,6 +7317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &210164509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7426,6 +7558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &213018679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7557,6 +7691,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &214105663
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7688,6 +7824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &219296011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7870,6 +8008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &219377546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7882,7 +8022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &221410744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7950,6 +8090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &221410748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8081,6 +8223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &222958931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8212,6 +8356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &226422246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8343,6 +8489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &235143174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8474,6 +8622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &241391676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8605,6 +8755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &241728644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8736,6 +8888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &243283382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8867,6 +9021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &250780862
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8998,6 +9154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &252840078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9129,6 +9287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &252908349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9260,6 +9420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &253739929
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9391,6 +9553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &253841251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9522,6 +9686,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &267708980
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9653,6 +9819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &277202695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9784,6 +9952,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &281279784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9915,6 +10085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &281448228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10046,6 +10218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &283381997
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10177,6 +10351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &292406457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10308,6 +10484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &293563938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10439,6 +10617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &295539092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10570,6 +10750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &297944204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10701,6 +10883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &303830381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10832,6 +11016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &307677462
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10963,6 +11149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &310606481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11094,6 +11282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &310922674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11225,6 +11415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &312521284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11356,6 +11548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &313388623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11487,6 +11681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &321346392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11618,6 +11814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &321588410
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11800,6 +11998,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &341468245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11812,7 +12012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &345409258
 GameObject:
   m_ObjectHideFlags: 0
@@ -11880,6 +12080,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &345409262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12011,6 +12213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &352205507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12142,6 +12346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &353366045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12273,6 +12479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &365623421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12404,6 +12612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &370514073
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12586,6 +12796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &374728518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12598,7 +12810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &374834606
 GameObject:
   m_ObjectHideFlags: 0
@@ -12666,6 +12878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &374834610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12797,6 +13011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &375310198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12928,6 +13144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &386571523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13059,6 +13277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &388734052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13196,6 +13416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &396976627
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13327,6 +13549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &413634068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13458,6 +13682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &415065012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13589,6 +13815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &424733347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13771,6 +13999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &427539722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13783,7 +14013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &428651185
 GameObject:
   m_ObjectHideFlags: 0
@@ -13851,6 +14081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &428651189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13982,6 +14214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &434453408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14279,6 +14513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &438227246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14410,6 +14646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &448224387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14541,6 +14779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &454260074
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14672,6 +14912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &456017745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14803,6 +15045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &461811976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14934,6 +15178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &463765878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15065,6 +15311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &463935435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15196,6 +15444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &464344983
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15327,6 +15577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &478440700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15458,6 +15710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &481762273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15589,6 +15843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &481799090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15720,6 +15976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &483559187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15851,6 +16109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &484873005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15982,6 +16242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &485680796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16113,6 +16375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &488904366
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16244,6 +16508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &493466143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16375,6 +16641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &494841155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16506,6 +16774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &495836492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16637,6 +16907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &497939713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16768,6 +17040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &501710826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16899,6 +17173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &502060304
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17030,6 +17306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &502275628
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17161,6 +17439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &505230883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17292,6 +17572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &507669881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17423,6 +17705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &511883525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17554,6 +17838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &530667010
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17685,6 +17971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &531813436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17816,6 +18104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &533205457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17947,6 +18237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &534685506
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18078,6 +18370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &549081547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18152,7 +18446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550237965}
   m_Layer: 0
-  m_Name: spawn refrence1 (str) (1)
+  m_Name: spawn refrence1 (bak)
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -18239,6 +18533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &552083677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18370,6 +18666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &553856809
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18501,6 +18799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &555964505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18632,6 +18932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &561797081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18763,6 +19065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &562823072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18894,6 +19198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &564306780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19025,6 +19331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &565399466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19156,6 +19464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &567663023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19287,6 +19597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &571205001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19418,6 +19730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &573394556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19549,6 +19863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &589733186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19680,6 +19996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &591148063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19811,6 +20129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &596418127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19942,6 +20262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &602199687
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20073,6 +20395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &610091875
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20204,6 +20528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &613234555
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20335,6 +20661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &615941104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20466,6 +20794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &616638040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20597,6 +20927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &619257911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20728,6 +21060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &627524781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20859,6 +21193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &630651016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20990,6 +21326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &631075002
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21121,6 +21459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &643277263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21252,6 +21592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &644519791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21383,6 +21725,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &646683092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21514,6 +21858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &671302040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21645,6 +21991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &671529703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21776,6 +22124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &672340276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21907,6 +22257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &678694214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22038,6 +22390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &683485969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22169,6 +22523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &684154272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22300,6 +22656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &685403630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22431,6 +22789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &687465547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22562,6 +22922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &697377076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22693,6 +23055,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &697541561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22824,6 +23188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &699438607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22955,6 +23321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &704554698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23092,6 +23460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &715717747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23223,6 +23593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &715801701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23354,6 +23726,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &721091018
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23485,6 +23859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &723377023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23616,6 +23992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &726264316
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23747,6 +24125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &729849240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23878,6 +24258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &737266244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24009,6 +24391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &739294154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24140,6 +24524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &741790086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24271,6 +24657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &748272414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24402,6 +24790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &748932356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24533,6 +24923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &756478547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24664,6 +25056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &759517267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24795,6 +25189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &759938936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24926,6 +25322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &767322484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25057,6 +25455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &767650804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25188,6 +25588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &770081000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25319,6 +25721,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &774297073
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25450,6 +25854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &775046991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25581,6 +25987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &775974284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25755,6 +26163,10 @@ MonoBehaviour:
   elitePool:
   - {fileID: 3243758097979402466, guid: 78d8e795d2f6ce44cbf8f243637c065c, type: 3}
   - {fileID: 2735752747538125203, guid: f97ed383016e11a478f65c90d199746c, type: 3}
+  - {fileID: 492943409901540054, guid: f996eb51b9867784d96a0ccd499b8cbf, type: 3}
+  - {fileID: 2837186755245582833, guid: 547d2d3bedcf29d4b99cc8a1765e360b, type: 3}
+  - {fileID: 7401158201357237825, guid: 3ebec804204d73c4498ab1da2b24ee30, type: 3}
+  - {fileID: 3182492684900936269, guid: f0543425b34ddcb4daf2770ec335a073, type: 3}
   lostS: 0
   lostW: 0
   lostD: 0
@@ -25894,6 +26306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &787203055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26025,6 +26439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &790483735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26156,6 +26572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &799169094
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26287,6 +26705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &801779984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26418,6 +26838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &806493520
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26549,6 +26971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &808036791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26680,6 +27104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &808736057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26811,6 +27237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &817698381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26942,6 +27370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &818685256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27073,6 +27503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &819718050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27204,6 +27636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &819791367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27428,6 +27862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &823904840
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27559,6 +27995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &825280061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27690,6 +28128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &833110670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27821,6 +28261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &833720104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27952,6 +28394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &835882650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28113,6 +28557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &842374961
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28244,6 +28690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &842984365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28375,6 +28823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &847186039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28506,6 +28956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &848761941
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28637,6 +29089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &858354667
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28768,6 +29222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &865228991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28899,6 +29355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &873020381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29030,6 +29488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &875302067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29161,6 +29621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &884416033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29292,6 +29754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &887561556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29423,6 +29887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &897417022
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29554,6 +30020,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &898319425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29685,6 +30153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &913538389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29816,6 +30286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &915376606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29947,6 +30419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &916739886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30078,6 +30552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &925437336
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30209,6 +30685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &931166922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30340,6 +30818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &931261007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30471,6 +30951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &933789808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30761,6 +31243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &937502733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30892,6 +31376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &941073029
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31023,6 +31509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &945095231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31154,6 +31642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &951381209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31285,6 +31775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &953319981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31416,6 +31908,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &962498040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31547,6 +32041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &962596090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31678,6 +32174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &967990355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31809,6 +32307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &968611519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31940,6 +32440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &972488675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32071,6 +32573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &976908481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32202,6 +32706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &983238048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32333,6 +32839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &985910509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32464,6 +32972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &988442192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32595,6 +33105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1008469148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32726,6 +33238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1012948993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32857,6 +33371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1016356748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32988,6 +33504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1017530643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33119,6 +33637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1024012488
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33250,6 +33770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1024182260
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33381,6 +33903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1028192298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33512,6 +34036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1038739118
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33643,6 +34169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1040574622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33882,6 +34410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1044710934
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34013,6 +34543,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1053088468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34144,6 +34676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1055415227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34275,6 +34809,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1057920233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34406,6 +34942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1074645012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34537,6 +35075,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1081631590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34668,6 +35208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1082996564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34799,6 +35341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1083366231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34990,7 +35534,7 @@ Camera:
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 24576
+    m_Bits: 28672
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -35069,6 +35613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1094305357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35200,6 +35746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1099112270
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35331,6 +35879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1103154967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35462,6 +36012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1103782524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35593,6 +36145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1108924734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35854,6 +36408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1114975870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35985,6 +36541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1132093785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36116,6 +36674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1138926133
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36247,6 +36807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1139394425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36378,6 +36940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1142270805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36509,6 +37073,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1155563806
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36640,6 +37206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1157857752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36771,6 +37339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1161809459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36902,6 +37472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1164258282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37033,6 +37605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1173046005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37164,6 +37738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1174399478
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37295,6 +37871,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1174583379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37426,6 +38004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1178973493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37557,6 +38137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1184674955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37739,6 +38321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &1188237589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37751,7 +38335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &1198669912
 GameObject:
   m_ObjectHideFlags: 0
@@ -37819,6 +38403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1198669916
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37950,6 +38536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1200652605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38081,6 +38669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1203099306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38212,6 +38802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1204101338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38343,6 +38935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1212076825
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38474,6 +39068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1214571210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38605,6 +39201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1214970402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38736,6 +39334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1215411784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38867,6 +39467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1218655037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39076,6 +39678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1219485283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39285,6 +39889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1229240327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39416,6 +40022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1239976856
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39547,6 +40155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1242302693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39678,6 +40288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1243440305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39875,6 +40487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1247393108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40006,6 +40620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1252575942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40137,6 +40753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1259488158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40268,6 +40886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1261940044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40399,6 +41019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1264436161
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40530,6 +41152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1266379582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40661,6 +41285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1267326530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40792,6 +41418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1267888851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40997,6 +41625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1276456710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41128,6 +41758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1276493972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41259,6 +41891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1284916222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41390,6 +42024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1284974387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41521,6 +42157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1285346163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41652,6 +42290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1287002345
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41783,6 +42423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1288757121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41914,6 +42556,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1302346136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42045,6 +42689,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1317926752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42176,6 +42822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1319316321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42307,6 +42955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1320757705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42438,6 +43088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1333858636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42569,6 +43221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1337834741
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42700,6 +43354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1339691950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42831,6 +43487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1341473724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42962,6 +43620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1348518978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43093,6 +43753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1354964437
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43224,6 +43886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1358617424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43355,6 +44019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1364498016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43486,6 +44152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1368133244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43617,6 +44285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1368207285
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43748,6 +44418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1389120390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43879,6 +44551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1396700211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44010,6 +44684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1402184431
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44141,6 +44817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1415695651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44272,6 +44950,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1423267976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44403,6 +45083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1425098563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44534,6 +45216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1427620216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44665,6 +45349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1434945550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44796,6 +45482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1436214418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44927,6 +45615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1438281365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45058,6 +45748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1447157979
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45189,6 +45881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1447337578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45320,6 +46014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1449288382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45451,6 +46147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1450924726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45582,6 +46280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1451267451
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45713,6 +46413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1460214850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45844,6 +46546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1471528587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46053,6 +46757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1478020228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46184,6 +46890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1480477521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46315,6 +47023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1483701654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46446,6 +47156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1498775037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46577,6 +47289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1504101559
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46708,6 +47422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1507901444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46839,6 +47555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1508574912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46970,6 +47688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1510405201
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47101,6 +47821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1512485740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47232,6 +47954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1514360003
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47363,6 +48087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1529806458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47494,6 +48220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1532437228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47625,6 +48353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1533217242
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47756,6 +48486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1534417999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47887,6 +48619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1535086921
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48018,6 +48752,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1539235144
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48149,6 +48885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1540680753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48280,6 +49018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1547830328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48411,6 +49151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1548392855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48542,6 +49284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1551582867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48673,6 +49417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1554805495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48804,6 +49550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1561686142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48935,6 +49683,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1564945509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49195,6 +49945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1569556168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49326,6 +50078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1570822508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49457,6 +50211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1572528986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49588,6 +50344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1576870455
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49719,6 +50477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1579178978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49850,6 +50610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1580198280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49981,6 +50743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1582349292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50112,6 +50876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1584065192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50294,6 +51060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!114 &1586113917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50306,7 +51074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTime: 7
+  killTime: 3.5
 --- !u!1 &1588266448
 GameObject:
   m_ObjectHideFlags: 0
@@ -50374,6 +51142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1588266452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50505,6 +51275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1592478423
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50737,6 +51509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1595729457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50868,6 +51642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1596942641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50999,6 +51775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1600904732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51130,6 +51908,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1605337835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51261,6 +52041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1605580239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51392,6 +52174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1611227226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51601,6 +52385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1621667591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51732,6 +52518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1628823209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51993,6 +52781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1643978501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52124,6 +52914,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1646378892
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52255,6 +53047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1647350785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52386,6 +53180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1655384651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52517,6 +53313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1656341506
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52648,6 +53446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1660205354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52779,6 +53579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1663647401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52910,6 +53712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1666497824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53041,6 +53845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1668007430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53172,6 +53978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1670353357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53303,6 +54111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1672942228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53434,6 +54244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1674287295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53565,6 +54377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1674863747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53696,6 +54510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1675720172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53827,6 +54643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1680334797
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -53958,6 +54776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1680783549
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54089,6 +54909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1683062900
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54220,6 +55042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1698984706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54351,6 +55175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1707581435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54482,6 +55308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1708652538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54613,6 +55441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1726111552
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54744,6 +55574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1727216465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54875,6 +55707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1727863898
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55006,6 +55840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1734455645
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55137,6 +55973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1735909205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55334,6 +56172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1740956939
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55465,6 +56305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1741262393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55596,6 +56438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1756384796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55727,6 +56571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1756989276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55858,6 +56704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1759815710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55989,6 +56837,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1765830654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56120,6 +56970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1768981093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56251,6 +57103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1772016526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56382,6 +57236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1776290537
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56513,6 +57369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1785114621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56644,6 +57502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1788241799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56775,6 +57635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1792223180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56906,6 +57768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1793378035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57037,6 +57901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1805867239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57168,6 +58034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1812051544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57299,6 +58167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1812140382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57430,6 +58300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1821188779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57561,6 +58433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1823355309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57692,6 +58566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1826745441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57823,6 +58699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1833898986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57954,6 +58832,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1838023591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58085,6 +58965,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1839760434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58216,6 +59098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1848307003
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58347,6 +59231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1854648975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58478,6 +59364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1861190523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58609,6 +59497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1868162212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58740,6 +59630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1873728597
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58871,6 +59763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1877667589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59002,6 +59896,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1882116010
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59133,6 +60029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1883100159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59264,6 +60162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1886818140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59395,6 +60295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1887504476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59526,6 +60428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1890467903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59657,6 +60561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1897179694
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59919,6 +60825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1897693184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60050,6 +60958,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1898375024
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60181,6 +61091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1902084656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60312,6 +61224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1904973964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60443,6 +61357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1912072956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60574,6 +61490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1914815896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60705,6 +61623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1917011130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60836,6 +61756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1920229408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60967,6 +61889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1925763127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61098,6 +62022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1926418364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61229,6 +62155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1928576464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61360,6 +62288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1928618144
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61491,6 +62421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1937029792
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61622,6 +62554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1947071304
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61753,6 +62687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1951507459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61884,6 +62820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1954550290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62015,6 +62953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1963286963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62146,6 +63086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1965223620
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62277,6 +63219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1966957200
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62408,6 +63352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1972631147
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62605,6 +63551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1981314571
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62736,6 +63684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1982412490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62867,6 +63817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1986653595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62998,6 +63950,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1991276980
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63129,6 +64083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &1995411358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63260,6 +64216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2004727725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63391,6 +64349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2013616975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63522,6 +64482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2025293076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63795,6 +64757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2046864298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -63926,6 +64890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2049859799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64057,6 +65023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2053766236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64188,6 +65156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2054725426
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64319,6 +65289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2055417886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64450,6 +65422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2057583457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64581,6 +65555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2062625039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64712,6 +65688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2067419872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64843,6 +65821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2071353450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64974,6 +65954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2078006696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65105,6 +66087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2080815995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65236,6 +66220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2087893168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65367,6 +66353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2090812599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65498,6 +66486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2091845513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65629,6 +66619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2091910298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65760,6 +66752,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2096048603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65891,6 +66885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2111580680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66022,6 +67018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2118043473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66153,6 +67151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2121531678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66284,6 +67284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2125579375
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66415,6 +67417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2132558738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66546,6 +67550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: -15
+  swapboolx: 0
+  swapbooly: 0
 --- !u!212 &2138897227
 SpriteRenderer:
   m_ObjectHideFlags: 0
