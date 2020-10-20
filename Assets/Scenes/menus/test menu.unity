@@ -699,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176049372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.586, y: 2.829, z: 0}
+  m_LocalPosition: {x: -1.3599997, y: 2.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -1096,7 +1096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256309295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3570007, y: 2.8389995, z: 0}
+  m_LocalPosition: {x: -1.3570007, y: 2.9349995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -1269,7 +1269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269496938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.112, y: -2.006, z: 89.44}
+  m_LocalPosition: {x: 4.907, y: -2.508, z: 89.44}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1627,7 +1627,7 @@ MonoBehaviour:
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: patch bots
-  itemDescription: small robots that fuse their chassis to hull breaches
+  itemDescription: small robots that fuse their chasses to hull breaches
   typeOfItem: 1
   itemIdentifyer: 11
   itemID: 5
@@ -1691,8 +1691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeaa5dcca4aa4245bc8c256592c59ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pgCost: 5
-  wgCost: 2
+  pgCost: 6
+  wgCost: 3
   costBox: {fileID: 1998119713}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
@@ -2570,7 +2570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521527519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.17, y: -2.62, z: 89.44}
+  m_LocalPosition: {x: -7.17, y: -2.62, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3053,7 +3053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590814562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1389999, y: 2.83, z: 0}
+  m_LocalPosition: {x: -0.8069997, y: 2.431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -3912,7 +3912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828919199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004000187, y: 2.832, z: 0}
+  m_LocalPosition: {x: -1.95, y: 2.433, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -5243,7 +5243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967740684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.353, y: -3.418, z: 0}
+  m_LocalPosition: {x: -3.353, y: -3.29, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6045,7 +6045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pgCost: 1
-  wgCost: 3
+  wgCost: 4
   costBox: {fileID: 1998119713}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
@@ -6264,7 +6264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142205698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.969, y: -1.918, z: 89.44}
+  m_LocalPosition: {x: -5.029, y: -2.588, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7323,7 +7323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300237486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.939, y: 2.845, z: 0}
+  m_LocalPosition: {x: -1.939, y: 2.941, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -7560,7 +7560,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.5377358, g: 0.4197615, b: 0.28155035, a: 0}
+  m_BackGroundColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -8225,7 +8225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400364590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.214, y: -3.406, z: 89.44}
+  m_LocalPosition: {x: 3.214, y: -3.21, z: 89.44}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8847,8 +8847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeaa5dcca4aa4245bc8c256592c59ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pgCost: 5
-  wgCost: 10
+  pgCost: 3
+  wgCost: 14
   costBox: {fileID: 1998119713}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
@@ -9634,7 +9634,7 @@ MonoBehaviour:
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
   itemName: repair arm
-  itemDescription: basically a welder on a robot arm
+  itemDescription: charges the hull to weld space dust and debris into hull breaches
   typeOfItem: 1
   itemIdentifyer: 10
   itemID: 4
@@ -10703,8 +10703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeaa5dcca4aa4245bc8c256592c59ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pgCost: 10
-  wgCost: 6
+  pgCost: 14
+  wgCost: 7
   costBox: {fileID: 1998119713}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
@@ -11660,7 +11660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071199771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.026, y: -2.652, z: 89.44}
+  m_LocalPosition: {x: -6.112, y: -2.061, z: 89.44}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11757,7 +11757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088222023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79900074, y: 2.831, z: 0}
+  m_LocalPosition: {x: -0.79900074, y: 2.927, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192894557}
@@ -12246,7 +12246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122198078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.867, y: -2.551, z: 89.44}
+  m_LocalPosition: {x: 5.968, y: -1.948, z: 89.44}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

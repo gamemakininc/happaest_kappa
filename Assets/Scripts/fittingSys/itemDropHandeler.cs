@@ -39,6 +39,11 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
                     parent.inputLoc = inputLoc;
                     parent.input();
                 }
+                else 
+                {
+                    pgCost = 0;
+                    wgCost = 0;
+                }
             }
         }
 

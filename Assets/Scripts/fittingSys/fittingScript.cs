@@ -788,6 +788,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -843,6 +845,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -899,6 +903,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -955,6 +961,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -1011,6 +1019,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -1066,6 +1076,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -1122,6 +1134,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
@@ -1178,6 +1192,8 @@ public class fittingScript : MonoBehaviour
 			//push gun selection and set sprite
 			slotsLoc[12].GetComponent<itemDropHandeler>().itemId = bulletSelector;
 			slotsLoc[12].GetComponent<itemDropHandeler>().updateSprite();
+			slotsLoc[12].GetComponent<itemDropHandeler>().wgCost = 0;
+			slotsLoc[12].GetComponent<itemDropHandeler>().pgCost = 0;
 		}
 		//update bullet selector
 		ObserverScript.Instance.fitSetup[12] = bulletSelector;
