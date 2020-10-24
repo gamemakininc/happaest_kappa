@@ -6,6 +6,8 @@ public class GameStateManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     private GameObject[] enemies;
+    private GameObject[] bullets;
+    private GameObject[] tiles;
     public GameObject background;
     private float backgroundSpeed;
     private enum states
@@ -92,6 +94,14 @@ public class GameStateManager : MonoBehaviour
         foreach(GameObject enemy in enemies)
         {
             enemy.GetComponent<enemyscript>().currentState = enemyscript.states.paused;
+            enemy.GetComponent<enemyscript>().shootDissabled = true;
+        }
+        bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach(GameObject bullet in bullets) { bullet.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition; }
+        tiles = GameObject.FindGameObjectsWithTag("Background");
+        foreach(GameObject tile in tiles)
+        {
+            if (tile.name.ToLower().Substring(0, 4) == "tile") { tile.GetComponent<TileScript>().freeze = true; }
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -105,9 +115,30 @@ public class GameStateManager : MonoBehaviour
     public void UnPause()
     {
         //enemies = GameObject.FindGameObjectsWithTag("enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            enemy.GetComponent<enemyscript>().currentState = enemy.GetComponent<enemyscript>().storedState;
+        if (enemies != null) {
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.GetComponent<enemyscript>().currentState = enemy.GetComponent<enemyscript>().storedState;
+                enemy.GetComponent<enemyscript>().shootDissabled = false;
+            }
+        }
+        if (bullets != null) {
+            foreach (GameObject bullet in bullets)
+            {
+                bullet.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                float speed = bullet.GetComponent<ebulletscript>().speed;
+                bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * speed;
+            }
+        }
+        if (tiles != null) {
+            foreach (GameObject tile in tiles)
+            {
+                if (tile.name.ToLower().Substring(0, 4) == "tile") {
+                    tile.GetComponent<TileScript>().freeze = false;
+                    /*float _velocity = tile.GetComponent<TileScript>().speed;
+                    tile.GetComponent<Rigidbody2D>().velocity = new Vector2(backgroundSpeed, 0);*/
+                }
+            }
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -116,5 +147,7 @@ public class GameStateManager : MonoBehaviour
         background = GameObject.Find("Background");
         background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        Vector2 velocity = background.GetComponent<InstantVelocity>().velocity;
+        background.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 }

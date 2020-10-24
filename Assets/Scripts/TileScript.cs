@@ -29,7 +29,7 @@ public class TileScript : MonoBehaviour
     {
         if (frozen == false) 
         {
-            if (freeze == true) { speed = 0; frozen = true; }
+            if (freeze == true) { /*speed = 0;*/ frozen = true; }
         }
         float xDif = tileEdgeX - cameraBoundX;
 

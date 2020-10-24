@@ -51,7 +51,7 @@ public class EnemyWavev2 : MonoBehaviour
         int mult = ObserverScript.Instance.diff;
         if (mult == 0) { mult = 5; }//if NG+ inflate the number
         else if (mult > 3) { mult = 3; }//if out of range set to hard
-        int levelCount;
+        int levelCount; //Number of levels (of this type) cleared
         //finds current mission, and gets number of mission type clears
         if (GameObject.Find("Observer") != null)
         {
@@ -80,6 +80,7 @@ public class EnemyWavev2 : MonoBehaviour
         //If levels cleared is 0, then scale is 1, else sqrt(levelcount + 1)
         remainingWaves = levelCount > 0 ? Mathf.RoundToInt(waveCount * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(waveCount * 1);
         remainingElites = levelCount > 0 ? Mathf.RoundToInt(eliteWaves * Mathf.Sqrt(levelCount + 1)) : Mathf.RoundToInt(eliteWaves * 1);
+
         if (ObserverScript.Instance.missionType > 0)
         {
             //will need rewritten when more than one boss of each type exist

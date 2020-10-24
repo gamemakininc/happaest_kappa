@@ -43,7 +43,7 @@ public class ebulletscript : MonoBehaviour
         if (timer >= 4)
         {
             //destroy game object
-            GameObject.Destroy(gameObject);
+            //GameObject.Destroy(gameObject);
         }
         if (aimed == true) 
         {
@@ -83,6 +83,11 @@ public class ebulletscript : MonoBehaviour
         }
     }
     public void die()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
