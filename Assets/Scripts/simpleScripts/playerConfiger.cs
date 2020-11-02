@@ -4,7 +4,7 @@
 public class playerConfiger : MonoBehaviour
 {
     private PlayerScript pspsps;
-    private int[] fitsetup;
+    private int[] _fitsetup;
     public Sprite[] viewmodel;
     public RuntimeAnimatorController[] animationset;
     public GameObject[] bullets;
@@ -17,55 +17,50 @@ public class playerConfiger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fitsetup = ObserverScript.Instance.fitSetup;
+        _fitsetup = ObserverScript.Instance.fitSetup;
         //set playerscript hook
         pspsps = GetComponent<PlayerScript>();
 
         //set animater (and redundant viewmodel)
-        GetComponent<Animator>().runtimeAnimatorController = animationset[fitsetup[13] - 1];
-        GetComponent<SpriteRenderer>().sprite = viewmodel[fitsetup[13] - 1];
+        GetComponent<Animator>().runtimeAnimatorController = animationset[_fitsetup[13] - 1];
+        GetComponent<SpriteRenderer>().sprite = viewmodel[_fitsetup[13] - 1];
         //----------------------------------------------------------------------------
         //weapons
         //set missiles
-        if (fitsetup[10] > 0) //so the whole thing dosent error out if nothing fitted
+        if (_fitsetup[10] > 0) //so the whole thing dosent error out if nothing fitted
         {
-            pspsps.MissilePrefab1 = missiles[fitsetup[10] - 1];
+            pspsps.MissilePrefab1 = missiles[_fitsetup[10] - 1];
         }
-        if (fitsetup[11] > 0) //so the whole thing dosent error out if nothing fitted
+        if (_fitsetup[11] > 0) //so the whole thing dosent error out if nothing fitted
         {
-            pspsps.MissilePrefab2 = missiles[fitsetup[11] - 1]; 
+            pspsps.MissilePrefab2 = missiles[_fitsetup[11] - 1]; 
         }
         //clause to set p0 to bace missile w no ammo if bolth empty
-        if (fitsetup[10] <= 0 && fitsetup[11] <= 0) { pspsps.MissilePrefab1 = missiles[0]; }
+        if (_fitsetup[10] <= 0 && _fitsetup[11] <= 0) { pspsps.MissilePrefab1 = missiles[0]; }
         
         //slot1 calc ammo
-        if (fitsetup[10] == 1) { p1Ammo = 20; }
-        else if (fitsetup[10] == 2) { p1Ammo = 15; }
-        else if (fitsetup[10] == 3) { p1Ammo = 10; }
+        if (_fitsetup[10] == 1) { p1Ammo = 20; }
+        else if (_fitsetup[10] == 2) { p1Ammo = 15; }
+        else if (_fitsetup[10] == 3) { p1Ammo = 10; }
         p1Ammo += ObserverScript.Instance.mslBonus;
         //send ammo var
         pspsps.payload0Ammo = p1Ammo;
 
         //slot2 calc ammo
-        if (fitsetup[11]==1) { p2Ammo = 20; }
-        else if (fitsetup[11] == 2) { p2Ammo = 15; }
-        else if (fitsetup[11] == 3) { p2Ammo = 10; }
+        if (_fitsetup[11]==1) { p2Ammo = 20; }
+        else if (_fitsetup[11] == 2) { p2Ammo = 15; }
+        else if (_fitsetup[11] == 3) { p2Ammo = 10; }
         p2Ammo += ObserverScript.Instance.mslBonus;
         //send ammo var
         pspsps.payload1Ammo = p2Ammo;
 
         //set gun
-        //if dual laser set prefab to laser
-        if (ObserverScript.Instance.fitSetup[12] == 8) 
-        { 
-            //fitsetup[12]--; 
-        }
         //set bullet
-        pspsps.BulletPrefab = bullets[fitsetup[12] - 1];
+        pspsps.BulletPrefab = bullets[_fitsetup[12] - 1];
         //set gun sound
-        pspsps.sounds[0] = gunSounds[fitsetup[12 - 1]];
+        pspsps.sounds[0] = gunSounds[_fitsetup[12 - 1]];
         //set refire rate
-        switch (fitsetup[12]) 
+        switch (_fitsetup[12]) 
         {
             //no gun
             case 0:
@@ -115,7 +110,7 @@ public class playerConfiger : MonoBehaviour
         //repair
         pspsps.repair = ObserverScript.Instance.pRepair;
         //setdeath effect 
-        pspsps.deathEffect = deathEffects[fitsetup[13] - 1];
+        pspsps.deathEffect = deathEffects[_fitsetup[13] - 1];
 
         //-------------------------------------------------------------------------
         //sp33d

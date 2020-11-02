@@ -216,25 +216,26 @@ public class PlayerScript : MonoBehaviour
     }
     public void Shoot()
     {
-        if (ObserverScript.Instance.fitSetup[12] != 8||ObserverScript.Instance.fitSetup[12] != 7)
+        int bs;
+        bs = ObserverScript.Instance.fitSetup[12];
+        //lasers only equipable to the secrit ships
+        if (bs == 7) 
+        {//spawn laser
+            Instantiate(BulletPrefab, wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
+            refireTime = Time.time + 0.1f;
+        }
+        else if (bs == 8)
+        {//spawn lasers
+            Instantiate(BulletPrefab, wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
+            Instantiate(BulletPrefab, wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
+            refireTime = Time.time + 0.1f;
+        }
+        else
         { //spawn bullet
             Instantiate(BulletPrefab, wPorts[2].position, wPorts[2].rotation);
             //reset timer
             refireTime = Time.time + nextFire;
         }
-        //lasers only equipable to the secrit ships
-        else if (ObserverScript.Instance.fitSetup[12] == 7) 
-        {//spawn laser
-            Instantiate(BulletPrefab, wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
-            refireTime = Time.time + 0.1f;
-        }
-        else if (ObserverScript.Instance.fitSetup[12] == 8)
-        {//spawn laser
-            Instantiate(BulletPrefab, wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
-            Instantiate(BulletPrefab, wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
-            refireTime = Time.time + 0.1f;
-        }
-
     }
     void blink(float charge) 
     {

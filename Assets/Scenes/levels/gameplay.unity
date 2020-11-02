@@ -13834,6 +13834,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1594971063}
     m_Modifications:
+    - target: {fileID: 1555447583121718708, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: bullets.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555447583121718708, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: bullets.Array.data[7]
+      value: 
+      objectReference: {fileID: 5229980862504995035, guid: 43eecead9fd97954c8630e2295435c80,
+        type: 3}
     - target: {fileID: 6376817392542884056, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_SortingLayerID
