@@ -101,6 +101,8 @@ public class mainMenu : MonoBehaviour
     }
     public void continueStatus()
     {
+        //update unlocks
+        unlocks = ObserverScript.Instance.unlocks;
         //check if any ships unlocked
         if (unlocks[28] == true || unlocks[29] == true || unlocks[30] == true || unlocks[31] == true || unlocks[32] == true || unlocks[33] == true || unlocks[34] == true || unlocks[35] == true)
         //allow use of continue btn

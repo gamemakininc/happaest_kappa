@@ -1159,8 +1159,8 @@ public class fittingScript : MonoBehaviour
 		slotsfake[7] = true;
 		slotsfake[8] = true;
 		slotsfake[9] = true;
-		slotsfake[10] = false;
-		slotsfake[11] = false;
+		slotsfake[10] = true;
+		slotsfake[11] = true;
 		slotsfake[12] = false;
 		counter = 0;
 		//update slots and clear fitted items

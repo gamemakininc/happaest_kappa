@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 6510727044811024822}
   - component: {fileID: 6618121263970739562}
   - component: {fileID: 6565079270840344892}
+  - component: {fileID: 1555447583121718708}
   - component: {fileID: 2479004553997606591}
   m_Layer: 12
   m_Name: Player_2
@@ -273,7 +274,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.03125, y: 0.109375, z: 0.03125, w: 0.046875}
@@ -329,28 +330,15 @@ MonoBehaviour:
   maxShield: 50
   shield: 50
   sRegen: 0.5
-  payload0Selector: 0
-  payload1Selector: 0
   payload0Ammo: 0
   payload1Ammo: 0
   wPorts:
   - {fileID: 6529636893501394874}
   - {fileID: 6522156913524804712}
   - {fileID: 6521917465467579620}
-  BulletPrefabs:
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
-  - {fileID: 195438850944218402, guid: 9d6a13e64e5155a4ca016cc47ed81c22, type: 3}
-  - {fileID: 2516345062458998654, guid: b98b210e4aeff564d89740350a4f4b9a, type: 3}
-  - {fileID: 5004865427797476403, guid: 452575d293c35cb41a1065556bb7534e, type: 3}
-  - {fileID: 6761477947585304962, guid: 25c9b36fba93b644d8f61677c6a2081a, type: 3}
-  - {fileID: 8259624815046067215, guid: ba6e1b7d46e8e7c49851bdeed855406b, type: 3}
-  - {fileID: 5229980862504995035, guid: 43eecead9fd97954c8630e2295435c80, type: 3}
-  MissilePrefabs:
-  - {fileID: 1168608532995092, guid: 89ad803d146842d4e8e882ee16dbb009, type: 3}
-  - {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419, type: 3}
-  - {fileID: 4493558455852222276, guid: 847533bc5baf7d948ba0fc8159281a29, type: 3}
-  bulletSelector: 4
-  mslBonus: 0
+  BulletPrefab: {fileID: 0}
+  MissilePrefab1: {fileID: 0}
+  MissilePrefab2: {fileID: 0}
   MoveSpeed: 8.5
   forwardSpeed: 0.7
   rb: {fileID: 6503074624666142574}
@@ -358,37 +346,71 @@ MonoBehaviour:
   es: {fileID: 0}
   dumbdumb: 0
   blinkCharger: 0
+  baceRefireRate: 0
   sounds:
-  - {fileID: 8300000, guid: 8d1f1ca1a73cb374eb751bef97be1abf, type: 3}
   - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
   - {fileID: 8300000, guid: ef6d559e2098a3f4b9fb08e36caabba3, type: 3}
   - {fileID: 8300000, guid: d321bacbd9d4a5346b500793680afc9a, type: 3}
-  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
   audioSource: {fileID: 2479004553997606591}
   involActive: 0
   fireBuffActive: 0
+  viewmodel: {fileID: 0}
+  animationset: {fileID: 0}
+  blinkEffect: {fileID: 185442560807075653, guid: 409e4d910dfebca40b4ee337ac3d70f6,
+    type: 3}
+  deathEffectSelector: 0
+  deathEffect: {fileID: 0}
+  bomb: 0
+--- !u!114 &1555447583121718708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523498303310306290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58194d8de458a724c941f9a59615e151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   viewmodel:
-  - {fileID: 21300006, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
-  - {fileID: -8542968065503311658, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
-  - {fileID: 727102200155412664, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
-  - {fileID: -8811244820750126997, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
-  - {fileID: 1373859652910129586, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
-  - {fileID: 7412717729738197967, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
+  - {fileID: 1694089084023748554, guid: 875f36a8459dc4e44bc0d8ed9178c884, type: 3}
+  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
+  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
   - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
-  - {fileID: 4379994170166470358, guid: b012a7572d23223459874710b3d7e55b, type: 3}
+  - {fileID: -5006950574146772211, guid: b012a7572d23223459874710b3d7e55b, type: 3}
   animationset:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9100000, guid: acd4c5238216b33459e47eb96482ee14, type: 2}
+  - {fileID: 9100000, guid: 22d4b96a8c60a0947a265a15dc002fd4, type: 2}
   - {fileID: 9100000, guid: 5a012f544de4b8f439ca42f6ad30e537, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 9100000, guid: 0a37d157b40f94645b020e0c25e236d8, type: 2}
   - {fileID: 9100000, guid: 028bac33e93a1d34aa15c1a8a57a3da6, type: 2}
-  - {fileID: 9100000, guid: b8346d70e8273d94e9bf7a63d5cd6eaf, type: 2}
-  shipselect: 0
-  blinkEffect: {fileID: 0}
-  deathEffectSelector: 0
-  deathEffect:
+  - {fileID: 9100000, guid: 8324c5bd5e3b2d043a37dd417ec0d204, type: 2}
+  bullets:
+  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 195438850944218402, guid: 9d6a13e64e5155a4ca016cc47ed81c22, type: 3}
+  - {fileID: 2516345062458998654, guid: b98b210e4aeff564d89740350a4f4b9a, type: 3}
+  - {fileID: 5004865427797476403, guid: 452575d293c35cb41a1065556bb7534e, type: 3}
+  - {fileID: 6761477947585304962, guid: 25c9b36fba93b644d8f61677c6a2081a, type: 3}
+  - {fileID: 8259624815046067215, guid: ba6e1b7d46e8e7c49851bdeed855406b, type: 3}
+  - {fileID: 5229980862504995035, guid: 43eecead9fd97954c8630e2295435c80, type: 3}
+  missiles:
+  - {fileID: 1168608532995092, guid: 89ad803d146842d4e8e882ee16dbb009, type: 3}
+  - {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419, type: 3}
+  - {fileID: 4493558455852222276, guid: 847533bc5baf7d948ba0fc8159281a29, type: 3}
+  gunSounds:
+  - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
+  - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
+  - {fileID: 8300000, guid: 8d1f1ca1a73cb374eb751bef97be1abf, type: 3}
+  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
+  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
+  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
+  deathEffects:
   - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
   - {fileID: 7052740348494417466, guid: 28a5e9f774cc27a43915aa63ca546530, type: 3}

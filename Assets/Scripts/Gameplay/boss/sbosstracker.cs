@@ -28,6 +28,7 @@ public class sbosstracker : MonoBehaviour
 
     //weapon timers
     public float thrustTimer;
+    public float thrustTimer1;
     public float laserTimer;
     public float cannonTimer;
     public float missileTimer;
@@ -135,7 +136,7 @@ public class sbosstracker : MonoBehaviour
                 if (GetComponent<TileScript>().speed >= 0) 
                 {
                     //tell tile to freeze
-                    GetComponent<TileScript>().freeze = true;
+                    GetComponent<TileScript>().bosStop = true;
                     //dissable tile slow moduel
                     slow = true;
                     //stop thuster animation
@@ -153,13 +154,13 @@ public class sbosstracker : MonoBehaviour
             //thruster fire
             if (thrusters[0] == true || thrusters[1] == true || thrusters[2] == true)
             {
-                if (t1Start <= thrustTimer)
+                if (t1Start <= thrustTimer1)
                 {
                     //turn thruster array1 on
                     if (thrusterObj[0] != null) { thrusterObj[0].GetComponent<thrusterScript>().turnOn(); }
                     if (thrusterObj[1] != null) { thrusterObj[1].GetComponent<thrusterScript>().turnOn(); }
                     if (thrusterObj[2] != null) { thrusterObj[2].GetComponent<thrusterScript>().turnOn(); }
-                    if (t1Stop <= thrustTimer)
+                    if (t1Stop <= thrustTimer1)
                     {
                         //turn thrusters off
                         if (thrusterObj[0] != null) { thrusterObj[0].GetComponent<thrusterScript>().turnOff(); }
@@ -171,7 +172,7 @@ public class sbosstracker : MonoBehaviour
                             t1Start = Random.Range(3, 5);
                             t1Stop = Random.Range(1, 3) + t1Start;
                             //reset timer
-                            thrustTimer = 0;
+                            thrustTimer1 = 0;
                         }
                     }
                 }

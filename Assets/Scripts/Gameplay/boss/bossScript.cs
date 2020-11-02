@@ -54,7 +54,7 @@ public class bossScript : MonoBehaviour
                 {
                     tile.GetComponent<TileScript>().speed += 0.4f * Time.deltaTime;
                 }
-                if (tile.GetComponent<TileScript>().speed >= 0) { tile.GetComponent<TileScript>().freeze = true; slow = true; }
+                if (tile.GetComponent<TileScript>().speed >= 0) { tile.GetComponent<TileScript>().bosStop = true; slow = true; }
             }
         }
         //run timers

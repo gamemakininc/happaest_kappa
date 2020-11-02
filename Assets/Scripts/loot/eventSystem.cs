@@ -56,7 +56,7 @@ public class eventSystem : MonoBehaviour
         unlocks = ObserverScript.Instance.unlocks;
         //unlock ship
         if (eventTriedFitting == true) {/*do nothing*/ }
-        else if (ObserverScript.Instance.shipswap>=ObserverScript.Instance.levelsCleared) 
+        else if (ObserverScript.Instance.shipswap<=ObserverScript.Instance.levelsCleared) //check if ship ready to unlock
         {
             //add to next ship unlock timer
             if (ObserverScript.Instance.diff == 0) {ObserverScript.Instance.shipswap += 5; }
@@ -91,11 +91,12 @@ public class eventSystem : MonoBehaviour
                 while (swapBool == false)
                 {
                     //set rng
-                    swapint = Random.Range(0, 7);
+                    swapint = Random.Range(0, 8);
                     //unlock something (hopefully)
+                    Debug.Log( "unlock tried " + swapint);
                     if (swapint == 0)
                     {
-                        if (unlocks[1] == false)
+                        if (unlocks[1] == false && swapBool == false)
                         {
                             //note 0h 1s 2v appearence of v should be considered a mission NPC
                             //set who is speaking
@@ -114,7 +115,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[2] == false)
+                        else if (unlocks[2] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -129,7 +130,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[3] == false)
+                        else if (unlocks[3] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -147,7 +148,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 1)
                     {
-                        if (unlocks[4] == false)
+                        if (unlocks[4] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -161,7 +162,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[5] == false)
+                        else if (unlocks[5] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -175,7 +176,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[6] == false)
+                        else if (unlocks[6] == false && swapBool == false)
                         {
 
                             //set who is speaking
@@ -193,7 +194,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 2)
                     {
-                        if (unlocks[7] == false)
+                        if (unlocks[7] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -207,7 +208,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[8] == false)
+                        else if (unlocks[8] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -221,7 +222,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[9] == false)
+                        else if (unlocks[9] == false && swapBool == false)
                         {
 
                             //set who is speaking
@@ -239,7 +240,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 3)
                     {
-                        if (unlocks[10] == false)
+                        if (unlocks[10] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -253,7 +254,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[11] == false)
+                        else if (unlocks[11] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -267,7 +268,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[12] == false)
+                        else if (unlocks[12] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[1];
@@ -284,7 +285,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 4)
                     {
-                        if (unlocks[13] == false)
+                        if (unlocks[13] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -298,7 +299,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[14] == false)
+                        else if (unlocks[14] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -312,7 +313,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[15] == false)
+                        else if (unlocks[15] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -329,7 +330,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 5)
                     {
-                        if (unlocks[16] == false)
+                        if (unlocks[16] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -343,7 +344,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[17] == false)
+                        else if (unlocks[17] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -357,7 +358,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[18] == false)
+                        else if (unlocks[18] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -374,7 +375,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 6)
                     {
-                        if (unlocks[19] == false)
+                        if (unlocks[19] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -388,7 +389,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[20] == false)
+                        else if (unlocks[20] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -402,7 +403,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[21] == false)
+                        else if (unlocks[21] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -419,7 +420,7 @@ public class eventSystem : MonoBehaviour
                     }
                     else if (swapint == 7)
                     {
-                        if (unlocks[22] == false)
+                        if (unlocks[22] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -433,7 +434,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[23] == false)
+                        else if (unlocks[23] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -447,7 +448,7 @@ public class eventSystem : MonoBehaviour
                             //stop the loop
                             swapBool = true;
                         }
-                        else if (unlocks[24] == false)
+                        else if (unlocks[24] == false && swapBool == false)
                         {
                             //set who is speaking
                             cSpeaker.sprite = speakers[0];
@@ -458,6 +459,51 @@ public class eventSystem : MonoBehaviour
                             eventStart();
                             //set swapint to unlocked item
                             swapint = 24;
+                            //stop the loop
+                            swapBool = true;
+                        }
+                    }
+                    else if (swapint == 8)
+                    {
+                        if (unlocks[25] == false && swapBool == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[2];
+                            ObserverScript.Instance.unlocks[25] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 48;
+                            eventLingth = 49;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 25;
+                            //stop the loop
+                            swapBool = true;
+                        }
+                        else if (unlocks[26] == false && swapBool == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[2];
+                            ObserverScript.Instance.unlocks[26] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 50;
+                            eventLingth = 51;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 26;
+                            //stop the loop
+                            swapBool = true;
+                        }
+                        else if (unlocks[27] == false && swapBool == false)
+                        {
+                            //set who is speaking
+                            cSpeaker.sprite = speakers[2];
+                            ObserverScript.Instance.unlocks[27] = true;
+                            eventAllreadyTriggered = true;
+                            msgselect = 52;
+                            eventLingth = 53;
+                            eventStart();
+                            //set swapint to unlocked item
+                            swapint = 27;
                             //stop the loop
                             swapBool = true;
                         }
@@ -498,11 +544,12 @@ public class eventSystem : MonoBehaviour
             while (swapBool == false)
             {
                 //set rng
-                swapint = Random.Range(0,7);
+                swapint = Random.Range(0,8);
                 //unlock something (hopefully)
+                Debug.Log("unlock tried " + swapint);
                 if (swapint == 0) 
                 {
-                    if (unlocks[1] == false)
+                    if (unlocks[1] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -520,7 +567,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[2] == false)
+                    else if (unlocks[2] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -535,7 +582,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[3] == false)
+                    else if (unlocks[3] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -553,7 +600,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 1) 
                 {
-                    if (unlocks[4] == false)
+                    if (unlocks[4] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -567,7 +614,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[5] == false)
+                    else if (unlocks[5] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -578,8 +625,10 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 5;
+                        //stop the loop
+                        swapBool = true;
                     }
-                    else if (unlocks[6] == false)
+                    else if (unlocks[6] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -596,7 +645,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 2)
                 {
-                    if (unlocks[7] == false)
+                    if (unlocks[7] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -610,7 +659,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[8] == false)
+                    else if (unlocks[8] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -624,7 +673,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[9] == false)
+                    else if (unlocks[9] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -641,7 +690,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 3)
                 {
-                    if (unlocks[10] == false)
+                    if (unlocks[10] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -655,7 +704,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[11] == false)
+                    else if (unlocks[11] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -669,7 +718,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[12] == false)
+                    else if (unlocks[12] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[1];
@@ -680,11 +729,13 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 12;
+                        //stop the loop
+                        swapBool = true;
                     }
                 }
                 else if (swapint == 4)
                 {
-                    if (unlocks[13] == false)
+                    if (unlocks[13] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -698,7 +749,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[14] == false)
+                    else if (unlocks[14] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -712,7 +763,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[15] == false)
+                    else if (unlocks[15] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -729,7 +780,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 5)
                 {
-                    if (unlocks[16] == false)
+                    if (unlocks[16] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -743,7 +794,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[17] == false)
+                    else if (unlocks[17] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -754,8 +805,10 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 17;
+                        //stop the loop
+                        swapBool = true;
                     }
-                    else if (unlocks[18] == false)
+                    else if (unlocks[18] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -772,7 +825,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 6)
                 {
-                    if (unlocks[19] == false)
+                    if (unlocks[19] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -786,7 +839,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[20] == false)
+                    else if (unlocks[20] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -797,8 +850,10 @@ public class eventSystem : MonoBehaviour
                         eventStart();
                         //set swapint to unlocked item
                         swapint = 20;
+                        //stop the loop
+                        swapBool = true;
                     }
-                    else if (unlocks[21] == false)
+                    else if (unlocks[21] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -815,7 +870,7 @@ public class eventSystem : MonoBehaviour
                 }
                 else if (swapint == 7)
                 {
-                    if (unlocks[22] == false)
+                    if (unlocks[22] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -829,7 +884,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[23] == false)
+                    else if (unlocks[23] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -843,7 +898,7 @@ public class eventSystem : MonoBehaviour
                         //stop the loop
                         swapBool = true;
                     }
-                    else if (unlocks[24] == false)
+                    else if (unlocks[24] == false && swapBool == false)
                     {
                         //set who is speaking
                         cSpeaker.sprite = speakers[0];
@@ -858,7 +913,51 @@ public class eventSystem : MonoBehaviour
                         swapBool = true;
                     }
                 }
-
+                else if (swapint == 8)
+                {
+                    if (unlocks[25] == false && swapBool == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[2];
+                        ObserverScript.Instance.unlocks[25] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 48;
+                        eventLingth = 49;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 25;
+                        //stop the loop
+                        swapBool = true;
+                    }
+                    else if (unlocks[26] == false && swapBool == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[2];
+                        ObserverScript.Instance.unlocks[26] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 50;
+                        eventLingth = 51;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 26;
+                        //stop the loop
+                        swapBool = true;
+                    }
+                    else if (unlocks[27] == false && swapBool == false)
+                    {
+                        //set who is speaking
+                        cSpeaker.sprite = speakers[2];
+                        ObserverScript.Instance.unlocks[27] = true;
+                        eventAllreadyTriggered = true;
+                        msgselect = 52;
+                        eventLingth = 53;
+                        eventStart();
+                        //set swapint to unlocked item
+                        swapint = 27;
+                        //stop the loop
+                        swapBool = true;
+                    }
+                }
                 counter++;
                 //escape clause incase number dosent come up in reasonable time.
                 if (counter >= 20) { Debug.Log("attempted to unlock and failed"); break; }
@@ -1097,7 +1196,7 @@ public class eventSystem : MonoBehaviour
         if (msgselect == 4) { StartCoroutine(TypeText()); } //are you shure?(responce to first no)
         else if (msgselect == 5)
         {
-            ObserverScript.Instance.mProgressShip++;
+            ObserverScript.Instance.mProgressMissile++;
             StartCoroutine(TypeText()); 
         } //thanks (end event and incroment event tracker)
         else if (msgselect == 6) { StartCoroutine(TypeText()); } //thanks... for nothing (end event no incroment)

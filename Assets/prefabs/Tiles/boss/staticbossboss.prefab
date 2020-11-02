@@ -131,7 +131,7 @@ MonoBehaviour:
   rb: {fileID: 7386662101896478243}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 8039655574127373870}
-  location: 1
+  location: 3
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -331,7 +331,7 @@ MonoBehaviour:
   rb: {fileID: 4000520148583869858}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 8445308145754610322}
-  location: 6
+  location: 7
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -583,6 +583,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 6735791284287347136}
   value: 20
 --- !u!114 &6735791284287347136
@@ -704,7 +705,7 @@ MonoBehaviour:
   rb: {fileID: 1972465084659540548}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 4127891765237707830}
-  location: 11
+  location: 12
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -961,6 +962,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 91574569339478199}
   value: 20
 --- !u!114 &91574569339478199
@@ -1109,6 +1111,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 6058019258779615882}
   value: 20
 --- !u!114 &6058019258779615882
@@ -1352,6 +1355,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 5765078121835222190}
   value: 20
 --- !u!114 &5765078121835222190
@@ -1560,6 +1564,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 1886391023935745912}
   value: 20
 --- !u!114 &1886391023935745912
@@ -1741,7 +1746,7 @@ MonoBehaviour:
   rb: {fileID: 8930774952837182416}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 2857244121128732455}
-  location: 7
+  location: 6
   laser: 0
   missle: 0
   player: {fileID: 0}
@@ -1941,7 +1946,7 @@ MonoBehaviour:
   rb: {fileID: 350352518989824369}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 1661189591389548858}
-  location: 12
+  location: 10
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -2161,11 +2166,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3835235772534777953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.0493, y: 0.0363, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.23774336, y: 0.00363, z: 0}
+  m_LocalScale: {x: 0.033333335, y: 0.1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2068121153372512980}
-  m_RootOrder: 1
+  m_Father: {fileID: 3974423894716629510}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9221388889250141864
 SpriteRenderer:
@@ -2203,9 +2208,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ebb71853616f1d54288f134594e46e65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2479,6 +2484,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 4107693065553096506}
   value: 20
 --- !u!114 &4107693065553096506
@@ -3363,6 +3369,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 2387106573563503353}
   value: 20
 --- !u!114 &2387106573563503353
@@ -3555,7 +3562,7 @@ MonoBehaviour:
   rb: {fileID: 6994485784293658024}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 1481774862635700707}
-  location: 10
+  location: 11
   laser: 0
   missle: 1
   player: {fileID: 0}
@@ -3788,6 +3795,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 2168020552279365164}
   value: 20
 --- !u!114 &2168020552279365164
@@ -4101,6 +4109,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 461171040715675312}
   value: 20
 --- !u!114 &461171040715675312
@@ -4279,6 +4288,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 3016389107359443892}
   value: 20
 --- !u!114 &3016389107359443892
@@ -4430,7 +4440,7 @@ MonoBehaviour:
   rb: {fileID: 5497864619283406477}
   bossTracker: {fileID: 6876359748589673298}
   parentScript: {fileID: 4194864597755487626}
-  location: 3
+  location: 1
   laser: 1
   missle: 0
   player: {fileID: 0}
@@ -4592,6 +4602,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 1011781317365934444}
   value: 20
 --- !u!114 &1011781317365934444
@@ -4875,6 +4886,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 5950413683296626253}
   value: 20
 --- !u!114 &5950413683296626253
@@ -5119,7 +5131,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3974423894716629510}
-  - {fileID: 3236128999948922740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5301,6 +5312,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 3145763679855976177}
   value: 20
 --- !u!114 &3145763679855976177
@@ -5580,6 +5592,7 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
+  diff: 0
   thisPowerup: {fileID: 3364005266572331689}
   value: 20
 --- !u!114 &3364005266572331689
@@ -6126,6 +6139,7 @@ Transform:
   - {fileID: 1704888346677364300}
   - {fileID: 5487251331400285026}
   - {fileID: 812275936141525852}
+  - {fileID: 3236128999948922740}
   m_Father: {fileID: 2068121153372512980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6214,6 +6228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
 --- !u!114 &6876359748589673298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6273,6 +6288,7 @@ MonoBehaviour:
   tInputInt: 0
   swapint: 0
   thrustTimer: 0
+  thrustTimer1: 0
   laserTimer: 0
   cannonTimer: 0
   missileTimer: 0

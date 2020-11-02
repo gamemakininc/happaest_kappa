@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f974c50fbf6de24e960494ac5feb902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 0
+  slot: 3
   s1diff: 0
   s1unlocks: 0
   s1Shipselector: 0
@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f974c50fbf6de24e960494ac5feb902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 0
+  slot: 1
   s1diff: 0
   s1unlocks: 0
   s1Shipselector: 0

@@ -104,12 +104,14 @@ public class endScreenScript : MonoBehaviour
                 //success unlock missile
                 ObserverScript.Instance.unlocks[25] = true;
                 //incromint mission progress tracker
-                ObserverScript.Instance.mProgressMissile++;
+                ObserverScript.Instance.mProgressMissile=3;
             }
             else if (i >= 30) 
             {
                 //set eswap to 'm1 failed
                 ObserverScript.Instance.esSwap = 2;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile = 2;
                 //start event
                 sm.hangar();
             }
@@ -157,13 +159,20 @@ public class endScreenScript : MonoBehaviour
         {
             //other missions will not have a fail state check
             int i = Random.Range(1, 100);
-            if (i > 30)
+            if (i < 30)
             {
+                //success unlock missile
                 ObserverScript.Instance.unlocks[25] = true;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile = 3;
             }
-            else if (i <= 30)
+            else if (i >= 30)
             {
+                //set eswap to 'm1 failed
                 ObserverScript.Instance.esSwap = 2;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile = 2;
+                //start event
                 sm.hangar();
             }
         }

@@ -987,7 +987,6 @@ MonoBehaviour:
   unlocks: 000000000000000000000000000000000000000000000000000000000000000000000000
   efireRate: 0
   fireRate: 0
-  pBulletSelector: 0
   pSpeed: 0
   pHealth: 0
   pShield: 0
@@ -1038,6 +1037,7 @@ MonoBehaviour:
   fs: 0
   keybinds: 
   ngp: 0
+  resoSelect: 0
 --- !u!4 &1003342820
 Transform:
   m_ObjectHideFlags: 0
@@ -2609,6 +2609,12 @@ MonoBehaviour:
   - ' hello23'
   - something standard unlocked
   - ' hello24'
+  - something advanced unlocked
+  - ' hello25'
+  - something basic unlocked
+  - ' hello26'
+  - something standard unlocked
+  - ' hello27'
   - something advanced unlocked
   speechBox: {fileID: 8168952298709872445}
   msgselect: 0

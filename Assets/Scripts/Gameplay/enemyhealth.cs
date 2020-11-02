@@ -8,15 +8,16 @@ public class enemyhealth : MonoBehaviour
     public float health;
     public bool isSBoss;
     public bool isBoss;
-
+    public int diff;
     //loot table var
     public powerupHandeler thisPowerup;
     public int value;//score value of enemy
 
     void Start()
     {
+        diff = ObserverScript.Instance.diff;
         float H=-5;
-        switch (ObserverScript.Instance.diff) 
+        switch (diff) 
         {
             case 0://NG+
                 H = health * 1.6f;
@@ -34,16 +35,41 @@ public class enemyhealth : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
+    {//rammed by player
+
         //check if player/get player script
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
-            ObserverScript.Instance.levelScore += value / 2;
+            int S=0;
             //damage player
-            player.TakeDamage(health);
-            //remove enemy
-            Destroy(gameObject);
+            switch (diff)
+            {
+                case 0://NG+
+                    //set damage
+                    player.TakeDamage(health * 4);
+                    //score reduction for ramming
+                    S = 0;
+                    break;
+                case 1://easy
+                    player.TakeDamage(health * 1.5f);
+                    //score reduction for ramming
+                    S = value;
+                    break;
+                case 2://normal
+                    player.TakeDamage(health * 2f);
+                    //score reduction for ramming
+                    S = value / 2;
+                    break;
+                case 3://hard
+                    player.TakeDamage(health * 2.5f);
+                    //score reduction for ramming
+                    S = value / 4;
+                    break;
+            }
+            value = S;
+            //die
+            Die();
         }
     }
 
@@ -83,6 +109,7 @@ public class enemyhealth : MonoBehaviour
             }
             if (GetComponentInChildren<turretScript>() != null)
             {
+                makeLoot();
                 GetComponentInChildren<turretScript>().die();
                 Debug.Log(transform + "sent info to" + GetComponentInChildren<Transform>());
             }

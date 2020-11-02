@@ -9,7 +9,7 @@ public class TileScript : MonoBehaviour
     [Tooltip("Freezes the tile on Screen")]
     public bool freeze;
     private bool frozen;
-
+    public bool bosStop;
     private float cameraBoundX;
     private float tileEdgeX;
 
@@ -29,7 +29,7 @@ public class TileScript : MonoBehaviour
     {
         if (frozen == false) 
         {
-            if (freeze == true) { /*speed = 0;*/ frozen = true; }
+            if (freeze == true) { frozen = true; }
         }
         float xDif = tileEdgeX - cameraBoundX;
 
@@ -41,5 +41,7 @@ public class TileScript : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, 0);
         }
+
+        if (bosStop == true) { speed = 0; bosStop = false; }
     }
 }

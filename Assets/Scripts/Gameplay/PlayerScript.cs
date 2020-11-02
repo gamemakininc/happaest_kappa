@@ -18,15 +18,12 @@ public class PlayerScript : MonoBehaviour
     public float shield;
     public float sRegen = .5f;
     //build bullet 
-    public int payload0Selector;
-    public int payload1Selector;
     public int payload0Ammo;
     public int payload1Ammo;
     public Transform[] wPorts;
-    public GameObject[] BulletPrefabs;
-    public GameObject[] MissilePrefabs;
-    public int bulletSelector = 1;
-    public int mslBonus;
+    public GameObject BulletPrefab;
+    public GameObject MissilePrefab1;
+    public GameObject MissilePrefab2;
     //set speed
     public float MoveSpeed = 6;
     public float forwardSpeed = 0.7f;
@@ -43,10 +40,8 @@ public class PlayerScript : MonoBehaviour
     private float hitTimer;
     private float itimer;
     private float fRtimer;
-    private float baceRefireRatee;
-    private float baceRefireRate;
+    public float baceRefireRate;
     private float refireTime;
-    private float enextFire;
     private float nextFire;
     //audio
     public AudioClip[] sounds;
@@ -55,57 +50,26 @@ public class PlayerScript : MonoBehaviour
     public bool involActive;
     public bool fireBuffActive;
     //viewmodel editors
-    public Sprite[] viewmodel;
-    public RuntimeAnimatorController[] animationset;
-    public int shipselect;
+    public Sprite viewmodel;
+    public RuntimeAnimatorController animationset;
     //effects
     public GameObject blinkEffect;
     //set death sprite
     public int deathEffectSelector;
-    public GameObject[] deathEffect;
+    public GameObject deathEffect;
     //bombs avalible
     public int bomb;
 
     private void Start()
     {
-        //set variables from observer
-        maxShield = ObserverScript.Instance.pShield;
         shield = maxShield;
-        sRegen = ObserverScript.Instance.pSRegen;
-        maxHealth = ObserverScript.Instance.pHealth;
         health = maxHealth;
-        repair = ObserverScript.Instance.pRepair;
-        MoveSpeed = ObserverScript.Instance.pSpeed;
-        bulletSelector = ObserverScript.Instance.fitSetup[12] - 1;
-        payload0Selector = ObserverScript.Instance.fitSetup[10] - 1;
-        payload1Selector = ObserverScript.Instance.fitSetup[11] - 1;
-        mslBonus = ObserverScript.Instance.mslBonus;
-        nextFire = ObserverScript.Instance.fireRate;
-        enextFire = ObserverScript.Instance.efireRate;
-        shipselect = ObserverScript.Instance.fitSetup[13]-1;
-        //save location of RB and animator
+        nextFire = baceRefireRate;
+        //save location of RB, animator and sfx audio player
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        //if variables could not be imported set bace values
-        if (health == 0)
-        {
-            health = 100;
-        }
-        if (MoveSpeed == 0f) 
-        {
-            MoveSpeed = 6f;
-        }
-        //set launcher ammo baced on selectors
-        if (payload0Selector == 0){ payload0Ammo = 20 + mslBonus; }
-        else if (payload0Selector == 1) { payload0Ammo = 15 + mslBonus; }
-        else if (payload0Selector == 2) { payload0Ammo = 10 + mslBonus; }
-        if (payload1Selector == 0) { payload0Ammo = 20 + mslBonus; }
-        else if (payload1Selector == 1) { payload1Ammo = 15 + mslBonus; }
-        else if (payload1Selector == 2) { payload1Ammo = 10 + mslBonus; }
-        GetComponent<Animator>().runtimeAnimatorController = animationset[shipselect];
-        GetComponent<SpriteRenderer>().sprite = viewmodel[shipselect];
-        deathEffectSelector = shipselect;
+        //set volume
         audioSource.volume = ObserverScript.Instance.sfxvol;
     }
 
@@ -120,13 +84,8 @@ public class PlayerScript : MonoBehaviour
         if (inputManedger.Instance.GetButtonDownH("fire1") && Time.time > refireTime)
         {
             Shoot();
-            //check bullet selector for what sound to play
-            if (bulletSelector == 2) { audioSource.PlayOneShot(sounds[0]); }
-            else if (bulletSelector ==0 ) { audioSource.PlayOneShot(sounds[1]); }
-            else if (bulletSelector == 1) { audioSource.PlayOneShot(sounds[1]); }
-            else if (bulletSelector == 3) { audioSource.PlayOneShot(sounds[4]); }
-            else if (bulletSelector == 4) { audioSource.PlayOneShot(sounds[4]); }
-            else if (bulletSelector == 5) { audioSource.PlayOneShot(sounds[4]); }
+            //play gun sfx
+            audioSource.PlayOneShot(sounds[0]);
         }
         //fire missile slot1
         if (inputManedger.Instance.GetButtonDown("fire2"))
@@ -169,7 +128,6 @@ public class PlayerScript : MonoBehaviour
             {   fireBuffActive = false;
                 //reset fire rates
                 nextFire = baceRefireRate;
-                enextFire = baceRefireRatee;
             }
         }
         //incroment timer (used for shield regen delay)
@@ -205,11 +163,11 @@ public class PlayerScript : MonoBehaviour
         {
             if (payload0Ammo >= 1) 
             {
-                    Instantiate(MissilePrefabs[payload0Selector], wPorts[0].position, wPorts[0].rotation);
+                    Instantiate(MissilePrefab1, wPorts[0].position, wPorts[0].rotation);
                     portSwap = false;
                     payload0Ammo--;
                     hasFired = true;
-                    audioSource.PlayOneShot(sounds[2]);
+                    audioSource.PlayOneShot(sounds[1]);
             }
         }
         if (portSwap == false)
@@ -218,10 +176,10 @@ public class PlayerScript : MonoBehaviour
             {
                 if (hasFired == false)
                 {
-                    Instantiate(MissilePrefabs[payload0Selector], wPorts[1].position, wPorts[1].rotation);
+                    Instantiate(MissilePrefab1, wPorts[1].position, wPorts[1].rotation);
                     portSwap = true;
                     payload0Ammo--;
-                    audioSource.PlayOneShot(sounds[2]);
+                    audioSource.PlayOneShot(sounds[1]);
                 }
             }
         }
@@ -234,11 +192,11 @@ public class PlayerScript : MonoBehaviour
         {
             if (payload1Ammo >= 1)
             {
-                    Instantiate(MissilePrefabs[payload1Selector], wPorts[0].position, wPorts[0].rotation);
+                    Instantiate(MissilePrefab2, wPorts[0].position, wPorts[0].rotation);
                     portSwap = false;
                     payload1Ammo--;
                     hasFired = true;
-                    audioSource.PlayOneShot(sounds[2]);
+                    audioSource.PlayOneShot(sounds[1]);
             }
         }
         if (portSwap == false)
@@ -247,10 +205,10 @@ public class PlayerScript : MonoBehaviour
             {
                 if (hasFired == false)
                 {
-                    Instantiate(MissilePrefabs[payload1Selector], wPorts[1].position, wPorts[1].rotation);
+                    Instantiate(MissilePrefab2, wPorts[1].position, wPorts[1].rotation);
                     portSwap = true;
                     payload1Ammo--;
-                    audioSource.PlayOneShot(sounds[2]);
+                    audioSource.PlayOneShot(sounds[1]);
                 }
             }
         }
@@ -258,42 +216,22 @@ public class PlayerScript : MonoBehaviour
     }
     public void Shoot()
     {
-            //fire rate augments
-            if (bulletSelector == 0 || bulletSelector == 1)
-            { //spawn bullet
-                Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
-                //reset timer
-                refireTime = Time.time + nextFire;
-            }
-            if (bulletSelector == 2)
-            {//spawn bullet
-                Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
-                //reset timer
-                refireTime = Time.time + nextFire + 0.1f;
-            }
-
-            if (bulletSelector == 3 || bulletSelector == 4)
-            { //spawn bullet
-                Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
-                //reset timer
-                refireTime = Time.time + enextFire;
-            }
-            if (bulletSelector == 5)
-            { //spawn bullet
-                Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation);
-                //reset timer
-                refireTime = Time.time + enextFire + 0.1f;
-            }
+        if (ObserverScript.Instance.fitSetup[12] != 8||ObserverScript.Instance.fitSetup[12] != 7)
+        { //spawn bullet
+            Instantiate(BulletPrefab, wPorts[2].position, wPorts[2].rotation);
+            //reset timer
+            refireTime = Time.time + nextFire;
+        }
         //lasers only equipable to the secrit ships
-        if (bulletSelector == 6) 
+        else if (ObserverScript.Instance.fitSetup[12] == 7) 
         {//spawn laser
-            Instantiate(BulletPrefabs[bulletSelector], wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
+            Instantiate(BulletPrefab, wPorts[2].position, wPorts[2].rotation, parent: wPorts[2]);
             refireTime = Time.time + 0.1f;
         }
-        if (bulletSelector == 7)
+        else if (ObserverScript.Instance.fitSetup[12] == 8)
         {//spawn laser
-            Instantiate(BulletPrefabs[6], wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
-            Instantiate(BulletPrefabs[6], wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
+            Instantiate(BulletPrefab, wPorts[0].position, wPorts[0].rotation, parent: wPorts[0]);
+            Instantiate(BulletPrefab, wPorts[1].position, wPorts[1].rotation, parent: wPorts[1]);
             refireTime = Time.time + 0.1f;
         }
 
@@ -345,10 +283,10 @@ public class PlayerScript : MonoBehaviour
     }
     void Die()
     {
-        if (deathEffect[shipselect] != null)
+        if (deathEffect != null)
         {
             //spawn death sprite
-            Instantiate(deathEffect[shipselect], transform.position, Quaternion.Euler(0, 0, -90));
+            Instantiate(deathEffect, transform.position, Quaternion.Euler(0, 0, -90));
         }
         //notify end screen
         es.GetComponent<endScreenScript>().win = false;
@@ -372,16 +310,14 @@ public class PlayerScript : MonoBehaviour
         fireBuffActive = true;
         //get bace fire rate in swapfile
         baceRefireRate = nextFire;
-        //get bace fire rate in swapfile
-        baceRefireRatee = enextFire;
         //set fire delay to 0
         nextFire = 0;
-        enextFire = 0;
     }
     public void addMissiles() 
     {
         //add missiles to all active missile slots
-        if (payload0Selector>=0) { payload0Ammo += 5; }
-        if (payload1Selector>=0) { payload1Ammo += 5; }
+        payload0Ammo += 5;
+        payload1Ammo += 5; 
+
     }
 }
