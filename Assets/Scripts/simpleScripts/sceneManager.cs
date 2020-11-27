@@ -30,4 +30,8 @@ public class sceneManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("hangar");
 	}
+	public void debugreset() 
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
 }

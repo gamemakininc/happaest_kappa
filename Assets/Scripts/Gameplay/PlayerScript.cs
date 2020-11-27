@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour
     private float fRtimer;
     public float baceRefireRate;
     private float refireTime;
-    private float nextFire;
+    public float nextFire;
     //audio
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -64,7 +64,6 @@ public class PlayerScript : MonoBehaviour
     {
         shield = maxShield;
         health = maxHealth;
-        nextFire = baceRefireRate;
         //save location of RB, animator and sfx audio player
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

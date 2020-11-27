@@ -1049,7 +1049,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &671286846
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f974c50fbf6de24e960494ac5feb902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 3
+  slot: 2
   s1diff: 0
   s1unlocks: 0
   s1Shipselector: 0
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   unlocksbox: {fileID: 515138083}
   ships:
   - {fileID: 21300000, guid: e4c0b0a9d70bc1d4f80051a9e7ad78c7, type: 3}
-  - {fileID: 21300014, guid: cb639e463af02ae4e87ef50a738bb24b, type: 3}
+  - {fileID: 1694089084023748554, guid: 875f36a8459dc4e44bc0d8ed9178c884, type: 3}
   - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
   - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
   - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
@@ -2149,7 +2149,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1328462160
@@ -2842,7 +2842,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1618113604

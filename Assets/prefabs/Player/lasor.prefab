@@ -49,7 +49,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   timer: 0
   Damage: 10
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 1
   Enemy: {fileID: 0}
@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 5229980863429946221}
   lineRenderer: {fileID: 4957359299233716101}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!1 &5229980863429946220
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,12 +156,12 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: -1925323217
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 90, z: 0}
-  - {x: 0, y: 90, z: 0}
+  - {x: 10, y: 90, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -168,21 +169,30 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.22314066
+        time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.27661556
+        outSlope: -0.27661556
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.9409592
+      - serializedVersion: 3
+        time: 0.99606323
+        value: 0.7129593
+        inSlope: -0.341264
+        outSlope: -0.341264
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 0.5518868, g: 0.8327447, b: 1, a: 1}
+      key0: {r: 0.5518868, g: 0.8327447, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}

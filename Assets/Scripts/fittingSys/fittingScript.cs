@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class fittingScript : MonoBehaviour
 {
 	//set bace values
-	private float baceERefireRate = 0.40f;
-	private float baceRefireRate = 0.30f;
+	private float baceERefireRate = 0.30f;
+	private float baceRefireRate = 0.20f;
 	private float baceMoveSpeed = 8f;
 	public float baceHealth = 100f;
 	public float baceSRegen = 0.5f;
@@ -680,12 +680,48 @@ public class fittingScript : MonoBehaviour
 		counter++;
 		//check gun
 		if (fitSetup[counter] == 0) { Debug.Log("error no gun"); }
-		else if (fitSetup[counter] == 1) { bulletSelector = 1; }
-		else if (fitSetup[counter] == 2) { bulletSelector = 2; }
-		else if (fitSetup[counter] == 3) { bulletSelector = 3; }
-		else if (fitSetup[counter] == 4) { bulletSelector = 4; }
-		else if (fitSetup[counter] == 5) { bulletSelector = 5; }
-		else if (fitSetup[counter] == 6) { bulletSelector = 6; }
+		else if (fitSetup[counter] == 1)
+		{ 
+			//set bullet selector
+			bulletSelector = 1;
+			//set fire rate
+			//bace fire rate no change needed
+		}//cannon
+		else if (fitSetup[counter] == 2)
+		{
+			//set bullet selector
+			bulletSelector = 2;
+			//set fire rate
+			refireRate += 0.1f;
+		}//dual cannon
+		else if (fitSetup[counter] == 3)
+		{
+			//set bullet selector
+			bulletSelector = 3;
+			//set fire rate
+			refireRate += 0.2f;
+		}//triple cannon
+		else if (fitSetup[counter] == 4)
+		{
+			//set bullet selector
+			bulletSelector = 4;
+			//set fire rate
+			//bace fire rate no change needed
+		}//plaz
+		else if (fitSetup[counter] == 5)
+		{
+			//set bullet selector
+			bulletSelector = 5;
+			//set fire rate
+			erefireRate += 0.1f;
+		}//dual plaz
+		else if (fitSetup[counter] == 6)
+		{
+			//set bullet selector
+			bulletSelector = 6;
+			//set fire rate
+			erefireRate += 0.4f;
+		}//plaz trio
 
 		//update text outputs
 		healthOutput.GetComponent<Text>().text = ("hull:" + health + "  rep rate:" + repair);

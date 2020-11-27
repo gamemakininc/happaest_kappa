@@ -16,6 +16,8 @@ public class settingsMenu : MonoBehaviour
     public inputManedger im;
     public KeyCode[] keyBinds;
     public int intkey;
+    public Text fovPaste;
+    public Slider fovSlider;
 
     public GameObject confDialogue;
     public Button btnConfirm;
@@ -58,6 +60,11 @@ public class settingsMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        float fov = fovSlider.value;
+        int ifov;
+        ifov = Mathf.RoundToInt (fov);
+        fovPaste.text= (""+ifov);
         //set vars in observer script from sliders
         ObserverScript.Instance.mvol = mVolSli.value;
         ObserverScript.Instance.sfxvol = sfxVolSli.value;

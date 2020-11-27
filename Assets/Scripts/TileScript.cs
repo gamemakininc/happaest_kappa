@@ -23,6 +23,7 @@ public class TileScript : MonoBehaviour
 
         cameraBoundX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, 0)).x;
         tileEdgeX = GetComponent<SpriteRenderer>().bounds.extents.x;
+        bosStop = false;
     }
 
     private void Update()

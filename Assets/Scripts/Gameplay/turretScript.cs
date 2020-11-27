@@ -5,7 +5,7 @@ public class turretScript : MonoBehaviour
     public Rigidbody2D rb;
 
     //script trackers
-    public sbosstracker bossTracker;
+    public sBossHealth bossHp;
     public enemyhealth parentScript;
     //location int for boss handeler
     public int location;
@@ -33,11 +33,10 @@ public class turretScript : MonoBehaviour
 
     public void die() 
     {
-        bossTracker.gInputInt = location;
-        bossTracker.updateVarsTurret();
-
+        //tell boss tracker that a turret is dead
+        bossHp.updateVarsTurret();
+        Debug.Log("turret died");
     }
-    //why is it setup this way? am i stupid?
     public void fire()
     {
         if (laser == true)//should be only one to freeze rotation

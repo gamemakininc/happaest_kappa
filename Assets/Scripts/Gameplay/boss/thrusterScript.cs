@@ -6,7 +6,8 @@ public class thrusterScript : MonoBehaviour
     public float health;
     public GameObject flame;
     public GameObject body;
-    public sbosstracker bossTracker;
+    public sbossThrustScript bossTracker;//when this unrefrenced variable is removed the boss breaks... why?
+    public sBossHealth bossHp;
 
 
 
@@ -39,9 +40,6 @@ public class thrusterScript : MonoBehaviour
         //dissable colliders
         this.GetComponent<Collider2D>().enabled = false;
         flame.GetComponent<Collider2D>().enabled = false;
-        //update bosstracker script
-        bossTracker.tInputInt = location;
-        bossTracker.updateVarsThrust();
         //remove script objects
         Destroy(flame);//not working for some reason
         Destroy(gameObject);

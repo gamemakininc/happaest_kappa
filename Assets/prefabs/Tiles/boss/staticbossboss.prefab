@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425667954665582770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 6220941884125012695}
   m_Father: {fileID: 2409318101493133966}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &5048430581701953230
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,9 +101,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7386662101896478243}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 8039655574127373870}
   location: 3
   laser: 1
@@ -229,7 +229,8 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 8685595385539894939}
   body: {fileID: 4652780925983460035}
-  bossTracker: {fileID: 6876359748589673298}
+  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
 --- !u!1 &811940394647433868
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811940394647433868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -264,7 +265,7 @@ Transform:
   - {fileID: 2611066188238080085}
   m_Father: {fileID: 1359971588927346210}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1653542682814219343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -301,9 +302,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -329,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4000520148583869858}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 8445308145754610322}
   location: 7
   laser: 0
@@ -526,9 +527,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -630,7 +631,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343445331376887631}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -638,7 +639,7 @@ Transform:
   - {fileID: 8366733018134633335}
   m_Father: {fileID: 3415714643289962664}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &6329677342972635035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -675,9 +676,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -703,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1972465084659540548}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 4127891765237707830}
   location: 12
   laser: 0
@@ -833,7 +834,8 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 3580519098013245294}
   body: {fileID: 3848738453088425369}
-  bossTracker: {fileID: 6876359748589673298}
+  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
 --- !u!1 &1803659406656897759
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,9 +907,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1054,9 +1056,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1226,7 +1228,8 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 7752784957555548127}
   body: {fileID: 4427152329407952382}
-  bossTracker: {fileID: 6876359748589673298}
+  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
 --- !u!1 &2412257800941641653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,9 +1301,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1507,9 +1510,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1671,7 +1674,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3385463245411280037}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1679,7 +1682,7 @@ Transform:
   - {fileID: 2308093127098320150}
   m_Father: {fileID: 2370606510437746214}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &8587711317255404541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1716,9 +1719,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1744,7 +1747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8930774952837182416}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 2857244121128732455}
   location: 6
   laser: 0
@@ -1845,6 +1848,7 @@ MonoBehaviour:
   flame: {fileID: 5498446990653668191}
   body: {fileID: 4245124446610559766}
   bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
 --- !u!1 &3505678859119893270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1875,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3505678859119893270}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1879,7 +1883,7 @@ Transform:
   - {fileID: 1373828468064504718}
   m_Father: {fileID: 7947587794100344736}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &8662483823665696671
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1916,9 +1920,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1944,7 +1948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 350352518989824369}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 1661189591389548858}
   location: 10
   laser: 0
@@ -2322,9 +2326,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2427,9 +2431,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2605,9 +2609,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2709,9 +2713,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2843,9 +2847,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2903,7 +2907,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4560320174791201285}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2911,7 +2915,7 @@ Transform:
   - {fileID: 2760425291232527398}
   m_Father: {fileID: 5039220442756739273}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &478653694482465812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2948,9 +2952,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2976,7 +2980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6555137734361630374}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 1324046028114719471}
   location: 4
   laser: 0
@@ -3082,9 +3086,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3180,7 +3184,8 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 8606646525804569012}
   body: {fileID: 8447407891006782083}
-  bossTracker: {fileID: 6876359748589673298}
+  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
 --- !u!1 &5018264617858830620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,9 +3317,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3487,7 +3492,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5454242314718495456}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3495,7 +3500,7 @@ Transform:
   - {fileID: 2036197373044187749}
   m_Father: {fileID: 8569375311190990593}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &8018216779375417063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3532,9 +3537,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3560,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6994485784293658024}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 1481774862635700707}
   location: 11
   laser: 0
@@ -3682,7 +3687,7 @@ GameObject:
   - component: {fileID: 2168020552279365164}
   m_Layer: 11
   m_Name: lazor_turret (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3738,9 +3743,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3842,7 +3847,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5762985314367300916}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3850,7 +3855,7 @@ Transform:
   - {fileID: 8847756241431983681}
   m_Father: {fileID: 4895438729356817961}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &4746807164382595258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3887,9 +3892,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3915,7 +3920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2482373697084009813}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 4418945729754207881}
   location: 2
   laser: 1
@@ -4052,9 +4057,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4231,9 +4236,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4365,7 +4370,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6409760352615172661}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4373,7 +4378,7 @@ Transform:
   - {fileID: 4931544116542048863}
   m_Father: {fileID: 6616222495351826570}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &2390171280339758383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4410,9 +4415,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4438,7 +4443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5497864619283406477}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 4194864597755487626}
   location: 1
   laser: 1
@@ -4545,9 +4550,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4649,7 +4654,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6480112901961907397}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4657,7 +4662,7 @@ Transform:
   - {fileID: 6868918445045373818}
   m_Father: {fileID: 3634239475528667114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &4706554556419964373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4694,9 +4699,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4722,7 +4727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1053504219666488914}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 3891931419045092266}
   location: 13
   laser: 0
@@ -4829,9 +4834,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4993,7 +4998,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6779228142619066459}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5001,7 +5006,7 @@ Transform:
   - {fileID: 1785155247221471675}
   m_Father: {fileID: 7216211752958181967}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &5896432699190452981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5038,9 +5043,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6219008580301899996, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5066,7 +5071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7861088151016119386}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 5103888649545279803}
   location: 5
   laser: 0
@@ -5255,9 +5260,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5535,9 +5540,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2323917800338813707, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5713,9 +5718,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4219128882442154958, guid: 84e2acdcb8236ae44b6414f28e1ae2f3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5773,7 +5778,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8601279466661682225}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5781,7 +5786,7 @@ Transform:
   - {fileID: 4542802424749363328}
   m_Father: {fileID: 2755673874828816621}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &3755803187486196543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5818,9 +5823,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -5076354272350900210, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5846,7 +5851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3649292634861893057}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 4358909429440270681}
   location: 0
   laser: 1
@@ -5979,7 +5984,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8622346390532981101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5987,7 +5992,7 @@ Transform:
   - {fileID: 2794660843541732608}
   m_Father: {fileID: 7381586667400251339}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7973333185891700889
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6024,9 +6029,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6052,7 +6057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3471238979116360625}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 5798534186908002244}
   location: 8
   laser: 0
@@ -6100,7 +6105,9 @@ GameObject:
   - component: {fileID: 8294874966614060722}
   - component: {fileID: 7956892157787574955}
   - component: {fileID: 1250914156058942184}
-  - component: {fileID: 6876359748589673298}
+  - component: {fileID: 1899205439751538002}
+  - component: {fileID: 5927771651106228234}
+  - component: {fileID: 4456199125596575778}
   m_Layer: 0
   m_Name: Tile_staticboss
   m_TagString: Untagged
@@ -6181,7 +6188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 77992c84c0808c944adf998708b59fff, type: 3}
   m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_FlipX: 0
@@ -6229,7 +6236,7 @@ MonoBehaviour:
   speed: -2.5
   freeze: 0
   bosStop: 0
---- !u!114 &6876359748589673298
+--- !u!114 &1899205439751538002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6238,10 +6245,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8635630266027565337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb5f7c41c96c2b4d97dd9adef74e589, type: 3}
+  m_Script: {fileID: 11500000, guid: 82cd352aac7c3474a8e060e3245f88c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrusters: 010101010101
+  turretsCurrent: 15
+--- !u!114 &5927771651106228234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635630266027565337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b85e08dc61cf74b869d5f2e0590e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   thrusterObj:
   - {fileID: 9163109908159231009}
   - {fileID: 442140254229023481}
@@ -6249,29 +6268,30 @@ MonoBehaviour:
   - {fileID: 1533055784930217612}
   - {fileID: 3487569433802998768}
   - {fileID: 2386561860387655357}
-  turrets: 0101010101010101010101010101
+  thrustTimer: 0
+  thrustTimer1: 0
+--- !u!114 &4456199125596575778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635630266027565337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6002e91cc677aa84f9576035490896d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   laserObj:
   - {fileID: 8601279466661682225}
   - {fileID: 6409760352615172661}
   - {fileID: 5762985314367300916}
   - {fileID: 425667954665582770}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   cannonObj:
   - {fileID: 4560320174791201285}
   - {fileID: 6779228142619066459}
   - {fileID: 3385463245411280037}
   - {fileID: 811940394647433868}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   missileObj:
   - {fileID: 8622346390532981101}
   - {fileID: 9060286975586812670}
@@ -6279,16 +6299,7 @@ MonoBehaviour:
   - {fileID: 5454242314718495456}
   - {fileID: 1343445331376887631}
   - {fileID: 6480112901961907397}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  turretsCurrent: 0
-  gInputInt: 0
-  tInputInt: 0
   swapint: 0
-  thrustTimer: 0
-  thrustTimer1: 0
   laserTimer: 0
   cannonTimer: 0
   missileTimer: 0
@@ -6450,7 +6461,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9060286975586812670}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6458,7 +6469,7 @@ Transform:
   - {fileID: 468491370852452180}
   m_Father: {fileID: 7533630833363411575}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &8492505122261379230
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6495,9 +6506,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1499807265
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1346401361294608487, guid: 4dea78633bc472f4aa493f74f0623504,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6523,7 +6534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1331290864293424373}
-  bossTracker: {fileID: 6876359748589673298}
+  bossHp: {fileID: 1899205439751538002}
   parentScript: {fileID: 6335571835690949131}
   location: 9
   laser: 0
@@ -6623,4 +6634,5 @@ MonoBehaviour:
   health: 50
   flame: {fileID: 5380022275201504854}
   body: {fileID: 3983529982240718354}
-  bossTracker: {fileID: 6876359748589673298}
+  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}

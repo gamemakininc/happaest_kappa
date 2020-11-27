@@ -78,12 +78,12 @@ public class mainMenu : MonoBehaviour
             if (effecTimer <= .5f && effPeak == false)
             {
                 effecTimer += 0.8f*Time.deltaTime;
-                gs.drift.value = effecTimer;
-                gs.jitter.value = effecTimer;
                 if (effecTimer >= .5)
                 {
                     effPeak = true;
                 }
+                gs.jitter.value = effecTimer;
+                gs.drift.value = effecTimer;
             }
             if (effecTimer >= 0 && effPeak == true)
             {

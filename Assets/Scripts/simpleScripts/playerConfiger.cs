@@ -33,11 +33,11 @@ public class playerConfiger : MonoBehaviour
         }
         if (_fitsetup[11] > 0) //so the whole thing dosent error out if nothing fitted
         {
-            pspsps.MissilePrefab2 = missiles[_fitsetup[11] - 1]; 
+            pspsps.MissilePrefab2 = missiles[_fitsetup[11] - 1];
         }
         //clause to set p0 to bace missile w no ammo if bolth empty
         if (_fitsetup[10] <= 0 && _fitsetup[11] <= 0) { pspsps.MissilePrefab1 = missiles[0]; }
-        
+
         //slot1 calc ammo
         if (_fitsetup[10] == 1) { p1Ammo = 20; }
         else if (_fitsetup[10] == 2) { p1Ammo = 15; }
@@ -47,7 +47,7 @@ public class playerConfiger : MonoBehaviour
         pspsps.payload0Ammo = p1Ammo;
 
         //slot2 calc ammo
-        if (_fitsetup[11]==1) { p2Ammo = 20; }
+        if (_fitsetup[11] == 1) { p2Ammo = 20; }
         else if (_fitsetup[11] == 2) { p2Ammo = 15; }
         else if (_fitsetup[11] == 3) { p2Ammo = 10; }
         p2Ammo += ObserverScript.Instance.mslBonus;
@@ -58,37 +58,43 @@ public class playerConfiger : MonoBehaviour
         //set bullet
         pspsps.BulletPrefab = bullets[_fitsetup[12] - 1];
         //set gun sound
-        pspsps.sounds[0] = gunSounds[_fitsetup[12 - 1]];
+        pspsps.sounds[0] = gunSounds[_fitsetup[12] - 1];
         //set refire rate
         switch (_fitsetup[12]) 
         {
             //no gun
             case 0:
-                //do nothing
+                //should not be possible
                 break;
             //single cannon
             case 1:
                 pspsps.baceRefireRate = ObserverScript.Instance.fireRate;
+                pspsps.nextFire = ObserverScript.Instance.fireRate;
                 break;
             //twin cannon
             case 2:
                 pspsps.baceRefireRate = ObserverScript.Instance.fireRate + 0.1f;
+                pspsps.nextFire = ObserverScript.Instance.fireRate;
                 break;
             //shrapnel cannon
             case 3:
                 pspsps.baceRefireRate = ObserverScript.Instance.fireRate + 0.2f;
+                pspsps.nextFire = ObserverScript.Instance.fireRate;
                 break;
             //single plaz
             case 4:
                 pspsps.baceRefireRate = ObserverScript.Instance.efireRate;
+                pspsps.nextFire = ObserverScript.Instance.efireRate;
                 break;
             //twin plaz
             case 5:
                 pspsps.baceRefireRate = ObserverScript.Instance.efireRate + 0.1f;
+                pspsps.nextFire = ObserverScript.Instance.efireRate;
                 break;
             //triple plaz
             case 6:
                 pspsps.baceRefireRate = ObserverScript.Instance.efireRate + 0.4f;
+                pspsps.nextFire = ObserverScript.Instance.efireRate;
                 break;
             //laser1
             case 7:
@@ -103,10 +109,12 @@ public class playerConfiger : MonoBehaviour
         //health
         //set shield
         pspsps.maxShield = ObserverScript.Instance.pShield;
+        pspsps.shield = pspsps.maxShield;
         //shield regen
         pspsps.sRegen = ObserverScript.Instance.pSRegen;
         //set health
         pspsps.maxHealth = ObserverScript.Instance.pHealth;
+        pspsps.health = pspsps.maxHealth;
         //repair
         pspsps.repair = ObserverScript.Instance.pRepair;
         //setdeath effect 

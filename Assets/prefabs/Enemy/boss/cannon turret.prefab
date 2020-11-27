@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8176337042443018020}
   - component: {fileID: 8176337042443018019}
   - component: {fileID: 7327603486469959455}
+  - component: {fileID: -5784961993366107088}
   m_Layer: 11
   m_Name: cannon turret
   m_TagString: enemy
@@ -179,8 +180,27 @@ MonoBehaviour:
   health: 20
   isSBoss: 1
   isBoss: 1
-  thisPowerup: {fileID: 0}
+  diff: 0
+  thisPowerup: {fileID: -5784961993366107088}
   value: 0
+--- !u!114 &-5784961993366107088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176337042443018017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03115cc9d153e14e83c48a69c7b17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 1988526727809492, guid: a3167e5ddeb7ef34b9a836a8aca510c7, type: 3}
+  - {fileID: 1210205971745251032, guid: 79d809bb8f0dce9479d2a0552bd07a13, type: 3}
+  - {fileID: 7216495163256295703, guid: b9aab5c6e4538304ea812aebd033e619, type: 3}
+  - {fileID: 5506538639768510573, guid: 3081bec9a329518429c232e938df0cb0, type: 3}
+  swapint: 0
 --- !u!1 &8176337043092340242
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8176337043092340246}
-  bossTracker: {fileID: 0}
+  bossHp: {fileID: 0}
   parentScript: {fileID: 0}
   location: 0
   laser: 0
