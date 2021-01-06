@@ -6438,7 +6438,7 @@ GameObject:
   - component: {fileID: 1232395243}
   - component: {fileID: 1232395242}
   m_Layer: 5
-  m_Name: MMbtn (1)
+  m_Name: resetBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9367,7 +9367,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  diff: 0
+  diff: 1
   levelsCleared: 0
   type1: 0
   type2: 0

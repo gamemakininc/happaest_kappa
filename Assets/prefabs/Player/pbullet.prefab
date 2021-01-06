@@ -146,11 +146,12 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 50686825095239466}
   timer: 0
-  Damage: 2
-  trackingMouse: 0
+  Damage: 3
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0

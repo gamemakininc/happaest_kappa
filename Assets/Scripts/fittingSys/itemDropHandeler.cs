@@ -112,7 +112,7 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
         //update sprite
         spriteLoc.GetComponent<SpriteRenderer>().sprite = swapsprites[itemId];
         //tell fittingscript slot is empty
-        parent.inputLoc = inputLoc;
-        parent.input();
+        player.GetComponent<fittingScript>().inputLoc = inputLoc;
+        player.GetComponent<fittingScript>().input();
     }
 }

@@ -73,12 +73,12 @@ public class playerConfiger : MonoBehaviour
                 break;
             //twin cannon
             case 2:
-                pspsps.baceRefireRate = ObserverScript.Instance.fireRate + 0.1f;
+                pspsps.baceRefireRate = ObserverScript.Instance.fireRate;
                 pspsps.nextFire = ObserverScript.Instance.fireRate;
                 break;
             //shrapnel cannon
             case 3:
-                pspsps.baceRefireRate = ObserverScript.Instance.fireRate + 0.2f;
+                pspsps.baceRefireRate = ObserverScript.Instance.fireRate;
                 pspsps.nextFire = ObserverScript.Instance.fireRate;
                 break;
             //single plaz
@@ -88,12 +88,12 @@ public class playerConfiger : MonoBehaviour
                 break;
             //twin plaz
             case 5:
-                pspsps.baceRefireRate = ObserverScript.Instance.efireRate + 0.1f;
+                pspsps.baceRefireRate = ObserverScript.Instance.efireRate;
                 pspsps.nextFire = ObserverScript.Instance.efireRate;
                 break;
             //triple plaz
             case 6:
-                pspsps.baceRefireRate = ObserverScript.Instance.efireRate + 0.4f;
+                pspsps.baceRefireRate = ObserverScript.Instance.efireRate;
                 pspsps.nextFire = ObserverScript.Instance.efireRate;
                 break;
             //laser1

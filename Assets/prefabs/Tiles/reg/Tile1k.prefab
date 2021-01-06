@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
 --- !u!1 &5941694934005908336
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,16 +288,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: currentState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: m_Layer
@@ -391,16 +382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: currentState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: speed
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
@@ -497,16 +478,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: currentState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: m_Layer
@@ -602,16 +573,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: currentState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}
       propertyPath: m_Layer
@@ -706,21 +667,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: currentState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042374337022099714, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
-        type: 3}
-      propertyPath: maxRadians
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6105265525599727621, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb,
         type: 3}

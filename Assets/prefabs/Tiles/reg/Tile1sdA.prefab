@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
 --- !u!1 &1984085199342536288
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,11 +294,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
-        type: 3}
-      propertyPath: moveRight
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce7919733fbe0e48be9d9fe40a40d68, type: 3}
 --- !u!4 &4423265754401164836 stripped
@@ -313,11 +309,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5313590943672952547}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -413,11 +404,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5313590943672952547}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -593,11 +579,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
-        type: 3}
-      propertyPath: moveRight
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce7919733fbe0e48be9d9fe40a40d68, type: 3}
 --- !u!4 &7076009396121995415 stripped
@@ -693,11 +674,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 4544386167899985564, guid: 7ce7919733fbe0e48be9d9fe40a40d68,
-        type: 3}
-      propertyPath: moveRight
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce7919733fbe0e48be9d9fe40a40d68, type: 3}
 --- !u!4 &8675735503405962736 stripped
@@ -713,11 +689,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5313590943672952547}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x

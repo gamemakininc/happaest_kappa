@@ -185,9 +185,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
-		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
-		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 10) { refireRate -= 0.05f; erefireRate -= 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate -= 0.05f; erefireRate -= 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate -= 0.1f; erefireRate -= 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -198,9 +198,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
-		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
-		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 10) { refireRate -= 0.05f; erefireRate -= 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate -= 0.05f; erefireRate -= 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate -= 0.1f; erefireRate -= 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -211,9 +211,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
-		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
-		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 10) { refireRate -= 0.05f; erefireRate -= 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate -= 0.05f; erefireRate -= 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate -= 0.1f; erefireRate -= 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -224,9 +224,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
-		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
-		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 10) { refireRate -= 0.05f; erefireRate -= 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate -= 0.05f; erefireRate -= 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate -= 0.1f; erefireRate -= 0.1f; }
 		counter++;
 		if (fitSetup[counter] == 1) { shildBoost(); }
 		else if (fitSetup[counter] == 2) { shildBoost(); }
@@ -237,9 +237,9 @@ public class fittingScript : MonoBehaviour
 		else if (fitSetup[counter] == 7) { afterburner(); }
 		else if (fitSetup[counter] == 8) { afterburner(); }
 		else if (fitSetup[counter] == 9) { afterburner(); }
-		else if (fitSetup[counter] == 10) { refireRate += 0.05f; erefireRate += 0.02f; }
-		else if (fitSetup[counter] == 11) { refireRate += 0.05f; erefireRate += 0.1f; }
-		else if (fitSetup[counter] == 12) { refireRate += 0.1f; erefireRate += 0.1f; }
+		else if (fitSetup[counter] == 10) { refireRate -= 0.05f; erefireRate -= 0.02f; }
+		else if (fitSetup[counter] == 11) { refireRate -= 0.05f; erefireRate -= 0.1f; }
+		else if (fitSetup[counter] == 12) { refireRate -= 0.1f; erefireRate -= 0.1f; }
 		counter++;
 		//check low slots
 		sDebuffSpeed = 1;
@@ -262,7 +262,7 @@ public class fittingScript : MonoBehaviour
 				}
 
 			}
-		}
+		}//empty slot relock check
 		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
@@ -289,7 +289,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 3;
 			p1ammocount += 3;
-		}
+		}//missile mounts
 		else if (fitSetup[counter] == 11)
 		{
 			//if no missile slots avalible unlock p0
@@ -307,7 +307,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 6;
 			p1ammocount += 6;
-		}
+		}//missile racks
 		else if (fitSetup[counter] == 12)
 		{
 			//if no missile slots avalible unlock p0
@@ -325,7 +325,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 12;
 			p1ammocount += 12;
-		}
+		}//rocket pods
 		counter++;
 		if (fitSetup[counter] == 0)
 		{
@@ -346,7 +346,7 @@ public class fittingScript : MonoBehaviour
 				}
 
 			}
-		}
+		}//empty slot relock check
 		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
@@ -373,7 +373,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 3;
 			p1ammocount += 3;
-		}
+		}//missile mounts
 		else if (fitSetup[counter] == 11)
 		{
 			//if no missile slots avalible unlock p0
@@ -391,7 +391,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 6;
 			p1ammocount += 6;
-		}
+		}//missile racks
 		else if (fitSetup[counter] == 12)
 		{
 			//if no missile slots avalible unlock p0
@@ -409,7 +409,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 12;
 			p1ammocount += 12;
-		}
+		}//rocket pods
 		counter++;
 		if (fitSetup[counter] == 0)
 		{
@@ -430,7 +430,7 @@ public class fittingScript : MonoBehaviour
 				}
 
 			}
-		}
+		}//empty slot relock check
 		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
@@ -457,7 +457,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 3;
 			p1ammocount += 3;
-		}
+		}//missile mounts
 		else if (fitSetup[counter] == 11)
 		{
 			//if no missile slots avalible unlock p0
@@ -475,7 +475,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 6;
 			p1ammocount += 6;
-		}
+		}//missile racks
 		else if (fitSetup[counter] == 12)
 		{
 			//if no missile slots avalible unlock p0
@@ -493,7 +493,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 12;
 			p1ammocount += 12;
-		}
+		}//rocket pods
 		counter++;
 		if (fitSetup[counter] == 0)
 		{
@@ -514,7 +514,7 @@ public class fittingScript : MonoBehaviour
 				}
 
 			}
-		}
+		}//empty slot relock check
 		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
@@ -541,7 +541,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 3;
 			p1ammocount += 3;
-		}
+		}//missile mounts
 		else if (fitSetup[counter] == 11)
 		{
 			//if no missile slots avalible unlock p0
@@ -559,7 +559,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 6;
 			p1ammocount += 6;
-		}
+		}//missile racks
 		else if (fitSetup[counter] == 12)
 		{
 			//if no missile slots avalible unlock p0
@@ -577,7 +577,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 12;
 			p1ammocount += 12;
-		}
+		}//rocket pods
 		counter++;
 		if (fitSetup[counter] == 0)
 		{
@@ -598,7 +598,7 @@ public class fittingScript : MonoBehaviour
 				}
 
 			}
-		}
+		}//empty slot relock check
 		else if (fitSetup[counter] == 1) { healthBoost(); }
 		else if (fitSetup[counter] == 2) { healthBoost(); }
 		else if (fitSetup[counter] == 3) { healthBoost(); }
@@ -625,7 +625,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 3;
 			p1ammocount += 3;
-		}
+		}//missile mounts
 		else if (fitSetup[counter] == 11)
 		{
 			//if no missile slots avalible unlock p0
@@ -643,7 +643,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 6;
 			p1ammocount += 6;
-		}
+		}//missile racks
 		else if (fitSetup[counter] == 12)
 		{
 			//if no missile slots avalible unlock p0
@@ -661,7 +661,7 @@ public class fittingScript : MonoBehaviour
 			//update ui
 			p0ammocount += 12;
 			p1ammocount += 12;
-		}
+		}//rocket pods
 		counter++;
 		//check payload
 		if (fitSetup[counter] == 1) { payload0Selector = 1; p0ammocount += 20; }

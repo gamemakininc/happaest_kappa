@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 91574569339478199}
   m_Layer: 11
   m_Name: lazor_turret (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 6058019258779615882}
   m_Layer: 11
   m_Name: missile_turret (3)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 1886391023935745912}
   m_Layer: 11
   m_Name: missile_turret (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 4107693065553096506}
   m_Layer: 11
   m_Name: missile_turret (5)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3261,7 +3261,7 @@ GameObject:
   - component: {fileID: 2387106573563503353}
   m_Layer: 11
   m_Name: lazor_turret (4)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4494,7 +4494,7 @@ GameObject:
   - component: {fileID: 1011781317365934444}
   m_Layer: 11
   m_Name: lazor_turret (2)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4778,7 +4778,7 @@ GameObject:
   - component: {fileID: 5950413683296626253}
   m_Layer: 11
   m_Name: missile_turret (1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5204,7 +5204,7 @@ GameObject:
   - component: {fileID: 3145763679855976177}
   m_Layer: 11
   m_Name: missile_turret (4)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5484,7 +5484,7 @@ GameObject:
   - component: {fileID: 3364005266572331689}
   m_Layer: 11
   m_Name: missile_turret (6)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

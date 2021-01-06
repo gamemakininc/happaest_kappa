@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
 --- !u!1001 &89671736681485691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217,11 +218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,11 +313,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -421,11 +412,6 @@ PrefabInstance:
         type: 3}
       propertyPath: shootDissabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
@@ -527,11 +513,6 @@ PrefabInstance:
       propertyPath: shootDissabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -627,11 +608,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,11 +708,6 @@ PrefabInstance:
       propertyPath: shootDissabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,11 +803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,11 +898,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1037,11 +998,6 @@ PrefabInstance:
       propertyPath: shootDissabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1137,11 +1093,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2049668486320471576}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x

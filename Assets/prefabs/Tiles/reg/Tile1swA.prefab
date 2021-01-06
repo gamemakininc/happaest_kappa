@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
 --- !u!1001 &441478361571776082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,11 +214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9076841233763843042}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,16 +389,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: moveRight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc519412cb9968c42be4295500d3c218, type: 3}
 --- !u!4 &9137182047874404334 stripped
@@ -497,16 +483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: moveRight
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc519412cb9968c42be4295500d3c218, type: 3}
@@ -603,16 +579,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6163418336211000850, guid: fc519412cb9968c42be4295500d3c218,
-        type: 3}
-      propertyPath: moveRight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc519412cb9968c42be4295500d3c218, type: 3}
 --- !u!4 &7731815923744886411 stripped
@@ -628,11 +594,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9076841233763843042}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -728,11 +689,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9076841233763843042}
     m_Modifications:
-    - target: {fileID: 5297316353855013946, guid: 1cd4ac3d80c47824c892bf5696db8d33,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5669727490352130296, guid: 1cd4ac3d80c47824c892bf5696db8d33,
         type: 3}
       propertyPath: m_LocalPosition.x

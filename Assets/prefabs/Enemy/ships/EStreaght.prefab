@@ -140,7 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
-  health: 10
+  health: 4
+  isSBoss: 0
+  isBoss: 0
+  diff: 0
   thisPowerup: {fileID: 0}
   value: 5
 --- !u!114 &5297316353855013946

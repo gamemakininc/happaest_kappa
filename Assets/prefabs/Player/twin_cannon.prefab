@@ -50,13 +50,14 @@ MonoBehaviour:
   rb: {fileID: -819421177474721502}
   timer: 0
   Damage: 0
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!50 &-819421177474721502
 Rigidbody2D:
   serializedVersion: 4
@@ -224,14 +225,15 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 2415981992198515459}
   timer: 0
-  Damage: 2
-  trackingMouse: 0
+  Damage: 3
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!1 &2393105229983259195
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,11 +380,12 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 2414535908514497483}
   timer: 0
-  Damage: 2
-  trackingMouse: 0
+  Damage: 3
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
