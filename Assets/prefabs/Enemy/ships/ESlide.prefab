@@ -139,12 +139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ada2f116e251b843a8fc06650bf3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 418499814608949728, guid: 365bc9945f10de24da7a2049cbea2857,
+    type: 3}
   health: 3
   isSBoss: 0
   isBoss: 0
   diff: 0
-  thisPowerup: {fileID: 0}
+  thisPowerup: {fileID: 7307474506759803400}
   value: 5
 --- !u!114 &4544386167899985564
 MonoBehaviour:

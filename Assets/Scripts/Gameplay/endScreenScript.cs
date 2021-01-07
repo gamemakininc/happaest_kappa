@@ -47,15 +47,15 @@ public class endScreenScript : MonoBehaviour
             //if skip hit end early.
             if (drain == false)
             { break; }
-            if (ObserverScript.Instance.levelScore >= 32)
+            if (ObserverScript.Instance.levelScore >= 55)
             {
-                ObserverScript.Instance.levelScore -= 32;
+                ObserverScript.Instance.levelScore -= 55;
                 if (lockedState == true)
                 {
-                    ObserverScript.Instance.score += 32;
+                    ObserverScript.Instance.score += 55;
                 }
             }
-            else if (ObserverScript.Instance.levelScore < 26) 
+            else if (ObserverScript.Instance.levelScore < 55) 
             {
                 swapint1 = ObserverScript.Instance.levelScore;
                 ObserverScript.Instance.levelScore=0;
