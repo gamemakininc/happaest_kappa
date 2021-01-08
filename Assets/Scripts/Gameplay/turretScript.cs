@@ -29,13 +29,19 @@ public class turretScript : MonoBehaviour
     private bool swapBool;
     private float tweenSpeed;
     public float tweentime = 0.08f;
+    private bool boop = false;
 
 
     public void die() 
     {
-        //tell boss tracker that a turret is dead
-        bossHp.updateVarsTurret();
-        Debug.Log("turret died");
+        if (boop == false)
+        {
+            //retrigger prevention
+            boop = true;
+            //tell boss tracker that a turret is dead
+            bossHp.updateVarsTurret();
+            Debug.Log("turret died");
+        }
     }
     public void fire()
     {

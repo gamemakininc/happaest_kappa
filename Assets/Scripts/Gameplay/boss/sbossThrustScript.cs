@@ -70,6 +70,9 @@ public class sbossThrustScript : MonoBehaviour
                     thrusterObj[3].GetComponent<thrusterScript>().turnOff();
                     thrusterObj[4].GetComponent<thrusterScript>().turnOff();
                     thrusterObj[5].GetComponent<thrusterScript>().turnOff();
+                    transform.DetachChildren();
+                    sboss1TurretCtrl sboss1TurretCtrl = GetComponent<sboss1TurretCtrl>();
+                    sboss1TurretCtrl.endEnter();
                 }
             }
         }

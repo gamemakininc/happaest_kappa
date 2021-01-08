@@ -76,4 +76,26 @@ public class sboss1TurretCtrl : MonoBehaviour
         }
 
     }
+    public void endEnter() 
+    {
+        //enable damage on laser turrets
+        laserObj[0].GetComponentInParent<enemyhealth>().enabled = true;
+        laserObj[1].GetComponentInParent<enemyhealth>().enabled = true;
+        laserObj[2].GetComponentInParent<enemyhealth>().enabled = true;
+        laserObj[3].GetComponentInParent<enemyhealth>().enabled = true;
+        //enable damage on cannon turrets
+        cannonObj[0].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[1].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[2].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[3].GetComponentInParent<enemyhealth>().enabled = true;
+        //enable damage on missile turrets
+        cannonObj[0].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[1].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[2].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[3].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[4].GetComponentInParent<enemyhealth>().enabled = true;
+        cannonObj[5].GetComponentInParent<enemyhealth>().enabled = true;
+        //remove children from tile
+        transform.DetachChildren();
+    }
 }

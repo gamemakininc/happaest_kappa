@@ -12,6 +12,7 @@ public class enemyhealth : MonoBehaviour
     //loot table var
     public powerupHandeler thisPowerup;
     public int value;//score value of enemy
+    private bool boop=false;
 
     void Start()
     {
@@ -20,13 +21,13 @@ public class enemyhealth : MonoBehaviour
         switch (diff) 
         {
             case 0://NG+
-                H = health * 1.6f;
+                H = health * 2f;
                 break;
             case 1://easy
                 H = health * 0.8f;
                 break;
             case 3://hard
-                H = health * 1.2f;
+                H = health * 1.5f;
                 break;
         }
         if (H == -5) {/*do nothing*/}
@@ -99,33 +100,38 @@ public class enemyhealth : MonoBehaviour
             //remove self
             Destroy(gameObject);
         }
-        else 
+        else
         {
-            //allow skip if no death animation set
-            if (deathEffect != null)
+            if (boop == false) 
             {
-                //spawn death animation prefab
-                Instantiate(deathEffect, transform.position, Quaternion.identity);
-            }
-            if (GetComponentInChildren<turretScript>() != null)
-            {
-                makeLoot();
-                GetComponentInChildren<turretScript>().die();
-                Debug.Log(transform + "sent info to" + GetComponentInChildren<Transform>());
-            }
-            ObserverScript.Instance.levelScore += value;
-            //dont want to delete the tile static boss is on
-            if (isSBoss == false)
-            {
-                ObserverScript.Instance.type2++;
-                //get wave spawner script refrence
-                EnemyWavev2 waveSpner = FindObjectOfType<EnemyWavev2>();
-                //end level win state
-                waveSpner.OnLevelComplete();
-            }
-            //remove self
-            Destroy(gameObject);
+                //multitrigger prevention
+                boop = true;
+                //allow skip if no death animation set
+                if (deathEffect != null)
+                {
+                    //spawn death animation prefab
+                    Instantiate(deathEffect, transform.position, Quaternion.identity);
+                }
+                if (GetComponentInChildren<turretScript>() != null)
+                {
+                    makeLoot();
+                    GetComponentInChildren<turretScript>().die();
+                    Debug.Log(transform + "sent info to" + GetComponentInChildren<Transform>());
+                }
+                ObserverScript.Instance.levelScore += value;
+                //dont want to delete the tile static boss is on
+                if (isSBoss == false)
+                {
+                    ObserverScript.Instance.type2++;
+                    //get wave spawner script refrence
+                    EnemyWavev2 waveSpner = FindObjectOfType<EnemyWavev2>();
+                    //end level win state
+                    waveSpner.OnLevelComplete();
+                }
+                //remove self
+                Destroy(gameObject);
 
+            }
         }
     }
 

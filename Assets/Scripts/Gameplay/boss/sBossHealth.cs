@@ -2,7 +2,7 @@
 
 public class sBossHealth : MonoBehaviour
 {
-    //set in editor should be 1+turrets
+    //set in editor the number of turrets
     public int turretsCurrent;
 
     //turretscript Die() triggers

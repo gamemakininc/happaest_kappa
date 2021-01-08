@@ -168,7 +168,7 @@ MonoBehaviour:
   mgport: {fileID: 1434235926353972349}
   currentState: 3
   speed: 6
-  waitTime: 3
+  waitTime: 1.5
   currentTab: 3
   currentTab2: 5
   currentField: Kamikaze

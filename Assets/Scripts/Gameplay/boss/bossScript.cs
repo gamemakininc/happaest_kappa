@@ -54,15 +54,27 @@ public class bossScript : MonoBehaviour
                 {
                     tile.GetComponent<TileScript>().speed += 0.4f * Time.deltaTime;
                 }
-                if (tile.GetComponent<TileScript>().speed >= 0) { tile.GetComponent<TileScript>().bosStop = true; slow = true; }
+                //sile stopped
+                if (tile.GetComponent<TileScript>().speed >= 0) 
+                {
+                    //set tile speed to 0
+                    tile.GetComponent<TileScript>().bosStop = true; 
+                    //enable hp and shooting
+                    GetComponent<enemyhealth>().enabled = true;
+                    slow = true;
+                }
             }
         }
-        //run timers
-        lCoolDownTimer -= 1 * Time.deltaTime;
-        gunCooldownTimer -= 1 * Time.deltaTime;
-        aimedGunCooldownTimer -= 1 * Time.deltaTime;
-        gCounter += 1 * Time.deltaTime;
-        g2Counter += 1 * Time.deltaTime;
+        //check if stopped
+        if (slow==true) 
+        {
+            //run timers
+            lCoolDownTimer -= 1 * Time.deltaTime;
+            gunCooldownTimer -= 1 * Time.deltaTime;
+            aimedGunCooldownTimer -= 1 * Time.deltaTime;
+            gCounter += 1 * Time.deltaTime;
+            g2Counter += 1 * Time.deltaTime;
+        }
         //move to next point
         transform.position = Vector2.MoveTowards(transform.position, movepoints[points].position, speed*Time.deltaTime);
         //are we there yet?
