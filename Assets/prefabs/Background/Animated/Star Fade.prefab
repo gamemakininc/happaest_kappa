@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2553751669554847180}
   - component: {fileID: 5256138269526444133}
   - component: {fileID: 3313259823398855363}
+  - component: {fileID: 5504047488115812201}
   m_Layer: 13
   m_Name: Star Fade
   m_TagString: Background
@@ -124,3 +125,16 @@ MonoBehaviour:
   - {fileID: 1544139577146597090, guid: 10d03142c44a4d34fa2c3015a977baa5, type: 3}
   - {fileID: 3479738563013932785, guid: 669d6ba4e20987a4980cb6c06c2f67bf, type: 3}
   - {fileID: 8450655237335124378, guid: 11ac24718697ca24587efc0af7404c8b, type: 3}
+--- !u!114 &5504047488115812201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989423325903270887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 15

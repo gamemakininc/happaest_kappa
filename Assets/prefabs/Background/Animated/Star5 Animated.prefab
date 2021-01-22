@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6470563473360669652}
   - component: {fileID: 1177672837217737118}
   - component: {fileID: 2302968029383301244}
+  - component: {fileID: 8071503377302834619}
   m_Layer: 13
   m_Name: Star5 Animated
   m_TagString: Background
@@ -118,3 +119,16 @@ MonoBehaviour:
   starType: 3
   randomSprite: 0
   sprites: []
+--- !u!114 &8071503377302834619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687978330494088076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 15
