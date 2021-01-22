@@ -2182,14 +2182,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482102090}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9924502, w: 0.122648835}
-  m_LocalPosition: {x: 0.2839, y: -0.2632, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.990647, w: 0.13644952}
+  m_LocalPosition: {x: 0.28389984, y: -0.26319987, z: 0}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0}
   m_Children:
   - {fileID: 318884360}
   m_Father: {fileID: 1719295309}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -165.91}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -164.315}
 --- !u!60 &482102092
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2491,8 +2491,8 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship1
-  itemDescription: ship1
+  itemName: dart
+  itemDescription: basic and cheap to build but not a lot of room for personalization
   typeOfItem: 4
   itemIdentifyer: 28
   itemID: 1
@@ -2551,7 +2551,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6,
+  m_Sprite: {fileID: -3099908447755325936, guid: 73d14b3758abbb945a3bd3c55a3b5fba,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4946,7 +4946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -67.4, y: 37.6}
+  m_AnchoredPosition: {x: -66.6, y: 38.8}
   m_SizeDelta: {x: 197.52606, y: 397.54767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931056985
@@ -8713,7 +8713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.6, y: 37.5}
+  m_AnchoredPosition: {x: 60.4, y: 38.7}
   m_SizeDelta: {x: 193.33972, y: 397.54816}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478404826
@@ -10338,10 +10338,10 @@ MonoBehaviour:
   spriteLoc: {fileID: 1719295304}
   swapsprites:
   - {fileID: 21300000, guid: 620274d12c550764db6c8945b2e61793, type: 3}
-  - {fileID: 5111633792230247031, guid: 914ec4a95b3591d47a62704825467da6, type: 3}
+  - {fileID: -3099908447755325936, guid: 73d14b3758abbb945a3bd3c55a3b5fba, type: 3}
   - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
   - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
-  - {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880, type: 3}
+  - {fileID: -7088575804834715039, guid: 8223495a7bb02dd44a66009f80ab051e, type: 3}
   - {fileID: 1694089084023748554, guid: 875f36a8459dc4e44bc0d8ed9178c884, type: 3}
   - {fileID: 3868737063637775712, guid: f491eb3bd7f1a7c44bf975080a93f067, type: 3}
   - {fileID: -6730395109318709099, guid: c36ccc6897d1eae42a27122bc180c76b, type: 3}
@@ -12462,7 +12462,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2981902686820661374, guid: 4a4813716c41d63469b4d741ec1dc880,
+  m_Sprite: {fileID: -7088575804834715039, guid: 8223495a7bb02dd44a66009f80ab051e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
