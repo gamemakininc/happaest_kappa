@@ -150,8 +150,8 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   trashTex:
-    overrideState: 0
-    value: {fileID: 0}
+    overrideState: 1
+    value: {fileID: 2800000, guid: 7afe01b3a3c51eb488d90b5fd0adb478, type: 3}
     defaultState: 1
 --- !u!114 &-2626231941405020467
 MonoBehaviour:
