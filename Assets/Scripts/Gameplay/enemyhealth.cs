@@ -13,6 +13,9 @@ public class enemyhealth : MonoBehaviour
     public powerupHandeler thisPowerup;
     public int value;//score value of enemy
     private bool boop=false;
+    //swap to hold player health
+    private float phealth;
+    bool rammed;
 
     void Start()
     {
@@ -42,6 +45,7 @@ public class enemyhealth : MonoBehaviour
         PlayerScript player = hitInfo.GetComponent<PlayerScript>();
         if (player != null)
         {
+
             int S=0;
             //damage player
             switch (diff)
@@ -69,6 +73,8 @@ public class enemyhealth : MonoBehaviour
                     break;
             }
             value = S;
+            rammed = true;
+            phealth = player.health;
             //die
             Die();
         }
@@ -122,11 +128,27 @@ public class enemyhealth : MonoBehaviour
                 //dont want to delete the tile static boss is on
                 if (isSBoss == false)
                 {
+                    
                     ObserverScript.Instance.type2++;
                     //get wave spawner script refrence
                     EnemyWavev2 waveSpner = FindObjectOfType<EnemyWavev2>();
-                    //end level win state
-                    waveSpner.OnLevelComplete();
+                    //if rammed by player
+                    if (rammed == true)
+                    {
+                        //check health above 0 (so if you die win dosen't trigger)
+                        if (phealth > 0)
+                        {
+                            //end level win state
+                            waveSpner.OnLevelComplete();
+                        }
+                        //if rammed and player dies do nothing (should trigger fail state)
+                    }
+                    //if not rammed 
+                    else 
+                    {
+                        //end level win state
+                        waveSpner.OnLevelComplete();
+                    }
                 }
                 //remove self
                 Destroy(gameObject);

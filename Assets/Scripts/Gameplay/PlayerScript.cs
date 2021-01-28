@@ -289,9 +289,9 @@ public class PlayerScript : MonoBehaviour
             Instantiate(deathEffect, transform.position, Quaternion.Euler(0, 0, -90));
         }
         //notify end screen
-        es.GetComponent<endScreenScript>().win = false;
+        //es.GetComponent<endScreenScript>().win = false;
         //enable end screen
-        es.SetActive(true);
+        //es.SetActive(true);
         //remove self
         Destroy(gameObject);
     }

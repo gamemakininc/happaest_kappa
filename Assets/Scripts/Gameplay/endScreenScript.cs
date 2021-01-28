@@ -6,7 +6,9 @@ public class endScreenScript : MonoBehaviour
 {
     int scoreholder;
     sceneManager sm;
+    //i dont know what igUi is for
     public GameObject[] igUi;
+
     public GameObject skipBtn;
     bool drain;
     int swapint1;
@@ -33,6 +35,8 @@ public class endScreenScript : MonoBehaviour
             winBtn.SetActive(false);
         }
         StartCoroutine(drainScore());
+        
+        //wut is this for?
         while (I > igUi.Length ) { igUi[I].SetActive(false); I++; }
 
     }
@@ -233,7 +237,15 @@ public class endScreenScript : MonoBehaviour
         //clear active gun than ship
         ObserverScript.Instance.fitSetup[12] = 0;
         ObserverScript.Instance.fitSetup[13] = 0;
-        //change scene
-        sm.briefing();
+        //really long statement to check if it was last ship
+        if 
+            (ObserverScript.Instance.unlocks[28] == false && ObserverScript.Instance.unlocks[29] == false && ObserverScript.Instance.unlocks[30] == false && ObserverScript.Instance.unlocks[31] == false && ObserverScript.Instance.unlocks[32] == false && ObserverScript.Instance.unlocks[33] == false && ObserverScript.Instance.unlocks[34] == false && ObserverScript.Instance.unlocks[35] == false)
+        {//game over
+            sm.mainMenu();
+        }
+        else
+        {//change scene
+            sm.briefing();
+        }
     }
 }

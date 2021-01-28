@@ -354,7 +354,7 @@ public class EnemyWavev2 : MonoBehaviour
         ObserverScript.Instance.bookmark2 = false;
         ObserverScript.Instance.bookmark3 = false;
         currentState = states.paused;
-        es.GetComponent<endScreenScript>().win = true;
-        es.SetActive(true);
+        // spawn win screen
+        es.GetComponent<esSpawner>().sWin();
     }
 }

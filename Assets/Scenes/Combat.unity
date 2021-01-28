@@ -1111,7 +1111,7 @@ MonoBehaviour:
   pSRegen: 0
   pRepair: 0
   mslBonus: 0
-  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  fitSetup: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000
   wgBookmarks:
   - 0
   - 0
@@ -1205,6 +1205,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1902691647}
     m_Modifications:
+    - target: {fileID: 6510727044811024822, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510727044811024822, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.109375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510727044811024822, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510727044811024822, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.046875
+      objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1284,7 +1304,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a3328a70c08bc66489e53c29135412d9, type: 2}
+      objectReference: {fileID: 9100000, guid: 0152070d99d24354dad875f6d249621f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2601f73d34680aa48aa42a0607e25403, type: 3}
 --- !u!1 &1503072448
