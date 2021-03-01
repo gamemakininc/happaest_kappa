@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623424561179883441}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2330750144714196770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,8 +48,10 @@ MonoBehaviour:
   weevy: 0
   diaginal: 0
   hangar_port: 0
+  spawning: 0
+  th1s: {fileID: 1623424561179883441}
   shipPrefabs:
   - {fileID: 5669727490352130300, guid: 1cd4ac3d80c47824c892bf5696db8d33, type: 3}
-  - {fileID: 5955428208251613908, guid: fc519412cb9968c42be4295500d3c218, type: 3}
-  - {fileID: 1200422539281957987, guid: 7ce7919733fbe0e48be9d9fe40a40d68, type: 3}
   - {fileID: 4816369500149411268, guid: 8d2ce8f6a3cac0e4eb23acc934299eeb, type: 3}
+  - {fileID: 1200422539281957987, guid: 7ce7919733fbe0e48be9d9fe40a40d68, type: 3}
+  - {fileID: 5955428208251613908, guid: fc519412cb9968c42be4295500d3c218, type: 3}

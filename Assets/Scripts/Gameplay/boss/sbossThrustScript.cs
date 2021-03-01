@@ -31,6 +31,7 @@ public class sbossThrustScript : MonoBehaviour
     {
         //run timers
         thrustTimer += 1 * Time.deltaTime;
+        thrustTimer1 += 1 * Time.deltaTime;
         //before tile stops
         if (slow == false)
         {
@@ -71,8 +72,6 @@ public class sbossThrustScript : MonoBehaviour
                     thrusterObj[4].GetComponent<thrusterScript>().turnOff();
                     thrusterObj[5].GetComponent<thrusterScript>().turnOff();
                     transform.DetachChildren();
-                    sboss1TurretCtrl sboss1TurretCtrl = GetComponent<sboss1TurretCtrl>();
-                    sboss1TurretCtrl.endEnter();
                 }
             }
         }

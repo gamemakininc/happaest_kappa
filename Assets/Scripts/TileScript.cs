@@ -10,6 +10,7 @@ public class TileScript : MonoBehaviour
     public bool freeze;
     private bool frozen;
     public bool bosStop;
+    public bool anotherStopBool;
     private float cameraBoundX;
     private float tileEdgeX;
 
@@ -43,6 +44,6 @@ public class TileScript : MonoBehaviour
             rb.velocity = new Vector2(speed, 0);
         }
 
-        if (bosStop == true) { speed = 0; bosStop = false; }
+        if (bosStop == true) { speed = 0; bosStop = false; anotherStopBool = true; }
     }
 }
