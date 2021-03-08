@@ -268,7 +268,7 @@ public class mainMenu : MonoBehaviour
         //set current menu to swapint2
         infswapint2 = 6;
     }
-    public void infoEnemyPage()
+    public void infoEnemyPage1()
     {
         //start bg effect cycle
         effGo = true;
@@ -280,7 +280,7 @@ public class mainMenu : MonoBehaviour
         //set current menu to swapint2
         infswapint2 = 7;
     }
-    public void infoLorePage()
+    public void infoEnemyPage2()
     {
         //start bg effect cycle
         effGo = true;
@@ -291,5 +291,17 @@ public class mainMenu : MonoBehaviour
         menuParents[infswapint2].transform.position = menuPoints[4].position;
         //set current menu to swapint2
         infswapint2 = 8;
+    }
+    public void infoLorePage()
+    {
+        //start bg effect cycle
+        effGo = true;
+
+        infswapint1 = 9;
+        menuParents[infswapint1].transform.position = menuPoints[3].position;
+        //move privious menu
+        menuParents[infswapint2].transform.position = menuPoints[4].position;
+        //set current menu to swapint2
+        infswapint2 = 9;
     }
 }
