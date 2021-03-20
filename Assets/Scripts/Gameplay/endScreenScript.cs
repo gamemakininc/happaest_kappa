@@ -234,9 +234,9 @@ public class endScreenScript : MonoBehaviour
                     break;
                 }
         }
-        //clear active gun than ship
-        ObserverScript.Instance.fitSetup[12] = 0;
-        ObserverScript.Instance.fitSetup[13] = 0;
+        //reset fitting
+        ObserverScript.Instance.clearFitting();
+
         //really long statement to check if it was last ship
         if 
             (ObserverScript.Instance.unlocks[28] == false && ObserverScript.Instance.unlocks[29] == false && ObserverScript.Instance.unlocks[30] == false && ObserverScript.Instance.unlocks[31] == false && ObserverScript.Instance.unlocks[32] == false && ObserverScript.Instance.unlocks[33] == false && ObserverScript.Instance.unlocks[34] == false && ObserverScript.Instance.unlocks[35] == false)

@@ -163,6 +163,50 @@ public class ObserverScript : MonoBehaviour
             factionRangeSwap += Random.Range(20, 50);
         }
     }
-
+    public void clearFitting() 
+    {
+        //clear active fittings
+        fitSetup[0] = 0;
+        fitSetup[1] = 0;
+        fitSetup[2] = 0;
+        fitSetup[3] = 0;
+        fitSetup[4] = 0;
+        fitSetup[5] = 0;
+        fitSetup[6] = 0;
+        fitSetup[7] = 0;
+        fitSetup[8] = 0;
+        fitSetup[9] = 0;
+        fitSetup[10] = 0;
+        fitSetup[11] = 0;
+        fitSetup[12] = 0;
+        fitSetup[13] = 0;
+        //clear fitting bookmarks
+        wgBookmarks[0] = 0;
+        wgBookmarks[1] = 0;
+        wgBookmarks[2] = 0;
+        wgBookmarks[3] = 0;
+        wgBookmarks[4] = 0;
+        wgBookmarks[5] = 0;
+        wgBookmarks[6] = 0;
+        wgBookmarks[7] = 0;
+        wgBookmarks[8] = 0;
+        wgBookmarks[9] = 0;
+        wgBookmarks[10] = 0;
+        wgBookmarks[11] = 0;
+        wgBookmarks[12] = 0;
+        pgBookmarks[0] = 0;
+        pgBookmarks[1] = 0;
+        pgBookmarks[2] = 0;
+        pgBookmarks[3] = 0;
+        pgBookmarks[4] = 0;
+        pgBookmarks[5] = 0;
+        pgBookmarks[6] = 0;
+        pgBookmarks[7] = 0;
+        pgBookmarks[8] = 0;
+        pgBookmarks[9] = 0;
+        pgBookmarks[10] = 0;
+        pgBookmarks[11] = 0;
+        pgBookmarks[12] = 0;
+    }
 
 }

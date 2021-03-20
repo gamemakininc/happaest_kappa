@@ -8,6 +8,16 @@ public class mixMaster : MonoBehaviour
     public AudioSource as1;
     public bool swapBool;
     public AudioClip[] soundtrack;
+    //0 main menu theme
+    //1 briefing theme
+    //2 fitting menu theme
+    //3 hangar theme
+    //4 save menu theme
+    //============================= the following are faction themes aka the gameplay songs should be 10+min and loopable
+    //5 vulpie theme (tribal themed)
+    //6 PP theme (EDM/dubstep)
+    //7 solarin theme (trance)
+    //8 TL0 theme (industrial)
     public bool oneshot;
     public int nTrack;
     public int cTrack;

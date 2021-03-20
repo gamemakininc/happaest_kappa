@@ -8,6 +8,7 @@ public class saveMenuGofer : MonoBehaviour
     void Start()
     {
         SaveS = FindObjectOfType<savescript>();
+        mixMaster.Instance.nTrack = 4;
     }
     public void save1() 
     {

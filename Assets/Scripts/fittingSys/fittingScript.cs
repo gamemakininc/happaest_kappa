@@ -115,7 +115,7 @@ public class fittingScript : MonoBehaviour
 		SetOutputs();
 		Debug.Log("SetOutputs");
 		//play song
-		mixMaster.Instance.nTrack = 3;
+		mixMaster.Instance.nTrack = 2;
 	}
 	public void input()
 	{
