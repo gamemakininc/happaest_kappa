@@ -13,7 +13,7 @@ public class mixMaster : MonoBehaviour
     //2 fitting menu theme
     //3 hangar theme
     //4 save menu theme
-    //============================= the following are faction themes aka the gameplay songs should be 10+min and loopable
+    //============================= the following are faction themes aka the gameplay songs should be 10+min or loopable
     //5 vulpie theme (tribal themed)
     //6 PP theme (EDM/dubstep)
     //7 solarin theme (trance)

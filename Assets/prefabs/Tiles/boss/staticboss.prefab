@@ -5118,7 +5118,7 @@ GameObject:
   - component: {fileID: 2068121153372512980}
   - component: {fileID: 8292319285014287655}
   m_Layer: 0
-  m_Name: staticbossboss
+  m_Name: staticboss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6236,6 +6236,7 @@ MonoBehaviour:
   speed: -2.5
   freeze: 0
   bosStop: 0
+  anotherStopBool: 0
 --- !u!114 &1899205439751538002
 MonoBehaviour:
   m_ObjectHideFlags: 0

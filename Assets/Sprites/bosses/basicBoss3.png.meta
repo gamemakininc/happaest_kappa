@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 9405f8ce4e3606d42b1de525ec2c5524
+guid: cf6a91028dd7a00489da8feafb850ab7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -549440540255063274
-    second: basicassboss_0
+      213: -332633337561076218
+    second: basicBoss3_0
   - first:
-      213: -7863000125223300663
-    second: basicassboss_1
+      213: 8914490555896846482
+    second: basicBoss3_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basicassboss_0
+      name: basicBoss3_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 135
-        width: 152
-        height: 93
+        x: 81
+        y: 131
+        width: 91
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 613f5ec5dbeff58f0800000000000000
-      internalID: -549440540255063274
+      spriteID: 60e283aedbf326bf0800000000000000
+      internalID: -332633337561076218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basicassboss_1
+      name: basicBoss3_1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 15
-        width: 152
-        height: 93
+        x: 81
+        y: 3
+        width: 91
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c1963bcb0301e290800000000000000
-      internalID: -7863000125223300663
+      spriteID: 2985ec9fde1a6bb70800000000000000
+      internalID: 8914490555896846482
       vertices: []
       indices: 
       edges: []

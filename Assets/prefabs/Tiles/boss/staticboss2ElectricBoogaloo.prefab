@@ -1796,7 +1796,7 @@ GameObject:
   - component: {fileID: 6071368814857628290}
   - component: {fileID: 4316305014804028785}
   m_Layer: 0
-  m_Name: staticbossboss2ElectricBoogaloo
+  m_Name: staticboss2ElectricBoogaloo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
