@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class EnemyWavev2 : MonoBehaviour
 {
@@ -83,8 +84,62 @@ public class EnemyWavev2 : MonoBehaviour
 
         if (ObserverScript.Instance.missionType > 0)
         {
-            //will need rewritten when more than one boss of each type exist
-            _Boss = Boss[ObserverScript.Instance.missionType - 1];
+            //select a boss
+            if (ObserverScript.Instance.missionType == 1) 
+            {
+                //swt a basic boss
+                switch (ObserverScript.Instance.type2) 
+                {
+                    //if first 3 passes select boss
+                    case 0:
+                        //select boss1
+                        _Boss = Boss[0];
+                        break;
+
+                    case 1:
+                        //select boss2
+                        _Boss = Boss[1];
+                        break;
+
+                    case 2:
+                        //Select boss3
+                        _Boss = Boss[2];
+                        break;
+
+                    default:
+                        //if past first 3 passes randomly select a boss
+                        _Boss = Boss[Random.Range(0, 2)];
+                        break;
+                }
+            }
+            else if (ObserverScript.Instance.missionType == 2)
+            {
+                //select a static boss
+                switch (ObserverScript.Instance.type3)
+                {
+                    //if first 3 passes select boss
+                    case 0:
+                        //select boss1
+                        _Boss = Boss[3];
+                        break;
+
+                    case 1:
+                        //select boss2
+                        _Boss = Boss[4];
+                        break;
+
+                    case 2:
+                        //Select boss3
+                        _Boss = Boss[5];
+                        break;
+
+                    default:
+                        //if past first 3 passes randomly select a boss
+                        _Boss = Boss[Random.Range(3, 5)];
+                        break;
+                }
+            }
+
         }
         else if (ObserverScript.Instance.missionType == 0) 
         {

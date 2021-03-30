@@ -26096,7 +26096,11 @@ MonoBehaviour:
   eliteWaves: 0
   Boss:
   - {fileID: 4302898000001007925, guid: a70b0198325d0964ba35424ae3244bed, type: 3}
+  - {fileID: 5972013687164379193, guid: d0a0cb78658edc34a8d1066fd79ef004, type: 3}
+  - {fileID: 520462507480289252, guid: 9d181916b05eb414a81df9a7a2e1908e, type: 3}
   - {fileID: 7283082885683159685, guid: c87a4871416784043b57b6bdc5e80ce2, type: 3}
+  - {fileID: 3305661583767333587, guid: c38aaf1cd1436474dbe2d941c33de296, type: 3}
+  - {fileID: 2186351458940035717, guid: 210ff9ba702a7db4b803f15289c63e6b, type: 3}
   currentTile: {fileID: 0}
   tilePool:
   - {fileID: 2778270902021796803, guid: 308ca1cf61c3cca4a9014be610c02fbc, type: 3}
