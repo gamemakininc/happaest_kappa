@@ -820,7 +820,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02f4dfa55dcd9404db4a0ba3afcdadce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec1adc842b21a74ab3cf11489a6a953, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3846,7 +3846,32 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'standard contract duration is 1 cycle where we jump through all four factions
+    controled space (the leangth of each section is partally determined by the difficulty
+    harder is a longer rotation) due to the long distance of the jumps boardering
+    the different pirate spaces we can not use long range to make shure our landing
+    point is clear and more often than not will have to scramble fighters on a moments
+    notice.
+
+    after each mission successful or failure you will have a chance
+    to gain access to a new modual pack that will either be a message in your fitting
+    system or someone will ceatch you in the briefing room so dont forget to check
+    your messages..
+
+    speaking of mission failures all your craft are compatable
+    with the markV ejector pod you will be issued one pod. the jammer systems are
+    not built for prolonged use and will degrade over active use your first time
+    ejecting the system will hold just fine untill the cerberus can come and get
+    you. the cloak systems are too intrecate to be serviced in the field. every time
+    you eject it is more likely that your pod will be detected and distroied. the
+    most we have gotten out of one pod is 5 ejects. if your pod is destroied all
+    the modpacks and ships you have access to will be sold off (added to score) and
+    the funds deposited into a holding account untill next of kin can be contacted.
+    if you manage to survive the destruction of all your craft you will be confined
+    to the ship untill the end of the cycle where you will not be offered reneual
+    options or to take anything with you bescides earned pay.
+
+'
 --- !u!222 &388975313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4851,7 +4876,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d47639022c1e7a245a45d2cdacca7686, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c6755f497b046d4989b0f36118d1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5235,6 +5260,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534422868}
+  m_CullTransparentMesh: 0
+--- !u!1 &541091661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541091662}
+  - component: {fileID: 541091664}
+  - component: {fileID: 541091663}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &541091662
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541091661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 854489760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -35.5}
+  m_SizeDelta: {x: 0, y: -69.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &541091663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541091661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\ncontract \ndetails"
+--- !u!222 &541091664
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541091661}
   m_CullTransparentMesh: 0
 --- !u!1 &541381441
 GameObject:
@@ -8134,7 +8237,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78a3298d5597b7c46aa0882dac63790a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc24bc7ceee3ef64f9f5a7c9612d4ada, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8739,7 +8842,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d47639022c1e7a245a45d2cdacca7686, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8149856850b6f6c469099d14a4cbfdce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9416,6 +9519,155 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827626120}
   m_CullTransparentMesh: 0
+--- !u!1 &854489759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854489760}
+  - component: {fileID: 854489764}
+  - component: {fileID: 854489763}
+  - component: {fileID: 854489762}
+  - component: {fileID: 854489761}
+  m_Layer: 5
+  m_Name: infoCntractDetails
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &854489760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854489759}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children:
+  - {fileID: 541091662}
+  - {fileID: 2023933356}
+  m_Father: {fileID: 2086977694}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.82, y: -0.32000002}
+  m_SizeDelta: {x: 136.7, y: 160.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &854489761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1590230547}
+          m_MethodName: infoLorePage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &854489762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 854489763}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &854489763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 0
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &854489764
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854489759}
+  m_CullTransparentMesh: 0
 --- !u!1 &862126543
 GameObject:
   m_ObjectHideFlags: 0
@@ -9830,6 +10082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deaths: 0
+  cycles: 0
   unlocks: 00000000000000000000000000000000000000000000000000000000000000000000000000
   efireRate: 0
   fireRate: 0
@@ -10185,7 +10439,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d47639022c1e7a245a45d2cdacca7686, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ada47d16b372844a8b7d567f79a28b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10614,8 +10868,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n          :                                    :                              
-    :                                   :"
+  m_Text: '
+
+    pushy:                          gremlin:                     dredgen:                            
+    wasp:'
 --- !u!222 &938867123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10933,7 +11189,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02f4dfa55dcd9404db4a0ba3afcdadce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e63e6ca1688e9a74f8429555dab457a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13002,7 +13258,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78a3298d5597b7c46aa0882dac63790a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3068a69053495064cbb9f0c1276fe689, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15300,7 +15556,7 @@ MonoBehaviour:
   m_Text: 'Free Vulpira. When the counsel decided to sign on to the I.S.A. charter
     five of the largest vulpie families decided to head out on there own. legend
     has it they started out as miners and they setup several manufacturing stations.
-    After the loss of several of these stations they became more militaristic. While
+    After the loss of most of these stations they became more militaristic. While
     most of their equipment seems cobbled together and barely functional their numbers
     and seeming hatred of anything non-vulpie makes them a threat. '
 --- !u!222 &1300533165
@@ -15972,7 +16228,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d31eeb5d73b17b94da7ca74dd6d7e046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 447e1ecaf9f086f408d5a737db410278, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18403,8 +18659,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n          :                                    :                              
-    :                                   :"
+  m_Text: "\n   Gecko:                  Puff Adder:               Sungazer:                          
+    Basilisk:"
 --- !u!222 &1507234491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19028,7 +19284,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d31eeb5d73b17b94da7ca74dd6d7e046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd8b501a80b4493428b2fc1502798dcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20345,7 +20601,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78a3298d5597b7c46aa0882dac63790a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: beaf726b45f562e499dfb7ab219dc737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22773,8 +23029,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n          :                                    :                              
-    :                                   :"
+  m_Text: "\n    Okapi:                lesser Auk:                    Aurochs:                              
+    Baiji:"
 --- !u!222 &1865000471
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22853,7 +23109,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02f4dfa55dcd9404db4a0ba3afcdadce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d70469c8301e6b4a8215a4987d7845b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23886,6 +24142,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021711678}
   m_CullTransparentMesh: 0
+--- !u!1 &2023933355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023933356}
+  - component: {fileID: 2023933358}
+  - component: {fileID: 2023933357}
+  m_Layer: 5
+  m_Name: genericfileicon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023933356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023933355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8, y: 19.6, z: 0}
+  m_LocalScale: {x: 72, y: 72, z: 72}
+  m_Children: []
+  m_Father: {fileID: 854489760}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023933357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023933355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: infopageLore
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!212 &2023933358
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023933355}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 726fcaa0b38b3214bacb1f09ac8be3a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.12, y: 1.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2027327306
 GameObject:
   m_ObjectHideFlags: 0
@@ -23956,7 +24322,7 @@ SpriteRenderer:
   m_SortingLayerID: -1499807265
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d31eeb5d73b17b94da7ca74dd6d7e046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8559ca1fafbccc4ca1df3eedd377fc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24919,6 +25285,7 @@ Transform:
   - {fileID: 984835255}
   - {fileID: 571085910}
   - {fileID: 2035166659}
+  - {fileID: 854489760}
   m_Father: {fileID: 1001593452}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25799,10 +26166,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '                                                               ''battering
-    ram''
+  m_Text: '
 
-    ZX-308:                        RC-701:                     BR-28:                           
+    ZX-308:                      RC-701:                      BR-28:                          
     A-100:'
 --- !u!222 &2132661254
 CanvasRenderer:

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-public class briefingScript : MonoBehaviour
+public class audioScript : MonoBehaviour
 {
+    public int track;
     // Start is called before the first frame update
     void Start()
     {
-        mixMaster.Instance.nTrack = 1;
+        mixMaster.Instance.nTrack = track;
     }
 
     // Update is called once per frame

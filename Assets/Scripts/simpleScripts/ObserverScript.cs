@@ -3,6 +3,8 @@
 public class ObserverScript : MonoBehaviour
 {
     public static ObserverScript Instance { get; private set; }
+    public int deaths;
+    public int cycles;
     //unlocks 
     /*
       should corrispond to 'item designator'
@@ -68,12 +70,12 @@ public class ObserverScript : MonoBehaviour
      * 6 ship2 phase1(done)ect... (8,9,10)
      */
     public int missionType;//hold the type of mission to start 0=fighter 1=boss ship 2=static boss
-    public int factionId;//not yet implemented
+    public int factionId;//enemy fighters use this to select sprite
     public int factionRangeSwap;//how long between faction change
     public bool defenceMission;//used to change specific mechanics in defence missions
     //defence mission should never be missionType 2
     public int shipswap;//swap used by event system to unlock ships every few levels
-
+    public bool poped;
     //save preview variables slot1
     public int s1diff;
     public int s1Shipselector;
@@ -122,14 +124,17 @@ public class ObserverScript : MonoBehaviour
     public int resoSelect;//store set resolution
 
     private void Awake()
-    {//
+    {//awake triggers before start
         if (Instance == null)
-        {//
+        {//check for other observer scripts
+            //??
             Instance = this;
+            //if no ither found set this to a percistant game object
             DontDestroyOnLoad(gameObject);
         }
         else 
         {
+            //if other instance found clear this game object
             Destroy(gameObject);
         }
     }
@@ -157,8 +162,17 @@ public class ObserverScript : MonoBehaviour
         }
         else if (factionId == 2 && factionRangeSwap >= levelsCleared) 
         {
+            //incriment factionID
+            factionId++;
+            //add 20-50 for next faction update tick
+            factionRangeSwap += Random.Range(20, 50);
+        }
+        else if (factionId == 3 && factionRangeSwap >= levelsCleared)
+        {
+            FindObjectOfType<sceneManager>().cycleEnd();
+
             //reset faction 
-            factionId=0;
+            factionId = 0;
             //add 20-50 for next faction update tick
             factionRangeSwap += Random.Range(20, 50);
         }
@@ -207,6 +221,55 @@ public class ObserverScript : MonoBehaviour
         pgBookmarks[10] = 0;
         pgBookmarks[11] = 0;
         pgBookmarks[12] = 0;
+    }
+    public void hardReset() 
+    {
+        //lock ALL the things
+        unlocks[1] = false;
+        unlocks[2] = false;
+        unlocks[3] = false;
+        unlocks[4] = false;
+        unlocks[5] = false;
+        unlocks[6] = false;
+        unlocks[7] = false;
+        unlocks[8] = false;
+        unlocks[9] = false;
+        unlocks[10] = false;
+        unlocks[11] = false;
+        unlocks[12] = false;
+        unlocks[13] = false;
+        unlocks[14] = false;
+        unlocks[15] = false;
+        unlocks[16] = false;
+        unlocks[17] = false;
+        unlocks[18] = false;
+        unlocks[19] = false;
+        unlocks[20] = false;
+        unlocks[21] = false;
+        unlocks[22] = false;
+        unlocks[23] = false;
+        unlocks[24] = false;
+        unlocks[25] = false;
+        unlocks[26] = false;
+        unlocks[27] = false;
+        unlocks[28] = false;
+        unlocks[29] = false;
+        unlocks[30] = false;
+        unlocks[31] = false;
+        unlocks[32] = false;
+        unlocks[33] = false;
+        unlocks[34] = false;
+        unlocks[35] = false;
+        unlocks[36] = false;
+        //reset mission progress markers lvl completion holders
+        mProgressShip = 0;
+        mProgressMissile = 0;
+        levelsCleared = 0;
+        type1 = 0;
+        type2 = 0;
+        type3 = 0;
+        //because nesting functions is a good idea
+        clearFitting();
     }
 
 }

@@ -304,4 +304,16 @@ public class mainMenu : MonoBehaviour
         //set current menu to swapint2
         infswapint2 = 9;
     }
+    public void infocntractinfo()
+    {
+        //start bg effect cycle
+        effGo = true;
+
+        infswapint1 = 10;
+        menuParents[infswapint1].transform.position = menuPoints[3].position;
+        //move privious menu
+        menuParents[infswapint2].transform.position = menuPoints[4].position;
+        //set current menu to swapint2
+        infswapint2 = 10;
+    }
 }

@@ -26,6 +26,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame1.save";
         var save = new saves()
         {
+            deaths = ObserverScript.Instance.deaths,
+            cycles = ObserverScript.Instance.cycles,
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
@@ -63,6 +65,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame2.save";
         var save = new saves()
         {
+            deaths = ObserverScript.Instance.deaths,
+            cycles = ObserverScript.Instance.cycles,
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
@@ -100,6 +104,8 @@ public class savescript : MonoBehaviour
         savePath = Application.persistentDataPath + "savegame3.save";
         var save = new saves()
         {
+            deaths = ObserverScript.Instance.deaths,
+            cycles = ObserverScript.Instance.cycles,
             unlocks = ObserverScript.Instance.unlocks,
             efr = ObserverScript.Instance.efireRate,
             fr = ObserverScript.Instance.fireRate,
@@ -142,6 +148,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
+            ObserverScript.Instance.deaths = save.deaths;
+            ObserverScript.Instance.cycles = save.cycles;
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
@@ -190,6 +198,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
+            ObserverScript.Instance.deaths = save.deaths;
+            ObserverScript.Instance.cycles = save.cycles;
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;
@@ -235,6 +245,8 @@ public class savescript : MonoBehaviour
             {
                 save = (saves)binaryFormatter.Deserialize(fileStream);
             }
+            ObserverScript.Instance.deaths = save.deaths;
+            ObserverScript.Instance.cycles = save.cycles;
             ObserverScript.Instance.unlocks = save.unlocks;
             ObserverScript.Instance.efireRate = save.efr;
             ObserverScript.Instance.fireRate = save.fr;

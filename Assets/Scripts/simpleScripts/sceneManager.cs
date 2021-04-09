@@ -34,4 +34,12 @@ public class sceneManager : MonoBehaviour
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
+	public void gameOver()
+	{
+		SceneManager.LoadScene("gameOver");
+	}
+	public void cycleEnd()
+	{
+		SceneManager.LoadScene("cycleEnd");
+	}
 }

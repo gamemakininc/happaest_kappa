@@ -160,9 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyViewmodels:
-  - {fileID: 21300000, guid: bbbf8644803b0be478850cad8902ae9e, type: 3}
+  - {fileID: 21300000, guid: cc24bc7ceee3ef64f9f5a7c9612d4ada, type: 3}
+  - {fileID: 21300000, guid: beaf726b45f562e499dfb7ab219dc737, type: 3}
+  - {fileID: 21300000, guid: 3068a69053495064cbb9f0c1276fe689, type: 3}
   - {fileID: 21300000, guid: 78a3298d5597b7c46aa0882dac63790a, type: 3}
-  - {fileID: 21300000, guid: dba1185701419a44f8be8299d0e40546, type: 3}
   shootDissabled: 0
   ebullet: {fileID: 7436617211859324432, guid: 68e6658862947804591c701fe79567a6, type: 3}
   mgport: {fileID: 2516554543319344164}

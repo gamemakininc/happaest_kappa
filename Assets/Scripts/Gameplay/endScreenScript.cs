@@ -159,27 +159,7 @@ public class endScreenScript : MonoBehaviour
         ObserverScript.Instance.bookmark2 = false;
         ObserverScript.Instance.bookmark3 = false;
         //misson progress check
-        if (ObserverScript.Instance.mProgressMissile == 1)
-        {
-            //other missions will not have a fail state check
-            int i = Random.Range(1, 100);
-            if (i < 30)
-            {
-                //success unlock missile
-                ObserverScript.Instance.unlocks[25] = true;
-                //incromint mission progress tracker
-                ObserverScript.Instance.mProgressMissile = 3;
-            }
-            else if (i >= 30)
-            {
-                //set eswap to 'm1 failed
-                ObserverScript.Instance.esSwap = 2;
-                //incromint mission progress tracker
-                ObserverScript.Instance.mProgressMissile = 2;
-                //start event
-                sm.hangar();
-            }
-        }
+        
         //lock active ship
         switch (ObserverScript.Instance.fitSetup[13])
         {
@@ -234,18 +214,133 @@ public class endScreenScript : MonoBehaviour
                     break;
                 }
         }
+
+
         //reset fitting
         ObserverScript.Instance.clearFitting();
+        int _deaths = ObserverScript.Instance.deaths;
+        int i;
+        switch (_deaths) 
+        {
+            case 0:
+                //do nothing
+                break;
+
+            case 1:
+                i = Random.Range(0,100);
+                if (i < 5) 
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 2:
+                i = Random.Range(0, 100);
+                if (i < 15)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 3:
+                i = Random.Range(0, 100);
+                if (i < 25)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 4:
+                i = Random.Range(0, 100);
+                if (i < 35)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 5:
+                i = Random.Range(0, 100);
+                if (i < 55)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 6:
+                i = Random.Range(0, 100);
+                if (i < 65)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 7:
+                i = Random.Range(0, 100);
+                if (i < 75)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 8:
+                i = Random.Range(0, 100);
+                if (i < 85)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 9:
+                i = Random.Range(0, 100);
+                if (i < 95)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            case 10:
+                i = Random.Range(0, 100);
+                if (i < 100)
+                {
+                    ObserverScript.Instance.poped = true;
+                    sm.gameOver();
+                }
+                break;
+            default:
+                ObserverScript.Instance.poped = true;
+                sm.gameOver();
+                break;
+        }
+        
 
         //really long statement to check if it was last ship
         if 
             (ObserverScript.Instance.unlocks[28] == false && ObserverScript.Instance.unlocks[29] == false && ObserverScript.Instance.unlocks[30] == false && ObserverScript.Instance.unlocks[31] == false && ObserverScript.Instance.unlocks[32] == false && ObserverScript.Instance.unlocks[33] == false && ObserverScript.Instance.unlocks[34] == false && ObserverScript.Instance.unlocks[35] == false)
         {//game over
-            sm.mainMenu();
+            sm.gameOver();
         }
-        else
-        {//change scene
-            sm.briefing();
+        if (ObserverScript.Instance.mProgressMissile == 1)
+        {
+            //other missions will not have a fail state check
+            i = Random.Range(1, 100);
+            if (i < 30)
+            {
+                //success unlock missile
+                ObserverScript.Instance.unlocks[25] = true;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile = 3;
+            }
+            else if (i >= 30)
+            {
+                //set eswap to 'm1 failed
+                ObserverScript.Instance.esSwap = 2;
+                //incromint mission progress tracker
+                ObserverScript.Instance.mProgressMissile = 2;
+                //start event
+                sm.hangar();
+            }
         }
+        //if you didnt game over by this point return to briefing room
+        sm.briefing();
     }
 }

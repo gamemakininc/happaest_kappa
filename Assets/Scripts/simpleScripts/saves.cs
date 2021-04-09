@@ -1,7 +1,9 @@
 ﻿[System.Serializable]
 public class saves
 {
-    
+
+    public int deaths;
+    public int cycles;
     public bool[] unlocks;
     public float efr;
     public float fr;
