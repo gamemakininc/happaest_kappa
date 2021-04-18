@@ -533,8 +533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -279.5, y: 176.7}
-  m_SizeDelta: {x: 362.3396, y: 78.5}
+  m_AnchoredPosition: {x: -279.5, y: 178.97}
+  m_SizeDelta: {x: 362.3396, y: 70.93068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &166090662
 GameObject:
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship2
-  itemDescription: ship2
+  itemName: dart/EC
+  itemDescription: a revised dart with a larger reactor at expence of thruster power.
   typeOfItem: 4
   itemIdentifyer: 29
   itemID: 2
@@ -1249,7 +1249,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31,
+  m_Sprite: {fileID: -4283205288308362931, guid: c0bb457438ff1ae49a341001d5c2bc7d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: dart
+  itemName: dart/CN
   itemDescription: basic and cheap to build but not a lot of room for personalization
   typeOfItem: 4
   itemIdentifyer: 28
@@ -3077,7 +3077,7 @@ MonoBehaviour:
   costBox: {fileID: 1998119713}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: modifyed plasma bomb
+  itemName: modified plasma bomb
   itemDescription: the midifacations cause the bomb to split after seperation
   typeOfItem: 3
   itemIdentifyer: 36
@@ -6056,8 +6056,8 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship5
-  itemDescription: ship5
+  itemName: (fullback) mc-98
+  itemDescription: a mostly modular frame built around a massive weapon port.
   typeOfItem: 4
   itemIdentifyer: 32
   itemID: 5
@@ -6424,154 +6424,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!1 &1232395240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1232395241}
-  - component: {fileID: 1232395245}
-  - component: {fileID: 1232395244}
-  - component: {fileID: 1232395243}
-  - component: {fileID: 1232395242}
-  m_Layer: 5
-  m_Name: resetBtn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1232395241
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232395240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1243656779}
-  m_Father: {fileID: 2101735544}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -138.49998, y: -202.50002}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1232395242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232395240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2119905}
-          m_MethodName: debugreset
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1232395243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232395240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1232395244}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1232395244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232395240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1232395245
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232395240}
-  m_CullTransparentMesh: 0
 --- !u!1 &1237164421
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,86 +6559,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1243656778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1243656779}
-  - component: {fileID: 1243656781}
-  - component: {fileID: 1243656780}
-  m_Layer: 5
-  m_Name: text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1243656779
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243656778}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1232395241}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1243656780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243656778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'debug reload
-
-'
---- !u!222 &1243656781
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243656778}
-  m_CullTransparentMesh: 0
 --- !u!1 &1245622196
 GameObject:
   m_ObjectHideFlags: 0
@@ -8368,8 +8140,8 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: xel'naga... fighter
-  itemDescription: you say the only defence is a good offence
+  itemName: gorgan... fighter
+  itemDescription: wh.. are you flying a reactor... why?
   typeOfItem: 4
   itemIdentifyer: 34
   itemID: 7
@@ -9329,6 +9101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9430f96e5981ce94cba45155d5e680ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deaths: 0
+  cycles: 0
   unlocks: 01010101010101010101010101010101010101010101010101010101010101010101010101
   efireRate: 0
   fireRate: 0
@@ -9389,6 +9163,7 @@ MonoBehaviour:
   factionRangeSwap: 89
   defenceMission: 0
   shipswap: 0
+  poped: 0
   s1diff: 0
   s1Shipselector: 0
   s1clears: 0
@@ -12158,7 +11933,6 @@ RectTransform:
   - {fileID: 1377080322}
   - {fileID: 843101542}
   - {fileID: 493037803}
-  - {fileID: 1232395241}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12402,7 +12176,7 @@ MonoBehaviour:
   costBox: {fileID: 1442518866}
   nameBox: {fileID: 1838516771}
   descbox: {fileID: 147243501}
-  itemName: ship4
+  itemName: h-(wing) 306
   itemDescription: ship4
   typeOfItem: 4
   itemIdentifyer: 31

@@ -507,7 +507,7 @@ Animator:
   m_GameObject: {fileID: 6523498303310306290}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a37d157b40f94645b020e0c25e236d8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 028bac33e93a1d34aa15c1a8a57a3da6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewmodel:
   - {fileID: -3099908447755325936, guid: 73d14b3758abbb945a3bd3c55a3b5fba, type: 3}
-  - {fileID: -2920338503904516143, guid: f21d7857a099bcc4fb990654099ade31, type: 3}
+  - {fileID: -4283205288308362931, guid: c0bb457438ff1ae49a341001d5c2bc7d, type: 3}
   - {fileID: 7242487765654547111, guid: d878dc2c8cd8b7040855ab3371ba057a, type: 3}
   - {fileID: -7088575804834715039, guid: 8223495a7bb02dd44a66009f80ab051e, type: 3}
   - {fileID: 1694089084023748554, guid: 875f36a8459dc4e44bc0d8ed9178c884, type: 3}
@@ -591,7 +591,7 @@ MonoBehaviour:
   - {fileID: -5006950574146772211, guid: b012a7572d23223459874710b3d7e55b, type: 3}
   animationset:
   - {fileID: 9100000, guid: 0152070d99d24354dad875f6d249621f, type: 2}
-  - {fileID: 9100000, guid: 22d4b96a8c60a0947a265a15dc002fd4, type: 2}
+  - {fileID: 9100000, guid: 5a4fe3bab58d72943a68a2fa2106fa82, type: 2}
   - {fileID: 9100000, guid: 5a012f544de4b8f439ca42f6ad30e537, type: 2}
   - {fileID: 9100000, guid: a3328a70c08bc66489e53c29135412d9, type: 2}
   - {fileID: 9100000, guid: acd4c5238216b33459e47eb96482ee14, type: 2}
@@ -611,16 +611,16 @@ MonoBehaviour:
   - {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419, type: 3}
   - {fileID: 4493558455852222276, guid: 847533bc5baf7d948ba0fc8159281a29, type: 3}
   gunSounds:
-  - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
-  - {fileID: 8300000, guid: 4c9c46ac24e3c5649bac928c6fb247b6, type: 3}
+  - {fileID: 8300000, guid: e4203ec43accdc249b0c635db5dd6c3e, type: 3}
+  - {fileID: 8300000, guid: e4203ec43accdc249b0c635db5dd6c3e, type: 3}
   - {fileID: 8300000, guid: 8d1f1ca1a73cb374eb751bef97be1abf, type: 3}
   - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
   - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
   - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
-  - {fileID: 8300000, guid: 2308c753cccf35c4c981fd8a99ef2f6e, type: 3}
+  - {fileID: 8300000, guid: 8164cf8082b161647862773308bd8743, type: 3}
   deathEffects:
   - {fileID: 4561079212208228694, guid: 8547fcffa0a33684092a5c8b7c265e08, type: 3}
-  - {fileID: 1981457751854206, guid: 1b82a97157147d84982b3a91c1d5543a, type: 3}
+  - {fileID: 2103676050444787483, guid: 94b5eb8b0471cd74ab42e2fea6ccdb87, type: 3}
   - {fileID: 7052740348494417466, guid: 28a5e9f774cc27a43915aa63ca546530, type: 3}
   - {fileID: 7642914755747225642, guid: 7c76a11e246ff15439d8544c7dbc9076, type: 3}
   - {fileID: 9115780108792809489, guid: 6a0c26de6c1cea0459c758ba52c2419b, type: 3}
