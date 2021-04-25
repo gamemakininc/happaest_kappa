@@ -149,33 +149,106 @@ public class ObserverScript : MonoBehaviour
         {
             //incriment factionID
             factionId++;
-            //add between 20-50 for next faction swap
-            factionRangeSwap += Random.Range(20,50);
+            //add levels to new faction swap
+            switch (diff) 
+            {
+                case 0:
+                    //if ng+ add 20-50 till next faction swap
+                    factionRangeSwap += Random.Range(20, 50);
+                    break;
+                case 1:
+                    //if easy add 10-20 till next faction swap
+                    factionRangeSwap += Random.Range(10, 20);
+                    break;
+                case 2:
+                    //if medium add 20-35 till next faction change
+                    factionRangeSwap += Random.Range(20, 35);
+                    break;
+                case 3:
+                    //if hard add 30-50 to next faction change
+                    factionRangeSwap += Random.Range(30, 50);
+                    break;
+            }
             
         }
         else if (factionId == 1 && factionRangeSwap >= levelsCleared)
         {
             //incriment factionID
             factionId++;
-            //add between 20-50 for next faction swap
-            factionRangeSwap += Random.Range(20, 50);
+            //add levels to new faction swap
+            switch (diff)
+            {
+                case 0:
+                    //if ng+ add 20-50 till next faction swap
+                    factionRangeSwap += Random.Range(20, 50);
+                    break;
+                case 1:
+                    //if easy add 10-20 till next faction swap
+                    factionRangeSwap += Random.Range(10, 20);
+                    break;
+                case 2:
+                    //if medium add 20-35 till next faction change
+                    factionRangeSwap += Random.Range(20, 35);
+                    break;
+                case 3:
+                    //if hard add 30-50 to next faction change
+                    factionRangeSwap += Random.Range(30, 50);
+                    break;
+            }
         }
         else if (factionId == 2 && factionRangeSwap >= levelsCleared) 
         {
             //incriment factionID
             factionId++;
-            //add 20-50 for next faction update tick
-            factionRangeSwap += Random.Range(20, 50);
+            //add levels to new faction swap
+            switch (diff)
+            {
+                case 0:
+                    //if ng+ add 20-50 till next faction swap
+                    factionRangeSwap += Random.Range(20, 50);
+                    break;
+                case 1:
+                    //if easy add 10-20 till next faction swap
+                    factionRangeSwap += Random.Range(10, 20);
+                    break;
+                case 2:
+                    //if medium add 20-35 till next faction change
+                    factionRangeSwap += Random.Range(20, 35);
+                    break;
+                case 3:
+                    //if hard add 30-50 to next faction change
+                    factionRangeSwap += Random.Range(30, 50);
+                    break;
+            }
         }
         else if (factionId == 3 && factionRangeSwap >= levelsCleared)
         {
-            FindObjectOfType<sceneManager>().cycleEnd();
 
             //reset faction 
             factionId = 0;
-            //add 20-50 for next faction update tick
-            factionRangeSwap += Random.Range(20, 50);
+            //add levels to new faction swap
+            switch (diff)
+            {
+                case 0:
+                    //if ng+ add 20-50 till next faction swap
+                    factionRangeSwap += Random.Range(20, 50);
+                    break;
+                case 1:
+                    //if easy add 10-20 till next faction swap
+                    factionRangeSwap += Random.Range(10, 20);
+                    break;
+                case 2:
+                    //if medium add 20-35 till next faction change
+                    factionRangeSwap += Random.Range(20, 35);
+                    break;
+                case 3:
+                    //if hard add 30-50 to next faction change
+                    factionRangeSwap += Random.Range(30, 50);
+                    break;
+            }
+            FindObjectOfType<sceneManager>().cycleEnd();
         }
+
     }
     public void clearFitting() 
     {

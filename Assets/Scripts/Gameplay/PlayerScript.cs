@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -21,9 +22,12 @@ public class PlayerScript : MonoBehaviour
     public int payload0Ammo;
     public int payload1Ammo;
     public Transform[] wPorts;
+    public GameObject spawnRef;
     public GameObject BulletPrefab;
     public GameObject MissilePrefab1;
     public GameObject MissilePrefab2;
+    public GameObject bomb;
+    public GameObject lgm;
     //set speed
     public float MoveSpeed = 6;
     public float forwardSpeed = 0.7f;
@@ -43,6 +47,7 @@ public class PlayerScript : MonoBehaviour
     public float baceRefireRate;
     private float refireTime;
     public float nextFire;
+    float bombCounter;
     //audio
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -58,7 +63,8 @@ public class PlayerScript : MonoBehaviour
     public int deathEffectSelector;
     public GameObject deathEffect;
     //bombs avalible
-    public int bomb;
+    public int bombAmt;
+    public bool bombReady;
 
     private void Start()
     {
@@ -70,6 +76,10 @@ public class PlayerScript : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         //set volume
         audioSource.volume = ObserverScript.Instance.sfxvol;
+        if (ObserverScript.Instance.defenceMission == true) 
+        {
+
+        }
     }
 
     //Update called once per frame
@@ -99,6 +109,10 @@ public class PlayerScript : MonoBehaviour
         if (inputManedger.Instance.GetButtonDown("blink")) 
         {
             blink(blinkCharger);
+        }
+        if (inputManedger.Instance.GetButtonDown("bomb"))
+        {
+            bombLaunch();
         }
         //animator variables
         animator.SetFloat("Vertical", movement.y);
@@ -138,6 +152,23 @@ public class PlayerScript : MonoBehaviour
         if (blinkCharger < 1) 
         {
             blinkCharger += .2f * Time.deltaTime;
+        }
+        //bomb charger& ready check
+        if (ObserverScript.Instance.defenceMission == true && bombReady == false)
+        {
+            bombCounter += Time.deltaTime * 0.5f;
+            //timer check
+            if (bombCounter > 35)
+            {
+                //used to update UI and fire check when bomb is attempted to launch
+                bombReady = true;
+            }
+
+        }
+        //if not defence mission just check bomb amount
+        else if (bombAmt>0) 
+        {
+            bombReady = true;
         }
     }
 
@@ -262,6 +293,27 @@ public class PlayerScript : MonoBehaviour
         Instantiate(blinkEffect, D, Quaternion.identity);
         blinkCharger = 0;
     }
+    void bombLaunch() 
+    {
+        //if ready 
+        if (bombReady == true)
+        {
+            //reset ready
+            bombReady = false;
+            //check mission type
+            if (ObserverScript.Instance.defenceMission == true)
+            {
+                bombCounter = 0;
+                int i = Random.Range(0, 3);
+                airstrike(i);
+            }
+            else
+            {
+                bombAmt--;
+                Instantiate(bomb, this.transform);
+            }
+        }
+    }
     public void TakeDamage(float damage)
     {
         GameObject.Find("PostProcessing Volume").GetComponent<GlitchShaderVariables>()._AddGlitch(0.3f, 0.5f, 0.0f, 0.1f);
@@ -319,5 +371,36 @@ public class PlayerScript : MonoBehaviour
         payload0Ammo += 5;
         payload1Ammo += 5; 
 
+    }
+    IEnumerator airstrike(int direction) //direction 0T 1L 2R 3B
+    {
+        //set amount of missiles to launch
+        int i = Random.Range(15,20);
+        //l00p to spawn missiles
+        while (i>0)
+        {
+            i--;
+            switch (direction) 
+            {
+                case 0:
+                    spawnRef.transform.position = new Vector3(Random.Range(-9.5f,9.5f), 5.26f , 0);
+                    Instantiate(lgm,spawnRef.transform);
+                    break;
+                case 1:
+                    spawnRef.transform.position = new Vector3(-9.5f, Random.Range(-5.82f, 5.82f), 0);
+                    Instantiate(lgm, spawnRef.transform);
+                    break;
+                case 2:
+                    spawnRef.transform.position = new Vector3(9.5f, Random.Range(-5.82f, 5.82f), 0);
+                    Instantiate(lgm, spawnRef.transform);
+                    break;
+                case 3:
+                    spawnRef.transform.position = new Vector3(Random.Range(-9.5f, 9.5f), -5.26f, 0);
+                    Instantiate(lgm, spawnRef.transform);
+                    break;
+            }
+            yield return 0;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
