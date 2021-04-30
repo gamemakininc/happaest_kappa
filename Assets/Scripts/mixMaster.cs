@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class mixMaster : MonoBehaviour
 {
@@ -53,11 +54,7 @@ public class mixMaster : MonoBehaviour
                 //start track
                 if (oneshot == true) { oneshot = false; as0.loop= true; as0.clip=(soundtrack[nTrack]); as0.Play(); }
                 //crossfadeset values
-                if (swapf0 >= ObserverScript.Instance.mvol)
-                {
-                    swapf0 += Time.deltaTime * 0.5f;
-                }
-                swapf1 += Time.deltaTime * -0.5f;
+                StartCoroutine(MMSwap());
                 //if fade complete set current track switch swapbool so next track triggers on other output
                 if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; Debug.Log("MM swap1"); }
             }
@@ -67,11 +64,7 @@ public class mixMaster : MonoBehaviour
                 //start track
                 if (oneshot == false) { oneshot = true; as1.loop = true; as1.clip = (soundtrack[nTrack]); as1.Play(); }
                 //crossfade set values
-                if (swapf1 >= ObserverScript.Instance.mvol)
-                {
-                    swapf1 += Time.deltaTime * 0.5f;
-                }
-                swapf0 += Time.deltaTime * -0.5f;
+                StartCoroutine(MMSwap2());
                 //if fade complete set current track switch swapbool so next track triggers on other output
                 if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; Debug.Log("MM swap2"); }
 
@@ -83,5 +76,33 @@ public class mixMaster : MonoBehaviour
         //apply volume values
         as0.volume = swapf0;
         as1.volume = swapf1;
+    }
+
+    //Coroutine editions of crossfades
+    IEnumerator MMSwap()
+    {
+        while (swapf0 <= ObserverScript.Instance.mvol || swapf1 > 0)
+        {
+            swapf0 += Time.deltaTime * 0.5f;
+            swapf1 += Time.deltaTime * -0.5f;
+            yield return new WaitForEndOfFrame();
+        }
+        Mathf.Clamp(swapf0, 0.0f, ObserverScript.Instance.mvol);
+        Mathf.Clamp(swapf1, 0.0f, ObserverScript.Instance.mvol);
+
+        yield return null;
+    }
+    IEnumerator MMSwap2()
+    {
+        while (swapf1 <= ObserverScript.Instance.mvol || swapf0 > 0)
+        {
+            swapf1 += Time.deltaTime * 0.5f;
+            swapf0 += Time.deltaTime * -0.5f;
+            yield return new WaitForEndOfFrame();
+        }
+        Mathf.Clamp(swapf0, 0.0f, ObserverScript.Instance.mvol);
+        Mathf.Clamp(swapf1, 0.0f, ObserverScript.Instance.mvol);
+
+        yield return null;
     }
 }
