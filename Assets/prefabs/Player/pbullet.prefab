@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 50686825095239466}
   - component: {fileID: 61839130610808204}
   - component: {fileID: 114619735554175572}
+  - component: {fileID: 7455604866047674523}
   m_Layer: 8
   m_Name: pbullet
   m_TagString: Untagged
@@ -155,3 +156,16 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   laserVisible: 0
   mouseAiming: 0
+--- !u!114 &7455604866047674523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981457751854206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 9

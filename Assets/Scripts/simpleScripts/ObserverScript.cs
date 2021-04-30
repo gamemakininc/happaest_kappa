@@ -13,7 +13,8 @@ public class ObserverScript : MonoBehaviour
       1-3,7-9    shields
       4-6,10-12  health
       13-18      speed mods
-      19-24      fire rate mods
+      19-21      fire rate mods
+      22-24      missile pods
       25-27      missiles
       28-35      ships (last two should have spechal unlock conditions)
       36         guns (should be last unlock)

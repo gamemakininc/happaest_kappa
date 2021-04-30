@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour
     public float baceRefireRate;
     private float refireTime;
     public float nextFire;
-    float bombCounter;
+    public float bombCounter;
     //audio
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -116,8 +116,6 @@ public class PlayerScript : MonoBehaviour
         }
         //animator variables
         animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
         //hp regen (check if hp below max)
         if (health < maxHealth)
         { 
@@ -156,9 +154,9 @@ public class PlayerScript : MonoBehaviour
         //bomb charger& ready check
         if (ObserverScript.Instance.defenceMission == true && bombReady == false)
         {
-            bombCounter += Time.deltaTime * 0.5f;
+            bombCounter += Time.deltaTime * 1f;
             //timer check
-            if (bombCounter > 35)
+            if (bombCounter > 20)
             {
                 //used to update UI and fire check when bomb is attempted to launch
                 bombReady = true;
@@ -305,12 +303,14 @@ public class PlayerScript : MonoBehaviour
             {
                 bombCounter = 0;
                 int i = Random.Range(0, 3);
-                airstrike(i);
+                StartCoroutine(airstrike(i));
             }
             else
             {
+
+                ObserverScript.Instance.levelScore -= 115;
                 bombAmt--;
-                Instantiate(bomb, this.transform);
+                Instantiate(bomb, wPorts[2].position, wPorts[2].rotation );
             }
         }
     }
@@ -340,10 +340,6 @@ public class PlayerScript : MonoBehaviour
             //spawn death sprite
             Instantiate(deathEffect, transform.position, Quaternion.Euler(0, 0, -90));
         }
-        //notify end screen
-        //es.GetComponent<endScreenScript>().win = false;
-        //enable end screen
-        //es.SetActive(true);
         //remove self
         Destroy(gameObject);
     }
@@ -383,20 +379,26 @@ public class PlayerScript : MonoBehaviour
             switch (direction) 
             {
                 case 0:
-                    spawnRef.transform.position = new Vector3(Random.Range(-9.5f,9.5f), 5.26f , 0);
-                    Instantiate(lgm,spawnRef.transform);
+                    //move spawn point?
+                    spawnRef.transform.position = new Vector3(Random.Range(-9.5f, 9.5f), 5.26f, 0);
+                    //spawn on point
+                    Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
+                    Debug.Log("tried spawn top");
                     break;
                 case 1:
-                    spawnRef.transform.position = new Vector3(-9.5f, Random.Range(-5.82f, 5.82f), 0);
-                    Instantiate(lgm, spawnRef.transform);
+                    spawnRef.transform.position = new Vector3(-9.5f, Random.Range(-5.82f, 5.82f),0 );
+                    Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
+                    Debug.Log("tried spawn left");
                     break;
                 case 2:
                     spawnRef.transform.position = new Vector3(9.5f, Random.Range(-5.82f, 5.82f), 0);
-                    Instantiate(lgm, spawnRef.transform);
+                    Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
+                    Debug.Log("tried spawn right");
                     break;
                 case 3:
                     spawnRef.transform.position = new Vector3(Random.Range(-9.5f, 9.5f), -5.26f, 0);
-                    Instantiate(lgm, spawnRef.transform);
+                    Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
+                    Debug.Log("tried spawn bottum");
                     break;
             }
             yield return 0;

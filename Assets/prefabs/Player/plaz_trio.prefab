@@ -158,13 +158,14 @@ MonoBehaviour:
   rb: {fileID: 4114644024826350687}
   timer: 0
   Damage: 4
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!1 &7827873572616260317
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,13 +324,14 @@ MonoBehaviour:
   rb: {fileID: 1346369514583835898}
   timer: 0
   Damage: 4
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!1 &8259624815046067215
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +343,7 @@ GameObject:
   - component: {fileID: 7776289191362384123}
   - component: {fileID: 5612404589901051804}
   - component: {fileID: 9195891933119837681}
+  - component: {fileID: -7765664481606148044}
   m_Layer: 0
   m_Name: plaz_trio
   m_TagString: Untagged
@@ -381,13 +384,14 @@ MonoBehaviour:
   rb: {fileID: 9195891933119837681}
   timer: 0
   Damage: 0
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!50 &9195891933119837681
 Rigidbody2D:
   serializedVersion: 4
@@ -409,6 +413,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7765664481606148044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8259624815046067215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 9
 --- !u!1 &8798810943525347936
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,10 +584,11 @@ MonoBehaviour:
   rb: {fileID: 294657664418278471}
   timer: 0
   Damage: 4
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0

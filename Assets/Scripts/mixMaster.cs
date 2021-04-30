@@ -13,15 +13,15 @@ public class mixMaster : MonoBehaviour
     //2 fitting menu theme
     //3 hangar theme
     //4 save menu theme
-    //============================= the following are faction themes aka the gameplay songs should be 10+min or loopable
+    //============================= the following are faction themes aka the gameplay songs should be 2+min or loopable
     //5 vulpie theme (tribal themed)
-    //6 PP theme (EDM/dubstep)
-    //7 solarin theme (trance)
+    //6 PP theme 
+    //7 solarin theme 
     //8 TL0 theme (industrial)
-    public bool oneshot;
-    public int nTrack;
-    public int cTrack;
-    public int pTrack;
+    public bool oneshot;//retrigger prevention
+    public int nTrack; //holds next track value
+    public int cTrack; //holds current track value
+    public int pTrack; //??
     public float swapf0;
     public float swapf1;
     // Start is called before the first frame update
@@ -36,8 +36,7 @@ public class mixMaster : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        swapf0 = 0;
-        swapf1 = 1;
+        //set swaps
         swapBool = true;
         oneshot = true;
     }
@@ -56,14 +55,11 @@ public class mixMaster : MonoBehaviour
                 //crossfadeset values
                 if (swapf0 >= ObserverScript.Instance.mvol)
                 {
-                    swapf0 += 0.5f * Time.deltaTime;
+                    swapf0 += Time.deltaTime * 0.5f;
                 }
-                swapf1 += -0.5f * Time.deltaTime;
-                //crossfade apply values
-                as0.volume = swapf0;
-                as1.volume = swapf1;
+                swapf1 += Time.deltaTime * -0.5f;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; }
+                if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; Debug.Log("MM swap1"); }
             }
             else if (swapBool == false) {
                 //make shure bolth tracks active
@@ -71,18 +67,21 @@ public class mixMaster : MonoBehaviour
                 //start track
                 if (oneshot == false) { oneshot = true; as1.loop = true; as1.clip = (soundtrack[nTrack]); as1.Play(); }
                 //crossfade set values
-                if (swapf0 >= ObserverScript.Instance.mvol)
+                if (swapf1 >= ObserverScript.Instance.mvol)
                 {
-                    swapf1 += 0.5f * Time.deltaTime;
+                    swapf1 += Time.deltaTime * 0.5f;
                 }
-                swapf0 += -0.5f * Time.deltaTime;
-                //crossfade apply values
-                as0.volume = swapf0;
-                as1.volume = swapf1;
+                swapf0 += Time.deltaTime * -0.5f;
                 //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; }
+                if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; Debug.Log("MM swap2"); }
 
             }
         }
+        //negative number prevention.
+        if (swapf0 < 0) { swapf0 = 0; }
+        if (swapf1 < 0 ) { swapf1 = 0; }
+        //apply volume values
+        as0.volume = swapf0;
+        as1.volume = swapf1;
     }
 }

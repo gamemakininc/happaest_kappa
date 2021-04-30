@@ -94,6 +94,7 @@ public class itemDropHandeler : MonoBehaviour, IDropHandler
         {
             reset();
         }
+
     }
     public void updateSprite()
     {

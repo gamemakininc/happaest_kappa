@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4541061455334123892}
   - component: {fileID: 7126419558613137462}
   - component: {fileID: -819421177474721502}
+  - component: {fileID: 3706333246782592086}
   m_Layer: 0
   m_Name: twin_cannon
   m_TagString: Untagged
@@ -79,6 +80,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3706333246782592086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195438850944218402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 9
 --- !u!1 &2393078444117152625
 GameObject:
   m_ObjectHideFlags: 0

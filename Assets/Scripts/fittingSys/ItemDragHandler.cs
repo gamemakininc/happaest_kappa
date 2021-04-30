@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ItemDragHandler : MonoBehaviour, IDragHandler
 {
     //resource check
+    public float[] placeholder;//should hold pg/wg costs in case of reset
     public float pgCost;
     public float wgCost;
     //disc variables
@@ -15,7 +16,7 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
     public string itemDescription;
     //slot type variables
     public enum Slot { HIGH, LOW, PAYLOAD, GUN, SHIP };
-    public Slot typeOfItem = Slot.HIGH;
+    public Slot typeOfItem;
     //needed for reset
     Vector3 startPosition;
     //used to determine item
@@ -78,10 +79,99 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler
             GetComponent<CircleCollider2D>().enabled = false;
         }
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        placeholder[0] = pgCost;
+        placeholder[1] = wgCost;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (typeOfItem==Slot.GUN) 
+        {
+            //get currently fitted ship
+            int i = GameObject.FindGameObjectWithTag("Player").GetComponent<itemDropHandeler>().itemId;
+            //check what gun this is against player ship
+            switch (itemID) 
+            {
+                case 1:
+                    //check for matching ship
+                    if (i == 1)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else 
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+                case 2:
+                    //check for matching ship
+                    if (i == 3)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+                case 3:
+                    //check for matching ship
+                    if (i == 5)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+                case 4:
+                    //check for matching ship
+                    if (i == 2)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+                case 5:
+                    //check for matching ship
+                    if (i == 4)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+                case 6:
+                    //check for matching ship
+                    if (i == 6)
+                    {//if it is 0 out pg/cpu
+                        pgCost = 0;
+                        wgCost = 0;
+                    }
+                    else
+                    {//if the ship dosent match make shure costs are set
+                        pgCost = placeholder[0];
+                        wgCost = placeholder[1];
+                    }
+                    break;
+            }
+        }
     }
 }

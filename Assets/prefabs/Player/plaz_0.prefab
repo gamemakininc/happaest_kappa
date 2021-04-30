@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4235665473893581165}
   - component: {fileID: 4285642252050106900}
   - component: {fileID: 8733169393082408488}
+  - component: {fileID: 2836551705501865043}
   m_Layer: 8
   m_Name: plaz_0
   m_TagString: Untagged
@@ -158,10 +159,24 @@ MonoBehaviour:
   rb: {fileID: 4285642252050106900}
   timer: 0
   Damage: 4
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
+--- !u!114 &2836551705501865043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5004865427797476403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 9

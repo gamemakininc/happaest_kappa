@@ -13847,13 +13847,13 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 6376817392542884056, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1925323217
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6376817392542884056, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
+      propertyPath: m_SortingLayerID
+      value: -1925323217
       objectReference: {fileID: 0}
     - target: {fileID: 6423580167932119001, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
@@ -13877,6 +13877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -290
       objectReference: {fileID: 0}
@@ -13892,6 +13897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -13904,16 +13914,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6522307732327409882, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
@@ -13962,6 +13962,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6565079270840344892, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
+      propertyPath: lgm
+      value: 
+      objectReference: {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419,
+        type: 3}
+    - target: {fileID: 6565079270840344892, guid: 2601f73d34680aa48aa42a0607e25403,
+        type: 3}
       propertyPath: bombAmt
       value: 1
       objectReference: {fileID: 0}
@@ -13970,12 +13976,6 @@ PrefabInstance:
       propertyPath: spawnRef
       value: 
       objectReference: {fileID: 1431653484}
-    - target: {fileID: 6565079270840344892, guid: 2601f73d34680aa48aa42a0607e25403,
-        type: 3}
-      propertyPath: lgm
-      value: 
-      objectReference: {fileID: 8014835203141808759, guid: 456588bc0b6af5d489950bb2c0e47419,
-        type: 3}
     - target: {fileID: 6618121263970739562, guid: 2601f73d34680aa48aa42a0607e25403,
         type: 3}
       propertyPath: m_Controller
@@ -27799,9 +27799,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  bombText: {fileID: 0}
-  scoreTxt: {fileID: 0}
-  ps: {fileID: 0}
+  bombText: {fileID: 440551405}
+  scoreTxt: {fileID: 820150975}
+  ps: {fileID: 1009555482}
 --- !u!114 &820150975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33222,6 +33222,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 389
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1009555482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6565079270840344892, guid: 2601f73d34680aa48aa42a0607e25403,
+    type: 3}
+  m_PrefabInstance: {fileID: 427854251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6385b549e5679b84b90176da8bba250a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1012948989
 GameObject:
   m_ObjectHideFlags: 0
@@ -45088,7 +45100,7 @@ GameObject:
   - component: {fileID: 1431653485}
   m_Layer: 0
   m_Name: missile spawn refrence
-  m_TagString: Untagged
+  m_TagString: fittingSlot
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

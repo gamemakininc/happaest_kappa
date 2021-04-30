@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7515828105677691542}
   - component: {fileID: 729648990340196771}
   - component: {fileID: -3658224675017538382}
+  - component: {fileID: 6675544044537989189}
   m_Layer: 0
   m_Name: shrapnel_cannon
   m_TagString: Untagged
@@ -80,6 +81,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6675544044537989189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516345062458998654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deabafa08ab1b764a9addddb11889d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 9
 --- !u!1 &4360556707035717343
 GameObject:
   m_ObjectHideFlags: 0
