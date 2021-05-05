@@ -27,7 +27,7 @@ public class newGame : MonoBehaviour
         //get player name
         ObserverScript.Instance.playerName = nameBox.GetComponent<Text>().text;
 
-        //if easiest selected
+        //if NG+ selected
         if (diffaculty[0].isOn == true)
         {
             //set difficulty tracker to lowest position
@@ -40,8 +40,10 @@ public class newGame : MonoBehaviour
                 ObserverScript.Instance.unlocks[counter] = true;
                 counter++;
             }
-            ObserverScript.Instance.shipswap = 5;
+            ObserverScript.Instance.shipswap = 20;
+            ObserverScript.Instance.factionRangeSwap += Random.Range(20, 50);
         }
+        //if easy selected
         else if (diffaculty[1].isOn == true)
         {
             //set difficulty tracker
@@ -56,7 +58,9 @@ public class newGame : MonoBehaviour
             ObserverScript.Instance.unlocks[4] = true;
             ObserverScript.Instance.unlocks[1] = true;
             ObserverScript.Instance.shipswap = 5;
+            ObserverScript.Instance.factionRangeSwap += Random.Range(10, 20);
         }
+        //if medium selected
         else if (diffaculty[2].isOn == true)
         {
             //set difficulty tracker
@@ -67,7 +71,9 @@ public class newGame : MonoBehaviour
             ObserverScript.Instance.unlocks[30] = true;
             ObserverScript.Instance.unlocks[31] = true;
             ObserverScript.Instance.shipswap = Random.Range(5,10);
+            ObserverScript.Instance.factionRangeSwap += Random.Range(20, 35);
         }
+        //if hard selected
         else if (diffaculty[3].isOn == true)
         {
             //set difficulty tracker to highest position
@@ -75,7 +81,8 @@ public class newGame : MonoBehaviour
             //unlock hard specific items
             ObserverScript.Instance.unlocks[28] = true;
             ObserverScript.Instance.unlocks[29] = true;
-            ObserverScript.Instance.shipswap = 20;
+            ObserverScript.Instance.shipswap = Random.Range(10, 15);
+            ObserverScript.Instance.factionRangeSwap += Random.Range(30, 50);
         }
         sceneManager.briefing();
     }

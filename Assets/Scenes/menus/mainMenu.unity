@@ -3248,10 +3248,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3eafbc7e002e54d4388cab4efecb73db, type: 3}
   - {fileID: 8300000, guid: 474a28a748a53c04584ad1f8dd7c8efb, type: 3}
   - {fileID: 8300000, guid: 736a2c0354790b9419e34c868c0973b4, type: 3}
-  - {fileID: 8300000, guid: 547d1ada4c6216c4995011c45faefa99, type: 3}
-  - {fileID: 8300000, guid: 959f2e7512c34a246912a08f311b6bd2, type: 3}
-  - {fileID: 8300000, guid: da29ffc13e9a3eb40815ed877895d315, type: 3}
-  - {fileID: 8300000, guid: f108f0c6ec7cb47439d08a6ea8606347, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   oneshot: 0
   nTrack: 0
   cTrack: 2
@@ -10538,7 +10538,7 @@ MonoBehaviour:
   mProgressShip: 0
   missionType: 0
   factionId: 0
-  factionRangeSwap: 40
+  factionRangeSwap: 0
   defenceMission: 0
   shipswap: 0
   poped: 0
@@ -19806,6 +19806,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1544637007
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -109,6 +109,7 @@ public class GameStateManager : MonoBehaviour
 
         background = GameObject.Find("Background");
         background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        pauseMenu.gameObject.SetActive(true);
     }
 
     ///The opposite of pause
@@ -149,5 +150,6 @@ public class GameStateManager : MonoBehaviour
         background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Vector2 velocity = background.GetComponent<InstantVelocity>().velocity;
         background.GetComponent<Rigidbody2D>().velocity = velocity;
+        pauseMenu.gameObject.SetActive(true);
     }
 }

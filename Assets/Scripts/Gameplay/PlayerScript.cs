@@ -371,7 +371,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator airstrike(int direction) //direction 0T 1L 2R 3B
     {
         //set amount of missiles to launch
-        int i = Random.Range(15,20);
+        int i = Random.Range(10,15);
         //l00p to spawn missiles
         while (i>0)
         {
@@ -383,22 +383,18 @@ public class PlayerScript : MonoBehaviour
                     spawnRef.transform.position = new Vector3(Random.Range(-9.5f, 9.5f), 5.26f, 0);
                     //spawn on point
                     Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
-                    Debug.Log("tried spawn top");
                     break;
                 case 1:
                     spawnRef.transform.position = new Vector3(-9.5f, Random.Range(-5.82f, 5.82f),0 );
                     Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
-                    Debug.Log("tried spawn left");
                     break;
                 case 2:
                     spawnRef.transform.position = new Vector3(9.5f, Random.Range(-5.82f, 5.82f), 0);
                     Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
-                    Debug.Log("tried spawn right");
                     break;
                 case 3:
                     spawnRef.transform.position = new Vector3(Random.Range(-9.5f, 9.5f), -5.26f, 0);
                     Instantiate(lgm, spawnRef.transform.position, Quaternion.identity);
-                    Debug.Log("tried spawn bottum");
                     break;
             }
             yield return 0;

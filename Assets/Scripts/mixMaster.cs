@@ -52,9 +52,15 @@ public class mixMaster : MonoBehaviour
                 //make shure bilth sourcer are active
                 if (as1.enabled == false || as0.enabled == false) { as1.enabled = true; as0.enabled = true; }
                 //start track
-                if (oneshot == true) { oneshot = false; as0.loop= true; as0.clip=(soundtrack[nTrack]); as0.Play(); }
-                //crossfadeset values
-                StartCoroutine(MMSwap());
+                if (oneshot == true) 
+                {
+                    oneshot = false; 
+                    as0.loop= true; 
+                    as0.clip=(soundtrack[nTrack]);
+                    as0.Play();
+                    //crossfadeset values
+                    StartCoroutine(MMSwap());
+                }
                 //if fade complete set current track switch swapbool so next track triggers on other output
                 if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; Debug.Log("MM swap1"); }
             }
@@ -62,9 +68,15 @@ public class mixMaster : MonoBehaviour
                 //make shure bolth tracks active
                 if (as1.enabled == false || as1.enabled == false) { as1.enabled = true; as1.enabled = true;}
                 //start track
-                if (oneshot == false) { oneshot = true; as1.loop = true; as1.clip = (soundtrack[nTrack]); as1.Play(); }
-                //crossfade set values
-                StartCoroutine(MMSwap2());
+                if (oneshot == false) 
+                {
+                    oneshot = true; 
+                    as1.loop = true; 
+                    as1.clip = (soundtrack[nTrack]); 
+                    as1.Play();
+                    //crossfade set values
+                    StartCoroutine(MMSwap2());
+                }
                 //if fade complete set current track switch swapbool so next track triggers on other output
                 if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; Debug.Log("MM swap2"); }
 

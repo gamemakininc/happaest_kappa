@@ -1253,5 +1253,4 @@ public class fittingScript : MonoBehaviour
 		regenOutput.GetComponent<Text>().text = ("shields:" + shield + " boost rate:" + sRegen);
 		speedInfo.GetComponent<Text>().text = ("speed:" + MoveSpeed);
 	}
-
 }

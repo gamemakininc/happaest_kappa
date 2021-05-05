@@ -8649,7 +8649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deaths: 0
   cycles: 0
-  unlocks: 01010101010101010101010101010101010101010101010101010101010101010101010101
+  unlocks: 00000000000000000000000000000000000000000000000000000000000000000000000000
   efireRate: 0
   fireRate: 0
   pSpeed: 0
@@ -8766,7 +8766,7 @@ PrefabInstance:
     - target: {fileID: 5220116056173969631, guid: 3294c80461c4d2e418ac49e8d09055ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -457
+      value: -440
       objectReference: {fileID: 0}
     - target: {fileID: 5220116056173969631, guid: 3294c80461c4d2e418ac49e8d09055ec,
         type: 3}
