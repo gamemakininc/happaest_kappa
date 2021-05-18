@@ -156,6 +156,27 @@ public class EnemyWavev2 : MonoBehaviour
         currentState = states.spawning;
 
         //Debug.Log("Tile bounds.extents = " + currentTile.GetComponent<SpriteRenderer>().bounds.extents.x);
+        //play level music
+        switch (ObserverScript.Instance.factionId)
+        {
+            //faction 1 TL0
+            case 0:
+                //tell mix master what track to play
+                mixMaster.Instance.nTrack = 8;
+                break;
+            //faction2 FV
+            case 1:
+                mixMaster.Instance.nTrack = 5;
+                break;
+            //faction3 SU
+            case 2:
+                mixMaster.Instance.nTrack = 7;
+                break;
+            //faction4 PP
+            case 3:
+                mixMaster.Instance.nTrack = 6;
+                break;
+        }
     }
 
     private void Update()

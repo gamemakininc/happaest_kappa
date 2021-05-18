@@ -83,18 +83,21 @@ public class ObserverScript : MonoBehaviour
     public int s1clears=0;
     public string s1name="Empty";
     public float s1unlocks=0.1f;
+    public int s1Score;
     //save preview variables slot2
     public int s2diff;
     public int s2Shipselector;
     public int s2clears=0;
     public string s2name="Empty";
     public float s2unlocks = 0.1f;
+    public int s2Score;
     //save preview variables slot3
     public int s3diff;
     public int s3Shipselector;
     public int s3clears=0;
     public string s3name="Empty";
     public float s3unlocks = 0.1f;
+    public int s3Score;
 
     //settings (global save file)
     public float mvol;//hold value of music maximum volume

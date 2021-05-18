@@ -297,6 +297,7 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s1Shipselector = swapint;
             ObserverScript.Instance.s1clears = save.levelsCleared;
             ObserverScript.Instance.s1name = save.playerName;
+            ObserverScript.Instance.s1Score = save.score;
             swapBArray = save.unlocks;
             //clear counter and swapint
             counter = 0;
@@ -326,6 +327,7 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s2Shipselector = swapint;
             ObserverScript.Instance.s2clears = save.levelsCleared;
             ObserverScript.Instance.s2name = save.playerName;
+            ObserverScript.Instance.s2Score = save.score;
             swapBArray = save.unlocks;
             //clear counter and swapint
             counter = 0;
@@ -356,6 +358,7 @@ public class savescript : MonoBehaviour
             ObserverScript.Instance.s3Shipselector = swapint;
             ObserverScript.Instance.s3clears = save.levelsCleared;
             ObserverScript.Instance.s3name = save.playerName;
+            ObserverScript.Instance.s3Score = save.score;
             swapBArray = save.unlocks;
             //clear counter and swapint
             counter = 0;

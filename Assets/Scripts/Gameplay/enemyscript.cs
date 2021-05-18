@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(enemyhealth))]
 public class enemyscript : MonoBehaviour
 {
-    
+    float RDtimer;
+    int facID;
     private Rigidbody2D rb;
     public Sprite[] enemyViewmodels;
     //timer
@@ -18,6 +19,7 @@ public class enemyscript : MonoBehaviour
 
     void Start()
     {
+        facID = ObserverScript.Instance.factionId;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-1, 0);
         startY = transform.position.y;
@@ -26,8 +28,14 @@ public class enemyscript : MonoBehaviour
 
         if (currentState != states.kamikaze || currentState != states.paused)
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        // if suicider and FV double health
         if (currentState == states.kamikaze)
-            GetComponent<enemyhealth>().health *= 2;
+        {
+            if (facID == 1||facID==0)
+            {
+                GetComponent<enemyhealth>().health *= 2;
+            }
+        }
 
         storedState = currentState;
 
@@ -54,6 +62,10 @@ public class enemyscript : MonoBehaviour
         if (ObserverScript.Instance.factionId == 2)
         {
             GetComponent<SpriteRenderer>().sprite = enemyViewmodels[2];
+        }
+        if (ObserverScript.Instance.factionId == 3)
+        {
+            GetComponent<SpriteRenderer>().sprite = enemyViewmodels[3];
         }
 
     }
@@ -107,7 +119,6 @@ public class enemyscript : MonoBehaviour
     //Paused Attributes
     private Vector2 storedVelocity;
     public states storedState;
-    
     void FixedUpdate()
     {
         //Restores velocity when unpausing
@@ -219,7 +230,7 @@ public class enemyscript : MonoBehaviour
         Vector3 direction = playerPos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
-        rb.velocity = targetDirection * speed;
+        rb.velocity = targetDirection * (speed*4);
     }
 
     private void OnBecameVisible()
@@ -271,6 +282,32 @@ public class enemyscript : MonoBehaviour
             else if (type == 3) 
             {
                 Camera.main.GetComponent<EnemyWavev2>().lostK++;
+            }
+        }
+    }
+    public void Update()
+    {
+        //only trigger on TL0 ships
+        if (facID == 0) 
+        {
+            //increment timer
+            RDtimer += Time.deltaTime * 1;
+            if (RDtimer > 5) 
+            {
+                //after threashold run RNG check
+                int bewm = Random.Range(1, 100);
+                //if check passes
+                if (bewm <= 5)
+                {
+                    //kill enemy in a way that credits player
+                    GetComponent<enemyhealth>().health = 0;
+                }
+                //if check fails
+                else 
+                {
+                    //reset timer
+                    RDtimer = 0;
+                }
             }
         }
     }
