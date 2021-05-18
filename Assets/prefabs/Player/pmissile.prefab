@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3795887398370965780}
   m_Layer: 8
   m_Name: pmissile
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,13 +120,14 @@ MonoBehaviour:
   rb: {fileID: 50541174970436674}
   timer: 0
   Damage: 20
-  trackingMouse: 0
+  aimed: 0
   trackingEnemy: 0
   islasor: 0
   Enemy: {fileID: 0}
   laserBeam: []
   lineRenderer: {fileID: 0}
   laserVisible: 0
+  mouseAiming: 0
 --- !u!50 &50541174970436674
 Rigidbody2D:
   serializedVersion: 4

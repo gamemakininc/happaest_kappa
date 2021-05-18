@@ -5117,7 +5117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068121153372512980}
   - component: {fileID: 8292319285014287655}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: staticboss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

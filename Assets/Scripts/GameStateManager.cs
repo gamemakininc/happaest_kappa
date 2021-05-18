@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     public GameObject pauseMenu;
-    private GameObject[] enemies;
-    private GameObject[] bullets;
-    private GameObject[] tiles;
+    public GameObject[] enemies;
+    public GameObject[] bullets;
+    public GameObject[] tiles;
     public GameObject background;
     private float backgroundSpeed;
     private enum states
@@ -115,8 +115,8 @@ public class GameStateManager : MonoBehaviour
     ///The opposite of pause
     public void UnPause()
     {
-        //enemies = GameObject.FindGameObjectsWithTag("enemy");
         if (enemies != null) {
+            enemies = GameObject.FindGameObjectsWithTag("enemy");
             foreach (GameObject enemy in enemies)
             {
                 enemy.GetComponent<enemyscript>().currentState = enemy.GetComponent<enemyscript>().storedState;
@@ -124,6 +124,7 @@ public class GameStateManager : MonoBehaviour
             }
         }
         if (bullets != null) {
+            bullets = GameObject.FindGameObjectsWithTag("Bullet");
             foreach (GameObject bullet in bullets)
             {
                 bullet.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
@@ -132,6 +133,7 @@ public class GameStateManager : MonoBehaviour
             }
         }
         if (tiles != null) {
+            tiles = GameObject.FindGameObjectsWithTag("Background");
             foreach (GameObject tile in tiles)
             {
                 if (tile.name.ToLower().Substring(0, 4) == "tile") {
@@ -150,6 +152,6 @@ public class GameStateManager : MonoBehaviour
         background.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Vector2 velocity = background.GetComponent<InstantVelocity>().velocity;
         background.GetComponent<Rigidbody2D>().velocity = velocity;
-        pauseMenu.gameObject.SetActive(true);
+        pauseMenu.gameObject.SetActive(false);
     }
 }

@@ -118,6 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -2.5
   freeze: 0
+  bosStop: 0
+  anotherStopBool: 0
 --- !u!1 &3971791901844393703
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5674368162906705590}
   - component: {fileID: 2384702768352835909}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}

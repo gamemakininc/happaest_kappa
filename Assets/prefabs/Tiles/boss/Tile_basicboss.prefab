@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4762330766618050916}
   - component: {fileID: 3292271886443378327}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_basicboss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

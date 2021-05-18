@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6675544044537989189}
   m_Layer: 0
   m_Name: shrapnel_cannon
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4404058260511687949}
   m_Layer: 8
   m_Name: pbullet (1)
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4400348397359261787}
   m_Layer: 8
   m_Name: pbullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 4404062033136048333}
   m_Layer: 8
   m_Name: pbullet (2)
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

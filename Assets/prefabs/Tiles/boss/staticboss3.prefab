@@ -1522,7 +1522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7491385475884999380}
   - component: {fileID: 599526487585838375}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: staticboss3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
