@@ -46,6 +46,7 @@ public class GameStateManager : MonoBehaviour
             foreach (GameObject enemy in enemies)
             {
                 enemy.GetComponent<enemyscript>().currentState = enemyscript.states.paused;
+                enemy.GetComponent<enemyscript>().shootDissabled = true;
             }
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -62,7 +63,11 @@ public class GameStateManager : MonoBehaviour
             {
                 UnPause();
                 tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation; foreach (GameObject enemy in enemies)
+                {
+                    enemy.GetComponent<enemyscript>().currentState = enemy.GetComponent<enemyscript>().storedState;
+                    enemy.GetComponent<enemyscript>().shootDissabled = false;
+                }
                 background.GetComponent<Rigidbody2D>().velocity = targetVelocity;
                 currentState = states.play;
                 Camera.main.GetComponent<EnemyWavev2>().enabled = true;
@@ -76,13 +81,10 @@ public class GameStateManager : MonoBehaviour
         {
             if (currentState != states.pause)
             {
-                priorState = currentState;
-                currentState = states.pause;
                 Pause();
             }
             else
             {
-                currentState = priorState;
                 UnPause();
             }
         }
@@ -92,6 +94,9 @@ public class GameStateManager : MonoBehaviour
     ///Called when pausing the game
     public void Pause()
     {
+        priorState = currentState;
+        currentState = states.pause;
+
         paused = true;
         enemies = GameObject.FindGameObjectsWithTag("enemy");
         foreach(GameObject enemy in enemies)
@@ -118,6 +123,8 @@ public class GameStateManager : MonoBehaviour
     ///The opposite of pause
     public void UnPause()
     {
+        currentState = priorState;
+
         paused = false;
         if (enemies != null) {
             enemies = GameObject.FindGameObjectsWithTag("enemy");
