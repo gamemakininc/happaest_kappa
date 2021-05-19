@@ -10,6 +10,7 @@ public class GameStateManager : MonoBehaviour
     public GameObject[] tiles;
     public GameObject background;
     private float backgroundSpeed;
+    public bool paused;
     private enum states
     {
         play,
@@ -25,6 +26,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
+        paused = false;
         backgroundSpeed = Camera.main.GetComponent<BackgroundSpawner>().speedMultiplier;
         bVelocity = new Vector2(-12.0f, 0.0f);
     }
@@ -90,6 +92,7 @@ public class GameStateManager : MonoBehaviour
     ///Called when pausing the game
     public void Pause()
     {
+        paused = true;
         enemies = GameObject.FindGameObjectsWithTag("enemy");
         foreach(GameObject enemy in enemies)
         {
@@ -115,6 +118,7 @@ public class GameStateManager : MonoBehaviour
     ///The opposite of pause
     public void UnPause()
     {
+        paused = false;
         if (enemies != null) {
             enemies = GameObject.FindGameObjectsWithTag("enemy");
             foreach (GameObject enemy in enemies)

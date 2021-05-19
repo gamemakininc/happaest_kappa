@@ -8649,7 +8649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deaths: 0
   cycles: 0
-  unlocks: 00000000000000000000000000000000000000000000000000000000000000000000000000
+  unlocks: 01010101010101010101010101010101010101010101010101010101010101010101010101
   efireRate: 0
   fireRate: 0
   pSpeed: 0
@@ -8715,16 +8715,19 @@ MonoBehaviour:
   s1clears: 0
   s1name: Empty
   s1unlocks: 0
+  s1Score: 0
   s2diff: 0
   s2Shipselector: 0
   s2clears: 0
   s2name: Empty
   s2unlocks: 0
+  s2Score: 0
   s3diff: 0
   s3Shipselector: 0
   s3clears: 0
   s3name: Empty
   s3unlocks: 0
+  s3Score: 0
   mvol: 0.5
   sfxvol: 0.5
   mouseAiming: 0

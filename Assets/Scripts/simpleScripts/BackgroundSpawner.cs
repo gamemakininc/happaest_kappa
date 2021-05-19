@@ -11,7 +11,7 @@ public class BackgroundSpawner : MonoBehaviour
         public GameObject[] props;
         public float weight;
     }
-
+    public GameStateManager gStat;
     public GameObject backgroundParent;
     public float propsPerSecond;
     [HideInInspector]
@@ -29,18 +29,23 @@ public class BackgroundSpawner : MonoBehaviour
         invPropsPerSecond = 1 / (float)propsPerSecond; //Flips so that it's actually per second
         //print("invPropsPerSecond = " + invPropsPerSecond);
         _invPropsPerSecond = invPropsPerSecond;
+        gStat = FindObjectOfType<GameStateManager>();
     }
 
     void Update()
     {
-        _invPropsPerSecond -= Time.deltaTime * speedMultiplier;
-        if(_invPropsPerSecond <= 0)
+        //dissable functions if paused
+        if (gStat.paused == false)
         {
-            GameObject chosenProp = ChooseProp(backgroundElements);
-            GameObject spawnedProp = Instantiate(chosenProp, (Vector2)transform.position + (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(1.0f, Random.Range(0.05f, 0.95f), 0.0f)), Quaternion.Euler(Vector3.zero), backgroundParent.transform);
-            //print("Spawned " + spawnedProp.name);
-            //spawnedProp.GetComponent<Rigidbody2D>().AddForce(Vector2.left, ForceMode2D.Impulse);
-            _invPropsPerSecond = invPropsPerSecond;
+            _invPropsPerSecond -= Time.deltaTime * speedMultiplier;
+            if (_invPropsPerSecond <= 0)
+            {
+                GameObject chosenProp = ChooseProp(backgroundElements);
+                GameObject spawnedProp = Instantiate(chosenProp, (Vector2)transform.position + (Vector2)Camera.main.ViewportToWorldPoint(new Vector3(1.0f, Random.Range(0.05f, 0.95f), 0.0f)), Quaternion.Euler(Vector3.zero), backgroundParent.transform);
+                //print("Spawned " + spawnedProp.name);
+                //spawnedProp.GetComponent<Rigidbody2D>().AddForce(Vector2.left, ForceMode2D.Impulse);
+                _invPropsPerSecond = invPropsPerSecond;
+            }
         }
     }
 

@@ -21096,6 +21096,7 @@ GameObject:
   - component: {fileID: 1590230544}
   - component: {fileID: 1590230547}
   - component: {fileID: 1590230549}
+  - component: {fileID: 1590230548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21213,6 +21214,24 @@ MonoBehaviour:
   continuebtn: {fileID: 1553167726}
   unlocks: 
   soptions: []
+--- !u!114 &1590230548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590230543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8512e8d8959c20d41aaabdaeef52e99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  enemies: []
+  bullets: []
+  tiles: []
+  background: {fileID: 0}
+  paused: 0
 --- !u!114 &1590230549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28223,6 +28242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd86cf3220c9ab94dbd15f283310221f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gStat: {fileID: 0}
   backgroundParent: {fileID: 371155542}
   propsPerSecond: 3
   speedMultiplier: 1
