@@ -165,4 +165,9 @@ public class GameStateManager : MonoBehaviour
         background.GetComponent<Rigidbody2D>().velocity = velocity;
         pauseMenu.gameObject.SetActive(false);
     }
+    public void clearLvlscore()
+    {
+        ObserverScript.Instance.levelScore = 0;
+    }
+
 }

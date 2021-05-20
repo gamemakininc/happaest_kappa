@@ -25,6 +25,7 @@ public class mixMaster : MonoBehaviour
     public int pTrack; //??
     public float swapf0;
     public float swapf1;
+    public float _mvol;
     // Start is called before the first frame update
     private void Awake()
     {// make shure the singlet remains unas
@@ -45,6 +46,7 @@ public class mixMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _mvol = ObserverScript.Instance.mvol;
         if (nTrack != cTrack ) 
         {
             if (swapBool == true)
@@ -61,8 +63,6 @@ public class mixMaster : MonoBehaviour
                     //crossfadeset values
                     StartCoroutine(MMSwap());
                 }
-                //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf1 <= 0) { cTrack = nTrack; as1.enabled = false; swapBool = false; Debug.Log("MM swap1"); }
             }
             else if (swapBool == false) {
                 //make shure bolth tracks active
@@ -77,14 +77,14 @@ public class mixMaster : MonoBehaviour
                     //crossfade set values
                     StartCoroutine(MMSwap2());
                 }
-                //if fade complete set current track switch swapbool so next track triggers on other output
-                if (swapf0 <= 0) { cTrack = nTrack; as0.enabled = false; swapBool = true; Debug.Log("MM swap2"); }
 
             }
         }
         //negative number prevention.
         if (swapf0 < 0) { swapf0 = 0; }
         if (swapf1 < 0 ) { swapf1 = 0; }
+        if (swapf0 > _mvol) { swapf0 = _mvol; }
+        if (swapf1 > _mvol) { swapf1 = _mvol; }
         //apply volume values
         as0.volume = swapf0;
         as1.volume = swapf1;
@@ -93,28 +93,31 @@ public class mixMaster : MonoBehaviour
     //Coroutine editions of crossfades
     IEnumerator MMSwap()
     {
-        while (swapf0 <= ObserverScript.Instance.mvol || swapf1 > 0)
+        while (swapf0 <= (_mvol-0.01) || swapf1 >= 0.01)
         {
             swapf0 += Time.deltaTime * 0.5f;
             swapf1 += Time.deltaTime * -0.5f;
             yield return new WaitForEndOfFrame();
         }
-        Mathf.Clamp(swapf0, 0.0f, ObserverScript.Instance.mvol);
-        Mathf.Clamp(swapf1, 0.0f, ObserverScript.Instance.mvol);
-
+        //when fade complete set current track switch swapbool so next track triggers on other output
+        as1.enabled = false;
+        cTrack = nTrack; 
+        swapBool = false;
+        Debug.Log("MM swap1");
         yield return null;
     }
     IEnumerator MMSwap2()
     {
-        while (swapf1 <= ObserverScript.Instance.mvol || swapf0 > 0)
+        while (swapf1 <= (_mvol - 0.01) || swapf0 >= 0.01)
         {
             swapf1 += Time.deltaTime * 0.5f;
             swapf0 += Time.deltaTime * -0.5f;
             yield return new WaitForEndOfFrame();
         }
-        Mathf.Clamp(swapf0, 0.0f, ObserverScript.Instance.mvol);
-        Mathf.Clamp(swapf1, 0.0f, ObserverScript.Instance.mvol);
-
+        //when fade complete set current track switch swapbool so next track triggers on other output
+        as0.enabled = false; 
+        cTrack = nTrack;
+        swapBool = true; Debug.Log("MM swap2");
         yield return null;
     }
 }

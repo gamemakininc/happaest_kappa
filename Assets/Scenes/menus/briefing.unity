@@ -1024,16 +1024,19 @@ MonoBehaviour:
   s1clears: 0
   s1name: Empty
   s1unlocks: 0.1
+  s1Score: 0
   s2diff: 0
   s2Shipselector: 0
   s2clears: 0
   s2name: Empty
   s2unlocks: 0.1
+  s2Score: 0
   s3diff: 0
   s3Shipselector: 0
   s3clears: 0
   s3name: Empty
   s3unlocks: 0.1
+  s3Score: 0
   mvol: 0
   sfxvol: 0
   mouseAiming: 0
@@ -2430,7 +2433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -624}
+  m_AnchoredPosition: {x: 0, y: -766}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4597340370538230150
@@ -2618,8 +2621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.481, y: 0.707}
-  m_SizeDelta: {x: 579.6, y: 160}
+  m_AnchoredPosition: {x: -0.582, y: 0.7878}
+  m_SizeDelta: {x: 564.4, y: 140.83356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7667082995754699891
 GameObject:

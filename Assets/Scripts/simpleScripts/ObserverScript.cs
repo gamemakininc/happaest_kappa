@@ -173,7 +173,7 @@ public class ObserverScript : MonoBehaviour
                     factionRangeSwap += Random.Range(30, 50);
                     break;
             }
-            
+
         }
         else if (factionId == 1 && factionRangeSwap >= levelsCleared)
         {
@@ -252,6 +252,7 @@ public class ObserverScript : MonoBehaviour
             }
             FindObjectOfType<sceneManager>().cycleEnd();
         }
+
 
     }
     public void clearFitting() 
@@ -348,5 +349,4 @@ public class ObserverScript : MonoBehaviour
         //because nesting functions is a good idea
         clearFitting();
     }
-
 }

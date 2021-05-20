@@ -1,5 +1,4 @@
-﻿using UnityEditorInternal;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 public class levelUIscript : MonoBehaviour
 {

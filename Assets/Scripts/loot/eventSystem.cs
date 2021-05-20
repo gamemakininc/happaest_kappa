@@ -1543,7 +1543,6 @@ public class eventSystem : MonoBehaviour
             else  { ObserverScript.Instance.missionType = Random.Range(0,1); }
             //update factionId
             ObserverScript.Instance.factionChange();
-            //launch mission
             sm.gameplay();
         }
     }
