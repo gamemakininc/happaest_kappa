@@ -35,6 +35,13 @@ public class sbossThrustScript : MonoBehaviour
         //before tile stops
         if (slow == false)
         {
+            //force stop if thrusters destroied
+            if (transform.position.x <= -1.7) 
+            {
+                slow = true;
+                GetComponent<TileScript>().speed = 0;
+                GetComponent<TileScript>().bosStop = true;
+            }
             if (thrustTimer >= 5.7)
             {
                 //fire thrusters

@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     //set player model
     public Rigidbody2D rb;
     public Animator animator;
+    public SpriteRenderer involModel;
     //swap variables
     public GameObject es;
     public float dumbdumb;
@@ -48,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     private float refireTime;
     public float nextFire;
     public float bombCounter;
+    public float timeswap;
     //audio
     public AudioClip[] sounds;
     public AudioSource audioSource;
@@ -129,7 +131,14 @@ public class PlayerScript : MonoBehaviour
         if (involActive == true)
         {//incroment timer
             itimer += 1.0F * Time.deltaTime;
-            if (itimer >= 7) { involActive = false; }
+            timeswap += -1.0f * Time.deltaTime;
+            involModel.enabled = true;
+            involModel.color = new Color(1, 0, 0, (timeswap / 7));
+            if (itimer >= 7) 
+            {
+                involActive = false;
+                involModel.enabled = false;
+            }
         }
         if (fireBuffActive == true)
         {//incroment timer
@@ -346,6 +355,7 @@ public class PlayerScript : MonoBehaviour
     public void invincibility()
     {
         itimer = 0;
+        timeswap = 7;
         //dissable damage
         involActive =true;
         //add post processing effect

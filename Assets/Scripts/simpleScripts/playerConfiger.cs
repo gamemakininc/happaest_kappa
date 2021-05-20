@@ -13,6 +13,7 @@ public class playerConfiger : MonoBehaviour
     public GameObject[] deathEffects;
     private int p1Ammo;
     private int p2Ammo;
+    public SpriteRenderer shield;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class playerConfiger : MonoBehaviour
         //set animater (and redundant viewmodel)
         GetComponent<Animator>().runtimeAnimatorController = animationset[_fitsetup[13] - 1];
         GetComponent<SpriteRenderer>().sprite = viewmodel[_fitsetup[13] - 1];
+        shield.sprite = viewmodel[_fitsetup[13] - 1];
         //----------------------------------------------------------------------------
         //weapons
         //set missiles

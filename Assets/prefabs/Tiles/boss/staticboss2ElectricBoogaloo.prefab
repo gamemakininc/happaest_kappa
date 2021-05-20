@@ -2342,8 +2342,8 @@ MonoBehaviour:
   - {fileID: 6752064499468715738}
   - {fileID: 8688834641816374182}
   - {fileID: 7632582809854576363}
-  thrustTimer: 0
-  thrustTimer1: 0
+  thrustTimer: 3
+  thrustTimer1: 3
 --- !u!114 &8749283073842400736
 MonoBehaviour:
   m_ObjectHideFlags: 0
