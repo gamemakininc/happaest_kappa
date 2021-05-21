@@ -45,8 +45,10 @@ public class GameStateManager : MonoBehaviour
             enemies = GameObject.FindGameObjectsWithTag("enemy");
             foreach (GameObject enemy in enemies)
             {
-                enemy.GetComponent<enemyscript>().currentState = enemyscript.states.paused;
+                enemy.GetComponent<enemyscript>().storedState = enemy.GetComponent<enemyscript>().currentState;
+                //enemy.GetComponent<enemyscript>().currentState = enemyscript.states.paused;
                 enemy.GetComponent<enemyscript>().shootDissabled = true;
+                enemy.GetComponent<enemyscript>().enabled = false;
             }
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -63,8 +65,10 @@ public class GameStateManager : MonoBehaviour
             {
                 UnPause();
                 tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation; foreach (GameObject enemy in enemies)
+                tile.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                foreach (GameObject enemy in enemies)
                 {
+                    enemy.GetComponent<enemyscript>().enabled = true;
                     enemy.GetComponent<enemyscript>().currentState = enemy.GetComponent<enemyscript>().storedState;
                     enemy.GetComponent<enemyscript>().shootDissabled = false;
                 }
