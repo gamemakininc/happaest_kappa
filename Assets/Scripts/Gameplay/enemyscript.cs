@@ -291,7 +291,7 @@ public class enemyscript : MonoBehaviour
         {
             //increment timer
             RDtimer += Time.deltaTime * 1;
-            if (RDtimer > 5) 
+            if (RDtimer > 2) 
             {
                 //after threashold run RNG check
                 int bewm = Random.Range(1, 100);
